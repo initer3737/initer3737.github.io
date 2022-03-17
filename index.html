@@ -38,6 +38,9 @@
             background-color:indigo ;
             color: white;
         }
+        header img{
+            /* height: 90vh; */
+        }
         header{
             height: 90vh;
             display: flex;
@@ -60,7 +63,7 @@
 </head>
 <body>
     <header class="position-relative shadow">
-        <img src="img/computer-2982270_1920.jpg" class="img-fluid w-full">
+        <img src="img/computer-2982270_1920.jpg" class="w-100">
         <div class="filter"></div>
         <div class="text-container position-absolute text-center container text-white">
             <h5 class="fs-3">hi my name is puthut wahyu aji</h5>
@@ -75,7 +78,7 @@
                 <p id="jam" class="h4 text-end text-light bg-primary p-2"></p>
             </div>
             <div class="col-10 col-md-5 col-lg-4">
-                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid p-3 rounded">
+                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid p-3 rounded" data-bs-target="#quotes" data-bs-toggle="modal">
             </div>
             <div class="col-10 col-md-9 col-lg-8">
                <h5 class="text-capitalize">Hello there!.</h5>
@@ -123,6 +126,34 @@
     <footer class="bg-primary mt-3 p-4 text-light">
         <h3 class="text-center">&copy;PUTHUT_WAHYU_AJI <span id="year"></span></h3>
     </footer>
+    <div class="modals-goups">
+        <div class="modal fade" id="quotes">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">message</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <blockquote>"
+                            manusia memiliki keinginan untuk menjadi kuat
+                            sehingga lupa untuk menurunkan bakatnya pada
+                            generasi selanjutnya lalu pada akhirnya mereka
+                            tak mendapatkan apapun , tak akan ada yang 
+                            dapat mengingat namanya."
+                        </blockquote> <hr>
+                        <blockquote>
+                            "kau tahu? , meski kau menghargai hidupmu
+                            orang lain begitu mudah menginjak-injaknya."
+                            <p class="text-center">
+                                -yorichi sukikuni
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
