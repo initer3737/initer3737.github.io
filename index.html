@@ -137,7 +137,7 @@
     function Jam(){
         let T=document.getElementById('jam');
         let time=new Date();let hour;let minuets;let second;
-        hour=time.getHours();minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());
+        hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());
         T.innerHTML=`${hour}:${minuets}:${second}`;
         setTimeout('Jam()',1000);
     }
