@@ -42,7 +42,7 @@
             /* height: 90vh; */
         }
         header{
-            height: 90vh;
+            /* height: 90vh; */
             display: flex;
             align-items: center;
             align-content: center;
@@ -51,13 +51,20 @@
         .filter{
             background-color: dodgerblue;
             opacity: 0.6;
-            height: 93vh;
+            height: 100%;
             top: 0;
             width: 100%;
             position: absolute;
         }
         .text-container{
             z-index: 999;
+        }
+
+        .card:hover{
+            /* border-color: dodgerblue; */
+            background-color: dodgerblue;
+            transform: perspective(12px);
+            cursor: pointer;
         }
     </style>
 </head>
@@ -75,10 +82,15 @@
     <div class="container mt-5 bg-light shadow rounded  d-flex flex-column gap-4 justify-content-center align-content-center align-items-center p-2">
         <div class="row d-flex align-content-center align-items-center">
             <div class="col-12">
-                <p id="jam" class="h4 text-end text-light bg-primary p-2"></p>
+               <div class="bg-primary text-capitalize d-flex justify-content-between"> 
+                <p id="fulldate" class="h4 text-light p-2"></p>
+                <p id="jam" class="h4 text-light p-2"></p>
+               </div> 
             </div>
             <div class="col-10 col-md-5 col-lg-4">
-                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid p-3 rounded" data-bs-target="#quotes" data-bs-toggle="modal">
+               <div class="card m-2 p-1">
+                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid rounded shadow rounded" data-bs-target="#quotes" data-bs-toggle="modal">
+               </div>
             </div>
             <div class="col-10 col-md-9 col-lg-8">
                <h5 class="text-capitalize">Hello there!.</h5>
@@ -91,13 +103,12 @@
                   <a href="https://www.facebook.com/puthut.wahyuaji.94/" target="_blank" class="text-capitalize"><i class="fa-brands fa-facebook"></i> facebook</a>
                   <a href="https://twitter.com/puthut_wahkyu" target="_blank" class="text-capitalize"><i class="fa-brands fa-twitter"></i> twitter</a>
                   <a href="https://www.sololearn.com/profile/22926925" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> sololearn</a>
-                   <a href="https://www.duolingo.com/profile/PUTHUTWAHY" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> duolingo</a>
                   <a href="https://github.com/initer3737" target="_blank" class="text-capitalize"><i class="fa-brands fa-github"></i> github</a>
                </div>
             </div>
         </div>
     </div>
-    
+
     <div class="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
         <h5><i class="fa-solid fa-briefcase"></i> framework.</h5>
             <h3><i class="fa-brands fa-laravel text-danger"></i> laravel</h3>
@@ -144,10 +155,10 @@
                             dapat mengingat namanya."
                         </blockquote> <hr>
                         <blockquote>
-                            "kau tahu? , meski kau menghargai hidupmu
+                            "kau tahu? , meski kau menghargai hidupmu,
                             orang lain begitu mudah menginjak-injaknya."
                             <p class="text-center">
-                                -yorichi sukikuni
+                                -yorichi sugikuni
                             </p>
                         </blockquote>
                     </div>
@@ -168,11 +179,35 @@
     }
     function Jam(){
         let T=document.getElementById('jam');
-        let time=new Date();let hour;let minuets;let second;
-        hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());
-        T.innerHTML=`${hour}:${minuets}:${second}`;
+        let time=new Date();let hour;let minuets;let second;let statusTime;
+        hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());statusTime=()=>{
+            if(hour > 24 &&hour < 11 ){
+                status="pagi";
+            }else if(hour >11 && hour < 15){
+                status="siang";
+            }else if(hour > 15 && hour < 18 ){
+                status="sore";
+            }else{
+                status="malam";
+            }
+
+            return status;
+        };
+        T.innerHTML=`${hour}:${minuets}:${second} : ${statusTime()}`;
         setTimeout('Jam()',1000);
     }
+    function Tanggal(){
+        let t=document.getElementById("fulldate");
+        let time=new Date();
+        let hari;let bulan;let tanggal;let tahun;let hariAngka=time.getDate();
+        tahun=time.getFullYear();bulan=time.getMonth();hari=time.getDay();
+        let data={
+            hari:["minggu","senin","selasa","rabu","kamis","jum'at","sabtu"],
+            bulan:["januari","february","maret","april","mei","juni","juli","agustus","september","oktober","november","desember"]
+        };
+         t.innerHTML=`${data.hari[hari]}  ${hariAngka}  ${data.bulan[bulan]}  ${tahun}`;
+    }
     const validateTime=(T)=>T<10 ?'0'+T:T;
+    Tanggal();
     Years();
 </script>
