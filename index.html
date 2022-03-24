@@ -181,7 +181,7 @@
         let T=document.getElementById('jam');
         let time=new Date();let hour;let minuets;let second;let statusTime;
         hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());statusTime=()=>{
-            if(hour > 24 &&hour < 11 ){
+            if(hour > 00 &&hour < 11 ){
                 status="pagi";
             }else if(hour >11 && hour < 15){
                 status="siang";
