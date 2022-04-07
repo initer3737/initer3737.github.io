@@ -184,9 +184,9 @@
         hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());statusTime=()=>{
             if(hour > 00 &&hour < 11 ){
                 status="pagi";
-            }else if(hour >11 && hour < 15){
+            }else if(hour >=11 && hour < 15){
                 status="siang";
-            }else if(hour > 15 && hour < 18 ){
+            }else if(hour >= 15 && hour <= 18 ){
                 status="sore";
             }else{
                 status="malam";
