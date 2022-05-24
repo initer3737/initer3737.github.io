@@ -42,9 +42,6 @@
             background-color:indigo ;
             color: white;
         }
-        header img{
-            /* height: 90vh; */
-        }
         header{
             /* height: 90vh; */
             display: flex;
@@ -63,12 +60,14 @@
         .text-container{
             z-index: 999;
         }
-
         .card:hover{
             /* border-color: dodgerblue; */
             background-color: dodgerblue;
             transform: perspective(12px);
             cursor: pointer;
+        }
+        .gambar{
+            background-image: #000;
         }
     </style>
 </head>
@@ -92,8 +91,9 @@
                </div>
             </div>
             <div class="col-10 col-md-5 col-lg-4">
-               <div class="card m-2 p-1">
-                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid rounded shadow rounded" data-bs-target="#quotes" data-bs-toggle="modal">
+               <div class="card m-2 p-1 position-relative">
+                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid rounded shadow rounded gambar" data-bs-target="#quotes" data-bs-toggle="modal">
+                <div class="filter2"></div>
                </div>
             </div>
             <div class="col-10 col-md-9 col-lg-8">
@@ -102,14 +102,17 @@
                   i am interest in web development.
                </p>
                <h5 class="text-capitalize">social media.</h5>
-               <div class="d-flex flex-column fs-4">
-                  <a href="https://www.instagram.com/puthutwahyuaji/" target="_blank" class="text-capitalize"><i class="fa-brands fa-instagram"></i> instagram</a>
-                  <a href="https://www.facebook.com/puthut.wahyuaji.94/" target="_blank" class="text-capitalize"><i class="fa-brands fa-facebook"></i> facebook</a>
-                  <a href="https://twitter.com/puthut_wahkyu" target="_blank" class="text-capitalize"><i class="fa-brands fa-twitter"></i> twitter</a>
-                  <a href="https://www.sololearn.com/profile/22926925" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> sololearn</a>
-                  <a href="https://www.duolingo.com/profile/PUTHUTWAHY" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> duolingo</a>
-                  <a href="https://github.com/initer3737" target="_blank" class="text-capitalize"><i class="fa-brands fa-github"></i> github</a>
-               </div>
+               <div class="d-flex flex-row align-content-center align-items-center gap-3">
+                <div class="d-flex flex-column fs-4">
+                    <a href="https://www.instagram.com/puthutwahyuaji/" target="_blank" class="text-capitalize"><i class="fa-brands fa-instagram"></i> instagram</a>
+                    <a href="https://www.facebook.com/puthut.wahyuaji.94/" target="_blank" class="text-capitalize"><i class="fa-brands fa-facebook"></i> facebook</a>
+                    <a href="https://twitter.com/puthut_wahkyu" target="_blank" class="text-capitalize"><i class="fa-brands fa-twitter"></i> twitter</a>
+                    <a href="https://www.sololearn.com/profile/22926925" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> sololearn</a>
+                    <a href="https://www.duolingo.com/profile/PUTHUTWAHY" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> duolingo</a>
+                    <a href="https://github.com/initer3737" target="_blank" class="text-capitalize"><i class="fa-brands fa-github"></i> github</a>
+                </div>
+                <div class=""><a href="game.html" class="btn btn-outline-primary rounded-pill px-5 py-2">Game</a></div>
+            </div>
             </div>
         </div>
     </div>
@@ -184,7 +187,6 @@
 </html>
 
 <script>
-    window.setTimeout("Jam()",1000);
     function Years() {
         $date=new Date();
         let t=document.getElementById('year');
@@ -221,6 +223,12 @@
          t.innerHTML=`${data.hari[hari]}  ${hariAngka}  ${data.bulan[bulan]}  ${tahun}`;
     }
     const validateTime=(T)=>T<10 ?'0'+T:T;
-    Tanggal();
-    Years();
+
+    const initialize=()=>{
+                Tanggal();
+                Years();
+                Jam();
+            }
+
+            initialize();
 </script>

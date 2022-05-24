@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puthut wahyu aji | game</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7bb1ae10af.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            text-transform: capitalize;
+           cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.png), auto !important;
+        }
+        body{
+            cursor: url('img/cursor.jpeg'),auto;
+            background-color: #ddd;
+        }
+        a:hover{
+            transition:ease-in-out 0.5s;
+            color: blueviolet;
+            text-decoration: none;
+        }
+        .css{
+            color: dodgerblue;
+            background-color:white ;
+        }
+        .html{
+            color: orange;
+            background-color: white;
+        }
+        .mysql{
+            background-color:white ;
+            color: blue;
+        }
+        .javascript{
+            background-color:rgb(51, 51, 9) ;
+            color: yellow;
+        }
+        .php{
+            background-color:indigo ;
+            color: white;
+        }
+        header{
+            /* height: 90vh; */
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+        .filter{
+            background-color: dodgerblue;
+            opacity: 0.6;
+            height: 100%;
+            top: 0;
+            width: 100%;
+            position: absolute;
+        }
+        .text-container{
+            z-index: 999;
+        }
+        .card:hover{
+            /* border-color: dodgerblue; */
+            background-color: dodgerblue;
+            transform: perspective(12px);
+            cursor: pointer;
+        }
+        .gambar{
+            background-image: #000;
+        }
+    </style>
+</head>
+<body>
+    <header class="position-relative shadow">
+        <img src="img/computer-2982270_1920.jpg" class="w-100">
+        <div class="filter"></div>
+        <div class=" position-absolute text-center container text-white rounded">
+            <h4 class="text-light">tanggal : <span id="fulldate"></span></h4>
+            <h4>jam : <span id="jam"></span></h4>
+            <h5 class="fs-3">Game olahraga jempol</h5>
+            <div class="container bg-light m-5 p-4 text-dark rounded-pill shadow">
+               <div class="text-start"> <a href="index.html" class="btn btn-outline-secondary shadow rounded-pill py-2 px-5">kembali</a></div>
+                <div class="col-12">
+                    <div class=""><p> your score : <span id="score">0</span></p></div>
+                    <div class=""><button onclick="Game()" class="btn btn-primary rounded-pill py-2 px-5">Go!</button></div>
+                </div>
+            </div>
+        </div>
+    </header> <br><br>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+    let numb=0; //cupu <60 nub <160 mastah 
+    const Game=()=>{
+        let status='payah!';
+        let t=document.getElementById('score');
+        numb++;
+        // t.innerHTML =`${numb} : ${status}`;
+        if(numb > 120){
+            status='cupu!';
+        }
+        if(numb > 160){
+            status='nub!';
+        }
+        if(numb > 270){
+            status='mastah!';
+        }t.innerHTML =`${numb} : ${status}`;
+    }
+    function Years() {
+        $date=new Date();
+        let t=document.getElementById('year');
+        t.innerHTML=`${$date.getFullYear()} - ${$date.getFullYear()+5}`;
+    }
+    function Jam(){
+        let T=document.getElementById('jam');
+        let time=new Date();let hour;let minuets;let second;let statusTime;
+        hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());statusTime=()=>{
+            if(hour > 00 &&hour < 11 ){
+                status="pagi";
+            }else if(hour >11 && hour < 15){
+                status="siang";
+            }else if(hour > 15 && hour < 18 ){
+                status="sore";
+            }else{
+                status="malam";
+            }
+
+            return status;
+        };
+        T.innerHTML=`${hour}:${minuets}:${second} : ${statusTime()}`;
+        setTimeout('Jam()',1000);
+    }
+    function Tanggal(){
+        let t=document.getElementById("fulldate");
+        let time=new Date();
+        let hari;let bulan;let tanggal;let tahun;let hariAngka=time.getDate();
+        tahun=time.getFullYear();bulan=time.getMonth();hari=time.getDay();
+        let data={
+            hari:["minggu","senin","selasa","rabu","kamis","jum'at","sabtu"],
+            bulan:["januari","february","maret","april","mei","juni","juli","agustus","september","oktober","november","desember"]
+        };
+         t.innerHTML=`${data.hari[hari]}  ${hariAngka}  ${data.bulan[bulan]}  ${tahun}`;
+    }
+    const validateTime=(T)=>T<10 ?'0'+T:T;
+            const initialize=()=>{
+                Tanggal();
+                // Years();
+            }
+            initialize();
+            window.setTimeout(()=>Jam() ,1000);
+</script>
