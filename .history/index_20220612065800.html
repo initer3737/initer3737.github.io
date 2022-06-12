@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>puthut wahyu aji</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/7bb1ae10af.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            text-transform: capitalize;
+           cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.png), auto !important;
+        }
+        body{
+            cursor: url('img/cursor.jpeg'),auto;
+            background-color: #ddd;
+        }
+        a:hover{
+            transition:ease-in-out 0.5s;
+            color: blueviolet;
+            text-decoration: none;
+        }
+        .css{
+            color: dodgerblue;
+            background-color:white ;
+        }
+        .html{
+            color: orange;
+            background-color: white;
+        }
+        .mysql{
+            background-color:white ;
+            color: blue;
+        }
+        .javascript{
+            background-color:rgb(51, 51, 9) ;
+            color: yellow;
+        }
+        .php{
+            background-color:indigo ;
+            color: white;
+        }
+        header{
+            /* height: 90vh; */
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+        .filter{
+            background-color: dodgerblue;
+            opacity: 0.6;
+            height: 100%;
+            top: 0;
+            width: 100%;
+            position: absolute;
+        }
+        .text-container{
+            z-index: 999;
+        }
+        .card:hover{
+            /* border-color: dodgerblue; */
+            background-color: dodgerblue;
+            transform: perspective(12px);
+            cursor: pointer;
+        }
+        .gambar{
+            background-image: #000;
+        }
+    </style>
+</head>
+<body>
+    <header class="position-relative shadow">
+        <img src="img/computer-2982270_1920.jpg" class="w-100">
+        <div class="filter"></div>
+        <div class="text-container position-absolute text-center container text-white">
+            <h5 class="fs-3">hi my name is puthut wahyu aji</h5>
+            <p class="fs-4">
+                i am self learner , <br> i want to be fullstack developer.
+            </p>
+        </div>
+    </header> <br><br>
+    <div class="container mt-5 bg-light shadow rounded  d-flex flex-column gap-4 justify-content-center align-content-center align-items-center p-2">
+        <div class="row d-flex align-content-center align-items-center">
+            <div class="col-12">
+               <div class="bg-primary text-capitalize d-flex justify-content-between">
+                <p id="fulldate" class="h4 text-light p-2"></p>
+                <p id="jam" class="h4 text-light p-2"></p>
+               </div>
+            </div>
+            <div class="col-10 col-md-5 col-lg-4">
+               <div class="card m-2 p-1 position-relative">
+                <img src="img/IMG_20220122_211356.jpg" alt="" class="img-fluid rounded shadow rounded gambar" data-bs-target="#quotes" data-bs-toggle="modal">
+                <div class="filter2"></div>
+               </div>
+            </div>
+            <div class="col-10 col-md-9 col-lg-8">
+               <h5 class="text-capitalize">Hello there!.</h5>
+               <p class="fs-4">
+                  i am interest in web development.
+               </p>
+               <h5 class="text-capitalize">social media.</h5>
+               <div class="d-flex flex-row align-content-center align-items-center gap-3">
+                <div class="d-flex flex-column fs-4">
+                    <a href="https://www.instagram.com/puthutwahyuaji/" target="_blank" class="text-capitalize"><i class="fa-brands fa-instagram"></i> instagram</a>
+                    <a href="https://www.facebook.com/puthut.wahyuaji.94/" target="_blank" class="text-capitalize"><i class="fa-brands fa-facebook"></i> facebook</a>
+                    <a href="https://twitter.com/puthut_wahkyu" target="_blank" class="text-capitalize"><i class="fa-brands fa-twitter"></i> twitter</a>
+                    <a href="https://www.sololearn.com/profile/22926925" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> sololearn</a>
+                    <a href="https://www.duolingo.com/profile/PUTHUTWAHY" target="_blank" class="text-capitalize"><i class="fa-solid fa-globe"></i> duolingo</a>
+                    <a href="https://github.com/initer3737" target="_blank" class="text-capitalize"><i class="fa-brands fa-github"></i> github</a>
+                </div>
+                <div class=""><a href="game.html" class="btn btn-outline-primary rounded-pill px-5 py-2">Game</a></div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- https://www.fiverr.com/share/lYqN8j -->
+    <div class="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+        <h5><i class="fa-solid fa-briefcase"></i> framework.</h5>
+            <h3><i class="fa-brands fa-laravel text-danger"></i> laravel</h3>
+            <h3><i class="fa-brands fa-bootstrap text-primary"></i> bootstrap 5</h3>
+        </div>
+    </div>
+
+    <div class="container bg-light shadow mt-5 d-flex flex-column  justify-content-center align-content-center align-items-center p-2">
+        <h5>language.</h5>
+            <h3><i class="fa-brands fa-php php"></i> php</h3>
+            <h3><i class="fa-brands fa-js-square javascript"></i> javascript</h3>
+            <h3><i class="fa-solid fa-database mysql"></i> mysql</h3>
+            <h3><i class="fa-brands fa-html5 html"></i> html 5</h3>
+            <h3><i class="fa-brands fa-css3-alt css"></i> css</h3>
+        </div>
+
+        <div class="container bg-light shadow mt-5 d-flex flex-column  justify-content-center align-content-center align-items-center p-2">
+            <h5 class="capitalize">Hire me on.</h5>
+            <div class="d-flex flex-column fs-4">
+                <a href="https://www.upwork.com/workwith/puthutwahyuaji" target="_blank"><i class="fa-solid fa-briefcase"></i> upwork.com</a>
+                <a href="https://www.fiverr.com/share/lYqN8j" target="_blank"><i class="fa-solid fa-briefcase"></i> fiver.com</a>
+            </div>
+            </div>
+
+    </div>
+
+    <div class="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+        <h5>tutorials.</h5>
+        <div class="fs-4 d-flex gap-3">
+            <a href="https://initer3737.github.io/course/html/pages/course.html" target="_blank"><i class="fa-solid fa-globe"></i> website</a>
+            <a href="https://www.youtube.com/channel/UClsfa0LkA3_YMsFjW1M__sw" target="_blank"><i class="fa-brands fa-youtube"></i> youtube</a>
+        </div>
+    </div>
+
+    <footer class="bg-primary mt-3 p-4 text-light">
+        <h3 class="text-center">&copy;PUTHUT_WAHYU_AJI <span id="year"></span></h3>
+    </footer>
+    <div class="modals-groups">
+        <div class="modal fade" id="quotes">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">message</h5>
+                        <button class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <blockquote>"
+                            manusia memiliki keinginan untuk menjadi kuat
+                            sehingga lupa untuk menurunkan bakatnya pada
+                            generasi selanjutnya lalu pada akhirnya mereka
+                            tak mendapatkan apapun , tak akan ada yang
+                            dapat mengingat namanya."
+                        </blockquote> <hr>
+                        <blockquote>
+                            "kau tahu? , meski kau menghargai hidupmu,
+                            orang lain begitu mudah menginjak-injaknya."
+                            <p class="text-center">
+                                -yorichi sugikuni
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+<script>
+    function Years() {
+        $date=new Date();
+        let t=document.getElementById('year');
+        t.innerHTML=`${$date.getFullYear()} - ${$date.getFullYear()+5}`;
+    }
+    function Jam(){
+        let T=document.getElementById('jam');
+        let time=new Date();let hour;let minuets;let second;let statusTime;
+        hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());statusTime=()=>{
+            if(hour > 00 &&hour < 11 ){
+                status="pagi";
+            }else if(hour >11 && hour < 15){
+                status="siang";
+            }else if(hour > 15 && hour < 18 ){
+                status="sore";
+            }else{
+                status="malam";
+            }
+
+            return status;
+        };
+        T.innerHTML=`${hour}:${minuets}:${second} : ${statusTime()}`;
+        setTimeout('Jam()',1000);
+    }
+    function Tanggal(){
+        let t=document.getElementById("fulldate");
+        let time=new Date();
+        let hari;let bulan;let tanggal;let tahun;let hariAngka=time.getDate();
+        tahun=time.getFullYear();bulan=time.getMonth();hari=time.getDay();
+        let data={
+            hari:["minggu","senin","selasa","rabu","kamis","jum'at","sabtu"],
+            bulan:["januari","february","maret","april","mei","juni","juli","agustus","september","oktober","november","desember"]
+        };
+         t.innerHTML=`${data.hari[hari]}  ${hariAngka}  ${data.bulan[bulan]}  ${tahun}`;
+    }
+    const validateTime=(T)=>T<10 ?'0'+T:T;
+
+    const initialize=()=>{
+                Tanggal();
+                Years();
+                Jam();
+            }
+
+            initialize();
+</script>

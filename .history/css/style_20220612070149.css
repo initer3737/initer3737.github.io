@@ -1,0 +1,75 @@
+*{
+    text-transform: capitalize;
+   cursor: url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.ani), url(https://ani.cursors-4u.net/cursors/cur-13/cur1162.png), auto !important;
+}
+body{
+    cursor: url('img/cursor.jpeg'),auto;
+    background-color: #ddd;
+}
+a:hover{
+    transition:ease-in-out 0.5s;
+    color: blueviolet;
+    text-decoration: none;
+}
+.css{
+    color: dodgerblue;
+    background-color:white ;
+}
+.html{
+    color: orange;
+    background-color: white;
+}
+.mysql{
+    background-color:white ;
+    color: blue;
+}
+.javascript{
+    background-color:rgb(51, 51, 9) ;
+    color: yellow;
+}
+.php{
+    background-color:indigo ;
+    color: white;
+}
+header{
+    /* height: 90vh; */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.filter{
+    background-color: dodgerblue;
+    opacity: 0.6;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+.text-container{
+    z-index: 999;
+}
+.card:hover{
+    /* border-color: dodgerblue; */
+    background-color: dodgerblue;
+    transform: perspective(12px);
+    cursor: pointer;
+}
+.gambar{
+    background-image: #000;
+}
+
+/*color pallete*/
+.color-1{
+    color:#DFF6FF;
+}
+.bg-1{
+    color:#DFF6FF;
+}
+
+.color-2{
+    color:#DFF6FF;
+}
+.bg-2{
+    color:#DFF6FF;
+}

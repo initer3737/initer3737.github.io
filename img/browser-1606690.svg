@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 750 500" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="a" x1="750" x2="0" y1="552.36" y2="1052.4" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#909090" offset="0"/>
+   <stop stop-color="#8d97dd" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g transform="translate(0 -552.36)">
+  <rect y="552.36" width="750" height="500" color="#000000" fill="url(#a)"/>
+ </g>
+ <rect x="50.909" y="22.625" width="648.18" height="454.75" ry="2.5025" color="#000000" fill="#eaeaea"/>
+ <path d="m462.89 34.522 6.9912 22.355c0.1748 0.55892-0.47146 1.0571-1.0571 1.0571h-137.71c-0.58562 0-1.0571-0.47146-1.0571-1.0571l6.9912-22.355z" color="#000000" fill="#e0e0e0"/>
+ <path d="m330.06 34.522 6.9912 22.355c0.1748 0.55892-0.47146 1.0571-1.0571 1.0571h-137.71c-0.58562 0-1.0571-0.47146-1.0571-1.0571l6.9912-22.355z" color="#000000" fill="#e0e0e0"/>
+ <g transform="translate(-1.025 -39.927)">
+  <path d="m198.25 74.449 6.9912 22.355c0.0874 0.27946-0.0305 0.54373-0.24338 0.73814-0.21292 0.1944-0.52089 0.31894-0.81371 0.31894l-68.855 3.7076-68.855-3.7076c-0.29239-0.01574-0.55708-0.11786-0.74815-0.30893s-0.39235-0.48142-0.30893-0.74815l6.9912-22.355z" color="#000000" fill="#fff"/>
+  <circle transform="matrix(1.0783 0 0 1.0783 36.781 -77.143)" cx="139.32" cy="151.44" r="6.9912" color="#000000" fill="#ebebeb"/>
+  <path d="m189.53 83.642-5.0257 5.0257" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0594px"/>
+  <path d="m184.5 83.642 5.0257 5.0257" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0594px"/>
+ </g>
+ <circle cx="318.82" cy="46.228" r="7.5386" color="#000000" fill="#ebebeb"/>
+ <path d="m321.33 43.715-5.0257 5.0257" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0594px"/>
+ <path d="m316.31 43.715 5.0257 5.0257" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0594px"/>
+ <circle cx="451.65" cy="46.228" r="7.5386" color="#000000" fill="#ebebeb"/>
+ <path d="m454.17 43.715-5.0257 5.0257" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0594px"/>
+ <path d="m449.14 43.715 5.0257 5.0257" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.0594px"/>
+ <rect x="54.855" y="57.934" width="640.24" height="415.45" ry=".81672" color="#000000" fill="#fff"/>
+ <g transform="translate(31.933 -38.503)">
+  <circle transform="matrix(1.2414 0 0 1.2414 -182.36 -15.762)" cx="658.79" cy="76.16" r="3.6204" color="#000000" fill="#fffde3"/>
+  <circle transform="matrix(1.2414 0 0 1.2414 -169.38 -15.762)" cx="658.79" cy="76.16" r="3.6204" color="#000000" fill="#ffbcbc"/>
+  <circle transform="matrix(1.2414 0 0 1.2414 -195.35 -15.762)" cx="658.79" cy="76.16" r="3.6204" color="#000000" fill="#b4b4b4"/>
+ </g>
+</svg>
