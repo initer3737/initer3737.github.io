@@ -4,7 +4,7 @@ import React from "react";
         Route ,
         Navigate,
         HashRouter as Router,
-        
+        Link
         } from 'react-router-dom'
     import {
         NotFound,
@@ -17,7 +17,7 @@ import React from "react";
     import {
         Header,
         Footer,
-        Link,
+        // Link,
         Icon
     } from '../assembleComponent'
 
@@ -25,6 +25,7 @@ import React from "react";
      return (
         <>
             <nav className="d-flex gap-3 px-2">
+                <Link to={"/quotes"}>quotes</Link>
                 <a href="/quotes">kuotes</a>
                 <a href="/">back</a>
                         {/* <Link 
@@ -50,7 +51,7 @@ import React from "react";
                             /> */}
                 </nav>
                         <Header/>
-                            <Router>
+                            <Router basename="/">
                                 <Switch>
                                     <Route path="/" element={<HomePage />} />
                                     <Route path="/about" element={<About />} />
