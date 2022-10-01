@@ -16,6 +16,15 @@ export default function NotFound() {
                 height={"100vh"} 
                 attr={[]}            
                 /> */}
+            {/* <Img
+                src={Logo}
+                srcset={'srcset'}
+                alt={"image-banner"}
+                className={"w-100"}
+                width={"100vw"}
+                height={"100vh"} 
+                attr={[]}            
+                /> */}
                 <img src={Logo} alt="" className="w-100 h-100" />
         </>
     )
