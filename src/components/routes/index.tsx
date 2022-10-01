@@ -25,7 +25,7 @@ import React from "react";
      return (
         <>
             <nav className="d-flex gap-3 px-2">
-                {/* <Link to={"/quotes"}>quotes</Link> */}
+                <Link to={"/quotes"}>quotes</Link>
                 <a href="/quotes">kuotes</a>
                 <a href="/">back</a>
                         {/* <Link 
