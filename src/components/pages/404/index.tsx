@@ -2,7 +2,7 @@ import React from "react";
 import {
     Img
 } from '../../atom'
-import Logo from '../../../imgs/banner-982162_1920.jpg'
+import Logo from '../../../imgs/page-not-found-4721931.png'
 import style from './404.module.css'
 export default function NotFound() {
     return(
@@ -12,9 +12,11 @@ export default function NotFound() {
                 srcset={'srcset'}
                 alt={"image-banner"}
                 className={"w-100"}
-                attr={[]}                
-            /> */}
-            <div className={style.404}></div>
+                width={"100vw"}
+                height={"100vh"} 
+                attr={[]}            
+                /> */}
+                <img src={Logo} alt="" className="w-100 h-100" />
         </>
     )
 }

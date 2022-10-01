@@ -6,16 +6,20 @@ type attr={
     alt:string,
     srcset:string,
     className:string,
+    width:string,
+    height:string,
     attr:Array<Object>
 }
 export default function Img(props:attr) {
-    const {attr,src,alt,srcset,className}=props;
+    const {attr,src,alt,srcset,className,width,height}=props;
   return (
     <img 
       src={src}
       alt={alt}
       srcSet={srcset}
       className={className}
+      width={width}
+      height={height}
       {...attr}
     />
   )
