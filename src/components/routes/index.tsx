@@ -3,7 +3,8 @@ import React from "react";
         Routes as Switch, // similiar to switch
         Route ,
         Navigate,
-        BrowserRouter as Router
+        HashRouter as Router,
+        
         } from 'react-router-dom'
     import {
         NotFound,
@@ -24,27 +25,29 @@ import React from "react";
      return (
         <>
             <nav className="d-flex gap-3 px-2">
-                    <Link 
-                        variant="primary" 
-                        name={'home'} 
-                        href="/" 
-                        isIcon={true} 
-                        icon={"house-fill"}    
-                        />
-                    <Link 
-                        variant="primary" 
-                        name={'about'} 
-                        href="/about" 
-                        isIcon={true} 
-                        icon={"house-fill"}    
-                        />
-                    <Link 
-                        variant="primary" 
-                        name={'言葉'} 
-                        href="/quotes" 
-                        isIcon={true} 
-                        icon={"house-fill"}    
-                        />
+                <a href="/quotes">kuotes</a>
+                <a href="/">back</a>
+                        {/* <Link 
+                            variant="primary" 
+                            name={'home'} 
+                            href="/" 
+                            isIcon={true} 
+                            icon={"house-fill"}    
+                            />
+                        <Link 
+                            variant="primary" 
+                            name={'about'} 
+                            href="/about" 
+                            isIcon={true} 
+                            icon={"alexa"}    
+                            />
+                        <Link 
+                            variant="primary" 
+                            name={'言葉'} 
+                            href="/quotes" 
+                            isIcon={true} 
+                            icon={"chat-text"}    
+                            /> */}
                 </nav>
                         <Header/>
                             <Router>
