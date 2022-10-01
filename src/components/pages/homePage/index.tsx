@@ -9,7 +9,7 @@ export default function HomePage()
           <div className="row d-flex align-content-center align-items-center">
               <div className="col-12">
                 <div className="bg-4 text-capitalize d-flex justify-content-start"><i className="bi bi-clock-fill color-1"></i>
-                  <div id="fulldate" className="h4 text-light p-2"><Clock /></div>
+                  <div id="fulldate" className="h4 text-light p-2 fs-3"><Clock /></div>
                 </div>
               </div>
 
@@ -28,7 +28,7 @@ export default function HomePage()
                       <a href="https://www.instagram.com/yotsusan_machi/" target="_blank" className="text-capitalize"><i className="bi bi-instagram"></i> instagram</a>
                       <a href="https://github.com/initer3737" target="_blank" className="text-capitalize"><i className="bi bi-github"></i> github</a>
                   </div>
-                  <div className=""><a href="game.html" className="btn btn-outline-primary rounded-pill px-5 py-2"><i className="bi bi-controller"></i> Game</a></div>
+                  <div className=""><a href="#" className="btn btn-outline-primary rounded-pill px-5 py-2"><i className="bi bi-controller"></i> Game</a></div>
               </div>
               </div>
 
