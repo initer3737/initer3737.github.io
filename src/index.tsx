@@ -10,9 +10,9 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    {/* <HashRouter basename='/'> */}
+    <HashRouter basename={`/${process.env.PUBLIC_URL}`}>
       <App />
-    {/* </HashRouter> */}
+    </HashRouter>
   </React.StrictMode>
 );
 

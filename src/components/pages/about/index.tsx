@@ -1,5 +1,9 @@
 import React from 'react'
-
+import Logo from '../../../imgs/banner-909710_1920.jpg'
+import Logo2 from '../../../imgs/giphy.gif'
+import Logo3 from '../../../imgs/gears-1311171_1920.jpg'
+import Logo4 from '../../../imgs/giphy (1).gif'
+import Logo5 from '../../../imgs/book-158812.png'
 export default function About() {
   return (
     <div className='row'>
@@ -16,7 +20,7 @@ export default function About() {
           </div>
         </div>
         <img
-          src="img/banner-909710_1920.jpg"
+          src={Logo}
           className="img-fluid w-100 mt-3 shadow"
           alt=""
         />
@@ -36,7 +40,7 @@ export default function About() {
           <h3 className="color-4">
             <i className="bi bi-dash-circle-fill"></i> INTERNAL SERVER ERROR!
           </h3>
-          <img src="img/giphy.gif" className="img-fluid w-100 shadow" alt="" />
+          <img src={Logo2} className="img-fluid w-100 shadow" alt="" />
         </div>
       </div>
       <div className="col-12 mt-5 m-auto bg-4 text-light px-2 py-4">
@@ -53,7 +57,7 @@ export default function About() {
       </div>
       <div className="col-12 mt-4">
         <img
-          src="img/gears-1311171_1920.jpg"
+          src={Logo3}
           className="img-fluid w-100 shadow"
           alt=""
         />
@@ -77,7 +81,7 @@ export default function About() {
           <h3 className="color-4">
             <i className="bi bi-send-fill"></i> sending files!
           </h3>
-          <img src="img/giphy (1).gif" className="img-fluid w-100" alt="" />
+          <img src={Logo4} className="img-fluid w-100" alt="" />
         </div>
       </div>
       <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
@@ -94,7 +98,7 @@ export default function About() {
       </div>
       <div className="col-12 bg-2 d-flex align-items-center align-content-center">
         <img
-          src="img/book-158812.png"
+          src={Logo5}
           className="shadow img-fluid col-12"
           alt=""
         />

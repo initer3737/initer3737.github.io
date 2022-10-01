@@ -11,7 +11,7 @@ export default function Button(props:props) {
         <a 
             href={href} 
             className={`btn btn-${variant}`} 
-            {...attr}
+            // {...attr}
             >{name}
         </a>
     )

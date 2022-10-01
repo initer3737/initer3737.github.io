@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react'
     let date=new Date();
     const Waktu={
         hari:date.getDay(),
-        tanggal:date.getDay(),
+        tanggal:date.getDate(),
         bulan:date.getMonth(),
         tahun:date.getFullYear(),
     }
