@@ -2,7 +2,7 @@ import React from "react";
 import {
     Img
 } from '../../atom'
-import Logo from '../../../imgs/page-not-found-4721931.png'
+import Logo from '../../../imgs/404.gif'
 import style from './404.module.css'
 export default function NotFound() {
     return(
@@ -25,7 +25,8 @@ export default function NotFound() {
                 height={"100vh"} 
                 attr={[]}            
                 /> */}
-                <img src={Logo} alt="" className="w-100 h-100" />
+                <img src={Logo} alt="" className="w-50 h-100" />
+                <img src={Logo} alt="" className="w-50 h-100" />
         </>
     )
 }
