@@ -10,34 +10,154 @@
       content="Web site created using create-react-app"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
+    
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <!-- bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       <!-- bootstrap5 icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- css -->
+    <style>
+ /* Start https://www.cursors-4u.com */ * {cursor: url(https://cur.cursors-4u.net/cursors/cur-11/cur1018.ani), url(https://cur.cursors-4u.net/cursors/cur-11/cur1018.png), auto !important;} /* End https://www.cursors-4u.com */
+/* body{ */
+    /* cursor: url('img/cursor.jpeg'),auto; */
+    /* background-color: #ddd; */
+/* } */
+a:hover{
+    transition:ease-in-out 0.5s;
+    color: blueviolet;
+    text-decoration: none;
+}
+.css{
+    color: dodgerblue;
+    background-color:white ;
+}
+.html{
+    color: orange;
+    background-color: white;
+}
+.mysql{
+    background-color:white ;
+    color: blue;
+}
+.javascript{
+    background-color:rgb(51, 51, 9) ;
+    color: yellow;
+}
+.php{
+    background-color:white ;
+    color: indigo;
+}
+header{
+    /* height: 90vh; */
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.filter{
+    background-color: dodgerblue;
+    opacity: 0.6;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+.text-container{
+    z-index: 999;
+}
+.card:hover{
+    /* border-color: dodgerblue; */
+    background-color: dodgerblue;
+    transform: perspective(12px);
+    cursor: pointer;
+    transition: ease-out 0.5s;
+}
+.gambar{
+    background-image: #000;
+}
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+/*color pallete*/
+.color-1{
+    color:#DFF6FF;
+}
+.bg-1{
+    background-color:#DFF6FF;
+}
+
+.color-2{
+    color:#47B5FF;
+}
+.bg-2{
+    background-color:#47B5FF;
+}
+
+.color-3{
+    color:#1363DF;
+}
+.bg-3{
+    background-color:#1363DF;
+}
+
+.color-4{
+    color:#06283D;
+}
+.bg-4{
+    background-color:#06283D;
+}
+    </style>
     <title>React App</title>
   </head>
-  <body>
+  <body class="bg-1">
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <!-- bootstrap5 js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   </body>
+  <script>
+    function Years() {
+        $date=new Date();
+        let t=document.getElementById('year');
+        t.innerHTML=`${$date.getFullYear()} - ${$date.getFullYear()+5}`;
+    }
+    function Jam(){
+        let T=document.getElementById('jam');
+        let time=new Date();let hour;let minuets;let second;let statusTime;
+        hour=validateTime(time.getHours());minuets=validateTime(time.getMinutes());second=validateTime(time.getSeconds());statusTime=()=>{
+            if(hour > 00 &&hour < 11 ){
+                status="pagi";
+            }else if(hour >11 && hour < 15){
+                status="siang";
+            }else if(hour > 15 && hour < 18 ){
+                status="sore";
+            }else{
+                status="malam";
+            }
+
+            return status;
+        };
+        T.innerHTML=`${hour}:${minuets}:${second} : ${statusTime()}`;
+        setTimeout('Jam()',1000);
+    }
+    function Tanggal(){
+        let t=document.getElementById("fulldate");
+        let time=new Date();
+        let hari;let bulan;let tanggal;let tahun;let hariAngka=time.getDate();
+        tahun=time.getFullYear();bulan=time.getMonth();hari=time.getDay();
+        let data={
+            hari:["minggu","senin","selasa","rabu","kamis","jum'at","sabtu"],
+            bulan:["januari","february","maret","april","mei","juni","juli","agustus","september","oktober","november","desember"]
+        };
+         t.innerHTML=`${data.hari[hari]}  ${hariAngka}  ${data.bulan[bulan]}  ${tahun}`;
+    }
+    const validateTime=(T)=>T<10 ?'0'+T:T;
+
+    const initialize=()=>{
+                Tanggal();
+                Years();
+                Jam();
+            }
+
+            initialize();
+</script>
 </html>
