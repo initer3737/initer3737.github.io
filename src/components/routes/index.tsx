@@ -24,8 +24,8 @@ import React from "react";
    export default function Routes(){
      return (
         <>
-            <nav className="d-flex gap-3 px-2">
-                <Link to={"/quotes"}>quotes</Link>
+            <nav className="d-flex gap-3 px-2 flex-wrap">
+                {/* <Link to={"/quotes"}>quotes</Link> */}
                 <a href="/quotes">kuotes</a>
                 <a href="/">back</a>
                         {/* <Link 
@@ -51,7 +51,7 @@ import React from "react";
                             /> */}
                 </nav>
                         <Header/>
-                            <Router>
+                            <Router basename={`/${process.env.PUBLIC_URL}`}>
                                 <Switch>
                                     <Route path="/" element={<HomePage />} />
                                     <Route path="/about" element={<About />} />
