@@ -17,7 +17,7 @@ export default function NotFound() {
                 attr={[]}            
                 /> */}
             {/* <Img
-                src={Logo}
+                src={Logo}git
                 srcset={'srcset'}
                 alt={"image-banner"}
                 className={"w-100"}
