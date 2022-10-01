@@ -3,7 +3,7 @@ import React from "react";
         Routes as Switch, // similiar to switch
         Route ,
         Navigate,
-        HashRouter as Router,
+        BrowserRouter as Router,
         Link
         } from 'react-router-dom'
     import {
@@ -25,7 +25,7 @@ import React from "react";
      return (
         <>
             <nav className="d-flex gap-3 px-2">
-                <Link to={"/quotes"}>quotes</Link>
+                {/* <Link to={"/quotes"}>quotes</Link> */}
                 <a href="/quotes">kuotes</a>
                 <a href="/">back</a>
                         {/* <Link 
@@ -51,7 +51,7 @@ import React from "react";
                             /> */}
                 </nav>
                         <Header/>
-                            <Router basename="/">
+                            <Router>
                                 <Switch>
                                     <Route path="/" element={<HomePage />} />
                                     <Route path="/about" element={<About />} />
