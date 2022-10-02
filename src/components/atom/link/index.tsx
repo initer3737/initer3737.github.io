@@ -1,4 +1,4 @@
-import React from "react";
+import React, { HtmlHTMLAttributes } from "react";
 import Icon from "../icon";
 import {NavLink as Links} from 'react-router-dom'
     type props={
@@ -6,20 +6,24 @@ import {NavLink as Links} from 'react-router-dom'
         variant:string,
         name:string,
         icon:string,
-        isIcon:boolean
+        isIcon:boolean,
+        target:string,
         // attr:object,
     }
 export default function Link(props:props) {
-        const {variant,href,name,isIcon,icon} =props;
+        const {variant,href,name,isIcon,icon,target} =props;
             let condition;
       switch (isIcon) {
         case true:
-           condition= <Links  
+           condition= <Links
+                    target={target}
                     to={href} >
                     <Icon 
-                        variant={variant} 
-                        icon={icon} 
-                        name={name} />
+                        variant={variant}
+                        icon={icon}
+                        name={name} 
+                        //onlyIcon={true} 
+                   />
                     </Links> 
             break;
       

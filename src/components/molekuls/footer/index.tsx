@@ -14,7 +14,8 @@ export default function Footer() {
       </div>
         <div className="col-12 text-center">
           <h3 className='fw-bold'>
-            <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}/>
+            <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}
+            />
             </h3>
         </div>
     </footer>

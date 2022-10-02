@@ -3,10 +3,10 @@ import React from "react";
         href:string,
         variant:string,
         name:string,
-        attr:object,
+        // attr:object,
     }
 export default function Button(props:props) {
-        const {variant,href,attr,name} =props;
+        const {variant,href,name} =props;
     return(
         <a 
             href={href} 

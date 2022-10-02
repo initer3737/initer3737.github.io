@@ -4,6 +4,7 @@ import Logo2 from '../../../imgs/giphy.gif'
 import Logo3 from '../../../imgs/gears-1311171_1920.jpg'
 import Logo4 from '../../../imgs/giphy (1).gif'
 import Logo5 from '../../../imgs/book-158812.png'
+import { Icon, Img } from '../../assembleComponent'
 export default function About() {
   return (
     <div className='row'>
@@ -11,7 +12,8 @@ export default function About() {
         <div className="col-12 mt-5 m-auto bg-4 text-light px-2 py-4">
           <div className="text-center fw-bolder">
             <h5>
-              <i className="bi bi-info-circle-fill"></i> about
+              <Icon variant={'white'} icon={'info-circle-fill'} name={' '}/>
+                  about
             </h5>
           </div>
           <div className="text-start fs-5 px-5 col-12 col-md-6 m-auto">
@@ -19,16 +21,17 @@ export default function About() {
             repository
           </div>
         </div>
-        <img
+        <Img
           src={Logo}
           className="img-fluid w-100 mt-3 shadow"
-          alt=""
-        />
+          alt="" srcset={''} width={''} height={''} attr={[]}        
+          />
       </div>
       <div className="col-12 mt-5 m-auto bg-4 text-light px-2 py-4">
         <div className="text-center ">
           <h5>
-            <i className="bi bi-info-circle-fill"></i> what will i do?
+          <Icon variant={'white'} icon={'info-circle-fill'} name={' '}/>
+            what will i do?
           </h5>
         </div>
         <div className="text-start fs-5 px-5 col-12 col-md-6 m-auto">
@@ -38,15 +41,21 @@ export default function About() {
       <div className="col-6 mt-5 m-auto">
         <div className="d-flex flex-row flex-wrap">
           <h3 className="color-4">
-            <i className="bi bi-dash-circle-fill"></i> INTERNAL SERVER ERROR!
+            <Icon variant={' '} icon={'dash-circle-fill'} name={' '}/>
+               INTERNAL SERVER ERROR!
           </h3>
-          <img src={Logo2} className="img-fluid w-100 shadow" alt="" />
+          <Img 
+            src={Logo2} 
+            className="img-fluid w-100 shadow" 
+            alt="" srcset={''} width={''} height={''} attr={[]} 
+            />
         </div>
       </div>
       <div className="col-12 mt-5 m-auto bg-4 text-light px-2 py-4">
         <div className="text-center ">
           <h5>
-            <i className="bi bi-info-circle-fill"></i> what i wish?
+          <Icon variant={'white'} icon={'info-circle-fill'} name={' '}/>
+           what i wish?
           </h5>
         </div>
         <div className="text-start fs-5 px-5 col-12 col-md-6 m-auto">
@@ -56,16 +65,16 @@ export default function About() {
         </div>
       </div>
       <div className="col-12 mt-4">
-        <img
+        <Img
           src={Logo3}
           className="img-fluid w-100 shadow"
-          alt=""
-        />
+          alt="" srcset={''} width={''} height={''} attr={[]}        />
       </div>
       <div className="col-12 mt-5 m-auto bg-4 text-light px-2 py-4">
         <div className="text-center ">
           <h5>
-            <i className="bi bi-info-circle-fill"></i> when?
+          <Icon variant={'white'} icon={'info-circle-fill'} name={' '}/>
+           when?
           </h5>
         </div>
         <div className="text-start fs-5 px-5 col-12 col-md-6 m-auto">
@@ -79,15 +88,17 @@ export default function About() {
       <div className="col-6 mt-5 m-auto">
         <div className="d-flex flex-row flex-wrap">
           <h3 className="color-4">
-            <i className="bi bi-send-fill"></i> sending files!
+            <Icon variant={' '} icon={'send-fill'} name={' '}/>
+             sending files!
           </h3>
-          <img src={Logo4} className="img-fluid w-100" alt="" />
+          <Img src={Logo4} className="img-fluid w-100" alt="" srcset={''} width={''} height={''} attr={[]} />
         </div>
       </div>
       <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
         <div className="text-center ">
           <h5>
-            <i className="bi bi-info-circle-fill"></i> why?
+          <Icon variant={'white'} icon={'info-circle-fill'} name={' '}/>
+           why?
           </h5>
         </div>
         <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
@@ -97,11 +108,11 @@ export default function About() {
         </div>
       </div>
       <div className="col-12 bg-2 d-flex align-items-center align-content-center">
-        <img
+        <Img
           src={Logo5}
           className="shadow img-fluid col-12"
-          alt=""
-        />
+          alt="" srcset={''} width={''} height={''} attr={[]}        
+          />
       </div>
     </div>
   );
