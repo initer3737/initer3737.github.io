@@ -1,23 +1,26 @@
 {
   "files": {
     "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.8d62ce21.js",
+    "main.js": "/static/js/main.11c2b639.js",
     "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/Earth - 4788.mp4": "/static/media/Earth - 4788.c6043d6c61ec245407f5.mp4",
     "static/media/banner-909710_1920.jpg": "/static/media/banner-909710_1920.07b6b6e52305963a8175.jpg",
     "static/media/giphy.gif": "/static/media/giphy.e18864d01a6e292eb723.gif",
+    "static/media/the-background-292720.png": "/static/media/the-background-292720.d4ff33cea2ebd8202237.png",
+    "static/media/night-1851685_960_720.png": "/static/media/night-1851685_960_720.5126a8b3b6220deea82f.png",
     "static/media/gears-1311171_1920.jpg": "/static/media/gears-1311171_1920.c2b6bb58b82d5b774bdd.jpg",
     "static/media/banner-982162_1920.jpg": "/static/media/banner-982162_1920.a9354715cc5f66136ae9.jpg",
+    "static/media/wave-305226.png": "/static/media/wave-305226.99bfceef311ce0d8786d.png",
     "static/media/giphy (1).gif": "/static/media/giphy (1).a43db8f03471a8fdeee5.gif",
     "static/media/book-158812.png": "/static/media/book-158812.cce0cc7959d103e0bfbb.png",
     "index.html": "/index.html",
     "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.8d62ce21.js.map": "/static/js/main.8d62ce21.js.map",
+    "main.11c2b639.js.map": "/static/js/main.11c2b639.js.map",
     "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.8d62ce21.js"
+    "static/js/main.11c2b639.js"
   ]
 }
