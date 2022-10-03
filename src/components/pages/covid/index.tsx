@@ -1,16 +1,13 @@
 import axios from 'axios'
-import {useEffect,useState} from 'react'
-// import Api from '../../../utils/api'
-
+import {useEffect} from 'react'
+import { Covid as CovidOrganisme } from '../../organism'
 export default function Covid() {
-  let [covid,setCovid]=useState([])
+ 
   useEffect(()=>{
-    const url="https://data.covid19.go.id/public/api/update.json"
-    axios.get(url).then((res)=>console.log(res.data))
-    
+    document.title='initer3737 | data-covid'
   },[])
   
   return (
-    <div>data covid...</div>
+    <CovidOrganisme/>
   )
 }

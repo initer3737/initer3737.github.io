@@ -1,4 +1,5 @@
 import React from 'react'
+import './nav.css'
 import { useLocation } from 'react-router-dom';
 import {Link} from '../../atom'
 export default function Nav() {
@@ -6,7 +7,7 @@ export default function Nav() {
         const {pathname}=location;
         const splitLokasi=pathname.split('/');
   return (
-    <nav className="d-flex gap-3 px-2 py-4 flex-wrap bg-4 ">
+    <nav className="d-flex gap-3 px-2 py-4 flex-wrap bg-4 " id='nav'>
                 <Link 
                     target={""}
                     variant={`${splitLokasi[1]===''?'light':'info'}`}

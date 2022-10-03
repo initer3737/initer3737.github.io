@@ -1,11 +1,10 @@
-import React from "react";
-import Logo from '../../../imgs/404.gif'
-// import style from './404.module.css'
+import React, { useEffect } from "react";
+import { NotFound as NotFoundOrganisme } from "../../organism";
 export default function NotFound() {
+     useEffect(()=>{
+        document.title='initer3737 | not-found-404'
+     },[])
     return(
-        <>
-                <img src={Logo} alt="" className="w-50 h-100" />
-                <img src={Logo} alt="" className="w-50 h-100" />
-        </>
+       <NotFoundOrganisme/>
     )
 }
