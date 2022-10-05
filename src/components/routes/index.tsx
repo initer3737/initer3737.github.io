@@ -20,11 +20,11 @@ import React from "react";
 
    export default function Routes(){
      return (
-        <div className="d-flex flex-column justify-space-between h-100">
-            <>
+        <div className="d-flex flex-column justify-space-between h-100 col-12">
+            <div className="w-100">
                 <Nav/>
                 <Header/>
-            </>
+            </div>
                <>
                     <Switch>
                         <Route path="/" element={<HomePage />} />
