@@ -1,6 +1,6 @@
 import axios from 'axios'
 import {useEffect} from 'react'
-import { Covid as CovidOrganisme } from '../../organism'
+import { Anime as AnimeOrganisme } from '../../organism'
 export default function Covid() {
  
   useEffect(()=>{
@@ -8,6 +8,6 @@ export default function Covid() {
   },[])
   
   return (
-    <CovidOrganisme/>
+    <AnimeOrganisme/>
   )
 }

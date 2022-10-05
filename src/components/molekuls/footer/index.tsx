@@ -3,7 +3,7 @@ import { Icon } from '../../atom'
 import Button from '../../atom/button'
 export default function Footer() {
   return (
-    <footer className="mt-3 text-light row bg-4 p-2">
+    <footer className="mb-auto text-light row bg-4 p-2">
       <div className="container text-center">
         <div className="col-3 col-md-6 col-12">
          

@@ -7,7 +7,7 @@ import React from "react";
     import {
         NotFound,
         HomePage,
-        Covid,
+        Anime,
         About,
         LyricSong,
         Quotes
@@ -20,7 +20,7 @@ import React from "react";
 
    export default function Routes(){
      return (
-        <div className="d-flex flex-column justify-space-evently">
+        <div className="d-flex flex-column justify-space-between h-100">
             <>
                 <Nav/>
                 <Header/>
@@ -31,7 +31,7 @@ import React from "react";
                         <Route path="/about" element={<About />} />
                         <Route path="/lyrics" element={<LyricSong />} />
                         <Route path="/quotes" element={<Quotes />} />
-                        <Route path="/pantau-covid" element={<Covid />} />
+                        <Route path="/Anime" element={<Anime />} />
                         <Route path="/404" element={<NotFound/>} />
                         <Route path='*' element={<Navigate replace to='/404'/>} />
                     </Switch>

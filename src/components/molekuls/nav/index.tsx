@@ -40,14 +40,14 @@ export default function Nav() {
                     isIcon={true} 
                     icon={"file-music-fill"}    
                     /> 
-                {/* <Link 
+                <Link 
                     target={''}
-                    variant={`${splitLokasi[1]==='pantau-covid'?'light':'info'}`} 
-                    name={'data covid'} 
-                    href="/pantau-covid" 
+                    variant={`${splitLokasi[1]==='anime'?'light':'info'}`} 
+                    name={'anime'} 
+                    href="/anime" 
                     isIcon={true} 
-                    icon={"virus"}    
-                    />  */}
+                    icon={"film"}    
+                    /> 
                 </nav>
   )
 }
