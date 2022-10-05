@@ -45,11 +45,10 @@ export default function Anime(): JSX.Element {
      }    //set random data index every seconds
         setInterval(()=>{
           setAnimeCardDataIndex(updateIndexData(12));
-          setrandomQuotesDataIndex(updateIndexData(9))
         },5000);
         setInterval(()=>{
-          setrandomQuotesDataIndex(updateIndexData(9))
-        },10000);
+          setrandomQuotesDataIndex(updateIndexData(9));
+        },15000);
      //call function
      AnimeCards();
      AnimeRandomQuotes();
