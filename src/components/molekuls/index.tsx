@@ -3,4 +3,5 @@ import Card from './card';
 import Header from './header';
 import Footer from './footer';
 import Nav from './nav';
-export {Card,Header,Footer,Nav};
+import QuotesMolekuls from "./quotesMolekuls";
+export {Card,Header,Footer,Nav,QuotesMolekuls};

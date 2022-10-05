@@ -4,7 +4,7 @@ import { Anime as AnimeOrganisme } from '../../organism'
 export default function Covid() {
  
   useEffect(()=>{
-    document.title='initer3737 | data-covid'
+    document.title='initer3737 | anime-list'
   },[])
   
   return (

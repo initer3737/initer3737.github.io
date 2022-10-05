@@ -1,10 +1,9 @@
 import axios from 'axios'
-import { randomInt } from 'crypto'
 import {useEffect,useState} from 'react'
-import { Card } from '../../molekuls'
-require('../../../utils/api/index')
+import { Card, QuotesMolekuls } from '../../assembleComponent'
 export default function Anime(): JSX.Element {
-  let [Anime,setAnime]=useState(
+  let [AnimeCarddataIndex,setAnimeCardDataIndex]=useState(0)
+  let [AnimeCard,setAnimeCard]=useState(
       [
         {
           anime_id:'',
@@ -13,49 +12,79 @@ export default function Anime(): JSX.Element {
         }
       ]
   )
-  let [animeIndex,setAnimeIndex]=useState(0)
+  let [randomQuotesdataIndex,setrandomQuotesDataIndex]=useState(0)
+  let [randomQuotes,setRandomQuotes]=useState([{
+    anime: '',
+    character: '',
+    quote: ''
+  }])
+  
+
   useEffect(()=>{
     // const url='https://animechan.vercel.app/api'
     //  const api =axios.create({baseURL:url})
     //  api.get('/quotes')
     //  .then(async (res)=>setAnime(res.data))
     //  .catch((err)=>console.log(err));
-// const url='https://anime-facts-rest-api.herokuapp.com/api/v1'
     // fetch('https://animechan.vercel.app/api/quotes')
-    //   .then(response => response.json())
-    //   .then(quotes => setData(quotes))
-      //functions
-     const facts=async ()=>{
-        const url='https://anime-facts-rest-api.herokuapp.com/api/v1'
+          //get api endpoint
+     const AnimeCards=async ()=>{
+        const url='https://anime-facts-rest-api.herokuapp.com/api/v1'//12
         const dataApi= await(await fetch(url)).json()
-        
-          return setAnime({...dataApi.data})
+          return setAnimeCard({...dataApi.data})
      }
-
-     const updateIndexAnime=()=>{
-        let randomVal=Math.floor(Math.random()*10);
-       return setAnimeIndex(randomVal);
+     const AnimeRandomQuotes=async ()=>{
+        const url='https://animechan.vercel.app/api/quotes'//9
+        const dataApi= await(await fetch(url)).json()
+          return setRandomQuotes({...dataApi})
      }
-        setTimeout(()=>updateIndexAnime(),3000);
+            //utils
+     const updateIndexData=(numb:number)=>{
+        let randomVal=Math.floor(Math.random()*numb);
+       return randomVal;
+     }    //set random data index every seconds
+        setInterval(()=>{
+          setAnimeCardDataIndex(updateIndexData(12));
+          setrandomQuotesDataIndex(updateIndexData(9))
+        },5000);
+        setInterval(()=>{
+          setrandomQuotesDataIndex(updateIndexData(9))
+        },10000);
      //call function
-     facts();
-      
-              // console.log(arrayobj());
+     AnimeCards();
+     AnimeRandomQuotes();
               
   },[])
-      // const {anime_id,anime_name,anime_img}=...Anime;
-      
-      const anime=Anime[animeIndex]//[randomVal];
+      const animeCard=AnimeCard[AnimeCarddataIndex]
+      const animeQuotes=randomQuotes[randomQuotesdataIndex];
   return (
-    <div className='text-dark d-flex justify-content-center'>
-      <Card
-        footer={anime.anime_name}
-        borderColor={'info'} 
-        headerTitle={anime.anime_name} 
-        headerIcon={'film'} 
-        headerIconColor={'info'} 
-        bodyImgSrc={anime.anime_img}        
-        />
-    </div>
+    <>
+        <div className='text-dark d-flex justify-content-center'>
+          <Card
+          footer={animeCard.anime_name}
+          borderColor={'info'}
+          headerTitle={animeCard.anime_name}
+          headerIcon={'film'}
+          headerIconColor={'info'}
+          bodyImgSrc={animeCard.anime_img}
+          body={''} 
+          className={'col-12 col-md-6 col-lg-4'}          
+          />
+        </div>
+        <div className='text-dark d-flex justify-content-center'>
+        <div className='text-dark d-flex justify-content-center'>
+          <Card
+            footer={animeQuotes.character}
+            borderColor={'info'}
+            headerTitle={animeQuotes.anime}
+            headerIcon={'chat-left-quote'}
+            headerIconColor={'dark w-50'}
+            bodyImgSrc={''}
+            body={animeQuotes.quote} 
+            className={'col-12'}            
+            />
+        </div>
+        </div>
+    </>
   )
 }

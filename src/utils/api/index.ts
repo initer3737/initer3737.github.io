@@ -4,7 +4,7 @@ import React from "react";
             method:string,
             url:string
         }
- async function Api(props:props) {
+ export default async function Api(props:props) {
         const{method,url}=props;
     const urlApi=url;
     const apiSendMethod={post:'post',get:'get',value:method.toLowerCase()}
