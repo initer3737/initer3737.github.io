@@ -5,7 +5,7 @@ import { Icon, Img } from '../../atom'
 import Button from '../../atom/button'
 export default function Footer() {
   return (
-    <footer className="mb-auto text-light row bg-4 p-2">
+    <footer className="mb-auto text-light row bg-4 p-2 mt-2">
         <div className="col-12">
             <h5 className="fs-5 text-capitalize text-light text-center">
               mero mero mero!
