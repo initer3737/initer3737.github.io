@@ -44,11 +44,11 @@ export default function HomePage()
                   <div className="">
                         <LinkToPage 
                             href={'#/game'}
-                            variant={'outline-primary rounded-pill px-5 py-2'}
+                            variant={'outline-primary'}
                             name={'Game'} 
                             icon={''} 
                             target={''} 
-                            className={'btn btn-outline-info py-3 px-5 shadow'}                          
+                            className={'btn btn-outline-info py-3 px-5 rounded-md shadow'}                          
                             />
                     </div>
               </div>
