@@ -39,15 +39,26 @@ export default function Anime(): JSX.Element {
           return setRandomQuotes({...dataApi})
      }
             //utils to generate random number depend on the argument
-     const updateIndexData=(numb:number)=>{
+     const updateIndexData=(numb:number,exceptNum:number,exceptable:boolean)=>{
         let randomVal=Math.floor(Math.random()*numb);
+          switch (exceptable) {
+            case true: //skip the number
+              randomVal=Math.floor(Math.random()*numb);
+                while (randomVal === exceptNum) {
+                  randomVal=Math.floor(Math.random()*numb);
+                }
+              break;
+            default:
+               randomVal=Math.floor(Math.random()*numb);
+              break;
+          }
        return randomVal;
      }    //set random data index every seconds
         setInterval(()=>{
-          setAnimeCardDataIndex(updateIndexData(12));
+          setAnimeCardDataIndex(updateIndexData(12,3,true)); //skip jujutsu kaisen at index 3 because it return 404
         },5000);
         setInterval(()=>{
-          setrandomQuotesDataIndex(updateIndexData(9));
+          setrandomQuotesDataIndex(updateIndexData(9,0,false));
         },15000);
      //call function that call the api endpoint
      AnimeCards();
