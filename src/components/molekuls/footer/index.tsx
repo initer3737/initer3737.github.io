@@ -8,7 +8,7 @@ export default function Footer() {
     <footer className="mb-auto text-light row bg-4 p-2 mt-2">
         <div className="col-12">
             <h5 className="fs-5 text-capitalize text-light text-center">
-              mero mero mero!
+             <Icon variant={'light'} icon={'hearts'} name={' mero mero mero!'}/> 
             </h5>
         </div>
         <div className="col-12 d-flex justify-content-between align-items-center align-self-center">
