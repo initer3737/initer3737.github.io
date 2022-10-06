@@ -45,9 +45,12 @@ export default function HomePage()
                   </div>
                   <div className="">
                         <Button 
-                          href={'#'} 
-                          variant={'outline-primary rounded-pill px-5 py-2'} 
-                          name={'Game'}
+                          href={'#/game'}
+                          variant={'outline-primary rounded-pill px-5 py-2'}
+                          name={'Game'} 
+                          onClick={''}  
+                          disableOnClick={true} 
+                          disableHref={false}                       
                           />
                     </div>
               </div>

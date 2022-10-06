@@ -4,4 +4,5 @@ import LyricSong from './lyricSong'
 import Quotes from './quotes'
 import Anime from './anime'
 import NotFound from './404'
-export {HomePage,About,LyricSong,Quotes,Anime,NotFound}
+import Game from './game'
+export {HomePage,About,LyricSong,Quotes,Anime,NotFound,Game}

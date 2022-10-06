@@ -10,7 +10,8 @@ import React from "react";
         Anime,
         About,
         LyricSong,
-        Quotes
+        Quotes,
+        Game
     } from '../pages'
     import {
         Header,
@@ -32,6 +33,7 @@ import React from "react";
                         <Route path="/lyrics" element={<LyricSong />} />
                         <Route path="/quotes" element={<Quotes />} />
                         <Route path="/Anime" element={<Anime />} />
+                        <Route path="/game" element={<Game/>} />
                         <Route path="/404" element={<NotFound/>} />
                         <Route path='*' element={<Navigate replace to='/404'/>} />
                     </Switch>
