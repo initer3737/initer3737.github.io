@@ -1,6 +1,5 @@
 import React from 'react'
 import { Icon, Img } from '../../atom';
-import Logo from '../../../imgs/404.gif'
     type props={
         className:string,
         headerTitle:string,

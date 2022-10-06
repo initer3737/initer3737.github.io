@@ -2,7 +2,6 @@ import React from 'react'
 import LogoFooter from '../../../imgs/cat-133.gif'
 import LogoFooter2 from '../../../imgs/kitten-7157608.png'
 import { Icon, Img } from '../../atom'
-import Button from '../../atom/button'
 export default function Footer() {
   return (
     <footer className="mb-auto text-light row bg-4 p-2 mt-2">
