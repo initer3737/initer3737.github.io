@@ -78,21 +78,34 @@ export default function HomePage()
 
       <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
         <h5><Icon variant={'primary'} icon={'info-circle'} name={''}/> information.</h5>
-        <div className="fs-4 d-flex gap-3 flex-wrap justify-content-evenly">
-          <LinkToPage 
-            href={"https://initer3737.github.io/course/html/pages/course.html"}
-            target="_blank"
-            variant={'primary'}
-            name={'website'}
-            icon={'globe'}                        
-          />
-          <LinkToPage 
-            href={"https://www.youtube.com/channel/UClsfa0LkA3_YMsFjW1M__sw"}
-            target="_blank"
-            variant={'primary'}
-            name={'youtube'}
-            icon={'youtube'}                        
-          />
+        <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
+          <>
+            <LinkToPage 
+              href={"https://initer3737.github.io/course/html/pages/course.html"}
+              target="_blank"
+              variant={'primary'}
+              name={'website'}
+              icon={'globe'}                        
+            />
+          </>
+          <>
+            <LinkToPage 
+              href={"https://initer3737.github.io/tongkronganku/pages/umkms/epri-cilok/toko.html"}
+              target="_blank"
+              variant={'primary'}
+              name={'bussines'}
+              icon={'shop-window'}                        
+            />
+          </>
+          <>
+            <LinkToPage 
+              href={"https://www.youtube.com/channel/UClsfa0LkA3_YMsFjW1M__sw"}
+              target="_blank"
+              variant={'primary'}
+              name={'youtube'}
+              icon={'youtube'}                        
+            />
+          </>
         </div>
       </div>
      </>
