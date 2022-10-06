@@ -3,7 +3,8 @@ import { Icon, Img, VideoFromYoutube } from '../../assembleComponent';
 import Logo1 from '../../../imgs/night-1851685_960_720.png'
 import Logo2 from '../../../imgs/the-background-292720.png'
 import Logo3 from '../../../imgs/wave-305226.png'
-import Logo4 from '../../../imgs/computer-2982270_1920.jpg'
+import Logo4 from '../../../imgs/watercolor-4116932.png'
+import Logo5 from '../../../imgs/landscape-1844226.svg'
 export default function LyricSong() {
   return (
     <div className='row'>
@@ -458,7 +459,7 @@ export default function LyricSong() {
 
        <div className="col-12 bg-1 d-flex align-items-center align-content-center">
         <Img
-          src={Logo4}
+          src={Logo5}
           className="shadow img-fluid col-12"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
@@ -594,7 +595,13 @@ export default function LyricSong() {
         </div>
       </div>
     </div>
-
+    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+        <Img
+          src={Logo4}
+          className="shadow img-fluid col-12"
+          alt="" srcset={''} width={''} height={''} attr={[]}       
+           />
+      </div>
     </div>
   );
 }
