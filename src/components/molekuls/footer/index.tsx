@@ -37,7 +37,7 @@ export default function Footer() {
             name={'kembali ke atas'} 
             onClick={()=>Top()} disableOnClick={false}            
             />
-          <h3 className='fw-bold'>
+          <h3 className='fw-bold mt-4'>
             <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}
             />
             </h3>
