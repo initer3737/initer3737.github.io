@@ -27,7 +27,7 @@ export default function Anime(): JSX.Element {
     //  .then(async (res)=>setAnime(res.data))
     //  .catch((err)=>console.log(err));
     // fetch('https://animechan.vercel.app/api/quotes')
-          //get api endpoint
+          //function that get api endpoint
      const AnimeCards=async ()=>{
         const url='https://anime-facts-rest-api.herokuapp.com/api/v1'//12
         const dataApi= await(await fetch(url)).json()
@@ -38,7 +38,7 @@ export default function Anime(): JSX.Element {
         const dataApi= await(await fetch(url)).json()
           return setRandomQuotes({...dataApi})
      }
-            //utils
+            //utils to generate random number depend on the argument
      const updateIndexData=(numb:number)=>{
         let randomVal=Math.floor(Math.random()*numb);
        return randomVal;
@@ -49,7 +49,7 @@ export default function Anime(): JSX.Element {
         setInterval(()=>{
           setrandomQuotesDataIndex(updateIndexData(9));
         },15000);
-     //call function
+     //call function that call the api endpoint
      AnimeCards();
      AnimeRandomQuotes();
               
