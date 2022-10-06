@@ -36,11 +36,10 @@ export default function Game() {
                     score:{`${score} ${status}`}
                 </h5>
                 <Button 
-                    href={'#/game'}
                     variant={'outline-info py-3 px-5 rounded-pill text-primary'}
                     name={'hit me!'}
                     onClick={()=>addScore()}
-                    disableOnClick={false} disableHref={true}                
+                    disableOnClick={false}                 
                     />
             </div>
         </div>

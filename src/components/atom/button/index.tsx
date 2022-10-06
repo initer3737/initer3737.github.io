@@ -1,32 +1,27 @@
 import React from "react";
     type props={
-        href:string,
         variant:string,
         name:string,
         onClick:any,
-        disableOnClick:boolean,
-        disableHref:boolean
-        // attr:object,
+        disableOnClick:boolean
     }
 export default function Button(props:props) {
-        const {variant,href,name,onClick,disableOnClick} =props;
+        const {variant,name,onClick,disableOnClick} =props;
         let condition;
-    switch (disableOnClick) {
+    switch (disableOnClick ) {
         case true:
-            condition=<a 
-                href={href} 
+            condition=<button 
                 className={`btn btn-${variant}`} 
                 >{name}
-                </a>
+                </button>
             break;
     
         default:
-          condition=<a 
-                href={href} 
+          condition=<button 
                 className={`btn btn-${variant}`} 
                 onClick={onClick}
                 >{name}
-            </a>
+            </button>
     }
     
     return condition;

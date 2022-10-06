@@ -33,25 +33,23 @@ export default function HomePage()
                         target="_blank"
                         variant={'primary'}
                         name={'instagram'}
-                        icon={'instagram'}                        
-                      />
+                        icon={'instagram'} className={''}                      />
                       <LinkToPage 
                         href={"https://github.com/initer3737"}
                         target="_blank"
                         variant={'primary'}
                         name={'github'}
-                        icon={'github'}                        
-                      />
+                        icon={'github'} className={''}                      />
                   </div>
                   <div className="">
-                        <Button 
-                          href={'#/game'}
-                          variant={'outline-primary rounded-pill px-5 py-2'}
-                          name={'Game'} 
-                          onClick={''}  
-                          disableOnClick={true} 
-                          disableHref={false}                       
-                          />
+                        <LinkToPage 
+                            href={'#/game'}
+                            variant={'outline-primary rounded-pill px-5 py-2'}
+                            name={'Game'} 
+                            icon={''} 
+                            target={''} 
+                            className={'btn btn-outline-info py-3 px-5 shadow'}                          
+                            />
                     </div>
               </div>
               </div>
@@ -85,8 +83,7 @@ export default function HomePage()
               target="_blank"
               variant={'primary'}
               name={'website'}
-              icon={'globe'}                        
-            />
+              icon={'globe'} className={''}            />
           </>
           <>
             <LinkToPage 
@@ -94,8 +91,7 @@ export default function HomePage()
               target="_blank"
               variant={'primary'}
               name={'bussines'}
-              icon={'shop-window'}                        
-            />
+              icon={'shop-window'} className={''}            />
           </>
           <>
             <LinkToPage 
@@ -103,8 +99,7 @@ export default function HomePage()
               target="_blank"
               variant={'primary'}
               name={'youtube'}
-              icon={'youtube'}                        
-            />
+              icon={'youtube'} className={''}            />
           </>
         </div>
       </div>

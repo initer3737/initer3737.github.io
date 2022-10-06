@@ -17,7 +17,8 @@ import favicon from '../../imgs/kitten-7157608.png';
     import {
         Header,
         Footer,
-        Nav
+        Nav,
+        ScrollToTop
     } from '../assembleComponent'
 
 export default function Routes(){
@@ -31,6 +32,7 @@ export default function Routes(){
      return (
         <div className="d-flex flex-column justify-space-between h-100 col-12">
             <div className="w-100">
+                <ScrollToTop/>
                 <Nav/>
                 <Header/>
             </div>

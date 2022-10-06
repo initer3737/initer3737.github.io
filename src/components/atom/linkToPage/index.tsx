@@ -6,12 +6,13 @@ type props={
     target:string,
     variant:string,
     name:string,
+    className:string,
     // onlyIcon:boolean,
 }
 export default function LinkToPage(props:props) {
-    const {href,icon,target,variant,name}=props;
+    const {href,icon,target,variant,name,className}=props;
   return (
-     <a href={href} target={target}>
+     <a href={href} target={target} className={className}>
         <Icon variant={variant} icon={icon} name={name} //nlyIcon={onlyIcon}
         />
     </a>

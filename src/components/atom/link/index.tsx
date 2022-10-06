@@ -8,7 +8,6 @@ import {NavLink as Links} from 'react-router-dom'
         icon:string,
         isIcon:boolean,
         target:string,
-        // attr:object,
     }
 export default function Link(props:props) {
         const {variant,href,name,isIcon,icon,target} =props;
@@ -22,7 +21,6 @@ export default function Link(props:props) {
                         variant={variant}
                         icon={icon}
                         name={name} 
-                        //onlyIcon={true} 
                    />
                     </Links> 
             break;
@@ -31,7 +29,6 @@ export default function Link(props:props) {
            condition= <Links 
             to={href} 
             className={`link-${variant}`} 
-            // {...attr}
             >{name}
             </Links>
             break;
