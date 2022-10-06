@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
     import {
         Routes as Switch, // similiar to switch
         Route ,
@@ -20,6 +20,9 @@ import React from "react";
     } from '../assembleComponent'
 
    export default function Routes(){
+    //  useState(()=>{
+    //     let favicon=;
+    //  },[])
      return (
         <div className="d-flex flex-column justify-space-between h-100 col-12">
             <div className="w-100">
