@@ -6,13 +6,11 @@ import Button from '../../atom/button'
 export default function Footer() {
   return (
     <footer className="mb-auto text-light row bg-4 p-2">
-      {/* <div className="container text-center">
-        <div className="col-3 col-md-6 col-12">
-         
+        <div className="col-12">
+            <h5 className="fs-5 text-capitalize text-light text-center">
+              mero mero mero!
+            </h5>
         </div>
-        <div className="col-3 col-md-6 col-12"></div>
-        <div className="col-3 col-md-6 col-12"></div>
-      </div> */}
         <div className="col-12 d-flex justify-content-between align-items-center align-self-center">
         <Img 
                 src={LogoFooter} 
