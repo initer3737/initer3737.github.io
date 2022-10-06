@@ -31,7 +31,7 @@ export default function Game() {
   return (
     <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
         <div className="">
-            <div className="container">
+            <div className="container d-flex flex-column ">
                 <h5 className="mx-5 my-4 fs-5">
                     score:{`${score} ${status}`}
                 </h5>
