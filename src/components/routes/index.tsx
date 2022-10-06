@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
+import favicon from '../../imgs/kitten-7157608.png';
     import {
         Routes as Switch, // similiar to switch
         Route ,
@@ -19,10 +20,14 @@ import React, { useState } from "react";
         Nav
     } from '../assembleComponent'
 
-   export default function Routes(){
-    //  useState(()=>{
-    //     let favicon=;
-    //  },[])
+export default function Routes(){
+  useEffect(() => {
+        const changeFavicon=(src:string)=>{
+           let favicon=document.getElementById('favicon')?.getAttribute('href')
+           return favicon=src;
+        }
+        changeFavicon(favicon)
+  }, []);
      return (
         <div className="d-flex flex-column justify-space-between h-100 col-12">
             <div className="w-100">
@@ -46,4 +51,4 @@ import React, { useState } from "react";
             </>   
         </div>
      )
-    }
+}
