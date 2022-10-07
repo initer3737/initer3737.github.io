@@ -10,16 +10,16 @@ export default function Game() {
     useEffect(()=>{
             const statusUpdate=()=>{
                 if(score <= 200){
-                    setStatus('yowai mono!')
+                    setStatus('<span className="alert alert-danger">yowai mono!</span>')
                 }
                 if(score >= 300){
-                    setStatus('not bad noobs!')
+                    setStatus('<span className="alert alert-warning">not bad noobs!</span>')
                 }
                 if(score >= 500){
-                    setStatus('not yet mature!')
+                    setStatus('<span className="alert alert-info">not yet mature!</span>')
                 }
                 if(score >= 1000){
-                    setStatus('you are sambal!')
+                    setStatus('<span className="alert alert-success">you are sambal!</span>')
                 }
             }
             statusUpdate();
