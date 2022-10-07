@@ -56,14 +56,12 @@ export default function HomePage()
 
           </div>
       </div>
-      {/* <!-- https://www.fiverr.com/share/lYqN8j --> */}
       <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
           <h5><Icon variant={'dark'} icon={'briefcase-fill'} name={''}
           /> framework.</h5>
             <h3><Icon variant={'danger'} icon={'ubuntu'} name={''}/> laravel</h3>
               <h3><Icon variant={'primary'} icon={'bootstrap'} name={''}/> bootstrap 5</h3>
           </div>
-    {/* </div> */}
 
       <div className="container bg-light shadow mt-5 d-flex flex-column  justify-content-center align-content-center align-items-center p-2">
           <h5><Icon variant={'dark'} icon={'code-slash'} name={''}/> language.</h5>
