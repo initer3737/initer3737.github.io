@@ -45,7 +45,7 @@ export default function Game() {
             <div className="container d-flex flex-column ">
                 <h5 className={`mx-5 my-4 fs-5 alert alert-success`}>
                     <Icon variant={'warning'} icon={'star-fill'} name={' '}/>
-                    HightScore:{`${localStorage.getItem('scorePlayer')}`}
+                    HightScore:{`${localStorage.getItem('scorePlayer')??'0'}`}
                 </h5>
                 <h5 className={`mx-5 my-4 fs-5 alert alert-${color} text-${color}`}>
                     score:{`${score} ${status}`}
