@@ -77,7 +77,7 @@ export default function HomePage()
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
           <>
             <LinkToPage 
-              href={"https://initer3737.github.io/course/html/pages/course.html"}
+              href={"https://initer3737.github.io/course/#/course"}
               target="_blank"
               variant={'primary'}
               name={'website'}
