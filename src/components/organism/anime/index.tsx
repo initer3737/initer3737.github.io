@@ -1,4 +1,3 @@
-import axios from 'axios'
 import {useEffect,useState} from 'react'
 import { Card } from '../../assembleComponent'
 export default function Anime(): JSX.Element {

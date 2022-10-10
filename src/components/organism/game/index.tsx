@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import { json } from 'stream/consumers';
+import PuingSound from '../../../sound/puing.mp3'
 import Logo from '../../../imgs/semangat_yuks.gif'
 import { 
     Button,
@@ -39,13 +39,14 @@ export default function Game() {
                 }
 
         },[score])//only run when status is change [dependencies]
-  return (
+        let Point=localStorage.getItem('scorePlayer');
+  return ( 
     <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
         <div className="">
             <div className="container d-flex flex-column ">
                 <h5 className={`mx-5 my-4 fs-5 alert alert-success`}>
                     <Icon variant={'warning'} icon={'star-fill'} name={' '}/>
-                    HightScore:{`${localStorage.getItem('scorePlayer')??'0'}`}
+                    HightScore:{`${Point??'0'}`}
                 </h5>
                 <h5 className={`mx-5 my-4 fs-5 alert alert-${color} text-${color}`}>
                     score:{`${score} ${status}`}
@@ -53,7 +54,11 @@ export default function Game() {
                 <Button 
                     variant={'outline-info py-3 px-5 rounded-pill text-primary'}
                     name={'hit me!'}
-                    onClick={()=>setScore((score)=>score+1)}
+                    onClick={()=>{
+                            const srcAudio=new Audio(PuingSound);
+                            if(score > Number(Point)){srcAudio.play();}
+                        return setScore((score)=>score+1)
+                    }}
                     disableOnClick={false}                 
                     />
             </div>
