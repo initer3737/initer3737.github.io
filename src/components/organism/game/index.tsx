@@ -9,7 +9,6 @@ export default function Game() {
     let [status,setStatus]=useState('');
     let [color,setColor]=useState('');
     useEffect(()=>{
-            const statusUpdate=()=>{
                 if(score <= 200){
                     setStatus('yowai mono!')
                     setColor('danger')
@@ -26,10 +25,12 @@ export default function Game() {
                     setStatus('you are sambal!')
                     setColor('success')
                 }
-            }
-            statusUpdate();
+                if(score >= 5000){
+                    setStatus('bruh stop! your waifu waiting at home!!')
+                    setColor('danger')
+                }
 
-        },[status])//only run when status is change [dependencies]
+        },[score])//only run when status is change [dependencies]
   return (
     <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
         <div className="">
