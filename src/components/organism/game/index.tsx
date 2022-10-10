@@ -1,13 +1,21 @@
 import React,{useEffect, useState} from 'react'
+import { json } from 'stream/consumers';
 import Logo from '../../../imgs/semangat_yuks.gif'
 import { 
     Button,
+    Icon,
     Img
  } from '../../assembleComponent'
 export default function Game() {
     let [score,setScore]=useState(0);
     let [status,setStatus]=useState('');
     let [color,setColor]=useState('');
+    useEffect(()=>{
+        if(score > JSON.parse(localStorage.getItem('scorePlayer')!!)){
+            localStorage.setItem('scorePlayer',JSON.stringify(score))
+        }
+    },[score]) //wwhen score change it become realtime
+
     useEffect(()=>{
                 if(score <= 200){
                     setStatus('yowai mono!')
@@ -35,6 +43,10 @@ export default function Game() {
     <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
         <div className="">
             <div className="container d-flex flex-column ">
+                <h5 className={`mx-5 my-4 fs-5 alert alert-success`}>
+                    <Icon variant={'warning'} icon={'star-fill'} name={' '}/>
+                    HightScore:{`${localStorage.getItem('scorePlayer')}`}
+                </h5>
                 <h5 className={`mx-5 my-4 fs-5 alert alert-${color} text-${color}`}>
                     score:{`${score} ${status}`}
                 </h5>
