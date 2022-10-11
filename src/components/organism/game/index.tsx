@@ -6,6 +6,7 @@ import fireMagicSound from '../../../sound/fire-magic-.mp3'
 import ak47calmSound from '../../../sound/ak47calm.mp3'
 import rifleSound from '../../../sound/rifle.mp3'
 import reloadSound from '../../../sound/reload.mp3'
+import emptygunSound from '../../../sound/empty-gun.mp3'
 import Logo from '../../../imgs/semangat_yuks.gif'
 import Ak12 from '../../../imgs/ak12.png'
 import Ak12fire from '../../../imgs/ak12-fire.png'
@@ -110,12 +111,12 @@ export default function Game() {
                       onClick={() => {
                             setAmmo((ammo)=>ammo<=0?ammo:ammo-1);
                             setIsFire(!isFire);
-                          if (score > Number(Point))srcAudio(ammo<=0?reloadSound:PuingSound).play(); 
+                          if (score > Number(Point))srcAudio(ammo<=0?emptygunSound:PuingSound).play(); 
                             if(score > 0 && score < 100 && ammo > 0)srcAudio(fireMagicSound).play()
                             if(score > 100 && score < 200 && ammo > 0)srcAudio(pistol9mmSound).play()
                             if(score > 200 && score < 300 && ammo > 0)srcAudio(ak47calmSound).play()
                             if(score > 300 && ammo < 0 )srcAudio(rifleSound).play()
-                            if(ammo <= 0 )srcAudio(reloadSound).play()
+                            if(ammo <= 0 )srcAudio(emptygunSound).play()
                            setScore((score) => ammo<=0?score:score + 1);
                       } }
                       disableOnClick={false}                   
