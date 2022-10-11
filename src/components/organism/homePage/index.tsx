@@ -45,8 +45,8 @@ export default function HomePage()
                         <LinkToPage 
                             href={'#/game'}
                             variant={'outline-primary'}
-                            name={'Game'} 
-                            icon={''} 
+                            name={' Game'} 
+                            icon={'controller'} 
                             target={''} 
                             className={'btn btn-outline-info py-3 px-5 rounded-md shadow'}                          
                             />
