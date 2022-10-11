@@ -1,4 +1,4 @@
-import React, { HtmlHTMLAttributes } from "react";
+import React from "react";
 import Icon from "../icon";
 import {NavLink as Links} from 'react-router-dom'
     type props={

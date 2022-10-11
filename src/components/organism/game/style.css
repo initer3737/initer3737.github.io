@@ -1,0 +1,4 @@
+.clear-focus:focus{
+    clear: both;
+    outline-style: none;
+}

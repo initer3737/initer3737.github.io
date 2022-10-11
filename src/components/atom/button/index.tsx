@@ -3,14 +3,15 @@ import React from "react";
         variant:string,
         name:string,
         onClick:any,
-        disableOnClick:boolean
+        disableOnClick:boolean,
+        // ref:null | MutableRefObject<null>
     }
 export default function Button(props:props) {
         const {variant,name,onClick,disableOnClick} =props;
         let condition;
     switch (disableOnClick ) {
         case true:
-            condition=<button 
+            condition=<button
                 className={`btn btn-${variant}`} 
                 >{name}
                 </button>

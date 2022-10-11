@@ -23,10 +23,11 @@ import favicon from '../../imgs/kitten-7157608.png';
 import {
      Login 
 } from "../services";
-import ProtectedRoutes from "../services/protectedRoutes";
+import {
+    ProtectedRoutes
+} from "../services";
 
 export default function Routes(){
-    const [login,setLogin]=useState(true)
   useEffect(() => {
         const changeFavicon=(src:string)=>{
            let favicon=document.getElementById('favicon')?.getAttribute('href')
@@ -48,7 +49,9 @@ export default function Routes(){
                         <Route path="/lyrics" element={<LyricSong />} />
                         <Route path="/quotes" element={<Quotes />} />
                         <Route path="/Anime" element={<Anime />} />
-                            <Route path="/game" element={login?<Game/>:<Login/>} />
+                        <Route element={<ProtectedRoutes/>}>
+                            <Route path="/game" element={<Game/>} />
+                        </Route>
                         <Route path="/login" element={<Login/>} />
                         <Route path="/404" element={<NotFound/>} />
                         <Route path='*' element={<Navigate replace to='/404'/>} />
