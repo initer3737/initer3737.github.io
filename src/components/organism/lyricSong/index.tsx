@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Img, VideoFromYoutube } from '../../assembleComponent';
+import { Icon, Img, Link, LinkToPage, Modal, VideoFromYoutube } from '../../assembleComponent';
 import Logo1 from '../../../imgs/night-1851685_960_720.png'
 import Logo2 from '../../../imgs/the-background-292720.png'
 import Logo3 from '../../../imgs/wave-305226.png'
@@ -340,11 +340,72 @@ export default function LyricSong() {
           lepaskan genggaman tangan ini Sekarang biarkan kita berdua berlari di
           malam hari
           <div className="mt-3">
+            <div className="text-center py-2">
+              <a role={'button'} data-bs-toggle={'modal'} data-bs-target={'#yoru'} className='btn btn-danger'>
+                <Icon variant={''} icon={'exclamation-octagon-fill'} name={' '}/>
+                warning!
+              </a>
+            </div>
             <VideoFromYoutube src={'https://www.youtube.com/embed/8omSc01lpbI'} />
           </div>
         </div>
       </div>
-
+        {/* modal */}
+          <Modal modalTitle={' informasi'} modalId={'yoru'} modalTitleIcon={'exclamation-circle'}>
+              <p className='text-center h5'>
+                <Icon variant={'light'} icon={'file-music-fill'} name={' yoru ni kakeru'}/>
+              </p>
+            <p>
+              lagu ini terinspirasi dari novel Thanatos no Yuuwaku
+            </p>
+            <p>
+              Novel "The Temptation of Thanatos" yang diposting di situs menulis online ramai menjadi bahan perbincangan. Penulis aslinya adalah "Maya Hoshino". Belum jelas profil detail dari penulis ini, tetapi ada spekulasi bahwa tampaknya dia adalah seorang mahasiswa yang masih aktif. Seperti yang dikatakan penulis itu sendiri, "Saya suka orang yang sedikit kejam",  tulisan singkat "The Temptation of Thanatos" ini adalah cerita yang kelam. The Temptation of Thanatos, atau dalam bahasa Jepang 
+            </p>
+            <p>
+            berjudul asli Tanatosu No Yuuwaku (タナトスの誘惑) adalah cerita yang ditulis dengan tema "Aku dan kamu yang frustasi di malam musim panas". Sebenarnya cerita seperti apa yang bisa diceritakan dari tema ini?
+              Meski merupakan kata yang jarang didengar, "Thanatos" adalah kata yang memiliki arti terkait dengan "kematian". Dalam mitologi Yunani, istilah "malaikat maut" digunakan oleh psikiater Freud, dalam menyebut "godaan untuk mengakhiri hidup". Dengan kata lain, apakah judul "The Temptation of Thanatos" berarti "undangan untuk mengakhiri hidup"? Seperti yang bisa kamu bayangkan dari judul ini, The Temptation of Thanatos mungkin adalah cerita tentang orang yang ingin mengakhiri hidupnya sendiri.
+            </p>
+              <div className="d-flex gap-2 flex-column">
+                <LinkToPage 
+                  href={'https://zonabanten.pikiran-rakyat.com/entertainment/pr-232624772/makna-kelam-di-balik-lagu-yoru-ni-kakeru-yoasobi-yang-viral-di-tiktok-ternyata-tak-seasyik-iramanya'}
+                  variant={'info'}
+                  name={' link referensi'}
+                  icon={'info-circle'}
+                  target={'_blank'} 
+                  className={''}                  
+                  />
+                <LinkToPage 
+                  href={'https://we-xpats.com/id/guide/as/jp/detail/3153/'} 
+                  variant={'info'} 
+                  name={' link referensi'} 
+                  icon={'info-circle'} 
+                  className={''}
+                  target={'_blank'}
+                  />
+              </div>
+              <div className='text-center h5 d-flex flex-column gap-1 py-2'>
+                <Icon variant={'danger'} icon={'exclamation-triangle-fill'} name={' disclaimer'}/>
+                <p className='h6'>
+                  lagu ini berisi tentang kontent 18+ yang tak layak didengar oleh anak-anak
+                  jauhkan dari telinga anak-anak!
+                </p>
+              </div>
+            <div className='d-flex flex-column gap-2'>
+                <p>
+                  jika ada perasaan keinginan untuk bunuh diri klik link di bawah
+                </p>
+              
+                <LinkToPage 
+                    href={'https://www.intothelightid.org/tentang-bunuh-diri/hotline-bunuh-diri-di-indonesia/'} 
+                    variant={'info'} 
+                    name={' call-hotline'} 
+                    icon={'telephone-inbound'}
+                    className={'text-center'}
+                    target={'_blank'}
+                  />
+              </div>
+          </Modal>
+        {/* end of modal */}
       <div className="col-12 bg-1 d-flex align-items-center align-content-center">
         <Img
           src={Logo2}

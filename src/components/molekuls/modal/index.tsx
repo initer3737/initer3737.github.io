@@ -1,10 +1,35 @@
 import React from 'react'
+import { Icon } from '../../assembleComponent'
 type props={
     modalTitle:string,
     children:Element | undefined | any,
+    modalId:string,
+    modalTitleIcon:string,
 }
 export default function Modal(props:props) {
+    const {modalId,children,modalTitle,modalTitleIcon}=props
   return (
-    <div>Modal</div>
+    <div className="modal fade" id={modalId}>
+    <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable text-centered">
+      <div className="modal-content text-light bg-4">
+        <div className="modal-header">
+          <h5 className="modal-title">
+            <Icon variant={''} icon={modalTitleIcon} name={modalTitle}/>
+          </h5>
+          <button className="btn-close btn-close-white" data-bs-dismiss="modal" />
+        </div>
+        <div className="modal-body">
+          <blockquote>
+           <div className="d-flex flex-column">
+                  {children}
+           </div>
+          </blockquote>
+        </div>
+        <div className="modal-footer">
+          <button className="btn btn-danger" data-bs-dismiss="modal"><i className="bi bi-x" /> Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
   )
 }
