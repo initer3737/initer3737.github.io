@@ -18,13 +18,16 @@ import {
     Icon,
     Img
  } from '../../assembleComponent'
+import { useLocation } from 'react-router-dom'
+import { useThemes } from '../../services'
  
 export default function Game() {
     let [status,setStatus]=useState('');
     let [score,setScore]=useState(0);
     let [color,setColor]=useState('');
     let [point,setPoint]=useState(localStorage);
-        let onpauseaudio=useRef(); //when change route it will be pause
+    const Theme=()=>useThemes()
+        // let onpauseaudio=useRef(); //when change route it will be pause
     const srcAudio = (src:string)=>new Audio(src);
     const themes=[
         themeSound1,
@@ -35,15 +38,10 @@ export default function Game() {
         themeSound6,
         themeSound7,
     ];const song=new Date().getDay();
-    // useEffect(()=>{
-    //     onpauseaudio.current =srcAudio(themes[song])
-    //     onpauseaudio.current.play()
+        const location=useLocation()
+            const {pathname}=location
+            const path=pathname.split('/')
         
-    // },[])
-    // useEffect(()=>{
-    //     onpauseaudio.current.pause()
-        
-    // },[])
     useEffect(()=>{
         if(score > JSON.parse(localStorage.getItem('scorePlayer')!!)){
            point.setItem('scorePlayer',JSON.stringify(score))
@@ -78,7 +76,7 @@ export default function Game() {
     <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
         <div className="">
             <div className="container d-flex flex-column ">
-                <div className="d-flex">
+                <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
                 <h5 className={`mx-5 my-4 fs-5 alert alert-success`}>
                     <Icon variant={'warning'} icon={'star-fill'} name={' '}/>
                     HightScore:{`${Point??'0'}`}
@@ -87,7 +85,7 @@ export default function Game() {
                     
                     <Button 
                         variant={'outline-danger rounded-pill px-3 py-2'} name={`reset game`} 
-                        onClick={(e:any)=>{
+                        onClick={()=>{
                                 window.location.reload();
                             return point.setItem('scorePlayer',"0")
                             }} disableOnClick={false}/>

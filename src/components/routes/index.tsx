@@ -21,7 +21,7 @@ import favicon from '../../imgs/kitten-7157608.png';
         ScrollToTop
     } from '../assembleComponent'
 import {
-     Login 
+     Login, useThemes 
 } from "../services";
 import {
     ProtectedRoutes
@@ -34,7 +34,9 @@ export default function Routes(){
            return favicon=src;
         }
         changeFavicon(favicon)
-  }, []);
+    }, []);
+    // useThemes();
+
      return (
         <div className="d-flex flex-column justify-space-between h-100 col-12">
             <div className="w-100">
