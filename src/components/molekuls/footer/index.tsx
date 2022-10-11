@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import LogoFooter from '../../../imgs/cat-133.gif'
 import LogoFooter2 from '../../../imgs/kitten-7157608.png'
-import { Button, Icon, Img, LinkToPage } from '../../atom'
+import { Button, Icon, Img } from '../../atom'
 export default function Footer() {
   const Top=()=>window.scrollTo(0,0)
   return (
@@ -36,7 +36,9 @@ export default function Footer() {
             variant={'outline-info py-3 px-5'}  
             name={'kembali ke atas'} 
             onClick={()=>Top()} disableOnClick={false}            
-            />
+            >
+              <Icon variant={'light'} icon={'arrow-bar-up'} name={''}/>
+            </Button>
           <h3 className='fw-bold mt-4'>
             <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}
             />

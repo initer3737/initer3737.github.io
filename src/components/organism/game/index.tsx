@@ -1,10 +1,7 @@
 import React,{useEffect, useState,useRef} from 'react'
 import'./style.css'
 import PuingSound from '../../../sound/puing.mp3'
-import pistol9mmSound from '../../../sound/9mm.mp3'
-import fireMagicSound from '../../../sound/fire-magic-.mp3'
 import ak47calmSound from '../../../sound/ak47calm.mp3'
-import rifleSound from '../../../sound/rifle.mp3'
 import reloadSound from '../../../sound/reload.mp3'
 import emptygunSound from '../../../sound/empty-gun.mp3'
 import Logo from '../../../imgs/semangat_yuks.gif'
@@ -32,6 +29,7 @@ export default function Game() {
             //useTheme is call from the routes
         },[])
     useEffect(()=>{
+                //store to local storage 
         if(score > JSON.parse(localStorage.getItem('scorePlayer')!!) && ammo >= 0){
            point.setItem('scorePlayer',JSON.stringify(score))
         }
@@ -58,32 +56,38 @@ export default function Game() {
                     setStatus('bruh stop! your waifu waiting at home!!')
                     setColor('danger')
                 }
-                    // resetGame();
+
                 },[score])//only run when status is change [dependencies]
                 let Point=point.getItem('scorePlayer');
   return ( 
-    <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
+    <div className="d-flex flex-column-reverse flex-sm-row justify-content-between ">
         <div className="">
-            <div className="container d-flex flex-column ">
+            <div className="container gap-3 d-flex flex-column ">
+                <div className="bg-4 color-1 text-center mt-2">
+                    <h3>counter strike!</h3>
+                </div>
                 <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
-                <h5 className={`mx-5 my-4 fs-5 alert alert-success`}>
+                <h5 className={`mx-5 fs-5 alert alert-success`}>
                     <Icon variant={'warning'} icon={'star-fill'} name={' '}/>
                     HightScore:{`${Point??'0'}`}
                 </h5>
-                <h5 className={`mx-5 my-4 fs-5`}>
+                <h5 className={`mx-5 fs-5`}>
                     
                     <Button 
                         variant={'outline-danger rounded-pill px-3 py-2'} name={`reset game`} 
                         onClick={()=>{
                                 window.location.reload();
                             return point.setItem('scorePlayer',"0")
-                            }} disableOnClick={false}/>
+                            }} disableOnClick={false}>
+                                <Icon variant={'light bg-danger rounded-pill px-2'} icon={'arrow-clockwise'} name={''}/>
+                            </Button>
                 </h5>
                 </div>
-                <h5 className={`mx-5 my-4 fs-5 alert alert-${color} text-${color}`}>
+                <div className="d-flex flex-column gap-3">
+                <h5 className={`mx-5 fs-5 alert alert-${color} text-${color}`}>
                     score:{`${(score)} ${status}`}
                 </h5>
-                <div className="alert alert-warning">
+                <div className="alert alert-success shadow rounded-md">
                     <div className="d-flex flex-row justify-content-between align-items-center">
                       <div className="d-flex flex-row justify-content-between gap-2">
                             <p>
@@ -92,6 +96,7 @@ export default function Game() {
                             
                             <button onClick={()=>{
                                     setAmmo(30)
+                                    setIsFire(false);
                                     srcAudio(reloadSound).play();
                                 }} className={'w-25 h-25 rounded-pill'}>
                                 <Icon variant={'danger w-100'} icon={'arrow-clockwise'} name={''}/>
@@ -109,26 +114,28 @@ export default function Game() {
                       variant={'outline-info py-3 px-5 rounded-pill text-primary clear-focus'}
                       name={'Fire!'}
                       onClick={() => {
+                                //sound setting
                             setAmmo((ammo)=>ammo<=0?ammo:ammo-1);
                             setIsFire(!isFire);
-                          if (score > Number(Point))srcAudio(ammo<=0?emptygunSound:PuingSound).play(); 
-                            if(score > 0 && score < 100 && ammo > 0)srcAudio(fireMagicSound).play()
-                            if(score > 100 && score < 200 && ammo > 0)srcAudio(pistol9mmSound).play()
-                            if(score > 200 && score < 300 && ammo > 0)srcAudio(ak47calmSound).play()
-                            if(score > 300 && ammo < 0 )srcAudio(rifleSound).play()
+                            if(score > JSON.parse(Point??'0') && ammo > 0 )srcAudio(PuingSound).play()
+                            if(score > 0 && ammo > 0 )srcAudio(ak47calmSound).play()
                             if(ammo <= 0 )srcAudio(emptygunSound).play()
                            setScore((score) => ammo<=0?score:score + 1);
                       } }
                       disableOnClick={false}                   
-                      />
+                      >
+                        <Icon variant={'danger'} icon={'fire'} name={''}/>
+                      </Button>
+                </div>
             </div>
         </div>
+        
        <div className="">
             <Img 
                 src={Logo} 
                 alt="" 
                 srcset={''} 
-                className={'img-fluid'} 
+                className={'w-100'} 
                 width={''} 
                 height={''} 
                 attr={[]}
