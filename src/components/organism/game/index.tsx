@@ -2,23 +2,18 @@ import React,{useEffect, useState,useRef} from 'react'
 import'./style.css'
 import PuingSound from '../../../sound/puing.mp3'
 import pistol9mmSound from '../../../sound/9mm.mp3'
-import themeSound1 from '../../../sound/teme-gaming-1.mp3'
-import themeSound2 from '../../../sound/teme-gaming-2.mp3'
-import themeSound3 from '../../../sound/teme-gaming-3.mp3'
-import themeSound4 from '../../../sound/teme-gaming-4.mp3'
-import themeSound5 from '../../../sound/teme-gaming-5.mp3'
-import themeSound6 from '../../../sound/teme-gaming-6.mp3'
-import themeSound7 from '../../../sound/teme-gaming-7.mp3'
 import fireMagicSound from '../../../sound/fire-magic-.mp3'
 import ak47calmSound from '../../../sound/ak47calm.mp3'
 import rifleSound from '../../../sound/rifle.mp3'
+import reloadSound from '../../../sound/reload.mp3'
 import Logo from '../../../imgs/semangat_yuks.gif'
+import Ak12 from '../../../imgs/ak12.png'
+import Ak12fire from '../../../imgs/ak12-fire.png'
 import { 
     Button,
     Icon,
     Img
  } from '../../assembleComponent'
-import { useLocation } from 'react-router-dom'
 import { useThemes } from '../../services'
  
 export default function Game() {
@@ -26,29 +21,20 @@ export default function Game() {
     let [score,setScore]=useState(0);
     let [color,setColor]=useState('');
     let [point,setPoint]=useState(localStorage);
+    let [ammo,setAmmo]=useState(30);
+    let [isFire,setIsFire]=useState(false);
     const Theme=()=>useThemes()
         // let onpauseaudio=useRef(); //when change route it will be pause
     const srcAudio = (src:string)=>new Audio(src);
-    const themes=[
-        themeSound1,
-        themeSound2,
-        themeSound3,
-        themeSound4,
-        themeSound5,
-        themeSound6,
-        themeSound7,
-    ];const song=new Date().getDay();
-        const location=useLocation()
-            const {pathname}=location
-            const path=pathname.split('/')
         useEffect(()=>{
-            
+            //this is to recieve theme music on every render because 
+            //useTheme is call from the routes
         },[])
     useEffect(()=>{
-        if(score > JSON.parse(localStorage.getItem('scorePlayer')!!)){
+        if(score > JSON.parse(localStorage.getItem('scorePlayer')!!) && ammo >= 0){
            point.setItem('scorePlayer',JSON.stringify(score))
         }
-    },[score]) //wwhen score change it become realtime
+    },[score,point]) //wwhen score change it become realtime
 
     useEffect(()=>{
                 if(score <= 200){
@@ -96,17 +82,41 @@ export default function Game() {
                 <h5 className={`mx-5 my-4 fs-5 alert alert-${color} text-${color}`}>
                     score:{`${(score)} ${status}`}
                 </h5>
+                <div className="alert alert-warning">
+                    <div className="d-flex flex-row justify-content-between align-items-center">
+                      <div className="d-flex flex-row justify-content-between gap-2">
+                            <p>
+                                {`${ammo} |  `} /90 <Icon variant={'warning'} icon={'distribute-horizontal'} name={' '}/>
+                            </p>
+                            
+                            <button onClick={()=>{
+                                    setAmmo(30)
+                                    srcAudio(reloadSound).play();
+                                }} className={'w-25 h-25 rounded-pill'}>
+                                <Icon variant={'danger w-100'} icon={'arrow-clockwise'} name={''}/>
+                            </button>
+                      </div>
+                        <div className="w-25">
+                            <Img src={
+                                    isFire&&ammo>0?Ak12fire:Ak12
+                                } alt={'ak-12'} srcset={''} className={'img-fluid'} width={''} height={''} attr={[]}/>
+                            <p>ak-12</p>
+                        </div>
+                    </div>
+                </div>
                 <Button 
                       variant={'outline-info py-3 px-5 rounded-pill text-primary clear-focus'}
-                      name={'hit me!'}
+                      name={'Fire!'}
                       onClick={() => {
-                         
-                          if (score > Number(Point))srcAudio(PuingSound).play(); 
-                            if(score > 0 && score < 100)srcAudio(fireMagicSound).play()
-                            if(score > 100 && score < 200)srcAudio(pistol9mmSound).play()
-                            if(score > 200 && score < 300)srcAudio(ak47calmSound).play()
-                            if(score > 300 )srcAudio(rifleSound).play()
-                          return setScore((score) => score + 1);
+                            setAmmo((ammo)=>ammo<=0?ammo:ammo-1);
+                            setIsFire(!isFire);
+                          if (score > Number(Point))srcAudio(ammo<=0?reloadSound:PuingSound).play(); 
+                            if(score > 0 && score < 100 && ammo > 0)srcAudio(fireMagicSound).play()
+                            if(score > 100 && score < 200 && ammo > 0)srcAudio(pistol9mmSound).play()
+                            if(score > 200 && score < 300 && ammo > 0)srcAudio(ak47calmSound).play()
+                            if(score > 300 && ammo < 0 )srcAudio(rifleSound).play()
+                            if(ammo <= 0 )srcAudio(reloadSound).play()
+                           setScore((score) => ammo<=0?score:score + 1);
                       } }
                       disableOnClick={false}                   
                       />
