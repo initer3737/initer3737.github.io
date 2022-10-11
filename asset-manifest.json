@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.74ef13a1.css",
-    "main.js": "/static/js/main.934878dc.js",
+    "main.js": "/static/js/main.f20e0c8e.js",
     "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/semangat_yuks.gif": "/static/media/semangat_yuks.16c8f89b18a0865a893c.gif",
@@ -28,20 +28,17 @@
     "static/media/ak12.png": "/static/media/ak12.539993c456c8d69ae9f5.png",
     "static/media/book-158812.png": "/static/media/book-158812.cce0cc7959d103e0bfbb.png",
     "static/media/puing.mp3": "/static/media/puing.fd2c2fea27379cbc44da.mp3",
-    "static/media/9mm.mp3": "/static/media/9mm.abbc2a89941f70dbc1cc.mp3",
     "static/media/ak47calm.mp3": "/static/media/ak47calm.ebb336310d8aec9550d5.mp3",
-    "static/media/rifle.mp3": "/static/media/rifle.72b5b2869a7b0410f279.mp3",
     "static/media/reload.mp3": "/static/media/reload.b2a72bf3291a2d2f97be.mp3",
-    "static/media/fire-magic-.mp3": "/static/media/fire-magic-.2d4ea5ba61f1cc8896ae.mp3",
-    "static/media/landscape-1844226.svg": "/static/media/landscape-1844226.353716af61952fa800d7b9ff7776bd3b.svg",
+    "static/media/landscape-1844226.svg": "/static/media/landscape-1844226.e74412425f2151ce2e7ff4c09f54c6d1.svg",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.74ef13a1.css.map": "/static/css/main.74ef13a1.css.map",
-    "main.934878dc.js.map": "/static/js/main.934878dc.js.map",
+    "main.f20e0c8e.js.map": "/static/js/main.f20e0c8e.js.map",
     "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74ef13a1.css",
-    "static/js/main.934878dc.js"
+    "static/js/main.f20e0c8e.js"
   ]
 }
