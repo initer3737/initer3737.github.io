@@ -80,8 +80,8 @@ export default function HomePage()
               href={"https://initer3737.github.io/course/#/course"}
               target="_blank"
               variant={'primary'}
-              name={'website'}
-              icon={'globe'} className={''}            />
+              name={'blog'}
+              icon={'file-richtext-fill'} className={''}            />
           </>
           <>
             <LinkToPage 
