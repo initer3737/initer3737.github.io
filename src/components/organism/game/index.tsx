@@ -41,7 +41,9 @@ export default function Game() {
         const location=useLocation()
             const {pathname}=location
             const path=pathname.split('/')
-        
+        useEffect(()=>{
+            
+        },[])
     useEffect(()=>{
         if(score > JSON.parse(localStorage.getItem('scorePlayer')!!)){
            point.setItem('scorePlayer',JSON.stringify(score))
