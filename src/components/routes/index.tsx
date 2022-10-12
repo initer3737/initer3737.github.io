@@ -40,7 +40,7 @@ export default function Routes(){
         //     setLoading(false);
         // },10000)
     }, []);
-    // useThemes();
+    useThemes();
 
      return (
         <div className="d-flex flex-column h-100 col-12">

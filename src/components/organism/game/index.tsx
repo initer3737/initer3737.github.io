@@ -8,6 +8,7 @@ import emptygunSound from "../../../sound/empty-gun.mp3";
 import Logo from "../../../imgs/semangat_yuks.gif";
 import Ak12 from "../../../imgs/ak12.png";
 import Ak12fire from "../../../imgs/ak12-fire.png";
+import spesialForce from "../../../imgs/spesial-force.jpg";
 import { Button, Icon, Img, Modal } from "../../assembleComponent";
 import { useThemes } from "../../services";
 
@@ -19,7 +20,7 @@ export default function Game() {
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
   //utils
-  const Theme = () => useThemes();
+  //  useThemes();
   // let onpauseaudio=useRef(); //when change route it will be pause
   const srcAudio = (src: string) => new Audio(src);
   const keyPress=(key:string,id:string)=>{
@@ -66,12 +67,21 @@ export default function Game() {
     }
   }, [score]); //only run when status is change [dependencies]
   let Point = point.getItem("scorePlayer");
+  const spesialForceStyle={
+      width:'12vw'
+  }
   return (
     <div className="d-flex flex-column-reverse flex-sm-row justify-content-between ">
       <div className="">
         <div className="container gap-3 d-flex flex-column ">
-          <div className="bg-4 color-1 text-center mt-2">
-            <h3>counter strike!</h3>
+          <div className="bg-4 color-1 mt-2 justify-content-evently align-items-center d-flex gap-3">
+              <img src={spesialForce} className="shadow" alt="spesial force" style={spesialForceStyle}/>
+            <div className="mx-auto text-center">
+              <h3>
+                <Icon variant={"info"} icon={"lightning"} name={""}/>
+                counter strike!
+              </h3>
+            </div>
           </div>
           <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
             <h5 className={`mx-5 fs-5 alert alert-success`}>
@@ -101,7 +111,7 @@ export default function Game() {
               score:{`${score} ${status}`}
             </h5>
             <div className="alert alert-success shadow rounded-md">
-            <div className={`bg-4 text-center text-white p-2 rounded shadow d-none d-sm-block`}
+            <div className={`bg-4 text-center text-white p-2 rounded shadow `}
             >
               <h3>
                 <Icon 
