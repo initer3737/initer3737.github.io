@@ -1,7 +1,7 @@
 import { HashLoader } from 'react-spinners';
 export default function LoadingData(){
     return( 
-     <div className="d-flex justify-content-center col-12">
+     <div className="d-flex justify-content-center col-12 align-items-baseline ">
          <HashLoader
          // cssOverride={}
          size={"200"}
