@@ -1,0 +1,13 @@
+.form-login{
+    background: url('../../../../imgs/spesial-force.jpg') no-repeat;
+    position: relative;
+    background-size: cover;
+    display: flex;
+    padding:40px 70px;
+    justify-content: flex-end;
+    align-items: center;  
+}
+
+.opacity-form{
+    opacity: 0.7;
+}
