@@ -1,13 +1,14 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useMemo } from "react";
 import "./style.css";
 import PuingSound from "../../../sound/puing.mp3";
 import ak47calmSound from "../../../sound/ak47calm.mp3";
 import reloadSound from "../../../sound/reload.mp3";
+import reloadSound2 from "../../../sound/reload2.mp3";
 import emptygunSound from "../../../sound/empty-gun.mp3";
 import Logo from "../../../imgs/semangat_yuks.gif";
 import Ak12 from "../../../imgs/ak12.png";
 import Ak12fire from "../../../imgs/ak12-fire.png";
-import { Button, Icon, Img } from "../../assembleComponent";
+import { Button, Icon, Img, Modal } from "../../assembleComponent";
 import { useThemes } from "../../services";
 
 export default function Game() {
@@ -17,15 +18,20 @@ export default function Game() {
   let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
+  //utils
   const Theme = () => useThemes();
   // let onpauseaudio=useRef(); //when change route it will be pause
   const srcAudio = (src: string) => new Audio(src);
+  const keyPress=(key:string,id:string)=>{
+      document.addEventListener('keyup',(e)=>{
+        return e.key === key?document.getElementById(id)?.click():''
+    })
+  }
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
-    document.addEventListener('keyup',(e)=>{
-       return e.key === 'r'?document.getElementById('reload')?.click():''
-    })
+      keyPress('r','reload')
+  //pop up ,modal if condition
   }, []);
   useEffect(() => {
     //store to local storage
@@ -35,7 +41,7 @@ export default function Game() {
     ) {
       point.setItem("scorePlayer", JSON.stringify(score));
     }
-  }, [score, point]); //wwhen score change it become realtime
+  }, [score, point,ammo]); //wwhen score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -95,6 +101,11 @@ export default function Game() {
               score:{`${score} ${status}`}
             </h5>
             <div className="alert alert-success shadow rounded-md">
+            <div className={`bg-4 text-center text-white p-2 rounded shadow d-none d-sm-${ammo<=0?'block':'none'}`}>
+              <h3>
+                <Icon variant={"info"} icon={"exclamation-triangle"} name={" magazine is empty!"}/>
+                </h3>
+            </div>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div className="d-flex flex-row justify-content-between gap-2">
                   <p>
@@ -108,9 +119,11 @@ export default function Game() {
 
                   <button id="reload"
                     onClick={() => {
-                      setAmmo(30);
+                      const reloadAmmo=srcAudio(ammo==30?'':reloadSound2)
+                        reloadAmmo.play()
+                      // document.addEventListener('ended',document.getElementById(srcAudio(reloadSound2).play)
+                      setAmmo(30)
                       setIsFire(false);
-                      srcAudio(reloadSound).play();
                     }}
                     className={"w-25 h-25 rounded-pill"}
                   >
@@ -142,13 +155,13 @@ export default function Game() {
               name={"Fire!"}
               onClick={() => {
                 //sound setting
-                setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
-                setIsFire((isFire)=>!isFire);
-                if (score > JSON.parse(Point ?? "0") && ammo > 0)
-                  srcAudio(PuingSound).play();
-                if (score > 0 && ammo > 0) srcAudio(ak47calmSound).play();
-                if (ammo <= 0) srcAudio(emptygunSound).play();
-                setScore((score) => (ammo <= 0 ? score : score + 1));
+                  setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
+                  setIsFire((isFire)=>!isFire);
+                  if (score > JSON.parse(Point ?? "0") && ammo > 0)
+                    srcAudio(PuingSound).play();
+                  if (score > 0 && ammo > 0) srcAudio(ak47calmSound).play();
+                  if (ammo <= 0) srcAudio(emptygunSound).play();
+                  setScore((score) => (ammo <= 0 ? score : score + 1));
               }}
               disableOnClick={false}
             >
@@ -169,6 +182,12 @@ export default function Game() {
           attr={[]}
         />
       </div>
+      {/* button triger modal */}
+     
+      {/* button triger modal end */}
+    {/* modal */}
+    
+    {/* modal end */}
     </div>
   );
 }
