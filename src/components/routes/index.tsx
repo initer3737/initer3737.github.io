@@ -26,19 +26,24 @@ import {
 import {
     ProtectedRoutes
 } from "../services";
+import LoadingData from "../services/loading";
 
 export default function Routes(){
+    // let [loading,setLoading]=useState(true);
   useEffect(() => {
         const changeFavicon=(src:string)=>{
            let favicon=document.getElementById('favicon')?.getAttribute('href')
            return favicon=src;
         }
         changeFavicon(favicon)
+        // setTimeout(()=>{
+        //     setLoading(false);
+        // },10000)
     }, []);
     // useThemes();
 
      return (
-        <div className="d-flex flex-column justify-space-between h-100 col-12">
+        <div className="d-flex flex-column h-100 col-12">
             <div className="w-100">
                 <ScrollToTop/>
                 <Nav/>

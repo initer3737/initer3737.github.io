@@ -101,9 +101,18 @@ export default function Game() {
               score:{`${score} ${status}`}
             </h5>
             <div className="alert alert-success shadow rounded-md">
-            <div className={`bg-4 text-center text-white p-2 rounded shadow d-none d-sm-${ammo<=0?'block':'none'}`}>
+            <div className={`bg-4 text-center text-white p-2 rounded shadow d-none d-sm-block`}
+            >
               <h3>
-                <Icon variant={"info"} icon={"exclamation-triangle"} name={" magazine is empty!"}/>
+                <Icon 
+                  variant={"info"} 
+                  icon={"exclamation-triangle"} 
+                  name={`
+                   ${ammo==30?'magazine is fully loaded!':'magazine '} 
+                   ${ammo>=30 && ammo>1?'':''} 
+                  ${ammo==0?'is empty':''}
+                  ${ammo<30?ammo===0?'':ammo+' bullet':''}
+                   `}/>
                 </h3>
             </div>
               <div className="d-flex flex-row justify-content-between align-items-center">
@@ -119,9 +128,10 @@ export default function Game() {
 
                   <button id="reload"
                     onClick={() => {
-                      const reloadAmmo=srcAudio(ammo==30?'':reloadSound2)
+                      const reloadAmmo=srcAudio(ammo==30?reloadSound:reloadSound2)
                         reloadAmmo.play()
                       // document.addEventListener('ended',document.getElementById(srcAudio(reloadSound2).play)
+                      // console.log('reload end?>>'+reloadAmmo.ended);
                       setAmmo(30)
                       setIsFire(false);
                     }}
