@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.74ef13a1.css",
-    "main.js": "/static/js/main.3d54c340.js",
+    "main.js": "/static/js/main.6ae5af0f.js",
     "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/semangat_yuks.gif": "/static/media/semangat_yuks.16c8f89b18a0865a893c.gif",
@@ -30,15 +30,16 @@
     "static/media/puing.mp3": "/static/media/puing.fd2c2fea27379cbc44da.mp3",
     "static/media/ak47calm.mp3": "/static/media/ak47calm.ebb336310d8aec9550d5.mp3",
     "static/media/reload2.mp3": "/static/media/reload2.4a1bbbfd04df737a5586.mp3",
+    "static/media/reload.mp3": "/static/media/reload.b2a72bf3291a2d2f97be.mp3",
     "static/media/landscape-1844226.svg": "/static/media/landscape-1844226.e74412425f2151ce2e7ff4c09f54c6d1.svg",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.74ef13a1.css.map": "/static/css/main.74ef13a1.css.map",
-    "main.3d54c340.js.map": "/static/js/main.3d54c340.js.map",
+    "main.6ae5af0f.js.map": "/static/js/main.6ae5af0f.js.map",
     "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.74ef13a1.css",
-    "static/js/main.3d54c340.js"
+    "static/js/main.6ae5af0f.js"
   ]
 }
