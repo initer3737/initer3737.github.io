@@ -33,6 +33,7 @@ export default function Footer() {
           </div>
         <div className="col-12 text-center">
           <Button 
+            allAttr={{}}
             variant={'outline-info py-3 px-5'}  
             name={'kembali ke atas'} 
             onClick={()=>Top()} disableOnClick={false}            

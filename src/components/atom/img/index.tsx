@@ -8,7 +8,7 @@ type attr={
     className:string,
     width:string,
     height:string,
-    attr:Array<Object>
+    attr:Object | any
 }
 export default function Img(props:attr) {
     const {attr,src,alt,srcset,className,width,height}=props;

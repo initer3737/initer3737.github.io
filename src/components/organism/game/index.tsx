@@ -8,8 +8,9 @@ import emptygunSound from "../../../sound/empty-gun.mp3";
 import Logo from "../../../imgs/semangat_yuks.gif";
 import Ak12 from "../../../imgs/ak12.png";
 import Ak12fire from "../../../imgs/ak12-fire.png";
+import Ak12info from "../../../imgs/AK-12-info.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
-import { Button, Icon, Img, Modal } from "../../assembleComponent";
+import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
 import { useThemes } from "../../services";
 
 export default function Game() {
@@ -32,6 +33,7 @@ export default function Game() {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
       keyPress('r','reload')
+      keyPress('f','fire')
   //pop up ,modal if condition
   }, []);
   useEffect(() => {
@@ -90,6 +92,7 @@ export default function Game() {
             </h5>
             <h5 className={`mx-5 fs-5`}>
               <Button
+                allAttr={{}}
                 variant={"outline-danger rounded-pill px-3 py-2"}
                 name={`reset game`}
                 onClick={() => {
@@ -155,20 +158,25 @@ export default function Game() {
                   </button>
                 </div>
                 <div className="w-25">
-                  <Img
-                    src={isFire && ammo > 0 ? Ak12fire : Ak12}
-                    alt={"ak-12"}
-                    srcset={""}
-                    className={"img-fluid"}
-                    width={""}
-                    height={""}
-                    attr={[]}
-                  />
+                  <a role="button" data-bs-toggle="modal" data-bs-target="#infoweapon">
+                    <Img
+                      src={isFire && ammo > 0 ? Ak12fire : Ak12}
+                      alt={"ak-12"}
+                      srcset={""}
+                      className={"img-fluid"}
+                      width={""}
+                      height={""}
+                      attr={undefined}                  
+                      />
+                    </a>
                   <p>ak-12</p>
                 </div>
               </div>
             </div>
             <Button
+              allAttr={{
+                id:'fire'
+              }}
               variant={
                 "outline-info py-3 px-5 rounded-pill text-primary clear-focus"
               }
@@ -185,7 +193,7 @@ export default function Game() {
               }}
               disableOnClick={false}
             >
-              <Icon variant={"danger"} icon={"fire"} name={""} />
+              <Icon variant={"danger"} icon={"fire"} name={""}/>
             </Button>
           </div>
         </div>
@@ -206,7 +214,56 @@ export default function Game() {
      
       {/* button triger modal end */}
     {/* modal */}
-    
+    <Modal modalTitle={" weapons"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
+        <Img
+          src={Ak12info}
+          alt=""
+          srcset={""}
+          className={"w-100 bg-1"}
+          width={""}
+          height={""}
+          attr={[]}
+        />
+       <div className="d-flex justify-content-between px-3 pt-3">
+        <div className="d-flex flex-column">
+          <div className="d-flex flelx-row gap-5">
+          <Icon variant={"info"} icon={"info-circle"} name={" weapon info"}/>
+          <h5 className="text-center">ak-12</h5>
+          </div>
+          <hr />
+              <p className="text-start">
+              AK-12 adalah pengembangan lebih lanjut platform AK-47. Senapan tersebut masih dibuat berdasarkan prinsip kesederhanaan dan keandalan.
+              “Senjata ini dirancang untuk berfungsi dalam kondisi iklim paling keras, dari badai pasir di Gurun Sahara pada suhu 40 derajat Celsius hingga badai salju di Kutub Utara pada suhu -40 derajat Celsius. Performanya stabil dan dapat terus menembak, bahkan ketika pesaing-pesaing asingnya telah menyerah. Anda dapat menyeberangi rawa tanpa khawatir senjata itu sewaktu-waktu macet. AK-12 betul-betul tangguh dan dapat diandalkan dalam kondisi terberat sekali pun,” kata Yuri Sinichkin, mantan penembak jitu dan kepala insinyur di Lobaev Arms, kepada RT Tiongkok.
+              AK-12 mewarisi keandalan versi sebelumnya dan mendapatkan sejumlah fitur baru yang dibutuhkan senapan serbu abad ke-21.
+              Pertama, popor teleskopik yang baru memungkinkan penembak menyesuaikan senjata agar sesuai dengan fitur antropometriknya, serta peralatan dan zona tempur tempat ia beroperasi.
+              Kedua, AK-12 dilengkapi rel Picatinny sehingga penembak dapat memasang alat bidik apa pun pada senjata itu (collimator, berbagai alat optik, penunjuk laser, dan lain-lain). Selain itu, penembak kini dapat menjalankan misinya dan melihat target di depannya dengan jernih seperti pada senjata dalam permainan Call of Duty dan Apex Legends.
+              Ketiga, AK-12 mendapatkan pegangan baru yang mengikuti kontur tangan manusia dan membuatnya lebih nyaman digenggam. Pihak pengembang juga menambahkan “jendela” di sisi magazen sehingga si pengguna dapat melihat jumlah peluru yang tersisa.
+              Keempat, Kalashnikov memasang rem laras (muzzle brake) baru pada AK-12 yang dapat menyembunyikan si penembak ketika beroperasi pada malam hari (AK versi sebelumnya memancarkan kilatan api saat ditembakkan pada malam hari sehingga mengungkap posisi si prajurit) .
+              Semua fitur ini, ditambah keandalan senjata yang tak tak diragukan lagi, membuat AK-12 menjadi salah satu senapan terbaik di dunia untuk tentara reguler, bukan unit pasukan khusus.
+              </p>
+              <hr />
+              <div className="d-flex flex-column gap-3">
+                <LinkToPage 
+                  href={"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXs7Tkq9r6AhWYSGwGHRTpCJIQFnoECEQQAQ&url=https%3A%2F%2Fid.rbth.com%2Ftechnology%2F84956-kalashnikov-vs-senapan-nato-wyx&usg=AOvVaw0xcnoATmHTufDVQE35cK4_"} 
+                  icon={"info-circle"} 
+                  target={"_blank"} 
+                  variant={"info"} 
+                  name={" link referensi"} className={""}
+                  />
+                <LinkToPage 
+                  href={"https://en.kalashnikovgroup.ru/catalog/boevoe-strelkovoe-oruzhie/avtomaty/avtomat-kalashnikova-ak-12"} 
+                  icon={"info-circle"} 
+                  target={"_blank"} 
+                  variant={"info"} 
+                  name={" link referensi"} className={""}
+                  />
+              </div>
+        </div>
+        <div className="d-none">
+          <Icon variant={"info"} icon={"infinity"} name={" ak-12"}/>
+        </div>
+        </div>       
+    </Modal>
     {/* modal end */}
     </div>
   );

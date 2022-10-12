@@ -4,15 +4,17 @@ import React from "react";
         name:string,
         onClick:any,
         disableOnClick:boolean,
-        children:any | Element
+        children:any,
+        allAttr:object
         // ref:null | MutableRefObject<null>
     }
 export default function Button(props:props) {
-        const {variant,name,onClick,disableOnClick,children} =props;
+        const {variant,name,onClick,disableOnClick,children,allAttr} =props;
         let condition;
     switch (disableOnClick ) {
         case true:
             condition=<button
+                {...allAttr}
                 className={`btn btn-${variant}`}>
                     {children}{` ${name}`}
                 </button>
@@ -20,6 +22,7 @@ export default function Button(props:props) {
     
         default:
           condition=<button 
+                {...allAttr}
                 className={`btn btn-${variant}`} 
                 onClick={onClick}>
                    {children}{` ${name}`}
