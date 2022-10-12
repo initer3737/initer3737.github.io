@@ -34,6 +34,7 @@ export default function Game() {
     //useTheme is call from the routes
       keyPress('r','reload')
       keyPress('f','fire')
+      keyPress('h','info')
   //pop up ,modal if condition
   }, []);
   useEffect(() => {
@@ -211,7 +212,7 @@ export default function Game() {
         />
       </div>
       {/* button triger modal */}
-     
+        <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
       {/* button triger modal end */}
     {/* modal */}
     <Modal modalTitle={" weapons"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
@@ -264,6 +265,19 @@ export default function Game() {
         </div>
         </div>       
     </Modal>
+      {/*char info  */}
+      <Modal 
+        modalTitle={" informasi akun"} 
+        modalId={"charInfo"} 
+        modalTitleIcon={"info-circle"} >
+        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+        <hr />
+        <div className="d-flex flex-column py-2 px-3">
+          <p>player : player</p>
+          <p>score : {Point}</p>
+        </div>
+        <hr />
+      </Modal>
     {/* modal end */}
     </div>
   );

@@ -23,8 +23,10 @@ const location=useLocation();
         themeSound7,
     ];
     const song=new Date().getDay();
-    //   let Ref=useRef(new Audio());
-    //   let audio= Ref.current=new Audio(themes[song])
+      let Ref=useRef(new Audio());
+      let audio= Ref.current=new Audio(themes[song])
+      audio.volume=1.0
     //    splitLokasi[1] !=='game'?setIsPlay(false):setIsPlay(true);
-    //     !isPlay?audio.pause():audio.play()
+        // !isPlay?audio.pause():audio.play()
+        
 }
