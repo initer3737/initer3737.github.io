@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useMemo } from "react";
+import React, { useEffect, useState, useRef, useMemo,useContext } from "react";
 import "./style.css";
 import PuingSound from "../../../sound/puing.mp3";
 import ak47calmSound from "../../../sound/ak47calm.mp3";
@@ -144,8 +144,6 @@ export default function Game() {
                     onClick={() => {
                       const reloadAmmo=srcAudio(ammo==30?reloadSound:reloadSound2)
                         reloadAmmo.play()
-                      // document.addEventListener('ended',document.getElementById(srcAudio(reloadSound2).play)
-                      // console.log('reload end?>>'+reloadAmmo.ended);
                       setAmmo(30)
                       setIsFire(false);
                     }}
@@ -184,13 +182,13 @@ export default function Game() {
               name={"Fire!"}
               onClick={() => {
                 //sound setting
-                  setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
-                  setIsFire((isFire)=>!isFire);
-                  if (score > JSON.parse(Point ?? "0") && ammo > 0)
-                    srcAudio(PuingSound).play();
-                  if (score > 0 && ammo > 0) srcAudio(ak47calmSound).play();
-                  if (ammo <= 0) srcAudio(emptygunSound).play();
-                  setScore((score) => (ammo <= 0 ? score : score + 1));
+                   setIsFire((isFire)=>!isFire);
+                    setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
+                    if (score > JSON.parse(Point ?? "0") && ammo > 0)
+                      srcAudio(PuingSound).play();
+                    if (score > 0 && ammo > 0) srcAudio(ak47calmSound).play();
+                    if (ammo <= 0) srcAudio(emptygunSound).play();
+                    setScore((score) => (ammo <= 0 ? score : score + 1));
               }}
               disableOnClick={false}
             >
@@ -215,7 +213,7 @@ export default function Game() {
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
       {/* button triger modal end */}
     {/* modal */}
-    <Modal modalTitle={" weapons"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
+    <Modal modalTitle={" weapons | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
         <Img
           src={Ak12info}
           alt=""
@@ -272,10 +270,54 @@ export default function Game() {
         modalTitleIcon={"info-circle"} >
         <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
         <hr />
-        <div className="d-flex flex-column py-2 px-3">
-          <p>player : player</p>
-          <p>score : {Point}</p>
+        <div className="d-flex justify-content-between px-3 flex-row py-2 px-3">
+          <p><Icon variant={""} icon={"person-circle"} name={" player : player"}/></p>
+          <p><Icon variant={""} icon={"stars"} name={` score : ${Point}`}/></p>
         </div>
+       <div className="d-flex flex-column align-items-end">
+       <div className="d-flex flex-column align-items-center gap-3">
+        <div className="text-center border-start border-info px-2">
+          <Icon variant={"info"} icon={"fire"} name={" weapon used : ak-12"}/>
+        </div>
+          <Img
+              src={Ak12}
+              alt=""
+              srcset={""}
+              className={"w-100"}
+              width={""}
+              height={""}
+              attr={[]}
+            />
+       </div>
+         <div className="d-flex justify-content-between flex-row">
+          <div className="">
+            <div className="border-start px-3 border-info">
+                <p>
+                  type: assault rifle  
+                </p> 
+              </div>
+            <div className="border-start px-3 border-info">
+                <p>
+                  cartridge: 5.45×39mm  
+                </p> 
+              </div>
+          </div>
+
+          <div className="">
+              <div className="border-start px-3 border-info">
+                <p>
+                  rate of fire: 700 rounds / min  
+                </p> 
+              </div>
+              <div className="border-start px-3 border-info">
+                <p>
+                  state of origin : rusia  
+                </p> 
+              </div>
+          </div>
+
+         </div>
+       </div>
         <hr />
       </Modal>
     {/* modal end */}
