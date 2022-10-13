@@ -720,21 +720,6 @@ export default function LyricSong() {
             Karena aku sudah punya yang lain[istri]!
             Tapi katya terdengar, seperti sebuah lagu,
             Keluar dari jiwaku, Saudaraku.
-            ketika gadis cossack bermata gelap
-            menggosok sepatu kudaku.
-            Dia meminta sejumlah kecil uang, bukannya aku tidak menghargai pekerjaannya.
-            Siapa namamu nona muda?
-            Dan wanita muda itu menjawab:
-            Anda akan mendengar nama saya
-            dalam derap kaki kudamu.
-            Saya berkendara di sepanjang jalan,sambil menebak namanya
-            Aku berlari kencang di jalan.
-            Dan di sepanjang jalan di sekitar bebatuan cokelat,
-            Dan di antara bebatuan abu-abu.
-            Masha, Zina, Dasha? Nina?
-            Sepertinya tidak ada yang cocok.
-            Katya, Katya! - terdengar 
-            Dalam derap kaki kudaku.[diulang-ulang]
         <div className="mt-3">
           <VideoFromYoutube src={'https://youtube.com/embed/4QeL8dpHAUw'} />
         </div>
