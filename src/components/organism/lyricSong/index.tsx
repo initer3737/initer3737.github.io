@@ -538,6 +538,7 @@ export default function LyricSong() {
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
+
     <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -638,6 +639,7 @@ export default function LyricSong() {
         </div>
       </div>
     </div>
+
     <div className="col-12 bg-1 d-flex align-items-center align-content-center">
         <Img
           src={Logo4}
@@ -645,6 +647,100 @@ export default function LyricSong() {
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
+
+      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+          <div className="text-center ">
+            <h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> Черноглазая казачка
+            </h5>
+          </div>
+          <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+          Черноглазая казачка
+          Подковала мне коня.
+          Серебро с меня спросила,
+          Труд недорого ценя.
+          Как зовут тебя, молодка?
+          А молодка говорит:
+          Имя ты мое услышишь
+          Из под топота копыт.
+          Я по улице поехал,
+          По дороге поскакал.
+          По тропинке между бурых,
+          Между серых, между скал.
+          Маша, Зина, Даша, Нина ?
+          Все как будто не она.
+          Катя, Катя высекают
+          Мне подковы скакуна.
+          С той поры хоть шагом еду,
+          Хоть галопом поскачу,
+          Катя, Катя, Катерина,
+          Неустанно я шепчу.
+          Что за бестолочь такая,
+          У меня ж другая есть!
+          Ну, а Катю, словно песню,
+          Из груди брат не известь.
+          Черноглазая казачка
+          Подковала мне коня.
+          Серебро с меня спросила,
+          Труд недорого ценя.
+          Как зовут тебя, молодка?
+          А молодка говорит:
+          Имя ты мое услышишь
+          Из под топота копыт
+          </div>
+        </div>
+
+    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> gadis cossack bermata gelap
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+            ketika gadis cossack bermata gelap
+            menggosok sepatu kudaku.
+            Dia meminta sejumlah kecil uang, bukannya aku tidak menghargai pekerjaannya.
+            Siapa namamu nona muda?
+            Dan wanita muda itu menjawab:
+            Anda akan mendengar nama saya
+            dalam derap kaki kudamu.
+            Saya berkendara di sepanjang jalan,sambil menebak namanya
+            Aku berlari kencang di jalan.
+            Dan di sepanjang jalan di sekitar bebatuan cokelat,
+            Dan di antara bebatuan abu-abu.
+            Masha, Zina, Dasha? Nina?
+            Sepertinya tidak ada yang cocok.
+            Katya, Katya! - terdengar 
+            Dalam derap kaki kudaku.
+            Dan sejak saat itu, saat saya naik kuda,
+            suara terdengar saat saya berpacu.
+            Katya, Katya, Katerina,
+            Aku terngiang-ngiang dikepala.
+            Betapa kacaunya aku,
+            Karena aku sudah punya yang lain[istri]!
+            Tapi katya terdengar, seperti sebuah lagu,
+            Keluar dari jiwaku, Saudaraku.
+            ketika gadis cossack bermata gelap
+            menggosok sepatu kudaku.
+            Dia meminta sejumlah kecil uang, bukannya aku tidak menghargai pekerjaannya.
+            Siapa namamu nona muda?
+            Dan wanita muda itu menjawab:
+            Anda akan mendengar nama saya
+            dalam derap kaki kudamu.
+            Saya berkendara di sepanjang jalan,sambil menebak namanya
+            Aku berlari kencang di jalan.
+            Dan di sepanjang jalan di sekitar bebatuan cokelat,
+            Dan di antara bebatuan abu-abu.
+            Masha, Zina, Dasha? Nina?
+            Sepertinya tidak ada yang cocok.
+            Katya, Katya! - terdengar 
+            Dalam derap kaki kudaku.[diulang-ulang]
+        <div className="mt-3">
+          <VideoFromYoutube src={'https://youtube.com/embed/4QeL8dpHAUw'} />
+        </div>
+      </div>
+    </div>
+
     </div>
   );
 }
