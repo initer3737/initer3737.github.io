@@ -35,6 +35,7 @@ export default function Game() {
       keyPress('r','reload')
       keyPress('f','fire')
       keyPress('h','info')
+      keyPress('g','resetGame')
   //pop up ,modal if condition
   }, []);
   useEffect(() => {
@@ -93,9 +94,11 @@ export default function Game() {
             </h5>
             <h5 className={`mx-5 fs-5`}>
               <Button
-                allAttr={{}}
-                variant={"outline-danger rounded-pill px-3 py-2"}
-                name={`reset game`}
+                allAttr={{
+                  id:'resetGame'
+                }}
+                variant={" bg-danger rounded-pill  d-lg-none"}
+                name={``}
                 onClick={() => {
                   window.location.reload();
                   return point.setItem("scorePlayer", "0");
@@ -103,7 +106,7 @@ export default function Game() {
                 disableOnClick={false}
               >
                 <Icon
-                  variant={"light bg-danger rounded-pill px-2"}
+                  variant={"light rounded-pill px-2"}
                   icon={"arrow-clockwise"}
                   name={""}
                 />
@@ -140,14 +143,14 @@ export default function Game() {
                     />
                   </p>
 
-                  <button id="reload"
+                  <button id="reload"//triger reload when player press r
                     onClick={() => {
                       const reloadAmmo=srcAudio(ammo==30?reloadSound:reloadSound2)
                         reloadAmmo.play()
                       setAmmo(30)
                       setIsFire(false);
                     }}
-                    className={"w-25 h-25 rounded-pill"}
+                    className={"w-25 h-25 rounded-pill d-lg-none"}
                   >
                     <Icon
                       variant={"danger w-100"}
@@ -171,13 +174,26 @@ export default function Game() {
                   <p>ak-12</p>
                 </div>
               </div>
+               <a 
+                role={'button'}
+                data-bs-target="#infoHotkeys"
+                data-bs-toggle='modal'
+               >
+                   <div className="border-start border-info px-2 d-none d-lg-block">
+                    <Icon 
+                      variant={""} 
+                      icon={"info-circle"} 
+                      name={" info hotkeys"}
+                      /> 
+                   </div>
+               </a>
             </div>
             <Button
               allAttr={{
                 id:'fire'
               }}
               variant={
-                "outline-info py-3 px-5 rounded-pill text-primary clear-focus"
+                "outline-info py-3 px-5 rounded-pill text-primary d-lg-none clear-focus"
               }
               name={"Fire!"}
               onClick={() => {
@@ -194,7 +210,8 @@ export default function Game() {
             >
               <Icon variant={"danger"} icon={"fire"} name={""}/>
             </Button>
-          </div>
+          </div>              
+
         </div>
       </div>
 
@@ -213,7 +230,7 @@ export default function Game() {
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
       {/* button triger modal end */}
     {/* modal */}
-    <Modal modalTitle={" weapons | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
+    <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
         <Img
           src={Ak12info}
           alt=""
@@ -271,7 +288,7 @@ export default function Game() {
         <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
         <hr />
         <div className="d-flex justify-content-between px-3 flex-row py-2 px-3">
-          <p><Icon variant={""} icon={"person-circle"} name={" player : player"}/></p>
+          <p><Icon variant={""} icon={"person-circle"} name={" kombatan : player"}/></p>
           <p><Icon variant={""} icon={"stars"} name={` score : ${Point}`}/></p>
         </div>
        <div className="d-flex flex-column align-items-end">
@@ -293,12 +310,12 @@ export default function Game() {
           <div className="">
             <div className="border-start px-3 border-info">
                 <p>
-                  type: assault rifle  
+                  type : assault rifle  
                 </p> 
               </div>
             <div className="border-start px-3 border-info">
                 <p>
-                  cartridge: 5.45×39mm  
+                  cartridge : 5.45×39mm  
                 </p> 
               </div>
           </div>
@@ -306,12 +323,62 @@ export default function Game() {
           <div className="">
               <div className="border-start px-3 border-info">
                 <p>
-                  rate of fire: 700 rounds / min  
+                  rate of fire : 700 rounds / min  
                 </p> 
               </div>
               <div className="border-start px-3 border-info">
                 <p>
                   state of origin : rusia  
+                </p> 
+              </div>
+          </div>
+
+         </div>
+       </div>
+        <hr />
+      </Modal>
+      {/*hotkeys info  */}
+      <Modal 
+        modalTitle={" informasi"} 
+        modalId={"infoHotkeys"} 
+        modalTitleIcon={"info-circle"} >
+        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+        <hr />
+        
+       <div className="d-flex flex-column align-items-start">
+       <div className="p-3 my-2 mx-auto">
+        <div className="text-center border-start border-info px-2">
+          <Icon variant={"info"} icon={"fire"} name={" hotkeys : info"}/>
+        </div>
+       </div>
+       
+         <div className="d-flex flex-column">
+          <div className="">
+            <div className="border-start px-3 border-info">
+                <p className="d-flex flex-row gap-2">
+                  h :  
+                  <Icon variant={""} icon={"bar-chart-line-fill"} name={" show player status"}/> 
+                </p> 
+              </div>
+            <div className="border-start px-3 border-info">
+                <p className="d-flex flex-row gap-2">
+                  r : 
+                  <Icon variant={""} icon={"arrow-clockwise"} name={" reload firearm"}/>
+                </p> 
+              </div>
+          </div>
+
+          <div className="">
+              <div className="border-start px-3 border-info">
+                <p  className="d-flex flex-row gap-2">
+                  f : 
+                  <Icon variant={""} icon={"fire"} name={" fire the weapon"}/>
+                </p> 
+              </div>
+              <div className="border-start px-3 border-info">
+                <p className="d-flex flex-row gap-2">
+                  g : 
+                  <Icon variant={""} icon={"controller"} name={" restart the game"}/> 
                 </p> 
               </div>
           </div>

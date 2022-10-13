@@ -7,6 +7,6 @@ const useAuth=(auth:boolean=false)=>{
     // logikanya adalah ketika auth === true maka return anak false return navigate
     //komponen navigate memiliki nilai true jadi auth === true && navigate | true maka ?
 }
-export default function ProtectedRoutes(p:any) {
+export default function ProtectedRoutes() {
     return useAuth(true);
 }
