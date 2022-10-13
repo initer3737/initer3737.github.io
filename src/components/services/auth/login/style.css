@@ -1,5 +1,8 @@
+:root{
+    --kombatanforce:url('../../../../imgs/spesial-force.jpg') no-repeat;
+}
 .form-login{
-    background: url('../../../../imgs/spesial-force.jpg') no-repeat;
+    background: var(--kombatanforce);
     position: relative;
     background-size: cover;
     display: flex;
@@ -9,5 +12,6 @@
 }
 
 .opacity-form{
-    opacity: 0.7;
+    background: var(--kombatanforce) 90% ;
+    background-size: cover;
 }
