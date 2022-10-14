@@ -65,6 +65,7 @@ const navigate=useNavigate();
                   <Icon variant={'info'} icon={`${isLogin?'box-arrow-in-right':'pencil-square'}`} name={' '}/>
                   {isLogin?'Login':'register'}
                 </p>
+               <div className="d-flex flex-column gap-3"> 
                 <input type="text" onChange={(e)=>changeValue(e,true)} placeholder='username' required id='user' value={formvalueUser}/>
                 <input type="password" onChange={(e)=>changeValue(e,false)} placeholder='password' required id='pass' value={formvaluePass}/>
                 <Button 
@@ -106,7 +107,7 @@ const navigate=useNavigate();
                   allAttr={{}}>
                     <Icon variant={'light'} icon={`${isLogin?'box-arrow-in-right':'pencil-square'}`} name={` ${isLogin?'Login':'register'}`}/>                
                 </Button>
-              
+              </div>
             </div>
         </div>
     </div>
