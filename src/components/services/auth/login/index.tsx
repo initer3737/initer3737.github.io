@@ -1,10 +1,9 @@
 import React, {useEffect, useState } from 'react'
-import {Navigate,useNavigate} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import './style.css'
 import {
   Button,
-  Icon,
-  Img
+  Icon
 }from '../../../assembleComponent'
 export default function Login() {
   const [formvalueUser,setformvalueUser]=useState('')
@@ -66,8 +65,8 @@ const navigate=useNavigate();
                   {isLogin?'Login':'register'}
                 </p>
                <div className="d-flex flex-column gap-3"> 
-                <input type="text" onChange={(e)=>changeValue(e,true)} placeholder='username' required id='user' value={formvalueUser}/>
-                <input type="password" onChange={(e)=>changeValue(e,false)} placeholder='password' required id='pass' value={formvaluePass}/>
+                <input type="text" onChange={(e)=>changeValue(e,true)} placeholder='username' required id='user' value={formvalueUser} minLength={5}/>
+                <input type="password" onChange={(e)=>changeValue(e,false)} placeholder='password' required id='pass' value={formvaluePass} minLength={5}/>
                 <Button 
                   variant={'outline-info rounded-pill'} 
                   name={''} 
