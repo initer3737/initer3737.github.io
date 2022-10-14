@@ -20,7 +20,7 @@ export default function Game() {
   let [color, setColor] = useState("");
   let [theme, setTheme] = useState(true);
   let [login, setLogin] = useState(true);
-  let [point, setPoint] = useState(localStorage);
+  // let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
   const username=localStorage.getItem('username');
@@ -30,7 +30,8 @@ export default function Game() {
   //  useThemes().play();
   let navigate=useNavigate(); 
   const srcAudio = (src: string) => new Audio(src);
-  const keyPress=(key:string,id:string)=>{
+  const keyPress=(key:string,id:string,keyup:boolean=true)=>{
+    if(!keyup)document.getElementById(id)?.click();
       document.addEventListener('keyup',(e)=>{
         return e.key === key?document.getElementById(id)?.click():''
     })
@@ -44,7 +45,8 @@ export default function Game() {
       keyPress('h','info')
       keyPress('g','resetGame')
   //pop up ,modal if condition
-
+  //     setInterval(()=>{
+        
   }, []);
   useEffect(() => {
     //store to local storage
@@ -52,14 +54,21 @@ export default function Game() {
       score > JSON.parse(localStorage.getItem("scorePlayer")!!) &&
       ammo >= 0
     ) {
-      point.setItem("scorePlayer", JSON.stringify(score));
+      localStorage.setItem("scorePlayer", JSON.stringify(score));
     }
-      if(token !== 'true' || token=== undefined || !token){
-          // setLogin(false);
+        //check data to localstorage
+        if(token !== 'true'){
             navigate('/login')
-      }
-      
-  }, [score, point,ammo,username,password,token]); //wwhen score change it become realtime
+          //   window.addEventListener('storage',()=>{
+          //     return window.location.reload()
+          //   })
+          }
+      // setInterval(()=>{
+      //   window.addEventListener('storage',()=>{
+      //      if(token ===null)window.location.reload()
+      //   })
+      // },6000)
+  }, [score,ammo,username,password,token,localStorage]); //wwhen score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -83,7 +92,7 @@ export default function Game() {
       setColor("danger");
     }
   }, [score]); //only run when status is change [dependencies]
-  let Point = point.getItem("scorePlayer");
+  let Point = localStorage.getItem("scorePlayer");
   const spesialForceStyle={
       width:'12vw'
   }
@@ -94,10 +103,20 @@ export default function Game() {
           <div className="bg-4 color-1 mt-2 justify-content-evently align-items-center d-flex gap-3">
               <img src={spesialForce} className="shadow" alt="spesial force" style={spesialForceStyle}/>
             <div className="mx-auto text-center">
+              <div className="d-flex justify-content-between gap-5">
               <h3>
                 <Icon variant={"info"} icon={"lightning"} name={""}/>
                 counter strike!
               </h3>
+              <Button 
+                variant={" rounded-pill text-light"} 
+                name={""} onClick={()=>{
+                  keyPress('','logoutInfoTriger',false)
+                }} disableOnClick={false} allAttr={{}}>
+                <Icon variant={"info"} icon={"arrow-bar-right"} name={" "}/>
+                    <p className="d-none d-md-inline">logout</p>
+              </Button>
+              </div>
             </div>
           </div>
           <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
@@ -114,7 +133,7 @@ export default function Game() {
                 name={``}
                 onClick={() => {
                   window.location.reload();
-                  return point.setItem("scorePlayer", "0");
+                  return localStorage.setItem("scorePlayer", "0");
                 }}
                 disableOnClick={false}
               >
@@ -241,6 +260,7 @@ export default function Game() {
       </div>
       {/* button triger modal */}
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
+        <a role="button" data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></a>
       {/* button triger modal end */}
     {/* modal */}
     <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
@@ -401,6 +421,66 @@ export default function Game() {
         <hr />
       </Modal>
     {/* modal end */}
+      {/*logout info  */}
+      <Modal 
+        modalTitle={" informasi"} 
+        modalId={"logoutInfo"} 
+        modalTitleIcon={"info-circle"} >
+        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+        <hr />
+        
+       <div className="d-flex flex-column align-items-start">
+       <div className="p-3 my-2 mx-auto">
+        <div className="text-center border-start border-info px-2">
+          <Icon variant={"light"} icon={"arrow-bar-right"} name={" "}/>
+          <p className="text-info d-inline">yakin mau logout??</p>
+        </div>
+       </div>
+       
+       <div className="d-flex flex-column">
+           <div className="py-2 d-flex flex-column pb-3">
+              <div className="pb-2 mx-auto">
+                  <div className="text-center border-start border-info px-2">
+                    <Icon variant={"light"} icon={"fire"} name={" counter strike"}/>
+                  </div>
+              </div>
+           <Img 
+              src={spesialForce} 
+              alt={""} 
+              srcset={""} 
+              className={"w-100 border"} width={""} height={""} attr={undefined}/>
+           </div>
+           
+          <div className="d-flex justify-content-between px-3 py-2">
+              <div className="border-start px-3 border-info">
+                <p  className="d-flex flex-row gap-2">
+                  <Icon variant={""} icon={"person-circle"} name={` kombatan : ${username}`}/>
+                </p> 
+              </div>
+              <div className="border-start px-3 border-info">
+                <p className="d-flex flex-row gap-2">
+                  <Icon variant={""} icon={"stars"} name={` score : ${Point}`}/> 
+                </p> 
+              </div>
+          </div> <hr />
+                <Button 
+                  variant={""} 
+                  name={""} onClick={()=>{
+                    window.location.reload()
+                    localStorage.setItem('token','false')
+                  }} disableOnClick={false}allAttr={{}}>
+                    <Icon variant={"info"} icon={"caret-right"} name={" "}/>
+                    <p className="d-inline text-light">logout</p>
+                </Button>
+       </div>
+
+       </div>
+        <hr />
+      </Modal>
+    {/* modal end */}
+    {/* audio hidden for theme */}
+              {/* <audio onPl></audio> */}
+    {/* audio hidden for theme */}
     </div>
   );
 }
