@@ -57,9 +57,7 @@ export default function Game() {
       if(token !== 'true' || token=== undefined || !token){
           // setLogin(false);
             navigate('/login')
-            // window.location.reload();
       }
-      console.log('token: '+token);
       
   }, [score, point,ammo,username,password,token]); //wwhen score change it become realtime
 

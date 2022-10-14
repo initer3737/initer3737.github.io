@@ -7,21 +7,21 @@ import {LoadingData} from './components/services';
 
 function App(){
     const [loading,setLoading]=useState(true);
-    // useEffect(()=>{
-    //     setTimeout(()=>{
-    //         setLoading(false);
-    //     },9000)   
-    // },[])
+    useEffect(()=>{
+        setTimeout(()=>{
+            setLoading(false);
+        },9000)   
+    },[])
 
     return( 
     <>
-        {/* { */}
-        {/* // loading */}
-            {/* // ? */}
-         {/* <LoadingData/> */}
-            {/* // : */}
+        {
+        loading
+            ? 
+        <LoadingData/>
+             :
         <Routes/>
-        {/* // } */}
+        }
         
     </>    
     )
