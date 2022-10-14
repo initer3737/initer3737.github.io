@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navigate,Outlet } from 'react-router-dom'
   //[username:'',pass:'',is-login:bool]
 const useAuth=(auth:boolean=false)=>{
@@ -10,12 +10,13 @@ const useAuth=(auth:boolean=false)=>{
 export default function ProtectedRoutes() {
     const getUser=localStorage.getItem('username')
     const getPass=localStorage.getItem('password')
+    const getToken=localStorage.getItem('token')
       if(getUser === null){
           localStorage.setItem('username','');
       }
       if(getPass === null){
           localStorage.setItem('password','');
       }
-
-    return useAuth(getUser !== '' && getPass !== '');
+      
+    return useAuth(getUser !== '' && getPass !== '' && getToken !== 'false');
 }

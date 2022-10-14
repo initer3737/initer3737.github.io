@@ -12,25 +12,30 @@ import Ak12info from "../../../imgs/AK-12-info.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
 import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
 import { useThemes } from "../../services";
+import { useNavigate } from "react-router-dom";
 
 export default function Game() {
   let [status, setStatus] = useState("");
   let [score, setScore] = useState(0);
   let [color, setColor] = useState("");
+  let [theme, setTheme] = useState(true);
+  let [login, setLogin] = useState(true);
   let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
   const username=localStorage.getItem('username');
   const password=localStorage.getItem('password');
+  const token=localStorage.getItem('token');
   //utils
-  //  useThemes();
-  // let onpauseaudio=useRef(); //when change route it will be pause
+  //  useThemes().play();
+  let navigate=useNavigate(); 
   const srcAudio = (src: string) => new Audio(src);
   const keyPress=(key:string,id:string)=>{
       document.addEventListener('keyup',(e)=>{
         return e.key === key?document.getElementById(id)?.click():''
     })
   }
+//useThemes().play()
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
@@ -39,6 +44,7 @@ export default function Game() {
       keyPress('h','info')
       keyPress('g','resetGame')
   //pop up ,modal if condition
+
   }, []);
   useEffect(() => {
     //store to local storage
@@ -48,7 +54,14 @@ export default function Game() {
     ) {
       point.setItem("scorePlayer", JSON.stringify(score));
     }
-  }, [score, point,ammo,username,password]); //wwhen score change it become realtime
+      if(token !== 'true' || token=== undefined || !token){
+          // setLogin(false);
+            navigate('/login')
+            // window.location.reload();
+      }
+      console.log('token: '+token);
+      
+  }, [score, point,ammo,username,password,token]); //wwhen score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {

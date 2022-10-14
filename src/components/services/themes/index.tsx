@@ -25,7 +25,7 @@ const location=useLocation();
     const song=new Date().getDay();
       let Ref=useRef(new Audio());
       let audio= Ref.current=new Audio(themes[song])
-      audio.volume=1.0
+      audio.volume=0.2
         // let kontek=useContext(audio)
-        return ;
+        return audio;
 }
