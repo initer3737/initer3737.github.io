@@ -1,4 +1,4 @@
-import React , {useRef,useState} from 'react'
+import React , {useRef,useState,useContext} from 'react'
 import { useLocation } from 'react-router-dom'
 import themeSound1 from '../../../sound/teme-gaming-1.mp3'
 import themeSound2 from '../../../sound/teme-gaming-2.mp3'
@@ -26,7 +26,6 @@ const location=useLocation();
       let Ref=useRef(new Audio());
       let audio= Ref.current=new Audio(themes[song])
       audio.volume=1.0
-    //    splitLokasi[1] !=='game'?setIsPlay(false):setIsPlay(true);
-        // !isPlay?audio.pause():audio.play()
-        
+        // let kontek=useContext(audio)
+        return ;
 }

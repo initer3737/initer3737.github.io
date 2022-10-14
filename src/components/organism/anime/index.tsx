@@ -20,11 +20,14 @@ export default function Anime(): JSX.Element {
   
 
   useEffect(()=>{
-    // const url='https://animechan.vercel.app/api'
-    //  const api =axios.create({baseURL:url})
-    //  api.get('/quotes')
-    //  .then(async (res)=>setAnime(res.data))
-    //  .catch((err)=>console.log(err));
+    //
+
+// await fetch(
+//   `https://api.trace.moe/search?anilistID=1&url=${encodeURIComponent(
+//     "https://images.plurk.com/32B15UXxymfSMwKGTObY5e.jpg"
+//   )}`
+// ).then((e) => e.json());
+    
     // fetch('https://animechan.vercel.app/api/quotes')
           //function that get api endpoint
      const AnimeCards=async ()=>{
@@ -60,15 +63,24 @@ export default function Anime(): JSX.Element {
           setrandomQuotesDataIndex(updateIndexData(9,0,false));
         },15000);
      //call function that call the api endpoint
-     AnimeCards();
-     AnimeRandomQuotes();
-              
+     try {
+        AnimeCards();
+     } catch (e:any) {
+        console.log(e.msg());
+     }
+     try {
+        AnimeRandomQuotes();
+     } catch (e:any) {
+        console.log(e.msg());
+     }
+     
+            console.log(async ()=>await (await fetch(await('https://animechan.vercel.app/api/quotes'))).json)   
   },[])
       const animeCard=AnimeCard[AnimeCarddataIndex]
       const animeQuotes=randomQuotes[randomQuotesdataIndex];
   return (
     <>
-        <div className='text-dark d-flex justify-content-center'>
+        {/* <div className='text-dark d-flex justify-content-center'>
           <Card
           footer={animeCard.anime_name}
           borderColor={'info'}
@@ -79,7 +91,7 @@ export default function Anime(): JSX.Element {
           body={''} 
           className={'col-12 col-md-6 col-lg-4'}          
           />
-        </div>
+        </div> */}
         <div className='text-dark d-flex justify-content-center'>
         <div className='text-dark d-flex justify-content-center'>
           <Card

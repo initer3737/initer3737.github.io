@@ -8,5 +8,14 @@ const useAuth=(auth:boolean=false)=>{
     //komponen navigate memiliki nilai true jadi auth === true && navigate | true maka ?
 }
 export default function ProtectedRoutes() {
-    return useAuth(true);
+    const getUser=localStorage.getItem('username')
+    const getPass=localStorage.getItem('password')
+      if(getUser === null){
+          localStorage.setItem('username','');
+      }
+      if(getPass === null){
+          localStorage.setItem('password','');
+      }
+
+    return useAuth(getUser !== '' && getPass !== '');
 }

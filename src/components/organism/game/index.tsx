@@ -20,6 +20,8 @@ export default function Game() {
   let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
+  const username=localStorage.getItem('username');
+  const password=localStorage.getItem('password');
   //utils
   //  useThemes();
   // let onpauseaudio=useRef(); //when change route it will be pause
@@ -46,7 +48,7 @@ export default function Game() {
     ) {
       point.setItem("scorePlayer", JSON.stringify(score));
     }
-  }, [score, point,ammo]); //wwhen score change it become realtime
+  }, [score, point,ammo,username,password]); //wwhen score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -288,8 +290,8 @@ export default function Game() {
         <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
         <hr />
         <div className="d-flex justify-content-between px-3 flex-row py-2 px-3">
-          <p><Icon variant={""} icon={"person-circle"} name={" kombatan : player"}/></p>
-          <p><Icon variant={""} icon={"stars"} name={` score : ${Point}`}/></p>
+          <p><Icon variant={""} icon={"person-circle"} name={` kombatan : ${username??'player'}`}/></p>
+          <p><Icon variant={""} icon={"stars"} name={` score : ${Point??'0'}`}/></p>
         </div>
        <div className="d-flex flex-column align-items-end">
        <div className="d-flex flex-column align-items-center gap-3">
