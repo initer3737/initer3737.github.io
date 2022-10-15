@@ -66,11 +66,6 @@ let audio=new Audio(themes[song==6?0:song+1])
       audio.loop=true;
       audio.volume=0.6
       audio.play()
-      //  themeplay?audio.play():audio.pause();
-      // if(audio.ended){
-      //     setThemeplay(false);
-      //   setTimeout(()=>{setThemeplay(true)},3000)
-      // }
   }, []);
   useEffect(()=>{
     //when route change it trigger callback to pause audio

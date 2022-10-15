@@ -26,7 +26,7 @@ export default function Modal(props:props) {
           </blockquote>
         </div>
         <div className="modal-footer">
-          <button className="btn btn-outline-info text-white rounded-pill px-3 py-2" data-bs-dismiss="modal"><i className="bi bi-x" /> Close</button>
+          <button className="btn btn-outline-info text-white rounded-pill px-3 py-2" data-bs-dismiss="modal" id='modalClose'><i className="bi bi-x" /> Close</button>
         </div>
       </div>
     </div>

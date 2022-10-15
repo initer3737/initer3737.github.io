@@ -3,7 +3,8 @@ import {useNavigate} from 'react-router-dom';
 import './style.css'
 import {
   Button,
-  Icon
+  Icon,
+  Modal
 }from '../../../assembleComponent'
 /*themes*/
 import themeSound1 from '../../../../sound/teme-gaming-1.mp3'
@@ -17,6 +18,8 @@ import themeSound7 from '../../../../sound/teme-gaming-7.mp3'
 export default function Login() {
   const [formvalueUser,setformvalueUser]=useState('')
   const [formvaluePass,setformvaluePass]=useState('')
+  const [formResetvalueUser,setformResetvalueUser]=useState('')
+  const [formResetvaluePass,setformResetvaluePass]=useState('')
   const [loginMsg,setLoginMsg]=useState('')
   const getUser=localStorage.getItem('username')
   const getPass=localStorage.getItem('password')
@@ -80,69 +83,246 @@ const song=new Date().getDay();
   },[])
   // audio themes
   return (
-  <form action="">  
-    <div className="vw-100 vh-100 form-login">
-        <div className="d-flex justify-content-center align-items-center position-absolute">
+    <>
+      <form action="">
+        <div className="vw-100 vh-100 form-login">
+          <div className="d-flex justify-content-center align-items-center position-absolute">
             <div className="d-flex flex-column px-3 py-4 gap-2 bg-dark">
               <p className="color-1 h5 text-center">
-                  <Icon variant={'info'} icon={'lightning'} name={' '}/>
-                  counter strike
-                </p>
-                <p className='text-light'>login status : {loginMsg}</p>
-                <p className="text-white">user : {formvalueUser}</p>
-                <p className="text-white">password : {formvaluePass}</p>
-                <p className="color-1 h5 text-center">
-                  <Icon variant={'info'} icon={`${isLogin?'box-arrow-in-right':'pencil-square'}`} name={' '}/>
-                  {isLogin?'Login':'register'}
-                </p>
-               <div className="d-flex flex-column gap-3"> 
-                <input type="text" onChange={(e)=>changeValue(e,true)} placeholder='username' required id='user' value={formvalueUser} minLength={5}/>
-                <input type="password" onChange={(e)=>changeValue(e,false)} placeholder='password' required id='pass' value={formvaluePass} minLength={5}/>
-                <Button 
-                  variant={'outline-info rounded-pill'} 
-                  name={''} 
-                  onClick={()=>{
-                        
-                      const username=formvalueUser;
-                      const password=formvaluePass;
-                        if(isLogin){
-                          //login function
-                         if(!DBCheck(username,password)){
-                            setLoginMsg('login fail')
-                            DBStore('token','false')
-                             //clear value input
-                          setformvalueUser('');
-                          setformvaluePass('');
-                          return;
-                         }
-
-                         setLoginMsg('login nice 69')
-                         DBStore('token','true')
-                          //clear value input
-                          setformvalueUser('');
-                          setformvaluePass('');
-                        }
-                      if(!isLogin){
-                        //register function
-                        DBStore('username',username);
-                        DBStore('password',password);
+                <Icon variant={"info"} icon={"lightning"} name={" "} />
+                counter strike
+              </p>
+              <p className="text-light">
+                  <Icon
+                      variant={`${
+                        getUser === formvalueUser 
+                              &&
+                        getPass === formvaluePass      
+                        ? "info" : "danger"
+                      }`}
+                      icon={"check-circle"}
+                      name={" "}
+                    />
+                login status : {loginMsg}
+              </p>
+              <p className="text-white">
+                  <Icon
+                      variant={`${
+                        getUser === formvalueUser? "info" : "danger"
+                      }`}
+                      icon={"check-circle"}
+                      name={" "}
+                      />
+                user : {formvalueUser}
+              </p>
+              <p className="text-white">
+                  <Icon
+                      variant={`${
+                        getPass === formvaluePass? "info" : "danger"
+                      }`}
+                      icon={"check-circle"}
+                      name={" "}
+                      />
+                      password : {formvaluePass}
+              </p>
+              <p className="color-1 h5 text-center">
+                <Icon
+                  variant={"info"}
+                  icon={`${isLogin ? "box-arrow-in-right" : "pencil-square"}`}
+                  name={" "}
+                />
+                {isLogin ? "Login" : "register"}
+              </p>
+              <div className="d-flex flex-column gap-3">
+                <input
+                  type="text"
+                  onChange={(e) => changeValue(e, true)}
+                  placeholder="username"
+                  required
+                  id="user"
+                  value={formvalueUser}
+                  minLength={5}
+                  autoComplete={"false"}
+                />
+                <input
+                  type="password"
+                  onChange={(e) => changeValue(e, false)}
+                  placeholder="password"
+                  required
+                  id="pass"
+                  value={formvaluePass}
+                  minLength={5}
+                />
+                <Button
+                  variant={"outline-info rounded-pill"}
+                  name={""}
+                  onClick={() => {
+                    const username = formvalueUser;
+                    const password = formvaluePass;
+                    if (isLogin) {
+                      //login function
+                      if (!DBCheck(username, password)) {
+                        setLoginMsg("login fail");
+                        DBStore("token", "false");
                         //clear value input
-                          setformvalueUser('');
-                          setformvaluePass('');
-                      }  
-                      setformvalueUser('');
-                      setformvaluePass('');
-                  }} 
-                  disableOnClick={false} 
-                  allAttr={{}}>
-                    <Icon variant={'light'} icon={`${isLogin?'box-arrow-in-right':'pencil-square'}`} name={` ${isLogin?'Login':'register'}`}/>                
+                        setformvalueUser("");
+                        setformvaluePass("");
+                        return;
+                      }
+
+                      setLoginMsg("login nice 69");
+                      DBStore("token", "true");
+                      //clear value input
+                      setformvalueUser("");
+                      setformvaluePass("");
+                    }
+                    if (!isLogin) {
+                      //register function
+                      DBStore("username", username);
+                      DBStore("password", password);
+                      //clear value input
+                      setformvalueUser("");
+                      setformvaluePass("");
+                    }
+                    setformvalueUser("");
+                    setformvaluePass("");
+                  }}
+                  disableOnClick={false}
+                  allAttr={{}}
+                >
+                  <Icon
+                    variant={"light"}
+                    icon={`${isLogin ? "box-arrow-in-right" : "pencil-square"}`}
+                    name={` ${isLogin ? "Login" : "register"}`}
+                  />
                 </Button>
+                <a
+                  role="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#resetInfo"
+                  className={`btn btn-outline-info px-3 py-2 rounded-pill ${getPass && getToken && getUser?'d-block':'d-none'}`}
+                >
+                  <Icon
+                    variant={"light"}
+                    icon={"card-text"}
+                    name={" forgot password"}
+                  />
+                </a>
               </div>
             </div>
+          </div>
         </div>
-    </div>
-</form> //set is-login=true then navigate use to
-  )//cek pass dan username
+      </form>
+
+      {/*char info  */}
+      <Modal
+        modalTitle={" forgot password"}
+        modalId={"resetInfo"}
+        modalTitleIcon={"info-circle"}
+      >
+        <div className="text-center">
+          <Icon variant={"info text-center"} icon={"info-circle"} name={" "} />
+          <p className="d-inline">informasi</p>
+        </div>
+        <hr />
+        <div className="d-flex justify-content-center px-3 flex-row py-2 px-3">
+            <p className="border-start border-info px-2">
+              <Icon variant={"info"} icon={"person-circle"} name={` `} />
+              reset akun!
+            </p>
+        </div>
+        <div className="d-flex flex-column p-2 mx-auto align-items-center justify-content-center">
+          <div className="d-flex flex-column align-items-center gap-3"></div>
+          <div className="d-flex justify-content-between align-items-center gap-3 flex-row">
+            <div className="">
+              <div className="border-start px-3 border-info my-3">
+                <input
+                  type="text"
+                  placeholder="username"
+                  onChange={(e) => setformResetvalueUser(e.target.value)}
+                  value={formResetvalueUser}
+                />
+              </div>
+              <div className="border-start px-3 border-info my-3">
+                <input 
+                  type="password" placeholder="password"
+                  onChange={(e) => setformResetvaluePass(e.target.value)}
+                  value={formResetvaluePass}
+                />
+              </div>
+            </div>
+
+            <div className="d-flex flex-column justify-content-center align-items-center gap-2 pt-3">
+              <div className="">
+                <div className="border-start px-3 border-info">
+                  {/* <p>status: {getUser}</p> */}
+                  <p>
+                    username :{" "}
+                    <Icon
+                      variant={`${
+                        getUser === formResetvalueUser ? "info" : "danger"
+                      }`}
+                      icon={"check-circle"}
+                      name={""}
+                    />
+                  </p>
+                </div>
+              </div>
+              <div className="">
+                <div className="border-start px-3 border-info">
+                  <p>
+                    password :
+                    <Icon
+                      variant={`${
+                        formResetvaluePass.length >=5 ? "info" : "danger"
+                      }`}
+                      icon={"check-circle"}
+                      name={""}
+                    />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <p className="text-center d-inline">
+          <Icon variant={"info"} icon={"exclamation-triangle"} name={" "} />
+          confirmation!
+        </p>
+        <div className="d-flex flex-column px-3 py-2">
+          <p>
+            <Icon variant={"info"} icon={"pencil-square"} name={" "} />
+            username : {formResetvalueUser??''}
+          </p>
+          <p>
+            <Icon variant={"info"} icon={"pencil-square"} name={" "} />
+            password : {formResetvaluePass??''}
+          </p>
+        </div>
+        <hr />
+        <Button
+          variant={""}
+          name={""}
+          onClick={() => {
+
+            if(formResetvaluePass.length > 5 && formResetvalueUser === getUser){
+              DBStore('password',formResetvaluePass);
+              setformResetvalueUser('')
+              setformResetvaluePass('')
+              document.getElementById('modalClose')?.click();
+            }
+          }}
+          disableOnClick={false}
+          allAttr={{}}
+        >
+          <Icon variant={"info"} icon={"arrow-clockwise"} name={" "} />
+          <p className="d-inline text-light">reset</p>
+        </Button>
+        <hr />
+      </Modal>
+    </>
+  );//cek pass dan username
 }
 
 //use context ambil data player dari local storage
