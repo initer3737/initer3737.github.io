@@ -398,7 +398,7 @@ export default function LyricSong() {
                 <p>
                   jika ada perasaan keinginan untuk bunuh diri klik link di bawah
                 </p>
-              
+              <div className="d-inline text-center">
                 <LinkToPage 
                     href={'https://www.intothelightid.org/tentang-bunuh-diri/hotline-bunuh-diri-di-indonesia/'} 
                     variant={'info'} 
@@ -407,6 +407,7 @@ export default function LyricSong() {
                     className={'text-center'}
                     target={'_blank'}
                   />
+              </div>
               </div>
           </Modal>
         {/* end of modal */}

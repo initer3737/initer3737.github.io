@@ -316,6 +316,7 @@ let audio=new Audio(themes[song])
               </p>
               <hr />
               <div className="d-flex flex-column gap-3">
+                <div className="d-inline">
                 <LinkToPage 
                   href={"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXs7Tkq9r6AhWYSGwGHRTpCJIQFnoECEQQAQ&url=https%3A%2F%2Fid.rbth.com%2Ftechnology%2F84956-kalashnikov-vs-senapan-nato-wyx&usg=AOvVaw0xcnoATmHTufDVQE35cK4_"} 
                   icon={"info-circle"} 
@@ -323,6 +324,8 @@ let audio=new Audio(themes[song])
                   variant={"info"} 
                   name={" link referensi"} className={""}
                   />
+                </div>
+                <div className="d-inline">
                 <LinkToPage 
                   href={"https://en.kalashnikovgroup.ru/catalog/boevoe-strelkovoe-oruzhie/avtomaty/avtomat-kalashnikova-ak-12"} 
                   icon={"info-circle"} 
@@ -330,6 +333,7 @@ let audio=new Audio(themes[song])
                   variant={"info"} 
                   name={" link referensi"} className={""}
                   />
+                </div>
               </div>
         </div>
         <div className="d-none">
