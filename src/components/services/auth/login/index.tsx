@@ -58,7 +58,6 @@ const navigate=useNavigate();
       }
   },[getPass,getUser,getToken])
   // audio themes
-  let audio=useRef();
   const themes=[
     themeSound1,
     themeSound2,
@@ -69,19 +68,15 @@ const navigate=useNavigate();
     themeSound7,
 ];
 const song=new Date().getDay();
-// useThemes().play()
+  let audio=new Audio(themes[song]);
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
-      audio.current=new Audio(themes[song]);
-      audio.current.loop
-      audio.current.play();
-  //pop up ,modal if condition
-  //     setInterval(()=>{
-    // useThemes({play:true});
+      audio.loop=true
+      audio.play();
   }, []);
   useEffect(()=>{
-    return ()=>audio.current.pause();
+    return ()=>audio.pause();
   },[])
   // audio themes
   return (

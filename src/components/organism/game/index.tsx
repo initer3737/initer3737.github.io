@@ -28,7 +28,7 @@ export default function Game() {
   let [color, setColor] = useState("");
   // let [theme, setTheme] = useState(true);
   let [login, setLogin] = useState(true);
-  let audio=useRef();
+  // let audio=useRef();
   // let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
@@ -55,6 +55,7 @@ export default function Game() {
     themeSound7,
 ];
 const song=new Date().getDay();
+let audio=new Audio(themes[song])
 // useThemes().play()
   useEffect(() => {
     //this is to recieve theme music on every render because
@@ -63,15 +64,13 @@ const song=new Date().getDay();
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
-      audio.current=new Audio(themes[song]);
-      audio.current.loop
-      audio.current.play();
+      audio.play();
   //pop up ,modal if condition
   //     setInterval(()=>{
     // useThemes({play:true});
   }, []);
   useEffect(()=>{
-    return ()=>audio.current.pause();
+    return ()=>audio.pause();
   },[])
   useEffect(() => {
     //store to local storage
