@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {useLocation} from 'react-router-dom'
 import favicon from '../../imgs/kitten-7157608.png';
     import {
         Routes as Switch, // similiar to switch
@@ -21,25 +22,29 @@ import favicon from '../../imgs/kitten-7157608.png';
         ScrollToTop
     } from '../assembleComponent'
 import {
-     Login, useThemes 
-} from "../services";
-import {
-    ProtectedRoutes
+    GetThemes,
+     Login ,
+     ProtectedRoutes
 } from "../services";
 
 export default function Routes(){
+    const location=useLocation();
+        const {pathname}=location;
+        const path=pathname.split('/');   
   useEffect(() => {
         const changeFavicon=(src:string)=>{
            let favicon=document.getElementById('favicon')?.getAttribute('href')
            return favicon=src;
         }
         changeFavicon(favicon)
+            //path[1]=='game'?useThemes().play():useThemes().pause()
     }, []);
-    useThemes();
+    // useThemes();
 
      return (
         <div className="d-flex flex-column h-100 col-12">
             <div className="w-100">
+                <GetThemes/>
                 <ScrollToTop/>
                 <Nav/>
                 <Header/>
@@ -51,7 +56,7 @@ export default function Routes(){
                         <Route path="/lyrics" element={<LyricSong />} />
                         <Route path="/quotes" element={<Quotes />} />
                         <Route path="/Anime" element={<Anime />} />
-                        <Route element={<ProtectedRoutes/>}>
+                        <Route  element={<ProtectedRoutes/>}>
                             <Route path="/game" element={<Game/>} />
                         </Route>
                         <Route path="/login" element={<Login/>} />

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Icon, Img, Link, LinkToPage, Modal, VideoFromYoutube } from '../../assembleComponent';
+import { Icon, Img, LinkToPage, Modal, VideoFromYoutube } from '../../assembleComponent';
 import Logo1 from '../../../imgs/night-1851685_960_720.png'
 import Logo2 from '../../../imgs/the-background-292720.png'
 import Logo3 from '../../../imgs/wave-305226.png'
@@ -366,6 +366,7 @@ export default function LyricSong() {
               Meski merupakan kata yang jarang didengar, "Thanatos" adalah kata yang memiliki arti terkait dengan "kematian". Dalam mitologi Yunani, istilah "malaikat maut" digunakan oleh psikiater Freud, dalam menyebut "godaan untuk mengakhiri hidup". Dengan kata lain, apakah judul "The Temptation of Thanatos" berarti "undangan untuk mengakhiri hidup"? Seperti yang bisa kamu bayangkan dari judul ini, The Temptation of Thanatos mungkin adalah cerita tentang orang yang ingin mengakhiri hidupnya sendiri.
             </p>
               <div className="d-flex gap-2 flex-column">
+                <div className="d-inline">
                 <LinkToPage 
                   href={'https://zonabanten.pikiran-rakyat.com/entertainment/pr-232624772/makna-kelam-di-balik-lagu-yoru-ni-kakeru-yoasobi-yang-viral-di-tiktok-ternyata-tak-seasyik-iramanya'}
                   variant={'info'}
@@ -374,6 +375,8 @@ export default function LyricSong() {
                   target={'_blank'} 
                   className={''}                  
                   />
+                </div>
+                <div className="d-inline">
                 <LinkToPage 
                   href={'https://we-xpats.com/id/guide/as/jp/detail/3153/'} 
                   variant={'info'} 
@@ -382,9 +385,10 @@ export default function LyricSong() {
                   className={''}
                   target={'_blank'}
                   />
+                </div>
               </div>
               <div className='text-center h5 d-flex flex-column gap-1 py-2'>
-                <Icon variant={'danger'} icon={'exclamation-triangle-fill'} name={' disclaimer'}/>
+                <Icon variant={'info'} icon={'exclamation-triangle-fill'} name={' disclaimer'}/>
                 <p className='h6'>
                   lagu ini berisi tentang kontent 18+ yang tak layak didengar oleh anak-anak
                   jauhkan dari telinga anak-anak!
@@ -697,18 +701,18 @@ export default function LyricSong() {
         </h5>
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-            ketika gadis cossack bermata gelap
+            gadis cossack bermata gelap
             menggosok sepatu kudaku.
-            Dia meminta sejumlah kecil uang, bukannya aku tidak menghargai pekerjaannya.
+            Dia meminta sejumlah uang yang tak seberapa, bukannya aku tidak menghargai pekerjaannya.
             Siapa namamu nona muda?
             Dan wanita muda itu menjawab:
             Anda akan mendengar nama saya
-            dalam derap kaki kudamu.
+            dalam derap kaki kuda.
             Saya berkendara di sepanjang jalan,sambil menebak namanya
             Aku berlari kencang di jalan.
             Dan di sepanjang jalan di sekitar bebatuan cokelat,
             Dan di antara bebatuan abu-abu.
-            Masha, Zina, Dasha? Nina?
+            Dasha?,Zina ,Masha,Nina?
             Sepertinya tidak ada yang cocok.
             Katya, Katya! - terdengar 
             Dalam derap kaki kudaku.

@@ -11,15 +11,24 @@ import Ak12fire from "../../../imgs/ak12-fire.png";
 import Ak12info from "../../../imgs/AK-12-info.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
 import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
-import { useThemes } from "../../services";
+import { GetThemes } from "../../services";
 import { useNavigate } from "react-router-dom";
-
+/*themes*/
+import themeSound1 from '../../../sound/teme-gaming-1.mp3'
+import themeSound2 from '../../../sound/teme-gaming-2.mp3'
+import themeSound3 from '../../../sound/teme-gaming-3.mp3'
+import themeSound4 from '../../../sound/teme-gaming-4.mp3'
+import themeSound5 from '../../../sound/teme-gaming-5.mp3'
+import themeSound6 from '../../../sound/teme-gaming-6.mp3'
+import themeSound7 from '../../../sound/teme-gaming-7.mp3'
+/*end of themes*/
 export default function Game() {
   let [status, setStatus] = useState("");
   let [score, setScore] = useState(0);
   let [color, setColor] = useState("");
-  let [theme, setTheme] = useState(true);
+  // let [theme, setTheme] = useState(true);
   let [login, setLogin] = useState(true);
+  let audio=useRef();
   // let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
@@ -27,7 +36,6 @@ export default function Game() {
   const password=localStorage.getItem('password');
   const token=localStorage.getItem('token');
   //utils
-  //  useThemes().play();
   let navigate=useNavigate(); 
   const srcAudio = (src: string) => new Audio(src);
   const keyPress=(key:string,id:string,keyup:boolean=true)=>{
@@ -36,7 +44,18 @@ export default function Game() {
         return e.key === key?document.getElementById(id)?.click():''
     })
   }
-//useThemes().play()
+
+  const themes=[
+    themeSound1,
+    themeSound2,
+    themeSound3,
+    themeSound4,
+    themeSound5,
+    themeSound6,
+    themeSound7,
+];
+const song=new Date().getDay();
+// useThemes().play()
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
@@ -44,10 +63,16 @@ export default function Game() {
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
+      audio.current=new Audio(themes[song]);
+      audio.current.loop
+      audio.current.play();
   //pop up ,modal if condition
   //     setInterval(()=>{
-        
+    // useThemes({play:true});
   }, []);
+  useEffect(()=>{
+    return ()=>audio.current.pause();
+  },[])
   useEffect(() => {
     //store to local storage
     if (
@@ -441,7 +466,7 @@ export default function Game() {
            <div className="py-2 d-flex flex-column pb-3">
               <div className="pb-2 mx-auto">
                   <div className="text-center border-start border-info px-2">
-                    <Icon variant={"light"} icon={"fire"} name={" counter strike"}/>
+                    <Icon variant={"light"} icon={"lightning"} name={" counter strike"}/>
                   </div>
               </div>
            <Img 
