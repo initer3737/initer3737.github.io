@@ -95,20 +95,34 @@ const song=new Date().getDay();
               <p className="text-light">
                   <Icon
                       variant={`${
-                        getUser === formvalueUser 
-                              &&
-                        getPass === formvaluePass      
-                        ? "info" : "danger"
+                        isLogin ===true?
+                          getUser === formvalueUser 
+                                &&
+                          getPass === formvaluePass? "info" : "danger"
+                                  :
+                            formvalueUser.length >5
+                                   &&
+                            formvaluePass.length >5? "info" : "danger"
                       }`}
                       icon={"check-circle"}
                       name={" "}
                     />
-                login status : {loginMsg}
+                {isLogin?'login':'register'} status : 
+                              {
+                                isLogin
+                                  ?  
+                              loginMsg
+                                :
+                                formvaluePass.length>5 && formvalueUser.length>5?'register success':'registerfail'
+                              }
               </p>
               <p className="text-white">
                   <Icon
                       variant={`${
+                            isLogin?
                         getUser === formvalueUser? "info" : "danger"
+                                  :
+                        formvalueUser.length>5? "info" : "danger"
                       }`}
                       icon={"check-circle"}
                       name={" "}
@@ -118,7 +132,10 @@ const song=new Date().getDay();
               <p className="text-white">
                   <Icon
                       variant={`${
+                          isLogin?
                         getPass === formvaluePass? "info" : "danger"
+                                  :
+                        formvaluePass.length>5? "info" : "danger"
                       }`}
                       icon={"check-circle"}
                       name={" "}
@@ -177,15 +194,18 @@ const song=new Date().getDay();
                       setformvaluePass("");
                     }
                     if (!isLogin) {
-                      //register function
-                      DBStore("username", username);
-                      DBStore("password", password);
-                      //clear value input
-                      setformvalueUser("");
-                      setformvaluePass("");
+                      if(username.length > 5 && password.length > 5)
+                      {
+                        //register function
+                        DBStore("username", username);
+                        DBStore("password", password);
+                        //clear value input
+                        setformvalueUser("");
+                        setformvaluePass("");
+                      }
                     }
-                    setformvalueUser("");
-                    setformvaluePass("");
+                    // setformvalueUser("");
+                    // setformvaluePass("");
                   }}
                   disableOnClick={false}
                   allAttr={{}}
