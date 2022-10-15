@@ -1,7 +1,7 @@
 import React from 'react'
 import Video from '../../../imgs/Earth - 4788.mp4'
 import {Clock} from '../../../utils'
-import { LinkToPage,Icon,Button} from '../../atom'
+import { LinkToPage,Icon} from '../../atom'
 export default function HomePage()
  {
   return (

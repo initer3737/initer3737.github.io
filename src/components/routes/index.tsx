@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import {useLocation} from 'react-router-dom'
 import favicon from '../../imgs/kitten-7157608.png';
     import {
@@ -22,7 +22,6 @@ import favicon from '../../imgs/kitten-7157608.png';
         ScrollToTop
     } from '../assembleComponent'
 import {
-    GetThemes,
      Login ,
      ProtectedRoutes
 } from "../services";
@@ -37,14 +36,11 @@ export default function Routes(){
            return favicon=src;
         }
         changeFavicon(favicon)
-            //path[1]=='game'?useThemes().play():useThemes().pause()
     }, []);
-    // useThemes();
 
      return (
         <div className="d-flex flex-column h-100 col-12">
             <div className="w-100">
-                <GetThemes/>
                 <ScrollToTop/>
                 <Nav/>
                 <Header/>

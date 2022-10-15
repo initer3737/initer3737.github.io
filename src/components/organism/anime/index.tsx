@@ -76,7 +76,7 @@ export default function Anime(): JSX.Element {
      
             console.log(async ()=>await (await fetch(await('https://animechan.vercel.app/api/quotes'))).json)   
   },[])
-      const animeCard=AnimeCard[AnimeCarddataIndex]
+      const animeCard=AnimeCard[AnimeCarddataIndex] //api service is down 503 so i will comment it for a while
       const animeQuotes=randomQuotes[randomQuotesdataIndex];
   return (
     <>

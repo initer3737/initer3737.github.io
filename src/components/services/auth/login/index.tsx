@@ -1,4 +1,4 @@
-import React, {useEffect,useRef, useState } from 'react'
+import React, {useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom';
 import './style.css'
 import {
@@ -75,7 +75,7 @@ const song=new Date().getDay();
       audio.loop=true
       audio.play();
   }, []);
-  useEffect(()=>{
+  useEffect(()=>{ //to stop audio when route is change
     return ()=>audio.pause();
   },[])
   // audio themes

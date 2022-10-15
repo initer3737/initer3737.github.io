@@ -1,4 +1,3 @@
-import axios from 'axios'
 import {useEffect} from 'react'
 import { Anime as AnimeOrganisme } from '../../organism'
 export default function Covid() {

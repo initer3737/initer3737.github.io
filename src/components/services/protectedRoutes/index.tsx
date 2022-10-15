@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Navigate,Outlet } from 'react-router-dom'
   //[username:'',pass:'',is-login:bool]
 const useAuth=(auth:boolean=false)=>{

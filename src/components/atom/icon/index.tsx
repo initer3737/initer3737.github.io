@@ -3,7 +3,6 @@ type props={
     variant:string,
     icon:string,
     name:string,
-    // onlyIcon:boolean,
 }
 export default function Icon(props:props) {
     const {variant,icon,name}=props;

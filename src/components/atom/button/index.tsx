@@ -6,7 +6,6 @@ import React from "react";
         disableOnClick:boolean,
         children:any,
         allAttr:object
-        // ref:null | MutableRefObject<null>
     }
 export default function Button(props:props) {
         const {variant,name,onClick,disableOnClick,children,allAttr} =props;

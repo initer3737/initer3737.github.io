@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef, useMemo,useContext } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import PuingSound from "../../../sound/puing.mp3";
 import ak47calmSound from "../../../sound/ak47calm.mp3";
@@ -11,7 +11,6 @@ import Ak12fire from "../../../imgs/ak12-fire.png";
 import Ak12info from "../../../imgs/AK-12-info.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
 import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
-import { GetThemes } from "../../services";
 import { useNavigate } from "react-router-dom";
 /*themes*/
 import themeSound1 from '../../../sound/teme-gaming-1.mp3'
@@ -22,15 +21,15 @@ import themeSound5 from '../../../sound/teme-gaming-5.mp3'
 import themeSound6 from '../../../sound/teme-gaming-6.mp3'
 import themeSound7 from '../../../sound/teme-gaming-7.mp3'
 /*end of themes*/
+/*data string*/
+import usegame from "./text/game";
+/*data string*/
 export default function Game() {
   let [status, setStatus] = useState("");
   let [score, setScore] = useState(0);
   let [color, setColor] = useState("");
-  // let [theme, setTheme] = useState(true);
-  let [login, setLogin] = useState(true);
-  // let audio=useRef();
-  // let [point, setPoint] = useState(localStorage);
   let [ammo, setAmmo] = useState(30);
+  const [themeplay,setThemeplay]=useState(true)
   let [isFire, setIsFire] = useState(false);
   const username=localStorage.getItem('username');
   const password=localStorage.getItem('password');
@@ -55,8 +54,8 @@ export default function Game() {
     themeSound7,
 ];
 const song=new Date().getDay();
-let audio=new Audio(themes[song])
-// useThemes().play()
+let audio=new Audio(themes[song==6?0:song+1])
+
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
@@ -64,12 +63,17 @@ let audio=new Audio(themes[song])
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
-      audio.play();
-  //pop up ,modal if condition
-  //     setInterval(()=>{
-    // useThemes({play:true});
+      audio.loop=true;
+      audio.volume=0.6
+      audio.play()
+      //  themeplay?audio.play():audio.pause();
+      // if(audio.ended){
+      //     setThemeplay(false);
+      //   setTimeout(()=>{setThemeplay(true)},3000)
+      // }
   }, []);
   useEffect(()=>{
+    //when route change it trigger callback to pause audio
     return ()=>audio.pause();
   },[])
   useEffect(() => {
@@ -83,15 +87,7 @@ let audio=new Audio(themes[song])
         //check data to localstorage
         if(token !== 'true'){
             navigate('/login')
-          //   window.addEventListener('storage',()=>{
-          //     return window.location.reload()
-          //   })
           }
-      // setInterval(()=>{
-      //   window.addEventListener('storage',()=>{
-      //      if(token ===null)window.location.reload()
-      //   })
-      // },6000)
   }, [score,ammo,username,password,token,localStorage]); //wwhen score change it become realtime
 
   useEffect(() => {
@@ -301,18 +297,11 @@ let audio=new Audio(themes[song])
         <div className="d-flex flex-column">
           <div className="d-flex flelx-row gap-5">
           <Icon variant={"info"} icon={"info-circle"} name={" weapon info"}/>
-          <h5 className="text-center">ak-12</h5>
+          <h5 className="text-center">{usegame().title}</h5>
           </div>
           <hr />
               <p className="text-start">
-              AK-12 adalah pengembangan lebih lanjut platform AK-47. Senapan tersebut masih dibuat berdasarkan prinsip kesederhanaan dan keandalan.
-              “Senjata ini dirancang untuk berfungsi dalam kondisi iklim paling keras, dari badai pasir di Gurun Sahara pada suhu 40 derajat Celsius hingga badai salju di Kutub Utara pada suhu -40 derajat Celsius. Performanya stabil dan dapat terus menembak, bahkan ketika pesaing-pesaing asingnya telah menyerah. Anda dapat menyeberangi rawa tanpa khawatir senjata itu sewaktu-waktu macet. AK-12 betul-betul tangguh dan dapat diandalkan dalam kondisi terberat sekali pun,” kata Yuri Sinichkin, mantan penembak jitu dan kepala insinyur di Lobaev Arms, kepada RT Tiongkok.
-              AK-12 mewarisi keandalan versi sebelumnya dan mendapatkan sejumlah fitur baru yang dibutuhkan senapan serbu abad ke-21.
-              Pertama, popor teleskopik yang baru memungkinkan penembak menyesuaikan senjata agar sesuai dengan fitur antropometriknya, serta peralatan dan zona tempur tempat ia beroperasi.
-              Kedua, AK-12 dilengkapi rel Picatinny sehingga penembak dapat memasang alat bidik apa pun pada senjata itu (collimator, berbagai alat optik, penunjuk laser, dan lain-lain). Selain itu, penembak kini dapat menjalankan misinya dan melihat target di depannya dengan jernih seperti pada senjata dalam permainan Call of Duty dan Apex Legends.
-              Ketiga, AK-12 mendapatkan pegangan baru yang mengikuti kontur tangan manusia dan membuatnya lebih nyaman digenggam. Pihak pengembang juga menambahkan “jendela” di sisi magazen sehingga si pengguna dapat melihat jumlah peluru yang tersisa.
-              Keempat, Kalashnikov memasang rem laras (muzzle brake) baru pada AK-12 yang dapat menyembunyikan si penembak ketika beroperasi pada malam hari (AK versi sebelumnya memancarkan kilatan api saat ditembakkan pada malam hari sehingga mengungkap posisi si prajurit) .
-              Semua fitur ini, ditambah keandalan senjata yang tak tak diragukan lagi, membuat AK-12 menjadi salah satu senapan terbaik di dunia untuk tentara reguler, bukan unit pasukan khusus.
+              {usegame().description}
               </p>
               <hr />
               <div className="d-flex flex-column gap-3">
@@ -505,10 +494,6 @@ let audio=new Audio(themes[song])
        </div>
         <hr />
       </Modal>
-    {/* modal end */}
-    {/* audio hidden for theme */}
-              {/* <audio onPl></audio> */}
-    {/* audio hidden for theme */}
     </div>
   );
 }

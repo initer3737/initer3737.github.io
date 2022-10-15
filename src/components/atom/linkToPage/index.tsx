@@ -7,7 +7,6 @@ type props={
     variant:string,
     name:string,
     className:string,
-    // onlyIcon:boolean,
 }
 export default function LinkToPage(props:props) {
     const {href,icon,target,variant,name,className}=props;
