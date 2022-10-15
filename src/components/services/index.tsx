@@ -7,7 +7,6 @@ import GetThemes from "./getThemes";
 export{
     Login,
     ProtectedRoutes,
-    // useThemes,
     LoadingData,
     GetThemes
 }
