@@ -115,14 +115,13 @@ export default function LyricSong() {
                 <Icon variant={'light'} icon={'file-music-fill'} name={' yoru ni kakeru'}/>
               </p>
             <p>
-              lagu ini terinspirasi dari novel Thanatos no Yuuwaku
+                {useSong().text.yorunikakeru_text.text1}
             </p>
             <p>
-              Novel "The Temptation of Thanatos" yang diposting di situs menulis online ramai menjadi bahan perbincangan. Penulis aslinya adalah "Maya Hoshino". Belum jelas profil detail dari penulis ini, tetapi ada spekulasi bahwa tampaknya dia adalah seorang mahasiswa yang masih aktif. Seperti yang dikatakan penulis itu sendiri, "Saya suka orang yang sedikit kejam",  tulisan singkat "The Temptation of Thanatos" ini adalah cerita yang kelam. The Temptation of Thanatos, atau dalam bahasa Jepang 
+              {useSong().text.yorunikakeru_text.text2}
             </p>
             <p>
-            berjudul asli Tanatosu No Yuuwaku (タナトスの誘惑) adalah cerita yang ditulis dengan tema "Aku dan kamu yang frustasi di malam musim panas". Sebenarnya cerita seperti apa yang bisa diceritakan dari tema ini?
-              Meski merupakan kata yang jarang didengar, "Thanatos" adalah kata yang memiliki arti terkait dengan "kematian". Dalam mitologi Yunani, istilah "malaikat maut" digunakan oleh psikiater Freud, dalam menyebut "godaan untuk mengakhiri hidup". Dengan kata lain, apakah judul "The Temptation of Thanatos" berarti "undangan untuk mengakhiri hidup"? Seperti yang bisa kamu bayangkan dari judul ini, The Temptation of Thanatos mungkin adalah cerita tentang orang yang ingin mengakhiri hidupnya sendiri.
+              {useSong().text.yorunikakeru_text.text3}
             </p>
               <div className="d-flex gap-2 flex-column">
                 <div className="d-inline">
@@ -146,16 +145,15 @@ export default function LyricSong() {
                   />
                 </div>
               </div>
-              <div className='text-center h5 d-flex flex-column gap-1 py-2'>
+              <div className='text-center h5 d-flex flex-column gap-3 py-2'>
                 <Icon variant={'info'} icon={'exclamation-triangle-fill'} name={' disclaimer'}/>
                 <p className='h6'>
-                  lagu ini berisi tentang kontent 18+ yang tak layak didengar oleh anak-anak
-                  jauhkan dari telinga anak-anak!
+                    {useSong().text.yorunikakeru_text.text4}
                 </p>
               </div>
             <div className='d-flex flex-column gap-2'>
                 <p>
-                  jika ada perasaan keinginan untuk bunuh diri klik link di bawah
+                  {useSong().text.yorunikakeru_text.text5}
                 </p>
               <div className="d-inline text-center">
                 <LinkToPage 
