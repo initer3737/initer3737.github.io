@@ -469,7 +469,7 @@ let audio=new Audio(themes[song==6?0:song+1])
                   <Icon variant={""} icon={"person-circle"} name={` kombatan : ${username}`}/>
                 </p> 
               </div>
-              <div className="border-start px-3 border-info">
+              <div className="border-end px-3 border-info">
                 <p className="d-flex flex-row gap-2">
                   <Icon variant={""} icon={"stars"} name={` score : ${Point}`}/> 
                 </p> 
