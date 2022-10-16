@@ -128,6 +128,14 @@ export default function HomePage()
               name={' bootstrap icon'}
               icon={'stars'} className={''}            />
           </>
+          <>
+            <LinkToPage 
+              href={"https://www.cursors-4u.com/cursor/2009/04/28/free-2.html"}
+              target="_blank"
+              variant={'primary'}
+              name={' cursors4u'}
+              icon={'stars'} className={''}            />
+          </>
         </div>
       </div>
      </>
