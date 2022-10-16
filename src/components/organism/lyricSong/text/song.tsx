@@ -364,7 +364,7 @@ export default function useSong() {
                 },
             yorunikakeru:{
                 title:`berlari di malam hari`,
-                lirik:` Seperti tenggelam dan melebur ke dalamnya Langit bagi kita membentang
+                lirik:` Seperti tenggelam dan melebur ke dalamnya Langit bagi kita berdua membentang
                         di malam hari Hanya dengan "selamat tinggal" Satu kata itu membuatku
                         memahami segalanya Sosokmu dan juga langit saat matahari tenggelam
                         Tumpang tindih dengan pagar di sana Sejak pertama kali kita bertemu
@@ -402,7 +402,7 @@ export default function useSong() {
             },
             literature:{
                 title:`Literature [reina ueda]`,
-                lirik:`Jika dapat terwarnai maka itu adalah ilusi
+                lirik:`Jika warna dapat terwarnai maka itu adalah ilusi
                         Agar tak menjadi sesuatu yang berbentuk
                         Aku akan melukisnya dan juga mewujudkannya
                         Angin yang berhembus dengan lembut
@@ -486,7 +486,7 @@ export default function useSong() {
                         Dimana matahari terbit di langit biru.
                         Prajurit Rusia berjalan bahu-membahu,
                         Dan meskipun jalan militer tidaklah mudah,
-                        Kita akan melayani Rusia dengan iman dan kebenaran.
+                        Kita akan melayani Rusia dengan percaya dan mantap.
                         Untuk melayani Rusia adalah takdir untuk kau dan aku,
                         Untuk melayani Rusia - negeri yang luar biasa,
                         Dimana matahari terbit di langit biru.
@@ -521,6 +521,14 @@ export default function useSong() {
                         Keluar dari jiwaku, Saudaraku.`
            }     
         },
+       video:{
+              comet:"https://youtube.com/embed/VyvhvlYvRnc",
+              khorobuska:"https://youtube.com/embed/Y_WBf69oVgQ",
+              yorunikakeru:"https://www.youtube.com/embed/8omSc01lpbI",
+              literature:"https://youtube.com/embed/7u9MtqfcWaU",
+              toserverusia:"https://youtube.com/embed/si_KzQjLtEg",
+              chernoglaza:"https://youtube.com/embed/4QeL8dpHAUw",
+       } 
     }
   }
   return data.data

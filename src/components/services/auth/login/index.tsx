@@ -73,8 +73,6 @@ const navigate=useNavigate();
 const song=new Date().getDay();
   let audio=new Audio(themes[song]);
   useEffect(() => {
-    //this is to recieve theme music on every render because
-    //useTheme is call from the routes
       audio.loop=true
       audio.play();
   }, []);
@@ -204,8 +202,6 @@ const song=new Date().getDay();
                         setformvaluePass("");
                       }
                     }
-                    // setformvalueUser("");
-                    // setformvaluePass("");
                   }}
                   disableOnClick={false}
                   allAttr={{}}

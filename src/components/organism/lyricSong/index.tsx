@@ -34,9 +34,7 @@ export default function LyricSong() {
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
           {useSong().translate.comet.lirik}
-          <div className="mt-3">
-            <VideoFromYoutube src={'https://youtube.com/embed/VyvhvlYvRnc'} />
-          </div>
+            <VideoFromYoutube src={useSong().video.comet} />
       </div>
     </div>
 
@@ -68,9 +66,7 @@ export default function LyricSong() {
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
       {useSong().translate.korobushka.lirik}
-        <div className="mt-3">
-          <VideoFromYoutube src={'https://youtube.com/embed/Y_WBf69oVgQ'} />
-        </div>
+          <VideoFromYoutube src={useSong().video.khorobuska} />
       </div>
     </div>
 
@@ -109,7 +105,7 @@ export default function LyricSong() {
                 warning!
               </a>
             </div>
-            <VideoFromYoutube src={'https://www.youtube.com/embed/8omSc01lpbI'} />
+            <VideoFromYoutube src={useSong().video.yorunikakeru} />
           </div>
         </div>
       </div>
@@ -203,9 +199,7 @@ export default function LyricSong() {
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.literature.lirik}
-          <div className="mt-3">
-            <VideoFromYoutube src={'https://youtube.com/embed/7u9MtqfcWaU'} />
-          </div>
+            <VideoFromYoutube src={useSong().video.literature} />
       </div>
     </div>
 
@@ -238,9 +232,7 @@ export default function LyricSong() {
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
           {useSong().translate.toServeRusia.lirik}
-        <div className="mt-3">
-          <VideoFromYoutube src={'https://youtube.com/embed/si_KzQjLtEg'} />
-        </div>
+          <VideoFromYoutube src={useSong().video.toserverusia} />
       </div>
     </div>
 
@@ -273,9 +265,7 @@ export default function LyricSong() {
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.chernoglaza.lirik}
-        <div className="mt-3">
-          <VideoFromYoutube src={'https://youtube.com/embed/4QeL8dpHAUw'} />
-        </div>
+          <VideoFromYoutube src={useSong().video.chernoglaza} />
       </div>
     </div>
 
