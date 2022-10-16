@@ -109,9 +109,10 @@ const song=new Date().getDay();
                               {
                                 isLogin
                                   ?  
-                              loginMsg
+                          formvalueUser === getUser && 
+                          formvaluePass === getPass?'login success':'login fail!'
                                 :
-                                formvaluePass.length>5 && formvalueUser.length>5?'register success':'registerfail'
+                          formvaluePass.length>5 && formvalueUser.length>5?'register success':'registerfail'
                               }
               </p>
               <p className="text-white">
@@ -157,7 +158,7 @@ const song=new Date().getDay();
                   id="user"
                   value={formvalueUser}
                   minLength={5}
-                  autoComplete={"false"}
+                  autoComplete={"off"}
                 />
                 <input
                   type="password"

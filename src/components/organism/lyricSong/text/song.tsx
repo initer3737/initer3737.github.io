@@ -528,7 +528,10 @@ export default function useSong() {
               literature:"https://youtube.com/embed/7u9MtqfcWaU",
               toserverusia:"https://youtube.com/embed/si_KzQjLtEg",
               chernoglaza:"https://youtube.com/embed/4QeL8dpHAUw",
-       } 
+       } ,
+       text:{
+        // yoru_
+       }
     }
   }
   return data.data
