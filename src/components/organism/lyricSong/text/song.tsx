@@ -258,8 +258,51 @@ export default function useSong() {
                             А молодка говорит:
                             Имя ты мое услышишь
                             Из под топота копыт`
+                },     
+            chinderela:{
+                    title:`24時間シンデレラ [nijuyon jikan shinderera]`,
+                    lirik:`素直に I LOVE YOU！　届けよう1
+                        きっとYOU LOVE ME！　伝わるさ
+                        キミに似合うガラスの靴を探そう
+                        2人でStep＆Go！ いつまでも
+                        深夜12時をすぎたって
+                        ボクらの恋魔法-ラブマジック-は解けはしない
+                        おいでめしませ　お姫様
+                        毒のリンゴを食べて眠っちゃいそうな
+                        素直すぎるキミが　とても愛しい
+                        当たり前＝宝物さ
+                        地球はまわり　陽はのぼり
+                        キミは微笑む
+                        素直に I LOVE YOU！　届けよう
+                        きっとYOU LOVE ME！　伝わるさ
+                        キミに似合うガラスの靴を探そう
+                        2人でStep＆Go！ いつまでも
+                        深夜12時をすぎたって
+                        ボクらの恋魔法-ラブマジック-は解けはしない
+                        イジのわるいママハハにも
+                        急な雨にも　寂しい夜にも
+                        へこたれないキミが　やはり愛しい
+                        遠く離れて会えない日は
+                        星に願って夢で逢おう
+                        明日はハレルヤ
+                        一生 I LOVE YOU！　変わらない
+                        そうさ　YOU LOVE ME！　永遠さ
+                        キミに似合うダイヤのリング渡そう
+                        これから何千回　つまづいて
+                        さらに何万回　転んでも
+                        キミのガラスの靴は　脱げはしない
+                        当たり前＝宝物さ
+                        地球はまわり　陽はのぼり
+                        キミは微笑む
+                        素直に I LOVE YOU！　届けよう
+                        きっとYOU LOVE ME！　伝わるさ
+                        キミに似合うガラスの靴を探そう
+                        2人でStep＆Go！ いつまでも
+                        深夜12時をすぎたって
+                        キミは僕の愛しい24時間シンデレラ
+                        Hey！ Hey！ Hey！`
                 }     
-        },
+        }, //original
         translate:{
             comet:{
                 title:`yasashi suisei`,
@@ -519,6 +562,49 @@ export default function useSong() {
                         Karena aku sudah punya yang lain[istri]!
                         Tapi katya terdengar, seperti sebuah lagu,
                         Keluar dari jiwaku, Saudaraku.`
+           } ,    
+           chinderela:{
+                title:`24 hours chinderela`,
+                lirik:`Truly I LOVE YOU! I’ll send it to you.
+                Surely YOU LOVE ME! I feel it.
+                Let’s search for the glass slipper that fits you.
+                As two, Step & Go! Until the end.
+                Even if it’s passed 12am midnight,
+                our love magic will not disappear
+                Come and eat, princess.
+                I am enthralled with you, so sweet
+                you seem like you’d eat a poison apple and fall asleep
+                Natural things = My Treasure.
+                The earth is round, the sun rises,
+                you smile
+                Truly I LOVE YOU! I’ll send it to you.
+                Surely YOU LOVE ME! I feel it.
+                Let’s search for the glass slipper that fits you.
+                As two, Step & Go! Until the end.
+                Even if it’s passed 12am midnight,
+                our love magic will not disappear
+                You, never losing heart despite your mean stepmother,
+                the sudden rain, the lonely nights,
+                that’s who I love..
+                The days we cannot meet, separated far apart,
+                let’s wish upon a star and meet in our dreams
+                Tomorrow is wonderfull.
+                Forever I LOVE YOU! It will not change.
+                That’s right, YOU LOVE ME! It’s eternal.
+                Let’s look for the diamond ring that fits you.
+                Even if we stumble a thousand times from here,
+                and fall tens of thousands of times,
+                your glass slipper will not fall off.
+                Natural things = My Treasure.
+                The earth is round, the sun rises,
+                you smile.
+                Truly I LOVE YOU! I’ll send it to you.
+                Surely YOU LOVE ME! I feel it.
+                Let’s search for the glass slipper that fits you.
+                As two, Step & Go! Until the end.
+                Even if it’s passed 12am midnight,
+                you’re still my beloved 24 hour Cinderella
+                Hey! Hey! Hey!`
            }     
         },
        video:{
@@ -528,6 +614,7 @@ export default function useSong() {
               literature:"https://youtube.com/embed/7u9MtqfcWaU",
               toserverusia:"https://youtube.com/embed/si_KzQjLtEg",
               chernoglaza:"https://youtube.com/embed/4QeL8dpHAUw",
+              chinderela:"https://youtube.com/embed/mxu1PvGUGSk",
        } ,
        text:{
         yorunikakeru_text:{
