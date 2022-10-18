@@ -136,6 +136,14 @@ export default function HomePage()
               name={' cursors4u'}
               icon={'stars'} className={''}            />
           </>
+          <>
+            <LinkToPage 
+              href={"https://lyricstranslate.com"}
+              target="_blank"
+              variant={'primary'}
+              name={' lyricstranslate.com'}
+              icon={'stars'} className={''}            />
+          </>
         </div>
       </div>
      </>

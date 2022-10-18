@@ -301,6 +301,42 @@ export default function useSong() {
                         深夜12時をすぎたって
                         キミは僕の愛しい24時間シンデレラ
                         Hey！ Hey！ Hey！`
+                } ,    
+            tanjirou:{
+                    title:`竈門炭治郎のうた`,
+                    lirik:`目を閉じて　思い出す
+                    過ぎ去りし　あの頃の
+                    戻れない　帰れない
+                    広がった　深い闇
+                     
+                    戻れない　帰れない
+                    広がった　深い闇
+                     
+                    泣きたくなるような　優しい音
+                    どんなに苦しくても
+                    前へ　前へ　進め　絶望断ち
+                     
+                    失っても　失っても　生きていくしかない
+                    どんなにうちのめされても　守るものがある
+                     
+                    失っても　失っても　生きていくしかない
+                    どんなにうちのめされても　守るものがある
+                     
+                    我に課す　一択の
+                    運命と　覚悟する
+                     
+                    泥を舐め　足掻いても
+                    目に見えぬ　細い糸
+                     
+                    泣きたくなるような　優しい音
+                    どんなに悔しくても
+                    前へ　前へ　向かえ　絶望断ち
+                     
+                    傷ついても　傷ついても　立ち上がるしかない
+                    どんなにうちのめされても　守るものがある
+                     
+                    守るものがある
+                    `
                 }     
         }, //original
         translate:{
@@ -605,6 +641,43 @@ export default function useSong() {
                 Even if it’s passed 12am midnight,
                 you’re still my beloved 24 hour Cinderella
                 Hey! Hey! Hey!`
+           } ,    
+           tanjirou:{
+                title:`tanjirou no uta`,
+                lirik:`Close your eyes,
+                        And remember that passing voice.
+                        I can't return,
+                        I can't go back.
+                        There is only deep darkness.
+                        I can't return, I can't go back.
+                        There is only deep darkness.
+                        You hear a gentle sound and it makes you cry
+                        No matter how painful it is,
+                        Move forward (move forward)
+                        Keep going (keep going)
+                        Cut off that despair.
+                        Even if you lose, even if you fail,
+                        You have no choice but to keep on living.
+                        No matter how beaten you are,
+                        There is something you have to protect.
+                        Even if you lose, even if you fail,
+                        You have no choice but to keep on living.
+                        No matter how beaten you are,
+                        There is something you have to protect.
+                        This is the path you chose,
+                        Get ready to face destiny.
+                        Covered in mud and scratched your feet,
+                        Look at that thin thread you can't see by eye.
+                        You hear a gentle sound that makes you cry.
+                        No matter how painful it is,
+                        Move forward (move forward)
+                        Head forward (head forward)
+                        Cut off that despair.
+                        Even if it hurts, even if you are in pain,
+                        You have no choice but to stand up.
+                        No matter how beaten you are,
+                        There is something you have to protect.
+                        There is something you have to protect`
            }     
         },
        video:{
@@ -615,6 +688,7 @@ export default function useSong() {
               toserverusia:"https://youtube.com/embed/si_KzQjLtEg",
               chernoglaza:"https://youtube.com/embed/4QeL8dpHAUw",
               chinderela:"https://youtube.com/embed/mxu1PvGUGSk",
+              tanjirou:"https://youtube.com/embed/l-AjkizQ70A",
        } ,
        text:{
         yorunikakeru_text:{

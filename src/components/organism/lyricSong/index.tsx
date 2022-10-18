@@ -6,6 +6,7 @@ import Logo3 from '../../../imgs/wave-305226.png'
 import Logo4 from '../../../imgs/watercolor-4116932.png'
 import Logo5 from '../../../imgs/landscape-1844226.svg'
 import Rumah from '../../../imgs/rumah.jpg'
+import Kupu from '../../../imgs/butterfly.png'
 import useSong from './text/song';
 export default function LyricSong() {
   return (
@@ -298,6 +299,39 @@ export default function LyricSong() {
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.chinderela.lirik}
           <VideoFromYoutube src={useSong().video.chinderela} />
+      </div>
+    </div>
+
+    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+        <Img
+          src={Kupu}
+          className="shadow img-fluid col-12"
+          alt="" srcset={''} width={''} height={''} attr={[]}       
+           />
+      </div>
+
+      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+          <div className="text-center ">
+            <h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+              {useSong().original.tanjirou.title}
+            </h5>
+          </div>
+          <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+            {useSong().original.tanjirou.lirik}
+          </div>
+        </div>
+
+    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().translate.tanjirou.title}
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().translate.tanjirou.lirik}
+          <VideoFromYoutube src={useSong().video.tanjirou} />
       </div>
     </div>
 
