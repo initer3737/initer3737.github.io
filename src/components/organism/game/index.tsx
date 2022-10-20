@@ -109,7 +109,7 @@ let audio=new Audio(themes[song==6?0:song+1])
   }, [score]); //only run when status is change [dependencies]
   let Point = localStorage.getItem("scorePlayer");
   const spesialForceStyle={
-      width:'12vw'
+      width:'12vw',
   }
   return (
     <div className="d-flex flex-column-reverse flex-sm-row justify-content-between ">
