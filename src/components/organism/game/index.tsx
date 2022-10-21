@@ -20,6 +20,11 @@ import themeSound4 from '../../../sound/teme-gaming-4.mp3'
 import themeSound5 from '../../../sound/teme-gaming-5.mp3'
 import themeSound6 from '../../../sound/teme-gaming-6.mp3'
 import themeSound7 from '../../../sound/teme-gaming-7.mp3'
+import battleTheme from '../../../sound/battletheme.mp3'
+import artileri from '../../../sound/artileri.mp3'
+import alarmmiliter from '../../../sound/alarmmiliter.mp3'
+import antithank from '../../../sound/antithank.mp3'
+import battleradio from '../../../sound/battleradio.mp3'
 /*end of themes*/
 /*data string*/
 import usegame from "./text/game";
@@ -29,7 +34,6 @@ export default function Game() {
   let [score, setScore] = useState(0);
   let [color, setColor] = useState("");
   let [ammo, setAmmo] = useState(30);
-  const [themeplay,setThemeplay]=useState(true)
   let [isFire, setIsFire] = useState(false);
   const username=localStorage.getItem('username');
   const password=localStorage.getItem('password');
@@ -55,7 +59,11 @@ export default function Game() {
 ];
 const song=new Date().getDay();
 let audio=new Audio(themes[song==6?0:song+1])
-
+let BattleTheme=new Audio(battleTheme);
+let Artileri=new Audio(artileri);
+let Alarmmiliter=new Audio(alarmmiliter);
+let Antithank=new Audio(antithank);
+let BattleRadio=new Audio(battleradio);
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
@@ -63,13 +71,41 @@ let audio=new Audio(themes[song==6?0:song+1])
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
+        //artileri
+      Artileri.loop=true;
+      Artileri.volume=0.4
+      Artileri.play()
+      //battle theme
+      BattleTheme.loop=true;
+      BattleTheme.volume=0.4
+      BattleTheme.play()
+        //main sound
       audio.loop=true;
-      audio.volume=0.6
+      audio.volume=0.2
       audio.play()
+        //alarm militer
+      Alarmmiliter.loop=true;
+      Alarmmiliter.volume=0.4
+      Alarmmiliter.play()
+        //anti thank
+      Antithank.loop=true;
+      Antithank.volume=0.4
+      Antithank.play()
+        //battle radio
+      BattleRadio.loop=true;
+      BattleRadio.volume=0.4
+      BattleRadio.play()
   }, []);
   useEffect(()=>{
     //when route change it trigger callback to pause audio
-    return ()=>audio.pause();
+    return ()=>{
+      audio.pause()
+      BattleTheme.pause()
+      Artileri.pause()
+      Alarmmiliter.pause()
+      Antithank.pause()
+      BattleRadio.pause()
+    };
   },[])
   useEffect(() => {
     //store to local storage
@@ -272,6 +308,22 @@ let audio=new Audio(themes[song==6?0:song+1])
           height={""}
           attr={[]}
         />
+        <div className="bg-4 rounded text-white py-2 px-3">
+          <div className="text-center py-2 d-flex flex-column gap-2">
+            <Icon variant={"info"} icon={"fire"} name={" mision"}/>
+            <Icon variant={"light"} icon={"info-circle"} name={" eliminate all enemys troops"}/>
+            <hr />
+          </div>
+         <div className="d-flex justify-content-around">
+          <h5 className="border-start border-3 border-info px-2">name : elina</h5>
+          <h5 className="border-end border-3 border-info px-2">status : troops</h5>
+         </div>
+          <hr />
+         <div className="d-flex justify-content-around py-2">
+          <h5 className="border-start border-3 border-info px-2">rank : comander</h5>
+          <h5 className="border-end border-3 border-info px-2">position : bm-13 operator</h5>
+         </div>
+        </div>
       </div>
       {/* button triger modal */}
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
