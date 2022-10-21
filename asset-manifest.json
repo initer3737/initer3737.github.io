@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0acbbf1f.css",
-    "main.js": "/static/js/main.4713bb24.js",
+    "main.js": "/static/js/main.b5289f72.js",
     "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/semangat_yuks.gif": "/static/media/semangat_yuks.16c8f89b18a0865a893c.gif",
@@ -15,9 +15,13 @@
     "static/media/Earth - 4788.mp4": "/static/media/Earth - 4788.c6043d6c61ec245407f5.mp4",
     "static/media/teme-gaming-3.mp3": "/static/media/teme-gaming-3.d4d1a1f18b408697025a.mp3",
     "static/media/watercolor-4116932.png": "/static/media/watercolor-4116932.6b19c1bf563aa5258ce3.png",
+    "static/media/battletheme.mp3": "/static/media/battletheme.84389f6310b4b7c98deb.mp3",
     "static/media/spesial-force.jpg": "/static/media/spesial-force.2c98a3a2fd214cf5e04a.jpg",
     "static/media/AK-12-info.png": "/static/media/AK-12-info.7e1065f2127c52bb1398.png",
+    "static/media/antithank.mp3": "/static/media/antithank.17f3bf5f928cdaed5f19.mp3",
     "static/media/banner-909710_1920.jpg": "/static/media/banner-909710_1920.07b6b6e52305963a8175.jpg",
+    "static/media/alarmmiliter.mp3": "/static/media/alarmmiliter.a796df1136c79c2b096d.mp3",
+    "static/media/battleradio.mp3": "/static/media/battleradio.39a86427115be96c0a9f.mp3",
     "static/media/giphy.gif": "/static/media/giphy.e18864d01a6e292eb723.gif",
     "static/media/the-background-292720.png": "/static/media/the-background-292720.d4ff33cea2ebd8202237.png",
     "static/media/butterfly.png": "/static/media/butterfly.143700ff89487e937147.png",
@@ -25,6 +29,7 @@
     "static/media/cat-133.gif": "/static/media/cat-133.ba05b96186701898af88.gif",
     "static/media/gears-1311171_1920.jpg": "/static/media/gears-1311171_1920.c2b6bb58b82d5b774bdd.jpg",
     "static/media/banner-982162_1920.jpg": "/static/media/banner-982162_1920.a9354715cc5f66136ae9.jpg",
+    "static/media/artileri.mp3": "/static/media/artileri.2ee7eb3bd59d75090b8c.mp3",
     "static/media/rumah.jpg": "/static/media/rumah.b20388449d886f5978c6.jpg",
     "static/media/wave-305226.png": "/static/media/wave-305226.99bfceef311ce0d8786d.png",
     "static/media/ak12-fire.png": "/static/media/ak12-fire.ccb6c04f9e3bcbeaf9e9.png",
@@ -39,11 +44,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.0acbbf1f.css.map": "/static/css/main.0acbbf1f.css.map",
-    "main.4713bb24.js.map": "/static/js/main.4713bb24.js.map",
+    "main.b5289f72.js.map": "/static/js/main.b5289f72.js.map",
     "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0acbbf1f.css",
-    "static/js/main.4713bb24.js"
+    "static/js/main.b5289f72.js"
   ]
 }
