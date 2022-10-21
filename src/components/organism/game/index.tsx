@@ -228,10 +228,19 @@ let BattleRadio=new Audio(battleradio);
 
                   <button id="reload"//triger reload when player press r
                     onClick={() => {
-                      const reloadAmmo=srcAudio(ammo==30?reloadSound:reloadSound2)
-                        reloadAmmo.play()
-                      setAmmo(30)
-                      setIsFire(false);
+                      const reloadAmmo:HTMLAudioElement=srcAudio(reloadSound2)
+                      const reloadAmmoFull:HTMLAudioElement=srcAudio(reloadSound)
+                        if(ammo >= 30){
+                          reloadAmmo.volume=0.0
+                          reloadAmmoFull.play()
+                          return null;
+                        }
+                        if(ammo < 30){
+                          reloadAmmoFull.volume=0.0
+                          reloadAmmo.play()
+                        }
+                        setIsFire(false);
+                        setAmmo(30)
                     }}
                     className={"w-25 h-25 rounded-pill d-lg-none"}
                   >
@@ -311,7 +320,7 @@ let BattleRadio=new Audio(battleradio);
         <div className="bg-4 rounded text-white py-2 px-3">
           <div className="text-center py-2 d-flex flex-column gap-2">
             <Icon variant={"info"} icon={"fire"} name={" mision"}/>
-            <Icon variant={"light"} icon={"info-circle"} name={" eliminate all enemys troops"}/>
+            <Icon variant={"light"} icon={"info-circle"} name={" eliminate all enemies troops"}/>
             <hr />
           </div>
          <div className="d-flex justify-content-around">
