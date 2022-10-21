@@ -93,6 +93,14 @@ export default function HomePage()
           </>
           <>
             <LinkToPage 
+              href={"https://initer3737.github.io/galeri"}
+              target="_blank"
+              variant={'primary'}
+              name={'galeri'}
+              icon={'shop'} className={''}            />
+          </>
+          <>
+            <LinkToPage 
               href={"https://www.youtube.com/channel/UClsfa0LkA3_YMsFjW1M__sw"}
               target="_blank"
               variant={'primary'}
