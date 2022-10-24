@@ -111,7 +111,7 @@ export default function HomePage()
       </div>
       <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
         <h5><Icon variant={'primary'} icon={'info-circle'} name={''}/> spesial thanks to.</h5>
-        <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
+        <div className="fs-4 d-flex flex-column flex-sm-row gap-3 flex-wrap">
           <>
             <LinkToPage 
               href={"https://pixabay.com/"}
