@@ -2,3 +2,9 @@
     clear: both;
     outline-style: none;
 }
+
+.soldat{
+    width: 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -9,6 +9,7 @@ import Logo from "../../../imgs/semangat_yuks.gif";
 import Ak12 from "../../../imgs/ak12.png";
 import Ak12fire from "../../../imgs/ak12-fire.png";
 import Ak12info from "../../../imgs/AK-12-info.png";
+import soldatIcon from "../../../imgs/soldat.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
 import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
 import { useNavigate } from "react-router-dom";
@@ -200,6 +201,9 @@ let BattleRadio=new Audio(battleradio);
             <h5 className={`mx-5 fs-5 alert alert-${color} text-${color}`}>
               score:{`${score} ${status}`}
             </h5>
+            <div className="text-start px-5">
+                    <p><img src={soldatIcon} alt="soldier" className="soldat" /> kill count : {Math.ceil(Number(Point) / 10)}</p>
+            </div>
             <div className="alert alert-success shadow rounded-md">
             <div className={`bg-4 text-center text-white p-2 rounded shadow `}
             >
@@ -216,7 +220,8 @@ let BattleRadio=new Audio(battleradio);
                 </h3>
             </div>
               <div className="d-flex flex-row justify-content-between align-items-center">
-                <div className="d-flex flex-row justify-content-between gap-2">
+                <div className="d-flex flex-column justify-content-around gap-2">
+                  <div className="d-flex flex-row justify-content-around gap-2">
                   <p>
                     {`${ammo} |  `} /90{" "}
                     <Icon
@@ -250,6 +255,7 @@ let BattleRadio=new Audio(battleradio);
                       name={""}
                     />
                   </button>
+                  </div>
                 </div>
                 <div className="w-25">
                   <a role="button" data-bs-toggle="modal" data-bs-target="#infoweapon">
