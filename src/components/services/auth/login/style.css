@@ -1,17 +1,22 @@
 :root{
     --kombatanforce:url('../../../../imgs/spesial-force.jpg') no-repeat;
+    --kombatanforce2:url('../../../../imgs/login-page.jpg') no-repeat;
 }
 .form-login{
-    background: var(--kombatanforce);
+    background: var(--kombatanforce2);
     position: relative;
     background-size: cover;
     display: flex;
     padding:40px 70px;
     justify-content: flex-end;
-    align-items: center;  
+    align-items: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll; 
+    background-position: center; 
 }
 
 .opacity-form{
     background: var(--kombatanforce) 90% ;
     background-size: cover;
+    
 }

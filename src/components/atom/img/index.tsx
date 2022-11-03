@@ -9,8 +9,7 @@ type attr={
     height:string,
     attr:Object | any
 }
-export default function Img(props:attr) {
-    const {attr,src,alt,srcset,className,width,height}=props;
+export default function Img({attr,src,alt,srcset,className,width,height}:attr) {
   return (
     <img 
       src={src}
@@ -20,6 +19,7 @@ export default function Img(props:attr) {
       width={width}
       height={height}
       {...attr}
+      loading='lazy'
     />
   )
 }
