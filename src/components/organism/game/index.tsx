@@ -32,6 +32,7 @@ import battleradio from '../../../sound/battleradio.mp3'
 import usegame from "./text/game";
 /*data string*/
 export default function Game() {
+  let [mode, setMode] = useState(false);
   let [status, setStatus] = useState("");
   let [score, setScore] = useState(0);
   let [color, setColor] = useState("");
@@ -59,6 +60,7 @@ export default function Game() {
     themeSound6,
     themeSound7,
 ];
+
 const song=new Date().getDay();
 let audio=new Audio(themes[song==6?0:song+1])
 let BattleTheme=new Audio(battleTheme);
@@ -66,6 +68,47 @@ let Artileri=new Audio(artileri);
 let Alarmmiliter=new Audio(alarmmiliter);
 let Antithank=new Audio(antithank);
 let BattleRadio=new Audio(battleradio);
+    const warMode=(isOn:boolean)=>{
+          if(isOn)
+        {
+            //alarm militer
+          Alarmmiliter.loop=true;
+          Alarmmiliter.volume=0.4
+          Alarmmiliter.play()
+            //anti thank
+          Antithank.loop=true;
+          Antithank.volume=0.4
+          Antithank.play()
+            //battle radio
+          BattleRadio.loop=true;
+          BattleRadio.volume=0.4
+          BattleRadio.play()
+            //artileri
+          Artileri.loop=true;
+          Artileri.volume=0.4
+          Artileri.play()
+            //battle theme
+          BattleTheme.loop=true;
+          BattleTheme.volume=0.4
+          BattleTheme.play()
+        }
+        else{
+          //alarm militer
+          Alarmmiliter.pause()
+            //anti thank
+          Antithank.pause()
+            //battle radio
+          BattleRadio.pause()
+            //artileri
+          Artileri.pause()
+            //battle theme
+          BattleTheme.pause()
+        }
+    }
+   
+    useEffect(()=>{
+      warMode(true);
+    },[])
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
@@ -73,30 +116,12 @@ let BattleRadio=new Audio(battleradio);
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
-        //artileri
-      Artileri.loop=true;
-      Artileri.volume=0.4
-      Artileri.play()
-      //battle theme
-      BattleTheme.loop=true;
-      BattleTheme.volume=0.4
-      BattleTheme.play()
+
         //main sound
       audio.loop=true;
       audio.volume=0.2
       audio.play()
-        //alarm militer
-      Alarmmiliter.loop=true;
-      Alarmmiliter.volume=0.4
-      Alarmmiliter.play()
-        //anti thank
-      Antithank.loop=true;
-      Antithank.volume=0.4
-      Antithank.play()
-        //battle radio
-      BattleRadio.loop=true;
-      BattleRadio.volume=0.4
-      BattleRadio.play()
+      
   }, []);
   useEffect(()=>{
     //when route change it trigger callback to pause audio
@@ -109,6 +134,7 @@ let BattleRadio=new Audio(battleradio);
       BattleRadio.pause()
     };
   },[])
+
   useEffect(() => {
     //store to local storage
     if (
@@ -246,8 +272,10 @@ let BattleRadio=new Audio(battleradio);
                           reloadAmmoFull.volume=0.0
                           reloadAmmo.play()
                         }
-                        setIsFire(false);
-                        setAmmo(30)
+                          setIsFire(false);
+                        setTimeout(()=>{
+                          setAmmo(30)
+                        },3000)
                     }}
                     className={"w-25 h-25 rounded-pill d-lg-none"}
                   >
@@ -339,6 +367,17 @@ let BattleRadio=new Audio(battleradio);
          <div className="d-flex justify-content-around py-2">
           <h5 className="border-start border-3 border-info px-2">rank : comander</h5>
           <h5 className="border-end border-3 border-info px-2">position : bm-13 operator</h5>
+         </div>
+         <div className="d-flex justify-content-center py-2 d-none">
+          <h5 className="border-start border-3 border-info px-2">
+            <Button 
+              variant={"info"} name={`mode : ${mode?'war':'training'}`} 
+              onClick={()=>setMode(!mode)} 
+              disableOnClick={false} 
+              children={undefined} 
+              allAttr={{}}
+              />
+          </h5>
          </div>
         </div>
       </div>
