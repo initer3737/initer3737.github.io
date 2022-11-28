@@ -32,12 +32,13 @@ import battleradio from '../../../sound/battleradio.mp3'
 import usegame from "./text/game";
 /*data string*/
 export default function Game() {
-  let [mode, setMode] = useState(false);
+  let [warmode, setWarmode] = useState(false);
   let [status, setStatus] = useState("");
   let [score, setScore] = useState(0);
   let [color, setColor] = useState("");
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
+  let [reloadAction, setReloadAction] = useState(false);
   const username=localStorage.getItem('username');
   const password=localStorage.getItem('password');
   const token=localStorage.getItem('token');
@@ -61,14 +62,14 @@ export default function Game() {
     themeSound7,
 ];
 
-const song=new Date().getDay();
-let audio=new Audio(themes[song==6?0:song+1])
+const day=new Date().getDay();
+let audio=new Audio(themes[day==6?0:day+1])
 let BattleTheme=new Audio(battleTheme);
 let Artileri=new Audio(artileri);
 let Alarmmiliter=new Audio(alarmmiliter);
 let Antithank=new Audio(antithank);
 let BattleRadio=new Audio(battleradio);
-    const warMode=(isOn:boolean)=>{
+    const ServeMotherland=(isOn:boolean)=>{
           if(isOn)
         {
             //alarm militer
@@ -106,9 +107,6 @@ let BattleRadio=new Audio(battleradio);
         }
     }
    
-    useEffect(()=>{
-      warMode(true);
-    },[])
   useEffect(() => {
     //this is to recieve theme music on every render because
     //useTheme is call from the routes
@@ -117,9 +115,16 @@ let BattleRadio=new Audio(battleradio);
       keyPress('h','info')
       keyPress('g','resetGame')
 
+     if(day === 0 || 1 || 2 ){
+       setWarmode(true)
+       ServeMotherland(true);
+     } else{
+      setWarmode(false)
+      ServeMotherland(false);
+     }
         //main sound
       audio.loop=true;
-      audio.volume=0.2
+      audio.volume=0.6
       audio.play()
       
   }, []);
@@ -272,9 +277,11 @@ let BattleRadio=new Audio(battleradio);
                           reloadAmmoFull.volume=0.0
                           reloadAmmo.play()
                         }
+                          setReloadAction(true)
                           setIsFire(false);
                         setTimeout(()=>{
                           setAmmo(30)
+                          setReloadAction(false)
                         },3000)
                     }}
                     className={"w-25 h-25 rounded-pill d-lg-none"}
@@ -334,7 +341,7 @@ let BattleRadio=new Audio(battleradio);
                     if (ammo <= 0) srcAudio(emptygunSound).play();
                     setScore((score) => (ammo <= 0 ? score : score + 1));
               }}
-              disableOnClick={false}
+              disableOnClick={reloadAction}
             >
               <Icon variant={"danger"} icon={"fire"} name={""}/>
             </Button>
@@ -355,8 +362,8 @@ let BattleRadio=new Audio(battleradio);
         />
         <div className="bg-4 rounded text-white py-2 px-3">
           <div className="text-center py-2 d-flex flex-column gap-2">
-            <Icon variant={"info"} icon={"fire"} name={" mision"}/>
-            <Icon variant={"light"} icon={"info-circle"} name={" eliminate all enemies troops"}/>
+            <Icon variant={"info"} icon={"fire"} name={" mission"}/>
+            <Icon variant={"light"} icon={"info-circle"} name={`${warmode?' eliminate all enemies troops':' in your training range troops! comrade elina will assist you!!'}`}/>
             <hr />
           </div>
          <div className="d-flex justify-content-around">
@@ -367,17 +374,6 @@ let BattleRadio=new Audio(battleradio);
          <div className="d-flex justify-content-around py-2">
           <h5 className="border-start border-3 border-info px-2">rank : comander</h5>
           <h5 className="border-end border-3 border-info px-2">position : bm-13 operator</h5>
-         </div>
-         <div className="d-flex justify-content-center py-2 d-none">
-          <h5 className="border-start border-3 border-info px-2">
-            <Button 
-              variant={"info"} name={`mode : ${mode?'war':'training'}`} 
-              onClick={()=>setMode(!mode)} 
-              disableOnClick={false} 
-              children={undefined} 
-              allAttr={{}}
-              />
-          </h5>
          </div>
         </div>
       </div>
