@@ -6,6 +6,7 @@ import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
 import emptygunSound from "../../../sound/empty-gun.mp3";
 import Logo from "../../../imgs/semangat_yuks.gif";
+import Army from "../../../imgs/army.gif";
 import Ak12 from "../../../imgs/ak12.png";
 import Ak12fire from "../../../imgs/ak12-fire.png";
 import Ak12info from "../../../imgs/AK-12-info.png";
@@ -70,7 +71,7 @@ let Alarmmiliter=new Audio(alarmmiliter);
 let Antithank=new Audio(antithank);
 let BattleRadio=new Audio(battleradio);
     const ServeMotherland=(isOn:boolean)=>{
-          if(isOn)
+          if(isOn === true)
         {
             //alarm militer
           Alarmmiliter.loop=true;
@@ -107,24 +108,25 @@ let BattleRadio=new Audio(battleradio);
         }
     }
    
+const warTime=(dayWar:number)=>day === dayWar;
+
   useEffect(() => {
-    //this is to recieve theme music on every render because
-    //useTheme is call from the routes
+    //this is to recieve theme music on every render 
       keyPress('r','reload')
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
 
-     if(day === 0 || 1 || 2 ){
-       setWarmode(true)
-       ServeMotherland(true);
+     if( warTime(1) || warTime(2) || warTime(3) ){
+       setWarmode(false)
+       ServeMotherland(false);
      } else{
-      setWarmode(false)
-      ServeMotherland(false);
+      setWarmode(true)
+      ServeMotherland(true);
      }
-        //main sound
+        //main sound aka theme music
       audio.loop=true;
-      audio.volume=0.6
+      audio.volume=0.2
       audio.play()
       
   }, []);
@@ -186,7 +188,7 @@ let BattleRadio=new Audio(battleradio);
       <div className="">
         <div className="container gap-3 d-flex flex-column ">
           <div className="bg-4 color-1 mt-2 justify-content-evently align-items-center d-flex gap-3">
-              <img src={spesialForce} className="shadow" alt="spesial force" style={spesialForceStyle}/>
+              <img src={(warmode?Army:spesialForce)} className="shadow" alt="spesial force" style={spesialForceStyle}/>
             <div className="mx-auto text-center">
               <div className="d-flex justify-content-between gap-5">
               <h3>
