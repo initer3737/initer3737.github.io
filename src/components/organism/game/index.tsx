@@ -116,13 +116,13 @@ const warTime=(dayWar:number)=>day === dayWar;
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
-
+          //war start only 3 day 
      if( warTime(1) || warTime(2) || warTime(3) ){
-       setWarmode(false)
-       ServeMotherland(false);
+       setWarmode(true)
+       ServeMotherland(true);
      } else{
-      setWarmode(true)
-      ServeMotherland(true);
+      setWarmode(false)
+      ServeMotherland(false);
      }
         //main sound aka theme music
       audio.loop=true;
