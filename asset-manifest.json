@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.51962354.css",
-    "main.js": "/static/js/main.5c93db57.js",
+    "main.js": "/static/js/main.41d2a595.js",
     "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/semangat_yuks.gif": "/static/media/semangat_yuks.16c8f89b18a0865a893c.gif",
@@ -11,6 +11,7 @@
     "static/media/kitten-7157608.png": "/static/media/kitten-7157608.a7684d8fe997684d8924.png",
     "static/media/teme-gaming-2.mp3": "/static/media/teme-gaming-2.4fe1afefe38931cae7d4.mp3",
     "static/media/Earth - 4788.mp4": "/static/media/Earth - 4788.c6043d6c61ec245407f5.mp4",
+    "static/media/army.gif": "/static/media/army.b3f71c2f681aa8081d18.gif",
     "static/media/watercolor-4116932.png": "/static/media/watercolor-4116932.6b19c1bf563aa5258ce3.png",
     "static/media/battletheme.mp3": "/static/media/battletheme.84389f6310b4b7c98deb.mp3",
     "static/media/teme-gaming-6.mp3": "/static/media/teme-gaming-6.b8555b17fd7909a5fb3d.mp3",
@@ -46,11 +47,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.51962354.css.map": "/static/css/main.51962354.css.map",
-    "main.5c93db57.js.map": "/static/js/main.5c93db57.js.map",
+    "main.41d2a595.js.map": "/static/js/main.41d2a595.js.map",
     "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.51962354.css",
-    "static/js/main.5c93db57.js"
+    "static/js/main.41d2a595.js"
   ]
 }
