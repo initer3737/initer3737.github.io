@@ -1,5 +1,6 @@
 import {useEffect,useState} from 'react'
 import { Card } from '../../assembleComponent'
+import AnimeList from './animeList'
 export default function Anime(): JSX.Element {
   let [AnimeCarddataIndex,setAnimeCardDataIndex]=useState(0)
   let [AnimeCard,setAnimeCard]=useState(
@@ -92,9 +93,10 @@ export default function Anime(): JSX.Element {
           className={'col-12 col-md-6 col-lg-4'}          
           />
         </div> */}
-        <div className='text-dark d-flex justify-content-center'>
+        <div className='text-dark d-flex justify-content-center flex-column gap-3'>
         <div className='text-dark d-flex justify-content-center'>
           <Card
+          key={randomQuotesdataIndex}
             footer={animeQuotes.character}
             borderColor={'info'}
             headerTitle={animeQuotes.anime}
@@ -105,6 +107,7 @@ export default function Anime(): JSX.Element {
             className={'col-12'}            
             />
         </div>
+          <AnimeList/>
         </div>
     </>
   )
