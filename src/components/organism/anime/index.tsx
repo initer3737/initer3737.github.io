@@ -31,11 +31,12 @@ export default function Anime(): JSX.Element {
     
     // fetch('https://animechan.vercel.app/api/quotes')
           //function that get api endpoint
-     const AnimeCards=async ()=>{
-        const url='https://anime-facts-rest-api.herokuapp.com/api/v1'//12
-        const dataApi= await(await fetch(url)).json()
-          return setAnimeCard({...dataApi.data})
-     }
+    //  const AnimeCards=async ()=>{
+    //     const url='https://anime-facts-rest-api.herokuapp.com/api/v1'//12
+    //     const dataApi= await(await fetch(url)).json()
+    //       return setAnimeCard({...dataApi.data})
+    //  }
+
      const AnimeRandomQuotes=async ()=>{
         const url='https://animechan.vercel.app/api/quotes'//9
         const dataApi= await(await fetch(url)).json()
@@ -60,15 +61,17 @@ export default function Anime(): JSX.Element {
         setInterval(()=>{
           setAnimeCardDataIndex(updateIndexData(12,3,true)); //skip jujutsu kaisen at index 3 because it return 404
         },5000);
+
         setInterval(()=>{
           setrandomQuotesDataIndex(updateIndexData(9,0,false));
         },15000);
+
      //call function that call the api endpoint
-     try {
-        AnimeCards();
-     } catch (e:any) {
-        console.log(e.msg());
-     }
+    //  try {
+    //     // AnimeCards();
+    //  } catch (e:any) {
+    //     console.log(e.msg());
+    //  }
      try {
         AnimeRandomQuotes();
      } catch (e:any) {
