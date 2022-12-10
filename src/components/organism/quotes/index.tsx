@@ -34,6 +34,16 @@ export default function Quotes() {
               semuanya merupakan kesatuan.
             </div>
           </div>
+
+          <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+            <div className="text-center "><h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 雨</h5>
+            </div>
+            <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+              hujan yang indah menghiasi pagiku... pagiku begitu cerah
+            </div>
+          </div>
+
         </div>
     </>
   )
