@@ -75,7 +75,7 @@ export default function LyricSong() {
       <div className="col-12 bg-1 d-flex align-items-center align-content-center">
         <Img
           src={Logo3}
-          className="shadow img-fluid col-12"
+          className="shadow img-fluid"
           alt="" srcset={''} width={''} height={''} attr={[]}        
           />
       </div>
@@ -202,11 +202,11 @@ export default function LyricSong() {
             <VideoFromYoutube src={useSong().video.literature} />
       </div>
     </div>
-
-       <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+    
+      <div className="col-12 bg-1 d-flex align-items-center align-content-center">
         <Img
           src={Logo5}
-          className="shadow img-fluid col-12"
+          className="shadow img-fluid col-12 "
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>

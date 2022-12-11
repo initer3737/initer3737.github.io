@@ -26,7 +26,7 @@ export default function HomePage()
                 <h5 className="text-capitalize">
                   <Icon variant={'dark'} icon={'medium'} name={''}/> social media.
                 </h5>
-                <div className="d-flex flex-row align-content-center align-items-center gap-3">
+                <div className="d-flex flex-row align-content-center align-items-center gap-3 flex-wrap">
                   <div className="d-flex flex-column fs-4">
                       <LinkToPage 
                         href={"https://www.instagram.com/yotsusan_machi/"}
@@ -48,7 +48,7 @@ export default function HomePage()
                             name={' Game'} 
                             icon={'controller'} 
                             target={''} 
-                            className={'btn btn-outline-info py-3 px-5 rounded-md shadow'}                          
+                            className={'btn btn-outline-info py-3 px-5 rounded-pill shadow'}                          
                             />
                     </div>
               </div>

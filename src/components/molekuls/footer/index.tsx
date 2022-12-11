@@ -7,12 +7,10 @@ export default function Footer() {
   const Top=()=>window.scrollTo(0,0)
   return (
     <footer className="mb-auto text-light row bg-4 p-2 mt-2">
-        <div className="col-12">
             <h5 className="fs-5 text-capitalize text-light text-center">
              <Icon variant={'light'} icon={'hearts'} name={' mero mero mero!'}/> 
             </h5>
-        </div>
-        <div className="col-12 d-flex justify-content-between align-items-center align-self-center">
+        <div className="d-flex justify-content-between align-items-center align-self-center">
         <Img 
                 src={LogoFooter} 
                 alt={''} 
@@ -32,16 +30,16 @@ export default function Footer() {
                 attr={[]} 
           />       
           </div>
-        <div className="col-12 text-center">
+        <div className="text-center">
           <Button 
             allAttr={{}}
-            variant={'outline-info py-3 px-5'}  
+            variant={'outline-info py-4 px-5'}  
             name={'kembali ke atas'} 
             onClick={()=>Top()} disableOnClick={false}            
             >
               <Icon variant={'light'} icon={'arrow-bar-up'} name={''}/>
             </Button>
-          <h3 className='fw-bold mt-4'>
+          <div className='fw-bold mt-4 h3'>
             <div className="slidder-container">
               <code className='slidder-item'>
               <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}/>
@@ -56,7 +54,7 @@ export default function Footer() {
               <Icon variant={'light'} icon={'arrow-repeat'} name={'sugeng rawuh!!'}/>
               </code>
             </div>
-            </h3>
+            </div>
         </div>
     </footer>
   )

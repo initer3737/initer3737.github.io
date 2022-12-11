@@ -15,7 +15,7 @@ export default function Img({attr,src,alt,srcset,className,width,height}:attr) {
       src={src}
       alt={alt}
       srcSet={srcset}
-      className={className}
+      className={`${className}`}
       width={width}
       height={height}
       {...attr}

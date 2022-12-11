@@ -3,13 +3,14 @@
    display: flex;
    position: relative;
    flex-direction: column;
-   min-height: 150px;
+   min-height: 120px;
+   padding-top: 30vh;
 }
 .slidder-item{
     display:block ;
     position: absolute;
-    top: 20vh;
-    margin-bottom:140px;
+    top: 25vh;
+    padding-bottom:0.1vh;
     width: 100%;
     opacity: 0;
     --delay:500ms;

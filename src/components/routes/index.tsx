@@ -39,7 +39,7 @@ export default function Routes(){
     }, []);
 
      return (
-        <div className="d-flex flex-column h-100 col-12">
+        <div className="d-flex flex-column h-100 w-100 overflow-x-hidden">
             <div className="w-100">
                 <ScrollToTop/>
                 <Nav/>
