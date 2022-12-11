@@ -2,6 +2,7 @@ import React from 'react'
 import LogoFooter from '../../../imgs/cat-133.gif'
 import LogoFooter2 from '../../../imgs/kitten-7157608.png'
 import { Button, Icon, Img } from '../../atom'
+import './footer.css'
 export default function Footer() {
   const Top=()=>window.scrollTo(0,0)
   return (
@@ -41,8 +42,20 @@ export default function Footer() {
               <Icon variant={'light'} icon={'arrow-bar-up'} name={''}/>
             </Button>
           <h3 className='fw-bold mt-4'>
-            <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}
-            />
+            <div className="slidder-container">
+              <code className='slidder-item'>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}/>
+              </code>
+              <code className='slidder-item'>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={'selamat datang!!'}/>
+              </code>
+              <code className='slidder-item'>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={'Добро пожаловать!!'}/>
+              </code>
+              <code className='slidder-item'>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={'sugeng rawuh!!'}/>
+              </code>
+            </div>
             </h3>
         </div>
     </footer>
