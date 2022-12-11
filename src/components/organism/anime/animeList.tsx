@@ -139,7 +139,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     msg:'kawaishi noboru bebas setelah membunuh bitou makio , lalu ia di incar oleh seluruh siswa housen'
                 },
                 tenshura:{
-                    name:'thensura',
+                    name:'tenshura',
                     pov:'bereinkarnasi malah jadi slime',
                     rate:'7.6',
                     trailer:'https://youtube.com/embed/q2FCfgT-Fm8',
@@ -147,7 +147,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 samuraiX:{
                     name:'samurai x',
-                    pov:'pertarungan khensin himura sang hitokiri battousai',
+                    pov:'pertarungan kenshin himura sang hitokiri battousai',
                     rate:'10',
                     trailer:'https://youtube.com/embed/KlgKIkCZ4nQ',
                     rank:'legend',
@@ -162,7 +162,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     msg:'belum nonton tapi kelihatannya seperti anime yang bagus'
                 },
                 girlFrontline:{
-                    name:'girl fronline',
+                    name:'girl frontline',
                     pov:'suasana seperti peperangan yang di balut dengan aksi dramatis',
                     rate:'6.5',
                     trailer:'https://youtube.com/embed/qeBlL3GrAkY',
@@ -170,7 +170,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     msg:'cocok jika anda penyuka adrenalin'
                 },
                 umaru:{
-                    name:'himotou umaru chan',
+                    name:'himouto umaru chan',
                     pov:'imajinasi liar dari mc[main character] membuat tiap episodenya kian menarik',
                     rate:'5.5',
                     trailer:'https://youtube.com/embed/pkHn0_ola6Q',
@@ -180,6 +180,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
             }
 
     const AnimeList=()=>{
+        const mappedObj = Object.entries(animeLists).map((key, value) => value)
             return (
             <ul className='list-group fs-4 text-dark'>
                 <li className='list-group-item text-center'>
@@ -208,9 +209,9 @@ import { Icon, VideoFromYoutube } from '../../atom'
                             <Icon variant={`info ${animelist[1].msg??'d-none'}`} icon={'stickies-fill'} name={''}/>
                              {animelist[1].msg ?? undefined}
                         </li> 
-                        <li className='list-group-item d-flex flex-column mb-4'>
+                        <li className='list-group-item d-flex flex-column mb-4 shadow'>
                             <div className="d-flex gap-2 justify-content-center">
-                            <Icon variant={'info'} icon={'film'} name={' '}/>
+                                <Icon variant={'info'} icon={'film'} name={' '}/>
                                 <p className='fs-5'>trailer</p>
                             </div>
                                <div className="d-flex justify-content-center">
