@@ -189,7 +189,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 </li> 
                 {Object.entries(animeLists).map((animelist,i)=>(
                    <>
-                        <li className='list-group-item border border-y border-info' key={i}>
+                        <li className='list-group-item border-start-0 border-end-0 border-info border-1' key={i}>
                             <Icon variant={'primary'} icon={'play'} name={''}/>
                             {animelist[1].name}
                         </li> 
