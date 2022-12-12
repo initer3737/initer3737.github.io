@@ -53,6 +53,9 @@ export default function Footer() {
               <code className='slidder-item'>
               <Icon variant={'light'} icon={'arrow-repeat'} name={'sugeng rawuh!!'}/>
               </code>
+              <code className='slidder-item'>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={'wellcome!!'}/>
+              </code>
             </div>
             </div>
         </div>
