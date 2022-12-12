@@ -37,6 +37,7 @@
     animation-delay: calc(var(--delay)*5);
 }
 
+
 @keyframes move {
      0%{
         transform: translateY(0);
