@@ -49,9 +49,9 @@ export default function Routes(){
                     <Switch>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/lyrics" element={<LyricSong />} />
+                        <Route path="/songs" element={<LyricSong />} />
                         <Route path="/quotes" element={<Quotes />} />
-                        <Route path="/Anime" element={<Anime />} />
+                        <Route path="/animes" element={<Anime />} />
                         <Route  element={<ProtectedRoutes/>}>
                             <Route path="/game" element={<Game/>} />
                         </Route>

@@ -35,17 +35,17 @@ export default function Nav() {
                 />
             <Link 
                 target={''}
-                variant={`${splitLokasi[1]==='lyrics'?'light':'info'}`} 
+                variant={`${splitLokasi[1]==='songs'?'light':'info'}`} 
                 name={'songs'} 
-                href="/lyrics" 
+                href="/songs" 
                 isIcon={true} 
                 icon={"file-music-fill"}    
                 /> 
             <Link 
                 target={''}
-                variant={`${splitLokasi[1]==='anime'?'light':'info'}`} 
-                name={'anime'} 
-                href="/anime" 
+                variant={`${splitLokasi[1]==='animes'?'light':'info'}`} 
+                name={'animes'} 
+                href="/animes" 
                 isIcon={true} 
                 icon={"film"}    
                 /> 
