@@ -171,11 +171,11 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 kage:{
                     name:'kage no jitsuryokusha ni naritakute',
-                    pov:'unknow',
-                    rate:'unknow',
+                    pov:'berpura-pura lemah padahal beliau adalah pemimpin organisasi shadow garden yang over power',
+                    rate:'9.6',
                     trailer:'https://youtube.com/embed/jyoWE4cUtkI',
-                    rank:'unknow',
-                    msg:'belum nonton'
+                    rank:'epic',
+                    msg:'kalimat ter epic : "I AM ATOMIC" '
                 },
             }
 
