@@ -78,7 +78,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
             msg:string
         }
 
-        type Umaru={
+        type kage={
             name:string,
             pov:string,
             rate:string,
@@ -97,7 +97,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 samuraiX:SamuraiX,
                 ninja:Ninja,
                 girlFrontline:GirlFrontline,
-                umaru:Umaru
+                kage:kage
             }
                     //legend epic middle mid-medium regular
             const animeLists:animeType={
@@ -169,13 +169,13 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     rank:'mid-medium',
                     msg:'cocok jika anda penyuka adrenalin'
                 },
-                umaru:{
-                    name:'himouto umaru chan',
-                    pov:'imajinasi liar dari mc[main character] membuat tiap episodenya kian menarik',
-                    rate:'5.5',
-                    trailer:'https://youtube.com/embed/pkHn0_ola6Q',
-                    rank:'mid-medium',
-                    msg:'anime hiburan yang lucu cocok ketika anda sedang jenuh'
+                kage:{
+                    name:'kage no jitsuryokusha ni naritakute',
+                    pov:'unknow',
+                    rate:'unknow',
+                    trailer:'https://youtube.com/embed/jyoWE4cUtkI',
+                    rank:'unknow',
+                    msg:'belum nonton'
                 },
             }
 
