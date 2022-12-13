@@ -308,34 +308,45 @@ export default function useSong() {
                     過ぎ去りし　あの頃の
                     戻れない　帰れない
                     広がった　深い闇
-                     
                     戻れない　帰れない
                     広がった　深い闇
-                     
                     泣きたくなるような　優しい音
                     どんなに苦しくても
                     前へ　前へ　進め　絶望断ち
-                     
                     失っても　失っても　生きていくしかない
                     どんなにうちのめされても　守るものがある
-                     
                     失っても　失っても　生きていくしかない
                     どんなにうちのめされても　守るものがある
-                     
                     我に課す　一択の
                     運命と　覚悟する
-                     
                     泥を舐め　足掻いても
                     目に見えぬ　細い糸
-                     
                     泣きたくなるような　優しい音
                     どんなに悔しくても
                     前へ　前へ　向かえ　絶望断ち
-                     
                     傷ついても　傷ついても　立ち上がるしかない
                     どんなにうちのめされても　守るものがある
-                     
                     守るものがある
+                    `
+                } ,    
+            temnaya:{
+                    title:`Тёмная ночь`,
+                    lirik:`Тёмная ночь, только пули свистят по степи,
+                    Только ветер гудит в проводах, тускло звёзды мерцают.
+                    В тёмную ночь ты, любимая, знаю, не спишь
+                    И у детской кроватки тайком ты слезу утираешь.
+                    Как я люблю глубину твоих ласковых глаз,
+                    Как я хочу к ним прижаться сейчас губами.
+                    Тёмная ночь разделяет, любимая, нас,
+                    И тревожная чёрная степь пролегла между нами.
+                    Верю в тебя, в дорогую подругу мою,
+                    Эта вера от пули меня тёмной ночью хранила.
+                    Радостно мне, я спокоен в смертельном бою,
+                    Знаю, встретишь с любовью меня, что б со мной ни случилось.
+                    Смерть не страшна, с ней не раз мы встречались в степи.
+                    Вот и теперь надо мною она кружится...
+                    Ты меня ждёшь и у детской кроватки не спишь,
+                    И поэтому знаю - со мной ничего не случится.
                     `
                 }     
         }, //original
@@ -678,6 +689,25 @@ export default function useSong() {
                         No matter how beaten you are,
                         There is something you have to protect.
                         There is something you have to protect`
+           },    
+           temnaya:{
+                title:`malam gelap`,
+                lirik:`Malam gelap, hanya peluru yang mendesing di padang rumput ini
+                Hanya ratapan yang melalui kabel telepon, bintang berkelip-kelip samar.
+                sayangku aku tahu  kamu tidak tidur dan  di dekat tempat tidur anak kita,di malam yang gelap ini,
+                Dan kamu diam-diam menyeka air mata .
+                betapa aku menyukai mata lembutmu,
+                betapa aku ingin mencium mereka!
+                Malam yang gelap ini memisahkan kita, sayangku,
+                Dan padang rumput yang gelap ini memisahkan antara kita.
+                Aku percaya padamu, padamu sayangku,
+                kepercayaan ini melindungiku dari peluru , di malam yang gelap ini.
+                Saya senang dan tenang dalam pertempuran mematikan ini,
+                Karena saya tahu kamu akan menemuiku dengan cinta, apapun yang terjadi.
+                Kematiannya bukanlah hal yang mengerikan, kita sering bertemu dengannya di padang rumput.
+                dan disini kematian membayangiku sekali lagi
+                kamu menunggu diriku pulang , duduk di sebelah buaian.
+                dan aku tahu bahwa tidak ada terjadi kepada diriku`
            }     
         },
        video:{
@@ -689,6 +719,7 @@ export default function useSong() {
               chernoglaza:"https://youtube.com/embed/4QeL8dpHAUw",
               chinderela:"https://youtube.com/embed/mxu1PvGUGSk",
               tanjirou:"https://youtube.com/embed/l-AjkizQ70A",
+              temnaya:"https://youtube.com/embed/FEuSNZ2veME",
        } ,
        text:{
         yorunikakeru_text:{

@@ -7,6 +7,7 @@ import Logo4 from '../../../imgs/watercolor-4116932.png'
 import Logo5 from '../../../imgs/landscape-1844226.svg'
 import Rumah from '../../../imgs/rumah.jpg'
 import Kupu from '../../../imgs/butterfly.png'
+import forest from '../../../imgs/forest.jpg'
 import useSong from './text/song';
 export default function LyricSong() {
   return (
@@ -332,6 +333,39 @@ export default function LyricSong() {
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.tanjirou.lirik}
           <VideoFromYoutube src={useSong().video.tanjirou} />
+      </div>
+    </div>
+
+    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+        <Img
+          src={forest}
+          className="shadow img-fluid col-12"
+          alt="" srcset={''} width={''} height={''} attr={[]}       
+           />
+      </div>
+
+      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+          <div className="text-center ">
+            <h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+              {useSong().original.temnaya.title}
+            </h5>
+          </div>
+          <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+            {useSong().original.temnaya.lirik}
+          </div>
+        </div>
+
+    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().translate.temnaya.title}
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().translate.temnaya.lirik}
+          <VideoFromYoutube src={useSong().video.temnaya} />
       </div>
     </div>
 
