@@ -131,7 +131,7 @@ const warTime=(dayWar:number)=>day === dayWar;
       
   }, []);
   useEffect(()=>{
-    //when route change it trigger callback to pause audio
+    //when route change it trigger callback to pause audio || a.k.a component will unmount || unmounting lifecycle
     return ()=>{
       audio.pause()
       BattleTheme.pause()
@@ -154,7 +154,8 @@ const warTime=(dayWar:number)=>day === dayWar;
         if(token !== 'true'){
             navigate('/login')
           }
-  }, [score,ammo,username,password,token,localStorage]); //wwhen score change it become realtime
+          
+  }, [score,ammo,username,password,token]); //when score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
