@@ -704,7 +704,7 @@ export default function useSong() {
                 kepercayaan ini melindungiku dari peluru , di malam yang gelap ini.
                 Saya senang dan tenang dalam pertempuran mematikan ini,
                 Karena saya tahu kamu akan menemuiku dengan cinta, apapun yang terjadi.
-                Kematiannya bukanlah hal yang mengerikan, kita sering bertemu dengannya di padang rumput.
+                Kematian bukanlah hal yang mengerikan, kita sering bertemu dengannya di padang rumput.
                 dan disini kematian membayangiku sekali lagi
                 kamu menunggu diriku pulang , duduk di sebelah buaian.
                 dan aku tahu bahwa tidak ada terjadi kepada diriku`

@@ -1,0 +1,13 @@
+.exposure__container{
+    position: relative;    
+}
+
+#exposure__effect{
+    position: absolute;
+    color:#fff ;
+    top: 50vh;
+    bottom: 0;
+    left: 50%;
+    margin-left: -50vw;
+    width: 100vw;
+}

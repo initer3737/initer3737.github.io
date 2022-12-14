@@ -9,9 +9,11 @@ import Rumah from '../../../imgs/rumah.jpg'
 import Kupu from '../../../imgs/butterfly.png'
 import forest from '../../../imgs/forest.jpg'
 import useSong from './text/song';
+import './lyricsong.css'
 export default function LyricSong() {
   return (
-    <div className='row'>
+    <div className='row exposure__container'>
+      <span id="exposure__effect"></span>
         <div className="bg-4 text-center text-light p-3">
           <h5 className='fs-5'><Icon variant={' '} icon={'file-music-fill'} name={' '}/> songs</h5>
         </div>
