@@ -124,7 +124,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 crow:{
                     name:'crow zero',
-                    pov:'penaklukan 1 sekolah agar bisa mencapai puncak rantai kepemimpinan',
+                    pov:'murid pindahan yang ingin meneruskan bisnis ayahnya sebagai bos yakuza, untuk mencapai hal itu ia harus bisa menyatukkan suzuran ,pertama ia harus mengalahkan serizawa yang berada diposisi puncak',
                     rate:'9.4',
                     trailer:'https://youtube.com/embed/oGGBHeXaM5E',
                     rank:'epic',
@@ -155,11 +155,11 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 ninja:{
                     name:'shinobi no itoki',
-                    pov:'unknow',
-                    rate:'unknow',
+                    pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya banyak terjadi pengkhianatan dan konflik yang tak terduga',
+                    rate:'5.7',
                     trailer:'https://youtube.com/embed/MareC5TQWZ8',
-                    rank:'unknow',
-                    msg:'belum nonton tapi kelihatannya seperti anime yang bagus'
+                    rank:'regular',
+                    msg:'untuk mc tidak op dan terkesan lembek ,yah mungkin agar sesuai dengan ritme kehidaupan manusia from zero to hero'
                 },
                 girlFrontline:{
                     name:'girl frontline',
