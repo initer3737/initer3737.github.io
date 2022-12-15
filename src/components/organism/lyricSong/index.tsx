@@ -105,7 +105,8 @@ export default function LyricSong() {
           {useSong().translate.yorunikakeru.lirik}
           <div className="mt-3">
             <div className="text-center py-2">
-              <a role={'button'} data-bs-toggle={'modal'} data-bs-target={'#yoru'} className='btn btn-danger'>
+              <a role={'button'} data-bs-toggle={'modal'} data-bs-target={'#yoru'} className='btn btn-danger btn-effect'
+              >
                 <Icon variant={''} icon={'exclamation-octagon-fill'} name={' '}/>
                 warning!
               </a>

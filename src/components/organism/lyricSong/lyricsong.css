@@ -1,13 +1,7 @@
-.exposure__container{
-    position: relative;    
-}
 
-#exposure__effect{
-    position: absolute;
-    color:#fff ;
-    top: 50vh;
-    bottom: 0;
-    left: 50%;
-    margin-left: -50vw;
-    width: 100vw;
+
+.btn-effect:hover{
+    background-color: dodgerblue;
+    border: solid dodgerblue 0px;
+    transition: ease 2s;
 }
