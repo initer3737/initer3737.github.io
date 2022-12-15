@@ -155,11 +155,11 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 ninja:{
                     name:'shinobi no itoki',
-                    pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya banyak terjadi pengkhianatan dan konflik yang tak terduga',
+                    pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya , pengkhianatan banyak  dan konflik yang tak terduga',
                     rate:'5.7',
                     trailer:'https://youtube.com/embed/MareC5TQWZ8',
                     rank:'regular',
-                    msg:'untuk mc tidak op dan terkesan lembek ,yah mungkin agar sesuai dengan ritme kehidaupan manusia from zero to hero'
+                    msg:'untuk mc [main character] tidak op dan terkesan lembek ,yah mungkin agar sesuai dengan ritme kehidupan manusia [from zero to hero]'
                 },
                 girlFrontline:{
                     name:'girl frontline',
