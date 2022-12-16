@@ -75,7 +75,8 @@ import { Icon, VideoFromYoutube } from '../../atom'
             rate:string,
             trailer:string,
             rank:string,
-            msg:string
+            msg:string,
+            link:string
         }
 
         type kage={
@@ -110,7 +111,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 kimetsu:{
                     name:'kimetsu no yaiba',
-                    pov:'cerita agak sedikit berat',
+                    pov:'tanjirou yang merupakkan kakak tertua harus menerima kenyataan pahit ,keluarganya dibantai oleh muzan kibutsuji ,yang tersisa hanya adiknya seorang...',
                     rate:'8.5',
                     trailer:'https://youtube.com/embed/a9tq0aS5Zu8',
                     rank:'middle'
@@ -155,7 +156,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 ninja:{
                     name:'shinobi no itoki',
-                    pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya , pengkhianatan banyak  dan konflik yang tak terduga',
+                    pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya , terlebih ia harus berurusan dengan para pengkhianat clan',
                     rate:'5.7',
                     trailer:'https://youtube.com/embed/MareC5TQWZ8',
                     rank:'regular',
@@ -163,11 +164,13 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 girlFrontline:{
                     name:'girl frontline',
-                    pov:'suasana seperti peperangan yang di balut dengan aksi dramatis',
+                    pov:`Pada tahun 2060 akibat dari kecelakaan militer mengakibatkan penyakit berbahaya yang menular, serta karena kecerobohan perang nuklir secara besar-besaran. Sebagian besar permukaan Bumi sudah hancur. Selain itu, negara-negara besar juga mulai hancur karena efek buruk dari perang nuklir tersebut`
+                    ,
                     rate:'6.5',
                     trailer:'https://youtube.com/embed/qeBlL3GrAkY',
                     rank:'mid-medium',
-                    msg:'cocok jika anda penyuka adrenalin'
+                    msg:'cocok jika anda penyuka adrenalin',
+                    link:'https://dafunda.com/otaku/informasi-terbaru-anime-girls-frontline/'
                 },
                 kage:{
                     name:'kage no jitsuryokusha ni naritakute',
@@ -208,6 +211,10 @@ import { Icon, VideoFromYoutube } from '../../atom'
                         <li className='list-group-item'>
                             <Icon variant={`info ${animelist[1].msg??'d-none'}`} icon={'stickies-fill'} name={''}/>
                              {animelist[1].msg ?? undefined}
+                        </li> 
+                        <li className='list-group-item'>
+                            <Icon variant={`info ${animelist[1].link??'d-none'} h2`} icon={'link'} name={''}/>
+                             <a href={animelist[1].link ?? undefined} className={`${animelist[1].link??'d-none'}`}>link referensi</a>
                         </li> 
                         <li className='list-group-item d-flex flex-column mb-4 shadow'>
                             <div className="d-flex gap-2 justify-content-center">
