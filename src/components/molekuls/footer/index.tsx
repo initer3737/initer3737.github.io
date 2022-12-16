@@ -41,7 +41,7 @@ export default function Footer() {
               <Icon variant={'light'} icon={'arrow-bar-up'} name={''}/>
             </Button>
           <div className='fw-bold mt-4 h3'>
-            <div className="slidder-container">
+            <div className="slidder-container d-none d-md-block">
               <code className='slidder-item'>
               <Icon variant={'light'} icon={'arrow-repeat'} name={`いってらっしゃい ${username}!!`}/>
               </code>
@@ -58,6 +58,7 @@ export default function Footer() {
               <Icon variant={'light'} icon={'arrow-repeat'}  name={`wellcome ${username}!!`}/>
               </code>
             </div>
+              <Icon variant={'light'} icon={'arrow-repeat d-md-none'}  name={`wellcome ${username}!!`}/>
             </div>
         </div>
     </footer>
