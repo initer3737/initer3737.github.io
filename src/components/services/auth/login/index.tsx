@@ -1,4 +1,4 @@
-import React, {useEffect, useState } from 'react'
+import React, {FormEvent, useEffect, useState } from 'react'
 import {useNavigate} from 'react-router-dom';
 import './style.css'
 import {
@@ -39,7 +39,7 @@ if(getScore === null){
   localStorage.setItem('scorePlayer','0');
 }
 
-const changeValue=(e:string | any,isUser:boolean)=>{
+const changeValue=(e:FormEvent<HTMLInputElement> | any,isUser:boolean)=>{
       let condition;
     if(isUser){
       return  condition=setformvalueUser(e.target.value);
@@ -76,7 +76,7 @@ const song=new Date().getDay();
       audio.loop=true
       audio.play();
   }, []);
-  useEffect(()=>{ //to stop audio when route is change
+  useEffect(()=>{ //to stop audio when route is change || unmounting
     return ()=>audio.pause();
   },[])
   // audio themes

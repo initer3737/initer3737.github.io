@@ -5,6 +5,7 @@ import { Button, Icon, Img } from '../../atom'
 import './footer.css'
 export default function Footer() {
   const Top=()=>window.scrollTo(0,0)
+  const username=localStorage.getItem('username')??'';
   return (
     <footer className="mb-auto text-light row bg-4 p-2 mt-2">
             <h5 className="fs-5 text-capitalize text-light text-center">
@@ -42,19 +43,19 @@ export default function Footer() {
           <div className='fw-bold mt-4 h3'>
             <div className="slidder-container">
               <code className='slidder-item'>
-              <Icon variant={'light'} icon={'arrow-repeat'} name={'いってらっしゃい!!'}/>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={`いってらっしゃい ${username}!!`}/>
               </code>
               <code className='slidder-item'>
-              <Icon variant={'light'} icon={'arrow-repeat'} name={'selamat datang!!'}/>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={`selamat datang ${username}!!`}/>
               </code>
               <code className='slidder-item'>
-              <Icon variant={'light'} icon={'arrow-repeat'} name={'Добро пожаловать!!'}/>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={`Добро пожаловать ${username}!!`}/>
               </code>
               <code className='slidder-item'>
-              <Icon variant={'light'} icon={'arrow-repeat'} name={'sugeng rawuh!!'}/>
+              <Icon variant={'light'} icon={'arrow-repeat'} name={`sugeng rawuh ${username}!!`}/>
               </code>
               <code className='slidder-item'>
-              <Icon variant={'light'} icon={'arrow-repeat'}  name={'wellcome!!'}/>
+              <Icon variant={'light'} icon={'arrow-repeat'}  name={`wellcome ${username}!!`}/>
               </code>
             </div>
             </div>
