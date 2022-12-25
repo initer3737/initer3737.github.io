@@ -106,7 +106,7 @@ export default function Weather() {
                             <p>derajat angin : {weather?.wind.deg} &deg;</p>
                             <p>hembusan angin : {weather?.wind.gust}</p>
                             <p>kecepatan angin : {String(weather?.wind.speed)} meter / detik</p>
-                            <img src={`http://openweathermap.org/img/w/${weather?.weather[0].icon}.png`} alt='weather icon' className='img-fluid w-25'/>
+                            <img src={`https://openweathermap.org/img/w/${weather?.weather[0].icon}.png`} alt='weather icon' className='img-fluid w-25'/>
                             <p>deskripsi cuaca: {weather?.weather[0].description}</p>
                             <p>english : {weather?.weather[0].main}</p>
                         </div>
