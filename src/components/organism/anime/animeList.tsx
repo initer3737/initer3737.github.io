@@ -98,7 +98,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 samuraiX:SamuraiX,
                 ninja:Ninja,
                 girlFrontline:GirlFrontline,
-                kage:kage
+                kage:kage,
             }
                     //legend epic middle mid-medium regular
             const animeLists:animeType={
@@ -127,7 +127,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     name:'crow zero',
                     pov:'murid pindahan yang ingin meneruskan bisnis ayahnya sebagai bos yakuza, untuk mencapai hal itu ia harus bisa menyatukkan suzuran ,pertama ia harus mengalahkan serizawa yang berada diposisi puncak',
                     rate:'9.4',
-                    trailer:'https://youtu.be/H_xFbST-ysE',
+                    trailer:'https://youtube.com/embed/mc5X05k21IY',
                     rank:'epic',
                     msg:'nostalgia mimin ketika smp dulu'
                 },
@@ -179,7 +179,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     trailer:'https://youtube.com/embed/jyoWE4cUtkI',
                     rank:'epic',
                     msg:'kalimat ter epic : "I AM ATOMIC" '
-                },
+                }
             }
 
     const AnimeList=()=>{
@@ -220,11 +220,11 @@ import { Icon, VideoFromYoutube } from '../../atom'
                                 <Icon variant={'info'} icon={'film'} name={' '}/>
                                 <p className='fs-5'>trailer</p>
                             </div>
-                               <div className="d-flex justify-content-center" >
-                                    <div className="col-md-8 col-12">
-                                        <VideoFromYoutube src={animelist[1].trailer}/>
-                                    </div>
-                               </div>
+                            <div className="d-flex justify-content-center" >
+                                <div className="col-md-8 col-12">
+                                    <VideoFromYoutube src={animelist[1].trailer}/>
+                                </div>
+                            </div>
                         </li> 
                    </>
                 ))}
