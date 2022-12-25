@@ -127,7 +127,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     name:'crow zero',
                     pov:'murid pindahan yang ingin meneruskan bisnis ayahnya sebagai bos yakuza, untuk mencapai hal itu ia harus bisa menyatukkan suzuran ,pertama ia harus mengalahkan serizawa yang berada diposisi puncak',
                     rate:'9.4',
-                    trailer:'https://youtube.com/embed/oGGBHeXaM5E',
+                    trailer:'https://youtu.be/H_xFbST-ysE',
                     rank:'epic',
                     msg:'nostalgia mimin ketika smp dulu'
                 },
