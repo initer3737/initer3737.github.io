@@ -16,7 +16,7 @@ export default function Modal(props:props) {
           <h5 className="modal-title">
             <Icon variant={''} icon={modalTitleIcon} name={modalTitle}/>
           </h5>
-          <button className="btn-close btn-close-white" data-bs-dismiss="modal" />
+          <button className="btn-close btn-close-white" data-bs-dismiss="modal" id='close-modal'/>
         </div>
         <div className="modal-body">
           <blockquote>

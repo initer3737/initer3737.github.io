@@ -36,6 +36,7 @@ export default function Game() {
   let [warmode, setWarmode] = useState(false);
   let [status, setStatus] = useState("");
   let [score, setScore] = useState(0);
+  let point =localStorage.getItem("scorePlayer");
   let [color, setColor] = useState("");
   let [ammo, setAmmo] = useState(30);
   let [isFire, setIsFire] = useState(false);
@@ -64,7 +65,7 @@ export default function Game() {
 ];
 
 const day=new Date().getDay();
-let audio=new Audio(themes[day==6?0:day+1])
+let audio=new Audio(themes[day===6?0:day+1])
 let BattleTheme=new Audio(battleTheme);
 let Artileri=new Audio(artileri);
 let Alarmmiliter=new Audio(alarmmiliter);
@@ -112,6 +113,7 @@ const warTime=(dayWar:number)=>day === dayWar;
 
   useEffect(() => {
     //this is to recieve theme music on every render 
+    //mounting 
       keyPress('r','reload')
       keyPress('f','fire')
       keyPress('h','info')
@@ -144,8 +146,9 @@ const warTime=(dayWar:number)=>day === dayWar;
 
   useEffect(() => {
     //store to local storage
+      
     if (
-      score > JSON.parse(localStorage.getItem("scorePlayer")!!) &&
+      score > JSON.parse(point!!) &&
       ammo >= 0
     ) {
       localStorage.setItem("scorePlayer", JSON.stringify(score));
@@ -155,7 +158,7 @@ const warTime=(dayWar:number)=>day === dayWar;
             navigate('/login')
           }
           
-  }, [score,ammo,username,password,token]); //when score change it become realtime
+  }, [score,ammo,username,password,token,point]); //when score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -179,8 +182,7 @@ const warTime=(dayWar:number)=>day === dayWar;
       setColor("danger");
     }
   }, [score]); //only run when status is change [dependencies]
-  let Point = localStorage.getItem("scorePlayer");
-  const killCount=Math.ceil(Number(Point) / 10);
+  const killCount=Math.ceil(Number(point) / 10);
   const spesialForceStyle={
       width:'12vw',
   }
@@ -210,7 +212,7 @@ const warTime=(dayWar:number)=>day === dayWar;
           <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
             <h5 className={`mx-5 fs-5 alert alert-success`}>
               <Icon variant={"warning"} icon={"star-fill"} name={" "} />
-              HightScore:{`${Point ?? "0"}`}
+              HightScore:{`${localStorage.getItem('scorePlayer') ?? "0"}`}
             </h5>
             <h5 className={`mx-5 fs-5`}>
               <Button
@@ -248,9 +250,9 @@ const warTime=(dayWar:number)=>day === dayWar;
                   variant={"info"} 
                   icon={"exclamation-triangle"} 
                   name={`
-                   ${ammo==30?'magazine is fully loaded!':'magazine '} 
+                   ${ammo===30?'magazine is fully loaded!':'magazine '} 
                    ${ammo>=30 && ammo>1?'':''} 
-                  ${ammo==0?'is empty':''}
+                  ${ammo===0?'is empty':''}
                   ${ammo<30?ammo===0?'':ammo+' bullet':''}
                    `}/>
                 </h3>
@@ -338,7 +340,7 @@ const warTime=(dayWar:number)=>day === dayWar;
                 //sound setting
                    setIsFire((isFire)=>!isFire);
                     setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
-                    if (score > JSON.parse(Point ?? "0") && ammo > 0)
+                    if (score > JSON.parse(point ?? "0") && ammo > 0)
                       srcAudio(PuingSound).play();
                     if (score > 0 && ammo > 0) srcAudio(ak47calmSound).play();
                     if (ammo <= 0) srcAudio(emptygunSound).play();
@@ -382,7 +384,7 @@ const warTime=(dayWar:number)=>day === dayWar;
       </div>
       {/* button triger modal */}
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
-        <a role="button" data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></a>
+        <button data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></button>
       {/* button triger modal end */}
     {/* modal */}
     <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
@@ -441,7 +443,7 @@ const warTime=(dayWar:number)=>day === dayWar;
         <hr />
         <div className="d-flex justify-content-between px-3 flex-row py-2 px-3">
           <p><Icon variant={""} icon={"person-circle"} name={` kombatan : ${username??'player'}`}/></p>
-          <p><Icon variant={""} icon={"stars"} name={` score : ${Point??'0'}`}/></p>
+          <p><Icon variant={""} icon={"stars"} name={` score : ${point??'0'}`}/></p>
         </div>
        <div className="d-flex flex-column align-items-end">
        <div className="d-flex flex-column align-items-center gap-3">
@@ -578,7 +580,7 @@ const warTime=(dayWar:number)=>day === dayWar;
               </div>
               <div className="border-end px-3 border-info">
                 <p className="d-flex flex-row gap-2">
-                  <Icon variant={""} icon={"stars"} name={` score : ${Point}`}/> 
+                  <Icon variant={""} icon={"stars"} name={` score : ${point}`}/> 
                 </p> 
               </div>
           </div> <hr />
