@@ -1,24 +1,52 @@
-import React from 'react'
+import React ,{useEffect,useState}from 'react'
 import LogoFooter from '../../../imgs/cat-133.gif'
 import LogoFooter2 from '../../../imgs/kitten-7157608.png'
 import { Button, Icon, Img } from '../../atom'
 import { Weather } from '../../services'
-import Offline__user from "../../services/pwa/offline";
+import OfflineUser from "../../services/pwa/offline";
 import './footer.css'
+
+const FooterClock=()=>{
+  const times=new Date().toLocaleTimeString()
+    const [time,setTime]=useState(times);
+      const Update=()=>{ 
+        let timeUpdate=new Date().toLocaleTimeString();
+        return setTime(timeUpdate)
+      }
+      useEffect(()=>{setInterval(()=>Update(),1000)},[])
+          return <div className='footer__clock rounded fs-1 px-5 py-3'>{time}</div>;
+}
+
 export default function Footer() {
   const Top=()=>window.scrollTo(0,0)
   const cutStr=(stringLength:string)=>stringLength.length > 8 ?`${stringLength.slice(0,8)}...`:stringLength;
-  const username=cutStr(localStorage.getItem('username')??'');
-        
-          
-        
+  const username=cutStr(localStorage.getItem('username')??'');   
   return (
     <footer className="mb-auto text-light row bg-4 p-2 mt-2">
             <h5 className="fs-5 text-capitalize text-light text-center">
              <Icon variant={'light'} icon={'hearts'} name={' mero mero mero!'}/> 
             </h5>
-            <Offline__user/>
+            <OfflineUser/>
                   <Weather/>
+                <div className="d-flex gap-3 justify-content-center align-items-center gap-5 mt-5">
+                    <div className="anime__container__kelap mt-3 mx-5">
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                    </div>
+                      <FooterClock/>
+                    <div className="anime__container__kelap mt-3 px-5">
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                      <div className="anime__footer__kelap"></div>
+                    </div>
+                </div>
         <div className="d-flex justify-content-between align-items-center">
         <Img 
                 src={LogoFooter} 

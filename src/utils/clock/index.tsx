@@ -1,8 +1,6 @@
 import {useState,useEffect} from 'react'
             //time initialize
     let date=new Date();
-    //utils function
-    const validateTime=(T:number)=>T<10?`0${T}`:T;
     const Waktu={
         hari:date.getDay(),
         tanggal:date.getDate(),
@@ -32,7 +30,6 @@ export default function Clock() {
          const times=new Date().toLocaleTimeString();
         return setTime(times);
     };
-        
             useEffect(()=>{setInterval(()=>updateClock(),1000)},[])
   return (
     <>{`${time}  ${tanggal()}`}</>

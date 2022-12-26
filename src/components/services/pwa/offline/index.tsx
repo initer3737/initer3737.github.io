@@ -1,7 +1,7 @@
 import React from 'react'
 import pwa3 from './assetpwa/pwa3.jpg'
 
-export default function Offline__user() {
+export default function OfflineUser() {
         const useUser__offline=()=>{
             if(!navigator.onLine){
                 return true;
