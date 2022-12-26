@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.da5fc21f.css",
-    "main.js": "/static/js/main.91b2223c.js",
+    "main.js": "/static/js/main.f5c7c37b.js",
     "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/semangat_yuks.gif": "/static/media/semangat_yuks.16c8f89b18a0865a893c.gif",
@@ -25,6 +25,7 @@
     "static/media/battleradio.mp3": "/static/media/battleradio.39a86427115be96c0a9f.mp3",
     "static/media/teme-gaming-3.mp3": "/static/media/teme-gaming-3.eb49ccee6d29da396e96.mp3",
     "static/media/giphy.gif": "/static/media/giphy.e18864d01a6e292eb723.gif",
+    "static/media/pwa3.jpg": "/static/media/pwa3.35a97d3973d40e9615ce.jpg",
     "static/media/the-background-292720.png": "/static/media/the-background-292720.d4ff33cea2ebd8202237.png",
     "static/media/butterfly.png": "/static/media/butterfly.143700ff89487e937147.png",
     "static/media/night-1851685_960_720.png": "/static/media/night-1851685_960_720.5126a8b3b6220deea82f.png",
@@ -48,11 +49,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.da5fc21f.css.map": "/static/css/main.da5fc21f.css.map",
-    "main.91b2223c.js.map": "/static/js/main.91b2223c.js.map",
+    "main.f5c7c37b.js.map": "/static/js/main.f5c7c37b.js.map",
     "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da5fc21f.css",
-    "static/js/main.91b2223c.js"
+    "static/js/main.f5c7c37b.js"
   ]
 }
