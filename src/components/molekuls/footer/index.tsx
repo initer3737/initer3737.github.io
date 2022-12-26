@@ -3,6 +3,7 @@ import LogoFooter from '../../../imgs/cat-133.gif'
 import LogoFooter2 from '../../../imgs/kitten-7157608.png'
 import { Button, Icon, Img } from '../../atom'
 import { Weather } from '../../services'
+import Offline__user from "../../services/pwa/offline";
 import './footer.css'
 export default function Footer() {
   const Top=()=>window.scrollTo(0,0)
@@ -16,6 +17,7 @@ export default function Footer() {
             <h5 className="fs-5 text-capitalize text-light text-center">
              <Icon variant={'light'} icon={'hearts'} name={' mero mero mero!'}/> 
             </h5>
+            <Offline__user/>
                   <Weather/>
         <div className="d-flex justify-content-between align-items-center">
         <Img 

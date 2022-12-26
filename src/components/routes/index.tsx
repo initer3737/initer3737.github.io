@@ -26,6 +26,7 @@ import {
      ProtectedRoutes
 } from "../services";
 
+
 export default function Routes(){
     const location=useLocation();
         const {pathname}=location;
