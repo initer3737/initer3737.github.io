@@ -121,7 +121,7 @@ header{
     width: 12px;
     border-radius: 50vw;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
     --delay:500ms;
     animation-name: putar;
     animation-duration:.9s;
@@ -152,6 +152,8 @@ header{
 }
     </style>
     <title>initer3737</title>
+    <link rel="shortcut-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" href="apple-touch-favicon.png">
   </head>                           <!--user cant right click -->
   <body class="bg-firefork" >
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -160,8 +162,8 @@ header{
     <script>
         const cursor=document.getElementById('cursor')
         document.onmousemove=(e)=>{
-            cursor.style.left=(e.pageX-3)+'px'
-            cursor.style.top=(e.pageY-3)+'px'
+            cursor.style.left=(e.pageX+27)+'px'
+            cursor.style.top=(e.pageY+24)+'px'
             cursor.style.display='block'
         }
     </script>

@@ -8,6 +8,8 @@ import Logo5 from '../../../imgs/landscape-1844226.svg'
 import Rumah from '../../../imgs/rumah.jpg'
 import Kupu from '../../../imgs/butterfly.png'
 import forest from '../../../imgs/forest.jpg'
+import bandung from '../../../imgs/bandung.jpg'
+import indonesiaFlag from '../../../imgs/indonesia-flag.png'
 import useSong from './text/song';
 import './lyricsong.css'
 export default function LyricSong() {
@@ -369,6 +371,33 @@ export default function LyricSong() {
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.temnaya.lirik}
           <VideoFromYoutube src={useSong().video.temnaya} />
+      </div>
+    </div>
+
+    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+        <Img
+          src={bandung}
+          className="shadow img-fluid col-12"
+          alt="" srcset={''} width={''} height={''} attr={[]}       
+           />
+      </div>
+
+    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <Img
+          src={indonesiaFlag}
+          className="shadow img-fluid w-25 px-3 mb-3"
+          alt="" srcset={''} width={''} height={''} attr={[]}       
+           />
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().translate.bandung.title}
+          <Icon variant={'info'} icon={'hearts'} name={' '}/> 
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().translate.bandung.lirik}
+          <VideoFromYoutube src={useSong().video.bandung} />
       </div>
     </div>
 

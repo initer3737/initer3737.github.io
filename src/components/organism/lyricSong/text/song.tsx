@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function useSong() {
   const data=
   {
@@ -708,18 +706,26 @@ export default function useSong() {
                 dan disini kematian membayangiku sekali lagi
                 kamu menunggu diriku pulang , duduk di sebelah buaian.
                 dan aku tahu bahwa tidak ada terjadi kepada diriku`
-           }     
+           },     
+           bandung:{
+                title:`bandung lautan api`,
+                lirik:`Halo, halo Bandung, ibu kota Periangan
+                Halo, halo Bandung, kota kenang-kenangan
+                sudah lama beta tidak berjumpa dengan kau
+                sekarang telah menjadi lautan api, mari bung rebut kembali!`
+           },     
         },
        video:{
               comet:"https://youtube.com/embed/VyvhvlYvRnc",
-              khorobuska:"https://youtube.com/embed/Y_WBf69oVgQ",
+              khorobuska:"https://youtube.com/embed/X1oXUmJxOcI",
               yorunikakeru:"https://www.youtube.com/embed/8omSc01lpbI",
               literature:"https://youtube.com/embed/7u9MtqfcWaU",
-              toserverusia:"https://youtube.com/embed/si_KzQjLtEg",
+              toserverusia:"https://youtube.com/embed/j9yiWoYNfKE",
               chernoglaza:"https://youtube.com/embed/4QeL8dpHAUw",
               chinderela:"https://youtube.com/embed/mxu1PvGUGSk",
               tanjirou:"https://youtube.com/embed/l-AjkizQ70A",
               temnaya:"https://youtube.com/embed/FEuSNZ2veME",
+              bandung:"https://youtube.com/embed/R6esoDId4fY",
        } ,
        text:{
         yorunikakeru_text:{

@@ -28,8 +28,8 @@ export default function Footer() {
             </h5>
             <OfflineUser/>
                   <Weather/>
-                <div className="d-flex gap-3 justify-content-center align-items-center gap-5 mt-5">
-                    <div className="anime__container__kelap mt-3 mx-5">
+                <div className="d-flex gap-3 justify-content-center align-items-center gap-5 mt-5 flex-column flex-md-row">
+                    <div className="anime__container__kelap mt-3 mx-5 d-flex flex-row flex-md-column">
                       <div className="anime__footer__kelap"></div>
                       <div className="anime__footer__kelap"></div>
                       <div className="anime__footer__kelap"></div>
@@ -38,7 +38,7 @@ export default function Footer() {
                       <div className="anime__footer__kelap"></div>
                     </div>
                       <FooterClock/>
-                    <div className="anime__container__kelap mt-3 px-5">
+                    <div className="anime__container__kelap mt-3 mx-5 d-flex flex-row flex-md-column">
                       <div className="anime__footer__kelap"></div>
                       <div className="anime__footer__kelap"></div>
                       <div className="anime__footer__kelap"></div>

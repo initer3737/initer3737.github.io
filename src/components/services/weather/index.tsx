@@ -61,7 +61,6 @@ export default function Weather() {
             await axios.get(url)
                 .then(data=>{
                             //ubah input masukkan ke dalam localstorage
-                            console.log(data)
                             settingLokasi(input)
                             setweather({...data.data})
                 });
