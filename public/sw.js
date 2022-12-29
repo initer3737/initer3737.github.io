@@ -1,5 +1,5 @@
-console.warn('worker service here')
-let cacheData="Appv1";
+// console.warn('worker service here')
+let cacheDataName="Appv1";
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -42,25 +42,35 @@ const dataChache=[
 ]
 this.addEventListener("install",(e)=>{
     e.waitUntil(
-        caches.open(cacheData).then((cache)=>{
-            cache.addAll(
-                dataChache
-            )
+        caches.open(cacheDataName).then((cache)=>{
+           return cache.addAll( dataChache)
         })
     )
+})
+
+this.addEventListener('activate',(e)=>{
+    let cachewhitelist=[]
+        cachewhitelist.push(cacheDataName)
+        e.waitUntil(caches.keys().then((cachesName)=>Promise.all(
+            cachesName.map((cachename)=>{
+                if(!cachewhitelist.includes(cachename)){
+                    return caches.delete(cachename)
+                }
+            })
+        )))
 })
 
 this.addEventListener("fetch",(e)=>{
     if(!navigator.onLine){
         e.respondWith(
             caches.match(e.request).then((res)=>{
-                if(res){
-                    return res
-                }
+                    return fetch(e.request).catch(()=>caches.match('/offline.html'))
             })
         )
     }
 })
+
+
 
 // addEventListener('fetch', (event) => {
 //     // Prevent the default, and handle the request ourselves.

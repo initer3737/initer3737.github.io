@@ -2,16 +2,21 @@ import React, { useEffect, useState } from "react";
 import "./style.css";
 import PuingSound from "../../../sound/puing.mp3";
 import ak47calmSound from "../../../sound/ak47calm.mp3";
+import spr2Kal127MMSound from "../../../sound/SPR_2_1.mp3";
 import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
 import emptygunSound from "../../../sound/empty-gun.mp3";
 import Logo from "../../../imgs/semangat_yuks.gif";
 import Army from "../../../imgs/army.gif";
+import spr2Kal127MM from "../../../imgs/SPR_2_1.png";
+import spr2Kal127MMFire from "../../../imgs/SPR_2_1_fire.png";
+import spr2Kal127MMInfo from "../../../imgs/SPR_2_1-info.png";
 import Ak12 from "../../../imgs/ak12.png";
 import Ak12fire from "../../../imgs/ak12-fire.png";
 import Ak12info from "../../../imgs/AK-12-info.png";
 import soldatIcon from "../../../imgs/soldat.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
+import indoFlag from "../../../imgs/indonesia-flag.png";
 // import spesialForce from "../../../imgs/login-page.jpg";
 import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
 import { useNavigate } from "react-router-dom";
@@ -38,7 +43,8 @@ export default function Game() {
   let [score, setScore] = useState(0);
   let point =localStorage.getItem("scorePlayer");
   let [color, setColor] = useState("");
-  let [ammo, setAmmo] = useState(30);
+  let [changeWeapon, setChangeWeapon] = useState(true);
+  let [ammo, setAmmo] = useState(changeWeapon?30:5);
   let [isFire, setIsFire] = useState(false);
   let [reloadAction, setReloadAction] = useState(false);
   const username=localStorage.getItem('username');
@@ -108,9 +114,18 @@ let BattleRadio=new Audio(battleradio);
           BattleTheme.pause()
         }
     }
-   
+   const useFireImg=()=>{
+      if(changeWeapon){
+        //ak 12
+        return isFire && ammo > 0 ? Ak12fire : Ak12
+      }else{
+        //spr 2 pindad
+        return isFire && ammo > 0 ? spr2Kal127MMFire : spr2Kal127MM
+      }
+      
+   }
 const warTime=(dayWar:number)=>day === dayWar;
-
+const AmmoWeapon=changeWeapon?30:5;
   useEffect(() => {
     //this is to recieve theme music on every render 
     //mounting 
@@ -118,6 +133,7 @@ const warTime=(dayWar:number)=>day === dayWar;
       keyPress('f','fire')
       keyPress('h','info')
       keyPress('g','resetGame')
+      keyPress('q','gantisenjata')
           //war start only 3 day 
      if( warTime(1) || warTime(2) || warTime(3) ){
        setWarmode(true)
@@ -158,7 +174,7 @@ const warTime=(dayWar:number)=>day === dayWar;
             navigate('/login')
           }
           
-  }, [score,ammo,username,password,token,point]); //when score change it become realtime
+  }, [score,ammo,changeWeapon,username,password,token,point]); //when score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -237,7 +253,17 @@ const warTime=(dayWar:number)=>day === dayWar;
           </div>
           <div className="d-flex flex-column gap-3">
             <h5 className={`mx-5 fs-5 alert alert-${color} text-${color}`}>
-              score:{`${score} ${status}`}
+              score:{`${score} ${status} `}  
+              <Button variant={" d-lg-none"} name={""} onClick={()=>{
+                  // setChangeWeapon(!changeWeapon);
+                  setChangeWeapon((prevState)=>!prevState);
+              }} disableOnClick={false}allAttr={{id:"gantisenjata"}}>
+                <Icon
+                  variant={"info rounded-pill px-2"}
+                  icon={"arrow-clockwise"}
+                  name={""}
+                  />
+              </Button>
             </h5>
             <div className="text-start px-5">
                     <p><img src={soldatIcon} alt="soldier" className="soldat" loading="lazy" /> kill count : {killCount}</p>
@@ -250,10 +276,10 @@ const warTime=(dayWar:number)=>day === dayWar;
                   variant={"info"} 
                   icon={"exclamation-triangle"} 
                   name={`
-                   ${ammo===30?'magazine is fully loaded!':'magazine '} 
-                   ${ammo>=30 && ammo>1?'':''} 
+                   ${ammo===AmmoWeapon?'magazine is fully loaded!':'magazine '} 
+                   ${ammo>=AmmoWeapon && ammo>1?'':''} 
                   ${ammo===0?'is empty':''}
-                  ${ammo<30?ammo===0?'':ammo+' bullet':''}
+                  ${ammo<AmmoWeapon?ammo===0?'':ammo+' bullet':''}
                    `}/>
                 </h3>
             </div>
@@ -271,21 +297,22 @@ const warTime=(dayWar:number)=>day === dayWar;
 
                   <button id="reload"//triger reload when player press r
                     onClick={() => {
+                        
                       const reloadAmmo:HTMLAudioElement=srcAudio(reloadSound2)
                       const reloadAmmoFull:HTMLAudioElement=srcAudio(reloadSound)
-                        if(ammo >= 30){
+                        if(ammo >= AmmoWeapon){
                           reloadAmmo.volume=0.0
                           reloadAmmoFull.play()
                           return null;
                         }
-                        if(ammo < 30){
+                        if(ammo < AmmoWeapon){
                           reloadAmmoFull.volume=0.0
                           reloadAmmo.play()
                         }
                           setReloadAction(true)
                           setIsFire(false);
                         setTimeout(()=>{
-                          setAmmo(30)
+                          setAmmo(AmmoWeapon)
                           setReloadAction(false)
                         },3000)
                     }}
@@ -302,8 +329,8 @@ const warTime=(dayWar:number)=>day === dayWar;
                 <div className="w-25">
                   <a role="button" data-bs-toggle="modal" data-bs-target="#infoweapon">
                     <Img
-                      src={isFire && ammo > 0 ? Ak12fire : Ak12}
-                      alt={"ak-12"}
+                      src={useFireImg()}
+                      alt={changeWeapon?"ak-12":"SPR-2 pindad"}
                       srcset={""}
                       className={"img-fluid"}
                       width={""}
@@ -311,7 +338,7 @@ const warTime=(dayWar:number)=>day === dayWar;
                       attr={undefined}                  
                       />
                     </a>
-                  <p>ak-12</p>
+                  <p>{changeWeapon?"ak-12":"SPR-2"}</p>
                 </div>
               </div>
                <a 
@@ -338,11 +365,29 @@ const warTime=(dayWar:number)=>day === dayWar;
               name={"Fire!"}
               onClick={() => {
                 //sound setting
-                   setIsFire((isFire)=>!isFire);
+                  if(changeWeapon){
+                    setIsFire((isFire)=>!isFire);
+                    setTimeout(()=>{
+                      setIsFire((isFire)=>!isFire);
+                    },1000)
+                  }else{
+                    //must be pindad sniper rifle
+                    setIsFire((isFire)=>!isFire);
+                      setTimeout(()=>{
+                        setIsFire((isFire)=>!isFire);
+                      },1000)
+                  }
+
                     setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
                     if (score > JSON.parse(point ?? "0") && ammo > 0)
                       srcAudio(PuingSound).play();
-                    if (score > 0 && ammo > 0) srcAudio(ak47calmSound).play();
+                    if (score > 0 && ammo > 0) srcAudio(changeWeapon? ak47calmSound:spr2Kal127MMSound).play();
+                        if(changeWeapon === false){
+                            setReloadAction(true)
+                            setTimeout(()=>{
+                              setReloadAction(false)
+                            },5000)
+                        }
                     if (ammo <= 0) srcAudio(emptygunSound).play();
                     setScore((score) => (ammo <= 0 ? score : score + 1));
               }}
@@ -358,7 +403,7 @@ const warTime=(dayWar:number)=>day === dayWar;
       <div className="">
         <Img
           src={Logo}
-          alt=""
+          alt="comrade elina"
           srcset={""}
           className={"w-100"}
           width={""}
@@ -388,9 +433,10 @@ const warTime=(dayWar:number)=>day === dayWar;
       {/* button triger modal end */}
     {/* modal */}
     <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
+    <Img src={indoFlag} alt={"indonesia flag"} srcset={""} className={changeWeapon?"d-none":"w-25 align-self-center mb-3"} width={""} height={""} attr={undefined} />
         <Img
-          src={Ak12info}
-          alt=""
+          src={changeWeapon?Ak12info:spr2Kal127MMInfo}
+          alt={changeWeapon?"ak 12":"SPR-2 pindad"}
           srcset={""}
           className={"w-100 bg-1"}
           width={""}
@@ -405,13 +451,13 @@ const warTime=(dayWar:number)=>day === dayWar;
           </div>
           <hr />
               <p className="text-start">
-              {usegame().description}
+              {changeWeapon?usegame().description:usegame().descriptionSpr}
               </p>
               <hr />
               <div className="d-flex flex-column gap-3">
                 <div className="d-inline">
                 <LinkToPage 
-                  href={"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXs7Tkq9r6AhWYSGwGHRTpCJIQFnoECEQQAQ&url=https%3A%2F%2Fid.rbth.com%2Ftechnology%2F84956-kalashnikov-vs-senapan-nato-wyx&usg=AOvVaw0xcnoATmHTufDVQE35cK4_"} 
+                  href={changeWeapon?usegame().linkAk1:usegame().linkSpr1} 
                   icon={"info-circle"} 
                   target={"_blank"} 
                   variant={"info"} 
@@ -420,17 +466,23 @@ const warTime=(dayWar:number)=>day === dayWar;
                 </div>
                 <div className="d-inline">
                 <LinkToPage 
-                  href={"https://en.kalashnikovgroup.ru/catalog/boevoe-strelkovoe-oruzhie/avtomaty/avtomat-kalashnikova-ak-12"} 
+                  href={changeWeapon?usegame().linkAk2:usegame().linkSpr2} 
                   icon={"info-circle"} 
                   target={"_blank"} 
                   variant={"info"} 
                   name={" link referensi"} className={""}
                   />
                 </div>
+                <div className={changeWeapon?"d-none":"d-inline"}>
+                  <LinkToPage 
+                    href={changeWeapon?usegame().linkAk2:usegame().linkSpr3} 
+                    icon={"info-circle"} 
+                    target={"_blank"} 
+                    variant={"info"} 
+                    name={" source untuk suara SPR-2"} className={""}
+                    />
+                </div>
               </div>
-        </div>
-        <div className="d-none">
-          <Icon variant={"info"} icon={"infinity"} name={" ak-12"}/>
         </div>
         </div>       
     </Modal>
@@ -448,11 +500,11 @@ const warTime=(dayWar:number)=>day === dayWar;
        <div className="d-flex flex-column align-items-end">
        <div className="d-flex flex-column align-items-center gap-3">
         <div className="text-center border-start border-info px-2">
-          <Icon variant={"info"} icon={"fire"} name={" weapon used : ak-12"}/>
+          <Icon variant={"info"} icon={"fire"} name={` weapon used : ${changeWeapon?"ak-12":"SPR-2 pindad"}`}/>
         </div>
           <Img
-              src={Ak12}
-              alt=""
+              src={changeWeapon?Ak12:spr2Kal127MM}
+              alt={changeWeapon?"ak12":"SPR-2 pindad"}
               srcset={""}
               className={"w-100"}
               width={""}
@@ -464,12 +516,12 @@ const warTime=(dayWar:number)=>day === dayWar;
           <div className="">
             <div className="border-start px-3 border-info">
                 <p>
-                  type : assault rifle  
+                  type : {changeWeapon?"assault rifle":"sniper rifle"}  
                 </p> 
               </div>
             <div className="border-start px-3 border-info">
                 <p>
-                  cartridge : 5.45×39mm  
+                  cartridge : {changeWeapon?"5.45×39mm":"12.7 x 99 mm"}
                 </p> 
               </div>
           </div>
@@ -477,12 +529,12 @@ const warTime=(dayWar:number)=>day === dayWar;
           <div className="">
               <div className="border-start px-3 border-info">
                 <p>
-                  rate of fire : 700 rounds / min  
+                  rate of fire : {changeWeapon?"700 rounds / min":"n/a"}  
                 </p> 
               </div>
               <div className="border-start px-3 border-info">
                 <p>
-                  state of origin : rusia  
+                  state of origin : {changeWeapon?"rusia":"indonesia"}  
                 </p> 
               </div>
           </div>
@@ -530,6 +582,12 @@ const warTime=(dayWar:number)=>day === dayWar;
                 </p> 
               </div>
               <div className="border-start px-3 border-info">
+                <p  className="d-flex flex-row gap-2">
+                  q : 
+                  <Icon variant={""} icon={"fire"} name={" change the weapon"}/>
+                </p> 
+              </div>
+              <div className="border-start px-3 border-info">
                 <p className="d-flex flex-row gap-2">
                   g : 
                   <Icon variant={""} icon={"controller"} name={" restart the game"}/> 
@@ -567,7 +625,7 @@ const warTime=(dayWar:number)=>day === dayWar;
               </div>
            <Img 
               src={spesialForce} 
-              alt={""} 
+              alt={"spesial force"} 
               srcset={""} 
               className={"w-100 border"} width={""} height={""} attr={undefined}/>
            </div>
