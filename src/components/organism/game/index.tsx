@@ -146,7 +146,7 @@ const AmmoWeapon=changeWeapon?30:5;
       audio.loop=true;
       audio.volume=0.2
       audio.play()
-      
+      changeWeapon?setAmmo(30):setAmmo(5)
   }, []);
   useEffect(()=>{
     //when route change it trigger callback to pause audio || a.k.a component will unmount || unmounting lifecycle
@@ -173,7 +173,7 @@ const AmmoWeapon=changeWeapon?30:5;
         if(token !== 'true'){
             navigate('/login')
           }
-          
+          // changeWeapon?setAmmo(30):setAmmo(5)
   }, [score,ammo,changeWeapon,username,password,token,point]); //when score change it become realtime
 
   useEffect(() => {
@@ -256,6 +256,7 @@ const AmmoWeapon=changeWeapon?30:5;
               score:{`${score} ${status} `}  
               <Button variant={" d-lg-none"} name={""} onClick={()=>{
                   // setChangeWeapon(!changeWeapon);
+                  setAmmo(0); //to handle bug in change weapon event
                   setChangeWeapon((prevState)=>!prevState);
               }} disableOnClick={false}allAttr={{id:"gantisenjata"}}>
                 <Icon
