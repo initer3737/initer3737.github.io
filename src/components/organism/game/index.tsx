@@ -257,6 +257,7 @@ const AmmoWeapon=changeWeapon?30:5;
               <Button variant={" d-lg-none"} name={""} onClick={()=>{
                   // setChangeWeapon(!changeWeapon);
                   setAmmo(0); //to handle bug in change weapon event
+                  setIsFire(false);//to handle bug in change weapon event
                   setChangeWeapon((prevState)=>!prevState);
               }} disableOnClick={false}allAttr={{id:"gantisenjata"}}>
                 <Icon
