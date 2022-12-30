@@ -15,6 +15,7 @@ export default function usegame() {
         Semua fitur ini, ditambah keandalan senjata yang tak tak diragukan lagi, membuat AK-12 menjadi salah satu senapan terbaik di dunia untuk tentara reguler, bukan unit pasukan khusus.'`,
         linkAk1:"https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwiXs7Tkq9r6AhWYSGwGHRTpCJIQFnoECEQQAQ&url=https%3A%2F%2Fid.rbth.com%2Ftechnology%2F84956-kalashnikov-vs-senapan-nato-wyx&usg=AOvVaw0xcnoATmHTufDVQE35cK4_",
         linkAk2:"https://en.kalashnikovgroup.ru/catalog/boevoe-strelkovoe-oruzhie/avtomaty/avtomat-kalashnikova-ak-12",
+        linkAk3:"https://youtu.be/CosTgEd1mBE",
 
        descriptionSpr:`SPR-2 Kal. 12.7 mm adalah senjata api tipe penembak runduk yang diproduksi oleh PT. Pindad. Seperti halnya senapan penembak runduk yang lain, senjata ini mampu menembakan proyektil sejauh 2 kilometer dengan akurasi maksimal (tergantung kemampuan penembak). Senjata ini dilengkapi peluru kaliber besar, yakni 12.7 x 99 mm. Dikarenakan bentuknya yang sangt panjang dan pelurunya kaliber besar, maka satu magasin hanya mampu menampung 5 butir amunisi.`,
         linkSpr1:"https://pindad.com/weapon",

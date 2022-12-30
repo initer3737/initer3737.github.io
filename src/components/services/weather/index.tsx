@@ -51,7 +51,7 @@ export default function Weather() {
             setInput(event.target.value)
         }
     useEffect(()=>{
-            settingLokasi('luhansk')
+            settingLokasi(lokasi ||'luhansk')
             getWeather();
     },[lokasi])
 

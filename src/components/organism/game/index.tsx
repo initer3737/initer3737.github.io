@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import PuingSound from "../../../sound/puing.mp3";
-import ak47calmSound from "../../../sound/ak47calm.mp3";
+import ak12Sound from "../../../sound/ak12-Sound.mp3";
 import spr2Kal127MMSound from "../../../sound/SPR_2_1.mp3";
 import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
@@ -18,7 +18,7 @@ import soldatIcon from "../../../imgs/soldat.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
 import indoFlag from "../../../imgs/indonesia-flag.png";
 // import spesialForce from "../../../imgs/login-page.jpg";
-import { Button, Icon, Img, LinkToPage, Modal } from "../../assembleComponent";
+import { Button, Icon, Img, LinkToPage, Modal,Input } from "../../assembleComponent";
 import { useNavigate } from "react-router-dom";
 /*themes*/
 import themeSound1 from '../../../sound/teme-gaming-1.mp3'
@@ -254,18 +254,12 @@ const AmmoWeapon=changeWeapon?30:5;
           <div className="d-flex flex-column gap-3">
             <h5 className={`mx-5 fs-5 alert alert-${color} text-${color}`}>
               score:{`${score} ${status} `}  
-              <Button variant={" d-lg-none"} name={""} onClick={()=>{
+              <Input variant={""} statusState={changeWeapon} onClick={()=>{ 
                   // setChangeWeapon(!changeWeapon);
                   setAmmo(0); //to handle bug in change weapon event
                   setIsFire(false);//to handle bug in change weapon event
                   setChangeWeapon((prevState)=>!prevState);
-              }} disableOnClick={false}allAttr={{id:"gantisenjata"}}>
-                <Icon
-                  variant={"info rounded-pill px-2"}
-                  icon={"arrow-clockwise"}
-                  name={""}
-                  />
-              </Button>
+              }} allAttr={{id:"gantisenjata",type:"checkbox",role:"switch"}}/>
             </h5>
             <div className="text-start px-5">
                     <p><img src={soldatIcon} alt="soldier" className="soldat" loading="lazy" /> kill count : {killCount}</p>
@@ -368,13 +362,14 @@ const AmmoWeapon=changeWeapon?30:5;
               onClick={() => {
                 //sound setting
                   if(changeWeapon){
-                    setIsFire((isFire)=>!isFire);
+                    //must be pindad ak 12 rifle
+                    setIsFire(!isFire);
                     setTimeout(()=>{
                       setIsFire((isFire)=>!isFire);
                     },1000)
                   }else{
                     //must be pindad sniper rifle
-                    setIsFire((isFire)=>!isFire);
+                    setIsFire(!isFire);
                       setTimeout(()=>{
                         setIsFire((isFire)=>!isFire);
                       },1000)
@@ -383,7 +378,7 @@ const AmmoWeapon=changeWeapon?30:5;
                     setAmmo((ammo) => (ammo <= 0 ? ammo : ammo - 1));
                     if (score > JSON.parse(point ?? "0") && ammo > 0)
                       srcAudio(PuingSound).play();
-                    if (score > 0 && ammo > 0) srcAudio(changeWeapon? ak47calmSound:spr2Kal127MMSound).play();
+                    if (score > 0 && ammo > 0) srcAudio(changeWeapon? ak12Sound:spr2Kal127MMSound).play();
                         if(changeWeapon === false){
                             setReloadAction(true)
                             setTimeout(()=>{
@@ -475,13 +470,13 @@ const AmmoWeapon=changeWeapon?30:5;
                   name={" link referensi"} className={""}
                   />
                 </div>
-                <div className={changeWeapon?"d-none":"d-inline"}>
+                <div className="d-inline">
                   <LinkToPage 
-                    href={changeWeapon?usegame().linkAk2:usegame().linkSpr3} 
+                    href={changeWeapon?usegame().linkAk3:usegame().linkSpr3} 
                     icon={"info-circle"} 
                     target={"_blank"} 
                     variant={"info"} 
-                    name={" source untuk suara SPR-2"} className={""}
+                    name={` source untuk suara ${changeWeapon?"ak-12":"SPR-2"}`} className={""}
                     />
                 </div>
               </div>
