@@ -430,7 +430,7 @@ const AmmoWeapon=changeWeapon?30:5;
         <button data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></button>
       {/* button triger modal end */}
     {/* modal */}
-    <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>sdsdsd
+    <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
     <Img src={changeWeapon?rusiaFlag:indoFlag} alt={"indonesia flag"} srcset={""} className={"w-25 align-self-center mb-3"} width={""} height={""} attr={undefined} />
         <Img
           src={changeWeapon?Ak12info:spr2Kal127MMInfo}
