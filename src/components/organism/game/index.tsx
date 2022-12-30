@@ -322,7 +322,7 @@ const AmmoWeapon=changeWeapon?30:5;
                   </button>
                   </div>
                 </div>
-                <div className="w-25">
+                <div className={`w-25 ${changeWeapon?"pt-1":""}`}>
                   <a role="button" data-bs-toggle="modal" data-bs-target="#infoweapon">
                     <Img
                       src={useFireImg()}
