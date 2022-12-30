@@ -20,10 +20,13 @@ const dataChache=[
     '/static/media/banner-982162_1920.a9354715cc5f66136ae9.jpg',
     '/static/media/spesial-force.2c98a3a2fd214cf5e04a.jpg',
     '/static/media/soldat.9274177d6a0aa01b9e55.png',
+    '/static/media/SPR_2_1.71fb250fb6e951ee813c.png',
+    '/static/media/SPR_2_1_fire.974ebb3b7941eebd6613.png',
     '/static/media/ak12.539993c456c8d69ae9f5.png',
     '/static/media/ak12-fire.ccb6c04f9e3bcbeaf9e9.png',
     '/static/media/pwa3.35a97d3973d40e9615ce.jpg',
     '/static/media/night-1851685_960_720.5126a8b3b6220deea82f.png',
+    '/static/media/pwa3.35a97d3973d40e9615ce.jpg',
     '/static/media/wave-305226.99bfceef311ce0d8786d.png',
     '/static/media/semangat_yuks.16c8f89b18a0865a893c.gif',
     '/static/media/battleradio.39a86427115be96c0a9f.mp3',
@@ -31,14 +34,15 @@ const dataChache=[
     '/static/media/artileri.2ee7eb3bd59d75090b8c.mp3',
     '/static/media/battletheme.84389f6310b4b7c98deb.mp3',
     '/static/media/alarmmiliter.a796df1136c79c2b096d.mp3',
+    '/static/js/bundle.js',
     '/index.html',
     '/',
     '/manifest.json',
-    '/static/js/bundle.js',
-    '/chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js'
-    // 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
-    // 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css',
-    // 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+    '/chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+    'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css',
+    'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png',
 ]
 this.addEventListener("install",(e)=>{
     e.waitUntil(
@@ -62,12 +66,17 @@ this.addEventListener('activate',(e)=>{
 
 this.addEventListener("fetch",(e)=>{
     if(!navigator.onLine){
+            //kalo user offline ambil datanya di dalam cache 
         e.respondWith(
             caches.match(e.request).then((res)=>{
-                    return fetch(e.request).catch(()=>caches.match('/offline.html'))
+                if(res){
+                    return res
+                }   
             })
         )
     }
+            //jika online maka ambil datanya di server /refetch
+    return fetch(e.request).catch(()=>caches.match(dataChache))
 })
 
 
