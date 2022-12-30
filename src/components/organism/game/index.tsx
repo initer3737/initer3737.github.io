@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
+import magSlide from "../../../sound/mag-slide.mp3";
 import PuingSound from "../../../sound/puing.mp3";
 import ak12Sound from "../../../sound/ak12-Sound.mp3";
 import spr2Kal127MMSound from "../../../sound/SPR_2_1.mp3";
@@ -256,7 +257,7 @@ const AmmoWeapon=changeWeapon?30:5;
             <h5 className={`mx-5 fs-5 alert alert-${color} text-${color}`}>
               score:{`${score} ${status} `}  
               <Input variant={""} statusState={changeWeapon} onClick={()=>{ 
-                  // setChangeWeapon(!changeWeapon);
+                  srcAudio(magSlide).play();
                   setAmmo(0); //to handle bug in change weapon event
                   setIsFire(false);//to handle bug in change weapon event
                   setChangeWeapon((prevState)=>!prevState);
