@@ -17,6 +17,7 @@ import Ak12info from "../../../imgs/AK-12-info.png";
 import soldatIcon from "../../../imgs/soldat.png";
 import spesialForce from "../../../imgs/spesial-force.jpg";
 import indoFlag from "../../../imgs/indonesia-flag.png";
+import rusiaFlag from "../../../imgs/rusia-flag.png";
 // import spesialForce from "../../../imgs/login-page.jpg";
 import { Button, Icon, Img, LinkToPage, Modal,Input } from "../../assembleComponent";
 import { useNavigate } from "react-router-dom";
@@ -429,8 +430,8 @@ const AmmoWeapon=changeWeapon?30:5;
         <button data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></button>
       {/* button triger modal end */}
     {/* modal */}
-    <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
-    <Img src={indoFlag} alt={"indonesia flag"} srcset={""} className={changeWeapon?"d-none":"w-25 align-self-center mb-3"} width={""} height={""} attr={undefined} />
+    <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>sdsdsd
+    <Img src={changeWeapon?rusiaFlag:indoFlag} alt={"indonesia flag"} srcset={""} className={"w-25 align-self-center mb-3"} width={""} height={""} attr={undefined} />
         <Img
           src={changeWeapon?Ak12info:spr2Kal127MMInfo}
           alt={changeWeapon?"ak 12":"SPR-2 pindad"}
