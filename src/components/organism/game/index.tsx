@@ -126,6 +126,12 @@ let BattleRadio=new Audio(battleradio);
       }
       
    }
+   const animationReloadWeapon=()=>{
+      //jika senjatanya adalah pindad spr 2 dan ketika ammo kosong
+          //jika fire di triger maka animasi tidak ditampilkan
+      if(changeWeapon === false && ammo<=0)return "d-none";
+    return reloadAction?'':"d-none"
+   }
 const warTime=(dayWar:number)=>day === dayWar;
 const AmmoWeapon=changeWeapon?30:5;
   useEffect(() => {
@@ -263,23 +269,29 @@ const AmmoWeapon=changeWeapon?30:5;
                   setChangeWeapon((prevState)=>!prevState);
               }} allAttr={{id:"gantisenjata",type:"checkbox",role:"switch"}}/>
             </h5>
-            <div className="text-start px-5">
+            <div className="text-start px-5 d-flex flex-row justify-content-between align-items-center">
                     <p><img src={soldatIcon} alt="soldier" className="soldat" loading="lazy" /> kill count : {killCount}</p>
+                    <iframe src="https://giphy.com/embed/TaYmMYLtP0RvpDzgn4" width="60vw"style={{borderRadius:"0"}} className={`giphy-embed ${animationReloadWeapon()}
+                    
+                    `}/>
             </div>
             <div className="alert alert-success shadow rounded-md">
-            <div className={`bg-4 text-center text-white p-2 rounded shadow `}
+            <div className={`bg-4 text-center text-white p-2 rounded shadow`}
             >
-              <h3>
-                <Icon 
-                  variant={"info"} 
-                  icon={"exclamation-triangle"} 
-                  name={`
-                   ${ammo===AmmoWeapon?'magazine is fully loaded!':'magazine '} 
-                   ${ammo>=AmmoWeapon && ammo>1?'':''} 
-                  ${ammo===0?'is empty':''}
-                  ${ammo<AmmoWeapon?ammo===0?'':ammo+' bullet':''}
-                   `}/>
-                </h3>
+              <div className="d-flex flex-column-reverse">
+                <h3>
+                  <Icon 
+                    variant={"info"} 
+                    icon={"exclamation-triangle"} 
+                    name={`
+                    ${ammo===AmmoWeapon?'magazine is fully loaded!':'magazine '} 
+                    ${ammo>=AmmoWeapon && ammo>1?'':''} 
+                    ${ammo===0?'is empty':''}
+                    ${ammo<AmmoWeapon?ammo===0?'':ammo+' bullet':''}
+                    `}/>
+                  </h3>
+                  {/* <iframe src="https://giphy.com/embed/TaYmMYLtP0RvpDzgn4" width="50vw"style={{borderRadius:"0"}} className="giphy-embed d-inline"/> */}
+              </div>
             </div>
               <div className="d-flex flex-row justify-content-between align-items-center">
                 <div className="d-flex flex-column justify-content-around gap-2">
@@ -479,6 +491,15 @@ const AmmoWeapon=changeWeapon?30:5;
                     target={"_blank"} 
                     variant={"info"} 
                     name={` source untuk suara ${changeWeapon?"ak-12":"SPR-2"}`} className={""}
+                    />
+                </div>
+                <div className="d-inline">
+                  <LinkToPage 
+                    href={usegame().reloadAnimation} 
+                    icon={"info-circle"} 
+                    target={"_blank"} 
+                    variant={"info"} 
+                    name={`source reload animasi`} className={""}
                     />
                 </div>
               </div>

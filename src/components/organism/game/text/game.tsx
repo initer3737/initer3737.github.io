@@ -21,6 +21,7 @@ export default function usegame() {
         linkSpr1:"https://pindad.com/weapon",
         linkSpr2:"https://id.wikipedia.org/wiki/SPR-2_Kal._12.7_mm",
         linkSpr3:"https://www.youtube.com/shorts/UTJ2gDxnv8A",
+        reloadAnimation:"https://giphy.com/gifs/loop-ai-artificial-intelligence-TaYmMYLtP0RvpDzgn4?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=http%3A%2F%2Flocalhost%3A3000%2F",
     }
   }
     return data.data;

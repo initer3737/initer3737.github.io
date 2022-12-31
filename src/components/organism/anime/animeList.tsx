@@ -87,6 +87,15 @@ import { Icon, VideoFromYoutube } from '../../atom'
             rank:string,
             msg:string
         }
+        type Machiavellianism={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link:string
+        }
 
             interface animeType{
                 lycoris:Lycoris,
@@ -99,6 +108,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 ninja:Ninja,
                 girlFrontline:GirlFrontline,
                 kage:kage,
+                machiavellianism:Machiavellianism,
             }
                     //legend epic middle mid-medium regular
             const animeLists:animeType={
@@ -179,6 +189,15 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     trailer:'https://youtube.com/embed/jyoWE4cUtkI',
                     rank:'epic',
                     msg:'kalimat ter epic : "I AM ATOMIC" '
+                },
+                machiavellianism:{
+                    name:'Busou Shoujo Machiavellianism',
+                    pov:'bercerita tentang Nomura Fudo yang dikeluarkan dari sekolah lamanya karena ia adalah anak bermasalah lalu ia masuk ke sekolah yang sangat diluar nalar , dimana kebanyakkan adalah wanita ,',
+                    rate:'7.6',
+                    trailer:'https://youtube.com/embed/Ghi2R6-HcMA',
+                    rank:'middle',
+                    msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x]',
+                    link:'https://www.otakotaku.com/anime/view/742/busou-shoujo-machiavellianism'
                 }
             }
 

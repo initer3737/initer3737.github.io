@@ -590,7 +590,7 @@ export default function useSong() {
                         Siapa namamu nona muda?
                         Dan wanita muda itu menjawab:
                         Anda akan mendengar nama saya
-                        dalam derap kaki kuda.
+                        dari derap kaki kuda.
                         Saya berkendara di sepanjang jalan,sambil menebak namanya
                         Aku berlari kencang di jalan.
                         Dan di sepanjang jalan di sekitar bebatuan cokelat,
@@ -598,8 +598,8 @@ export default function useSong() {
                         Dasha?,Zina ,Masha,Nina?
                         Sepertinya tidak ada yang cocok.
                         Katya, Katya! - terdengar 
-                        Dalam derap kaki kudaku.
-                        Dan sejak saat itu, saat saya naik kuda,
+                        dari derap kaki kudaku.
+                        Dan sejak saat itu, saatnya naik kuda,
                         suara terdengar saat saya berpacu.
                         Katya, Katya, Katerina,
                         Aku terngiang-ngiang dikepala.
@@ -717,7 +717,7 @@ export default function useSong() {
         },
        video:{
               comet:"https://youtube.com/embed/VyvhvlYvRnc",
-              khorobuska:"https://youtube.com/embed/X1oXUmJxOcI",
+              khorobuska:"https://youtube.com/embed/krJR0b1Wgrg",
               yorunikakeru:"https://www.youtube.com/embed/8omSc01lpbI",
               literature:"https://youtube.com/embed/7u9MtqfcWaU",
               toserverusia:"https://youtube.com/embed/j9yiWoYNfKE",
