@@ -192,11 +192,11 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 },
                 machiavellianism:{
                     name:'Busou Shoujo Machiavellianism',
-                    pov:'bercerita tentang Nomura Fudo yang dikeluarkan dari sekolah lamanya karena ia adalah anak bermasalah lalu ia masuk ke sekolah yang sangat diluar nalar , dimana kebanyakkan adalah wanita ,',
+                    pov:'bercerita tentang Nomura Fudo [pengguna peluru gaib] yang dikeluarkan dari sekolah lamanya karena ia adalah anak bermasalah lalu ia masuk ke sekolah yang sangat diluar nalar , dimana kebanyakkan adalah wanita ,ditambah lagi dengan sosok wanita misterius yang dijuluki maharani [kirukiru amou] yang membuat anime ini begitu mengesankan,',
                     rate:'7.6',
                     trailer:'https://youtube.com/embed/Ghi2R6-HcMA',
                     rank:'middle',
-                    msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x]',
+                    msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x]<br> nb : kalau di dunia nyata [dalam konteks orang pintar dan bodoh] orang yang menurut akan dianggap pintar sedang yang melawan sistem dan bertindak sesuai dengan keinginannya disebut sebagai orang bodoh [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
                     link:'https://www.otakotaku.com/anime/view/742/busou-shoujo-machiavellianism'
                 }
             }
@@ -232,7 +232,9 @@ import { Icon, VideoFromYoutube } from '../../atom'
                         </li> 
                         <li className='list-group-item' key={animelist[1].link}>
                             <Icon variant={`info ${animelist[1].link??'d-none'} h2`} icon={'link'} name={''}/>
-                             <a href={animelist[1].link ?? undefined} className={`${animelist[1].link??'d-none'}`}>link referensi</a>
+                             <a href={animelist[1].link ?? undefined}
+                                target='_blank'
+                                className={`${animelist[1].link??'d-none'}`}>link referensi</a>
                         </li> 
                         <li className='list-group-item d-flex flex-column mb-4 shadow' key={animelist[1].trailer}>
                             <div className="d-flex gap-2 justify-content-center">
