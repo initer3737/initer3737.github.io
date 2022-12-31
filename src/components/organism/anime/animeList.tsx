@@ -96,6 +96,33 @@ import { Icon, VideoFromYoutube } from '../../atom'
             msg:string,
             link:string
         }
+        type Blueperiod={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link:string
+        }
+        type TanakaKun={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link:string
+        }
+        type Sakamoto={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link?:string
+        }
 
             interface animeType{
                 lycoris:Lycoris,
@@ -105,10 +132,13 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 crow2:Crow2,
                 tenshura:Thensura,
                 samuraiX:SamuraiX,
-                ninja:Ninja,
+                ninja?:Ninja,
                 girlFrontline:GirlFrontline,
-                kage:kage,
-                machiavellianism:Machiavellianism,
+                kage?:kage,
+                machiavellianism?:Machiavellianism,
+                blueperiod:Blueperiod,
+                tanakaKun:TanakaKun,
+                sakamoto:Sakamoto,
             }
                     //legend epic middle mid-medium regular
             const animeLists:animeType={
@@ -164,13 +194,21 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     rank:'legend',
                     msg:'di remake menjadi lebih hd dan mengalami peningkatan kualitas dari segi grafis'
                 },
-                ninja:{
-                    name:'shinobi no itoki',
-                    pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya , terlebih ia harus berurusan dengan para pengkhianat clan',
-                    rate:'5.7',
-                    trailer:'https://youtube.com/embed/MareC5TQWZ8',
+                // ninja:{
+                //     name:'shinobi no itoki',
+                //     pov:'seorang penerus kepemimpinan sah yang ke 19 clan iga ,Ittoki Sakuraba harus menanggung beban sebagai ketua klan, meski begitu ia harus menghadapi fakta bahwa tidak semua berjalan sesuai keinginannya , terlebih ia harus berurusan dengan para pengkhianat clan',
+                //     rate:'5.7',
+                //     trailer:'https://youtube.com/embed/MareC5TQWZ8',
+                //     rank:'regular',
+                //     msg:'untuk mc [main character] tidak op dan terkesan lembek ,yah mungkin agar sesuai dengan ritme kehidupan manusia [from zero to hero]'
+                // },
+                sakamoto:{
+                    name:'sakamoto desu ga?',
+                    pov:'sakamoto yang selalu terpojok selalu saja punya cara untuk membalikkan keadaan',
+                    rate:'6.8',
+                    trailer:'https://youtube.com/embed/rnCzQbPRLHY',
                     rank:'regular',
-                    msg:'untuk mc [main character] tidak op dan terkesan lembek ,yah mungkin agar sesuai dengan ritme kehidupan manusia [from zero to hero]'
+                    msg:'langkah yang ia ambil untuk menghadapi para pembuli memang benar benar diluar nalar [beliau ini benar-benar sasuga sekali]'
                 },
                 girlFrontline:{
                     name:'girl frontline',
@@ -182,22 +220,40 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     msg:'cocok jika anda penyuka adrenalin',
                     link:'https://dafunda.com/otaku/informasi-terbaru-anime-girls-frontline/'
                 },
-                kage:{
-                    name:'kage no jitsuryokusha ni naritakute',
-                    pov:'berpura-pura lemah padahal beliau adalah pemimpin organisasi shadow garden yang over power',
-                    rate:'9.6',
-                    trailer:'https://youtube.com/embed/jyoWE4cUtkI',
-                    rank:'epic',
-                    msg:'kalimat ter epic : "I AM ATOMIC" '
-                },
-                machiavellianism:{
-                    name:'Busou Shoujo Machiavellianism',
-                    pov:'bercerita tentang Nomura Fudo [pengguna peluru gaib] yang dikeluarkan dari sekolah lamanya karena ia adalah anak bermasalah lalu ia masuk ke sekolah yang sangat diluar nalar , dimana kebanyakkan adalah wanita ,ditambah lagi dengan sosok wanita misterius yang dijuluki maharani [kirukiru amou] yang membuat anime ini begitu mengesankan,',
-                    rate:'7.6',
-                    trailer:'https://youtube.com/embed/Ghi2R6-HcMA',
+                // kage:{
+                //     name:'kage no jitsuryokusha ni naritakute',
+                //     pov:'berpura-pura lemah padahal beliau adalah pemimpin organisasi shadow garden yang over power',
+                //     rate:'9.6',
+                //     trailer:'https://youtube.com/embed/jyoWE4cUtkI',
+                //     rank:'epic',
+                //     msg:'kalimat ter epic : "I AM ATOMIC" '
+                // },
+                tanakaKun:{
+                    name:'tanaka kun itsumo kedaruge [dek tanaka yang selalu lesu]',
+                    pov:'menikmati hidup dan selalu mengalir seperti air',
+                    rate:'5.6',
+                    trailer:'https://youtube.com/embed/MWVEG7kDQfo',
                     rank:'middle',
-                    msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x]<br> nb : kalau di dunia nyata [dalam konteks orang pintar dan bodoh] orang yang menurut akan dianggap pintar sedang yang melawan sistem dan bertindak sesuai dengan keinginannya disebut sebagai orang bodoh [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
-                    link:'https://www.otakotaku.com/anime/view/742/busou-shoujo-machiavellianism'
+                    msg:'Tanaka merupakan seorang siswa di salah satu sekolah menengah atas di Jepang. Tanaka adalah cowok pemalas yang suka mendesah, bertopang dagu, punya mata yang seperti orang mengantuk, serta pada dasarnya tidak suka berusaha. Kemudian ada Ohta,',
+                    link:'https://id.wikipedia.org/wiki/The_Sluggish_Tanaka'
+                },
+                // machiavellianism:{
+                //     name:'Busou Shoujo Machiavellianism',
+                //     pov:'bercerita tentang Nomura Fudo [pengguna peluru gaib] yang dikeluarkan dari sekolah lamanya karena ia adalah anak bermasalah lalu ia masuk ke sekolah yang sangat diluar nalar , dimana kebanyakkan adalah wanita ,ditambah lagi dengan sosok wanita misterius yang dijuluki maharani [kirukiru amou] yang membuat anime ini begitu mengesankan,',
+                //     rate:'7.6',
+                //     trailer:'https://youtube.com/embed/Ghi2R6-HcMA',
+                //     rank:'middle',
+                //     msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x]<br> nb : kalau di dunia nyata [dalam konteks orang pintar dan bodoh] orang yang menurut akan dianggap pintar sedang yang melawan sistem dan bertindak sesuai dengan keinginannya disebut sebagai orang bodoh [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
+                //     link:'https://www.otakotaku.com/anime/view/742/busou-shoujo-machiavellianism'
+                // }
+                blueperiod:{
+                    name:'blue period',
+                    pov:'bercerita tentang pemuda yang memiliki ambisi menjadi pelukis,',
+                    rate:'unkown [belum nonton]',
+                    trailer:'https://youtube.com/embed/0a-4qVD8okU',
+                    rank:'unknow [belum nonton]',
+                    msg:'kesan pertama untuk anime ini  Yatora Yaguchi yang memiliki keinginan untuk menggambar dan perjuangan yang ia akan tempuh tidaklah mudah dapatkah ia meraih cita cita yang ia inginkan sebagai pelukis yang mampu menghasilkan karya seni yang indah',
+                    link:'https://pedomantangerang.pikiran-rakyat.com/selebritas/pr-072792826/nonton-anime-blue-period-lengkap-dengan-sinopsis-dan-link-streaming'
                 }
             }
 
