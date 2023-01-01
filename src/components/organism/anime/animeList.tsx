@@ -259,7 +259,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                     rate:'5.6',
                     trailer:'https://youtube.com/embed/MWVEG7kDQfo',
                     rank:'middle',
-                    msg:'Tanaka merupakan seorang siswa di salah satu sekolah menengah atas di Jepang. Tanaka adalah cowok pemalas yang suka mendesah, bertopang dagu, punya mata yang seperti orang mengantuk, serta pada dasarnya tidak suka berusaha. Kemudian ada Ohta,',
+                    msg:'dek Tanaka merupakan seorang siswa di salah satu sekolah menengah atas di Jepang. dek Tanaka adalah pria pemalas yang suka mendesah, bertopang dagu, punya mata yang seperti orang mengantuk, sisi positifnya ia selalu tahu bagaimana cara membuat tenaganya menjadi lebih efisien dan tidak boros',
                     link:'https://id.wikipedia.org/wiki/The_Sluggish_Tanaka',
                     tampil:true
                 },
