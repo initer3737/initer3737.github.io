@@ -285,6 +285,7 @@ import { Icon, VideoFromYoutube } from '../../atom'
                 }
             }
     const AnimeList=()=>{
+        /** why make filter mekanisme??, so delete anime that i want not to display to the ui is mendokusai ,so i decide to make fillter mekanisme */
                 const animeObjectEntries=Object.entries(animeLists);
             return (
             <ul className='list-group fs-4 text-dark'>
