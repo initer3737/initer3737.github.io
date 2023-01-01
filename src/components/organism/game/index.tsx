@@ -411,7 +411,7 @@ const AmmoWeapon=changeWeapon?30:5;
         </div>
       </div>
 
-      <div className="">
+      <div className="d-none d-lg-block">
         <Img
           src={Logo}
           alt="comrade elina"
