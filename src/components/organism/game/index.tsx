@@ -271,9 +271,7 @@ const AmmoWeapon=changeWeapon?30:5;
             </h5>
             <div className="text-start px-5 d-flex flex-row justify-content-between align-items-center">
                     <p><img src={soldatIcon} alt="soldier" className="soldat" loading="lazy" /> kill count : {killCount}</p>
-                    <iframe src="https://giphy.com/embed/TaYmMYLtP0RvpDzgn4" width="60vw"style={{borderRadius:"0"}} className={`giphy-embed ${animationReloadWeapon()}
-                    
-                    `}/>
+                    <iframe src="https://giphy.com/embed/TaYmMYLtP0RvpDzgn4" width="60vw"style={{borderRadius:"0"}} className={`reload__effect giphy-embed ${animationReloadWeapon()}`}/>
             </div>
             <div className="alert alert-success shadow rounded-md">
             <div className={`bg-4 text-center text-white p-2 rounded shadow`}

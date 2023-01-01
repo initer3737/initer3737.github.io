@@ -8,3 +8,16 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.reload__effect{
+    transition: 0.5s ease-in-out;
+}
+
+@keyframes reload__effect__ks{
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
