@@ -25,6 +25,7 @@
             rate:string,
             trailer:string,
             rank:string,
+            msg:string,
             tampil:boolean
         }
 

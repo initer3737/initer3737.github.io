@@ -22,10 +22,11 @@ import { animeType } from "./animeListType"
         },
         chainsaw:{
             name:'chainsaw man',
-            pov:'penuh konflik berdarah',
+            pov:'sebuah cerita bermula ketika denji bekerja serabutan demi melunasi hutang kedua orang tuanya yang telah tiada akan tetapi beliau harus menjalani kehidupan yang keras apapun ia lakukan untuk bertahan hidup mulai dari menjual organ dalamnya [mata,ginjal] namun semua berubah ketika ia bertemu dengan pochita',
             rate:'7.5',
             trailer:'https://youtube.com/embed/jk7QSGwupPA',
             rank:'epic',
+            msg:'saat pertama kali melihat mbak makima dan sifatnya yang manipulatif [ya wajar karena beliau adalah control devil] saya langsung teringat dengan Machiavellianism yang entah kenapa di tahun 2022 ini anime seperti [lycoris recoil] juga mengangkat isu yang sama , sepertinya ini merupakkan bentuk kritik yang disalurkan oleh para animator jepang karena pemerintah berusaha menutup-nutupi apa yang sebenarnya terjadi di jepang belakangan ini seperti yang saya singgung di atas atau mungkin hanya perasaan mimin saya [entahlah]',
             tampil:true
         },
         crow:{
