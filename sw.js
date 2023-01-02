@@ -1,5 +1,5 @@
 // console.warn('worker service here')
-let cacheDataName="initer3737SiteAppv1";
+let cacheDataName="initer3737SiteAppv111";
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -63,7 +63,7 @@ self.addEventListener('activate',(e)=>{
                 }
             })
         )))
-        e.waitUntil(clients.claim());
+        // e.waitUntil(clients.claim());
 })
 
 self.addEventListener("fetch",(e)=>{
