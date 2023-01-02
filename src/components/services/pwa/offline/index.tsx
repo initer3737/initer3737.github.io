@@ -11,7 +11,7 @@ export default function OfflineUser() {
         }
            
   return (
-    <div className={`position-relative ${useUser__offline()?'':'d-none'} d-none`} >
+    <div className={`position-relative ${useUser__offline()?'d-block':'d-none'}`} >
         <h3 className='h3 text-center'>beliau ini sedang offline!!</h3>
         <img src={pwa3} alt="offline pwa" loading='lazy' className='w-100'/>
     </div>

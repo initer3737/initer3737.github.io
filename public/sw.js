@@ -1,5 +1,5 @@
 // console.warn('worker service here')
-let cacheDataName="Appv1";
+let cacheDataName="initer3737SiteAppv1";
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -12,6 +12,7 @@ const dataChache=[
     '/static/media/banner-909710_1920.07b6b6e52305963a8175.jpg',
     '/static/media/giphy.e18864d01a6e292eb723.gif',
     '/static/media/gears-1311171_1920.c2b6bb58b82d5b774bdd.jpg',
+    '/static/media/wasurejiBg.5a3941b90480987746d4.jpg',
     '/static/media/giphy%20(1).a43db8f03471a8fdeee5.gif',
     '/static/media/book-158812.cce0cc7959d103e0bfbb.png',
     '/static/media/Earth%20-%204788.c6043d6c61ec245407f5.mp4',
@@ -44,41 +45,37 @@ const dataChache=[
     'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css',
     'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png',
 ]
-this.addEventListener("install",(e)=>{
-    e.waitUntil(
-        caches.open(cacheDataName).then((cache)=>{
-           return cache.addAll( dataChache)
+self.addEventListener("install",(e)=>{
+    e.waitUntil((async ()=>{
+           let cacheOpen=await caches.open(cacheDataName);
+            await cacheOpen.addAll(dataChache)
         })
-    )
+    )()
 })
 
-this.addEventListener('activate',(e)=>{
-    let cachewhitelist=[]
-        cachewhitelist.push(cacheDataName)
+self.addEventListener('activate',(e)=>{
         e.waitUntil(caches.keys().then((cachesName)=>Promise.all(
             cachesName.map((cachename)=>{
-                if(!cachewhitelist.includes(cachename)){
+                if(cachename !== cacheDataName){
                     return caches.delete(cachename)
                 }
             })
         )))
 })
 
-this.addEventListener("fetch",(e)=>{
-    if(!navigator.onLine){
-            //kalo user offline ambil datanya di dalam cache 
-        e.respondWith(
-            caches.match(e.request).then((res)=>{
-                if(res){
-                    return res
-                }   
-            })
-        )
-    }
-            //jika online maka ambil datanya di server /refetch
-    return fetch(e.request).catch(()=>caches.match(dataChache))
-})
+self.addEventListener("fetch",(e)=>{
+    e.respondWith(
+        (async ()=>{
+            const res=await caches.match(e.request);
+            if(res)return res
 
+            const getResponseServer=await fetch(e.request);
+            const cache=await caches.open(cacheDataName);
+            cache.put(e.request,getResponseServer.clone())
+            return getResponseServer;
+        })()
+    )
+})
 
 
 // addEventListener('fetch', (event) => {
