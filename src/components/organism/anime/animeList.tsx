@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, VideoFromYoutube } from "../../atom";
+import { LinkToPage,Icon, VideoFromYoutube } from "../../atom";
 import { animeLists } from "./animeDeskripsi";
 const AnimeList = () => {
   /** why make filter mekanisme??, so delete anime that i want not to display to the ui is mendokusai ,so i decide to make fillter mekanisme */
@@ -43,18 +43,13 @@ const AnimeList = () => {
               {animelist[1].msg ?? undefined}
             </li>
             <li className="list-group-item" key={animelist[1].link}>
-              <Icon
-                variant={`info ${animelist[1].link ?? "d-none"} h2`}
-                icon={"link"}
-                name={""}
-              />
-              <a
-                href={animelist[1].link ?? undefined}
-                target="_blank"
+              <LinkToPage 
+                href={animelist[1].link ?? undefined} 
+                icon={'link'} target={'_blank'} 
+                variant={`primary ${animelist[1].link ?? "d-none"} fs-4`} 
+                name={' link referensi'} 
                 className={`${animelist[1].link ?? "d-none"}`}
-              >
-                link referensi
-              </a>
+                />
             </li>
             <li
               className="list-group-item d-flex flex-column mb-4 shadow"

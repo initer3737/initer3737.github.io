@@ -117,7 +117,7 @@ import { animeType } from "./animeListType"
             rate:'7.6',
             trailer:'https://youtube.com/embed/Ghi2R6-HcMA',
             rank:'middle',
-            msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x]<br> nb : kalau di dunia nyata [dalam konteks orang pintar dan bodoh] orang yang menurut akan dianggap pintar sedang yang melawan sistem dan bertindak sesuai dengan keinginannya disebut sebagai orang bodoh [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
+            msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x] nb : kalau di dunia nyata orang yang menurut akan dianggap pintar sedang yang melawan sistem dan bertindak sesuai dengan keinginannya disebut sebagai orang bodoh [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
             link:'https://www.otakotaku.com/anime/view/742/busou-shoujo-machiavellianism',
             tampil:false
         },

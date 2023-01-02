@@ -346,6 +346,39 @@ export default function useSong() {
                     Ты меня ждёшь и у детской кроватки не спишь,
                     И поэтому знаю - со мной ничего не случится.
                     `
+                },
+             bandung:{
+                   title:`bandung lautan api`,
+                   lirik:`Halo, halo Bandung, ibu kota Periangan
+                        Halo, halo Bandung, kota kenang-kenangan
+                        sudah lama beta tidak berjumpa dengan kau
+                        sekarang telah menjadi lautan api, mari bung rebut kembali!`
+                },      
+            wasureji:{
+                    title:`忘れじの言の葉`,
+                    lirik:`言の葉を紡いで 微睡んだ泡沫
+                    旅人迷い込む 御伽の深い霧
+                    差し伸べた掌 そっと触れる予感
+                    受け止めて零れた 光の一滴
+                    面影虚ろって 微笑んだ幻
+                    想いの果てる場所 まだ遥か遠くて
+                    求め探して 彷徨って やがて詠われて
+                    幾千 幾万 幾億の旋律となる
+                    いつか失い奪われて 消える運命でも
+                    それは忘れられることなき物語
+                    指先を絡めて 触れる誰かの夢
+                    刻まれた想いの こだまだけが響く
+                    言の葉を紡いで 微睡んだ泡沫
+                    旅人の名前を 御伽噺と云う
+                    求め探して 彷徨って やがて道となり
+                    幾千 幾万 幾億の英雄は往く
+                    いつか失い奪われて 消える運命でも
+                    それは忘れられることなく 此処に在る
+                    求め探して 彷徨って やがて詠われて
+                    幾千 幾万 幾億の旋律となる
+                    いつか失い奪われて 消える運命でも
+                    それは忘れられることなき物語
+                    `
                 }     
         }, //original
         translate:{
@@ -708,11 +741,45 @@ export default function useSong() {
                 dan aku tahu bahwa tidak ada terjadi kepada diriku`
            },     
            bandung:{
-                title:`bandung lautan api`,
-                lirik:`Halo, halo Bandung, ibu kota Periangan
-                Halo, halo Bandung, kota kenang-kenangan
-                sudah lama beta tidak berjumpa dengan kau
-                sekarang telah menjadi lautan api, mari bung rebut kembali!`
+                title:`bandung sea of fire!`,
+                lirik:`Hallo hallo Bandung
+                Capital city of Priangan
+                Hallo hallo Bandung
+                City of many memories
+                It's been so long
+                Since I met you
+                Now burning like a sea of fire
+                Let's go take Bandung back.`
+           },  
+           wasureji:{
+                title:`the forgoten words`,
+                lirik:`Gently sleeping bubbles that spin words
+                A deep fog from a fairytale, leading travellers astray
+                An extended hand The slightest hint of a premonition
+                A single drop of light that was caught and spilled A hollowed-out face　A smiling illusion
+                The final destination of all thoughts
+                is still far, far away Searching for quests
+                Roaming the land
+                Before long, they will be sung about
+                and become thousands, even millions of melodies
+                Even though their fate is to be lost, to be stolen away, to disappear someday,
+                they are the very things we cannot forget —
+                stories Fingertips entwining and brushing against someone’s dream
+                Only the echoes of those engraved emotions resound
+                Gently sleeping bubbles that spin words
+                Travellers’ names now spoken of as fairytales Searching for quests
+                Roaming the land
+                Before long, they will become their own paths
+                and thousands, even millions of heroes will walk them
+                Even though their fate is to be lost, to be stolen away, to disappear someday,
+                they are the very things that cannot be forgotten
+                and are right here with us
+                Searching for quests, roaming the land
+                Before long, they will be sung about
+                and become thousands, even millions of melodies
+                Even though their fate is to be lost, to be stolen away, to disappear someday,
+                they are the very things we cannot forget —
+                stories`
            },     
         },
        video:{
@@ -726,6 +793,7 @@ export default function useSong() {
               tanjirou:"https://youtube.com/embed/l-AjkizQ70A",
               temnaya:"https://youtube.com/embed/FEuSNZ2veME",
               bandung:"https://youtube.com/embed/R6esoDId4fY",
+              wasureji:"https://youtube.com/embed/SVQd3HkIq8U",
        } ,
        text:{
         yorunikakeru_text:{

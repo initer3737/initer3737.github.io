@@ -5,3 +5,15 @@
     border: solid dodgerblue 0px;
     transition: ease 2s;
 }
+
+.songWasurejiBG{
+    width: 100vw;
+    height: 120vh;
+    background-image: url(../../../imgs/wasurejiBg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: steelblue;
+    background-blend-mode: luminosity;
+    /* background-blend-mode: color-burn; */
+    background-size: cover;
+}

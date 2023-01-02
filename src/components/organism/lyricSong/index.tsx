@@ -17,7 +17,7 @@ export default function LyricSong() {
     <div className='row exposure__container'>
       <span id="exposure__effect"></span>
         <div className="bg-4 text-center text-light p-3">
-          <h5 className='fs-5'><Icon variant={' '} icon={'file-music-fill'} name={' '}/> songs</h5>
+          <h5 className='fs-5'><Icon variant={' '} icon={'file-music-fill'} name={' '}/> songs [{Object.entries(useSong().translate).length}]</h5>
         </div>
 
         <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
@@ -375,6 +375,38 @@ export default function LyricSong() {
     </div>
 
     <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+        <div className="shadow img-fluid col-12 songWasurejiBG"></div>
+      </div>
+
+      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+          <div className="text-center ">
+            <h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+              {useSong().original.wasureji.title}
+            </h5>
+          </div>
+          <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+            {useSong().original.wasureji.lirik}
+          </div>
+        </div>
+
+    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().translate.wasureji.title}
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().translate.wasureji.lirik}
+          <div className="mb-3">
+            <LinkToPage href={'https://shiguremachi.tumblr.com/post/173025520892/forgotten-words-english-lyrics'} icon={'link'} target={'_blank'} variant={'info'} name={' link referensi'} className={'d-inline'}/>
+          </div>
+          <VideoFromYoutube src={useSong().video.wasureji} />
+      </div>
+    </div>
+
+    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
         <Img
           src={bandung}
           className="shadow img-fluid col-12"
@@ -391,12 +423,33 @@ export default function LyricSong() {
            />
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().original.bandung.title}
+          <Icon variant={'info'} icon={'hearts'} name={' '}/> 
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().original.bandung.lirik}
+      </div>
+    </div>
+
+    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <Img
+          src={indonesiaFlag}
+          className="shadow img-fluid w-25 px-3 mb-3"
+          alt="" srcset={''} width={''} height={''} attr={[]}       
+           />
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
           {useSong().translate.bandung.title}
           <Icon variant={'info'} icon={'hearts'} name={' '}/> 
         </h5>
       </div>
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.bandung.lirik}
+          <div className="mb-3">
+          <LinkToPage href={'https://www.mamalisa.com/?t=es&p=2786'} icon={'link'} target={'_blank'} variant={'info'} name={' link referensi'} className={'d-inline'}/>
+          </div>
           <VideoFromYoutube src={useSong().video.bandung} />
       </div>
     </div>
