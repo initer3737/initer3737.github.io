@@ -132,7 +132,7 @@ let BattleRadio=new Audio(battleradio);
           //jika fire di triger maka animasi tidak ditampilkan
       if(changeWeapon === false && ammo<=0)return "d-none";
     return reloadAction?'':"d-none"
-   }
+   }   
 const warTime=(dayWar:number)=>day === dayWar;
 const AmmoWeapon=changeWeapon?30:5;
   useEffect(() => {
@@ -237,7 +237,7 @@ const AmmoWeapon=changeWeapon?30:5;
           <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
             <h5 className={`mx-5 fs-5 alert alert-success`}>
               <Icon variant={"warning"} icon={"star-fill"} name={" "} />
-              HightScore:{`${async()=>await localStorage.getItem('scorePlayer') ?? "0"}`}
+              HightScore:{`${point}`}
             </h5>
             <h5 className={`mx-5 fs-5`}>
               <Button
