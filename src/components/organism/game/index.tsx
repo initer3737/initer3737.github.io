@@ -236,7 +236,7 @@ const AmmoWeapon=changeWeapon?30:5;
           <div className="d-flex flex-column-reverse  flex-sm-row align-items-center">
             <h5 className={`mx-5 fs-5 alert alert-success`}>
               <Icon variant={"warning"} icon={"star-fill"} name={" "} />
-              HightScore:{`${localStorage.getItem('scorePlayer') ?? "0"}`}
+              HightScore:{`${async()=>await localStorage.getItem('scorePlayer') ?? "0"}`}
             </h5>
             <h5 className={`mx-5 fs-5`}>
               <Button
