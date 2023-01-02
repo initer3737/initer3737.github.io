@@ -1,5 +1,5 @@
 // console.warn('worker service here')
-let cacheDataName="initer3737SiteAppv2";
+let cacheDataName="initer3737SiteAppv1";
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -47,6 +47,7 @@ const dataChache=[
     'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png',
 ]
 self.addEventListener("install",(e)=>{
+        self.skipWaiting()
     e.waitUntil((async ()=>{
            let cacheOpen=await caches.open(cacheDataName);
             await cacheOpen.addAll(dataChache)
@@ -62,6 +63,7 @@ self.addEventListener('activate',(e)=>{
                 }
             })
         )))
+        e.waitUntil(clients.claim());
 })
 
 self.addEventListener("fetch",(e)=>{
@@ -78,7 +80,21 @@ self.addEventListener("fetch",(e)=>{
     )
 })
 
+async function detectSWUpdate() {
+    const registration = await navigator.serviceWorker.ready;
+  
+    registration.addEventListener("updatefound", event => {
+      const newSW = registration.installing;
+      newSW.addEventListener("statechange", event => {
+        if (newSW.state == "installed") {
+           // New service worker is installed, but waiting activation
+            
+        }
+      });
+    })
+  }
 
+  detectSWUpdate();
 // addEventListener('fetch', (event) => {
 //     // Prevent the default, and handle the request ourselves.
 //     event.respondWith((async () => {
