@@ -1,5 +1,5 @@
 // console.warn('worker service here')
-let cacheDataName="initer3737SiteAppv1";
+let cacheDataName="initer3737SiteAppv2";
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -28,8 +28,9 @@ const dataChache=[
     '/static/media/pwa3.35a97d3973d40e9615ce.jpg',
     '/static/media/night-1851685_960_720.5126a8b3b6220deea82f.png',
     '/static/media/pwa3.35a97d3973d40e9615ce.jpg',
+    '/static/media/Vika.f704162606f0c53f30d7.gif',
+    '/static/media/Elina.16c8f89b18a0865a893c.gif',
     '/static/media/wave-305226.99bfceef311ce0d8786d.png',
-    '/static/media/semangat_yuks.16c8f89b18a0865a893c.gif',
     '/static/media/battleradio.39a86427115be96c0a9f.mp3',
     '/static/media/antithank.17f3bf5f928cdaed5f19.mp3',
     '/static/media/artileri.2ee7eb3bd59d75090b8c.mp3',
