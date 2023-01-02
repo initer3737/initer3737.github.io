@@ -22,7 +22,7 @@ import { animeType } from "./animeListType"
         },
         chainsaw:{
             name:'chainsaw man',
-            pov:'sebuah cerita bermula ketika denji bekerja serabutan demi melunasi hutang kedua orang tuanya yang telah tiada akan tetapi beliau harus menjalani kehidupan yang keras apapun ia lakukan untuk bertahan hidup mulai dari menjual organ dalamnya [mata,ginjal] namun semua berubah ketika ia bertemu dengan pochita',
+            pov:'bermula ketika denji bekerja serabutan demi melunasi hutang kedua orang tuanya yang telah tiada akan tetapi beliau harus menjalani kehidupan yang keras apapun ia lakukan untuk bertahan hidup mulai dari menjual organ dalamnya [mata,ginjal] namun semua berubah ketika ia bertemu dengan pochita',
             rate:'7.5',
             trailer:'https://youtube.com/embed/jk7QSGwupPA',
             rank:'epic',
