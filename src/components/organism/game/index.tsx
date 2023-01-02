@@ -7,7 +7,8 @@ import spr2Kal127MMSound from "../../../sound/SPR_2_1.mp3";
 import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
 import emptygunSound from "../../../sound/empty-gun.mp3";
-import Logo from "../../../imgs/semangat_yuks.gif";
+import Elina from "../../../imgs/Elina.gif";
+import Vika from "../../../imgs/Vika.gif";
 import Army from "../../../imgs/army.gif";
 import spr2Kal127MM from "../../../imgs/SPR_2_1.png";
 import spr2Kal127MMFire from "../../../imgs/SPR_2_1_fire.png";
@@ -411,8 +412,8 @@ const AmmoWeapon=changeWeapon?30:5;
 
       <div className="d-none d-lg-block">
         <Img
-          src={Logo}
-          alt="comrade elina"
+          src={warmode?Vika:Elina}
+          alt={`comrade ${warmode?'Vika':'Elina'}`}
           srcset={""}
           className={"w-100"}
           width={""}
@@ -426,13 +427,13 @@ const AmmoWeapon=changeWeapon?30:5;
             <hr />
           </div>
          <div className="d-flex justify-content-around">
-          <h5 className="border-start border-3 border-info px-2">name : elina</h5>
-          <h5 className="border-end border-3 border-info px-2">status : troops</h5>
+          <h5 className="border-start border-3 border-info px-2">name : {warmode?'Vika':'Elina'}</h5>
+          <h5 className="border-end border-3 border-info px-2">status : {warmode?'comander':'regular army'}</h5>
          </div>
           <hr />
          <div className="d-flex justify-content-around py-2">
-          <h5 className="border-start border-3 border-info px-2">rank : comander</h5>
-          <h5 className="border-end border-3 border-info px-2">position : bm-13 operator</h5>
+          <h5 className="border-start border-3 border-info px-2">rank : {warmode?'comander':'regular army'}</h5>
+          <h5 className="border-end border-3 border-info px-2">position : {warmode?'infantry':'bm-13 operator'}</h5>
          </div>
         </div>
       </div>
