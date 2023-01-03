@@ -428,12 +428,12 @@ const AmmoWeapon=changeWeapon?30:5;
           </div>
          <div className="d-flex justify-content-around">
           <h5 className="border-start border-3 border-info px-2">name : {warmode?'Vika':'Elina'}</h5>
-          <h5 className="border-end border-3 border-info px-2">status : {warmode?'comander':'regular army'}</h5>
+          <h5 className="border-end border-3 border-info px-2">status : {warmode?'leading military operations':'leading military training'}</h5>
          </div>
           <hr />
          <div className="d-flex justify-content-around py-2">
-          <h5 className="border-start border-3 border-info px-2">rank : {warmode?'comander':'regular army'}</h5>
-          <h5 className="border-end border-3 border-info px-2">position : {warmode?'infantry':'bm-13 operator'}</h5>
+          <h5 className="border-start border-3 border-info px-2">rank : {warmode?'SVR agent':'colonel'}</h5>
+          <h5 className="border-end border-3 border-info px-2">position : {warmode?'infantry':'TOS-A1 operator'}</h5>
          </div>
         </div>
       </div>

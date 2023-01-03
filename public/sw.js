@@ -62,8 +62,8 @@ self.addEventListener('activate',(e)=>{
                     return caches.delete(cachename)
                 }
             })
+            // e.waitUntil(clients.claim());
         )))
-        // e.waitUntil(clients.claim());
 })
 
 self.addEventListener("fetch",(e)=>{
