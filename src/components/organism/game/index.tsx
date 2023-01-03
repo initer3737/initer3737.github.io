@@ -432,7 +432,7 @@ const AmmoWeapon=changeWeapon?30:5;
          </div>
           <hr />
          <div className="d-flex justify-content-around py-2">
-          <h5 className="border-start border-3 border-info px-2">rank : {warmode?'SVR agent':'colonel'}</h5>
+          <h5 className="border-start border-3 border-info px-2">rank : {warmode?'SVR agent':'leutnant'}</h5>
           <h5 className="border-end border-3 border-info px-2">position : {warmode?'infantry':'TOS-A1 operator'}</h5>
          </div>
         </div>

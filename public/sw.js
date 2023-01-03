@@ -1,5 +1,6 @@
 // console.warn('worker service here')
-let cacheDataName="initer3737SiteAppv111";
+let cacheDataName="initer3737 Site App v.0.1.1";
+        //xyz major minor patch
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
