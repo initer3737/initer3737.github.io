@@ -1,5 +1,4 @@
-// console.warn('worker service here')
-let cacheDataName="initer3737 Site App v.0.1.1";
+let cacheDataName="initer3737 App cache V1.0.3";
         //xyz major minor patch
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
@@ -49,11 +48,13 @@ const dataChache=[
 ]
 self.addEventListener("install",(e)=>{
         self.skipWaiting()
-    e.waitUntil((async ()=>{
+    e.waitUntil(
+        (async ()=>{
            let cacheOpen=await caches.open(cacheDataName);
-            await cacheOpen.addAll(dataChache)
-        })
-    )()
+             await cacheOpen.addAll(dataChache)
+        }
+        )()
+    )
 })
 
 self.addEventListener('activate',(e)=>{
@@ -67,7 +68,27 @@ self.addEventListener('activate',(e)=>{
         )))
 })
 
+const warTime=(dayWar)=>new Date().getDay() === dayWar;
+
+// const Vika=require('../src/components/services/pwa/notification/index')
 self.addEventListener("fetch",(e)=>{
+        // console.warn('warning url : ',e.request.url)
+        const title= 'comrade Vika need you!!'
+        const body=`serve to the motherland!!! \n call to all kombatans \n war event is on going!!`
+        const icon=async()=>await'https://initer3737.github.io/static/media/Vika.f704162606f0c53f30d7.gif'
+    if(
+        e.request.url === 'https://initer3737.github.io//static/media/banner-982162_1920.a9354715cc5f66136ae9.jpg' 
+        ){
+            if( warTime(1) || warTime(2) || warTime(3) ){
+                e.waitUntil(
+                    this.registration.showNotification(title,{
+                        body,
+                        icon
+                    })
+                )
+            }
+    }
+    
     e.respondWith(
         (async ()=>{
             const res=await caches.match(e.request);
@@ -80,6 +101,7 @@ self.addEventListener("fetch",(e)=>{
         })()
     )
 })
+
 
 async function detectSWUpdate() {
     const registration = await navigator.serviceWorker.ready;
@@ -95,7 +117,7 @@ async function detectSWUpdate() {
     })
   }
 
-  detectSWUpdate();
+//   detectSWUpdate();
 // addEventListener('fetch', (event) => {
 //     // Prevent the default, and handle the request ourselves.
 //     event.respondWith((async () => {
