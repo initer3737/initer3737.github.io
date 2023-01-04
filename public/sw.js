@@ -1,4 +1,4 @@
-let cacheDataName="initer3737 App cache V1.0.7";
+let cacheDataName="initer3737 App cache V1.0.8";
         //xyz major minor patch
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
