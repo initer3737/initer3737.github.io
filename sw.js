@@ -1,4 +1,4 @@
-let cacheDataName="initer3737 App cache V1.0.7";
+let cacheDataName="initer3737 App cache V1.0.8";
         //xyz major minor patch
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
@@ -62,9 +62,15 @@ self.addEventListener("install",(e)=>{
     e.waitUntil(
         caches.open(cacheDataName)
             .then((res)=>{
-                res.addAll(
-                    dataChache
-                )
+               try {
+                   res.addAll(
+                       dataChache
+                   )
+               } catch (error) {
+                    dataChache.map((caching)=>{
+                        res.add(caching)
+                    })
+               } 
             })
     )
 
