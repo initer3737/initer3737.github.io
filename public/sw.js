@@ -62,9 +62,15 @@ self.addEventListener("install",(e)=>{
     e.waitUntil(
         caches.open(cacheDataName)
             .then((res)=>{
-                res.addAll(
-                    dataChache
-                )
+               try {
+                   res.addAll(
+                       dataChache
+                   )
+               } catch (error) {
+                    dataChache.map((caching)=>{
+                        res.add(caching)
+                    })
+               } 
             })
     )
 
