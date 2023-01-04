@@ -128,7 +128,7 @@ import { animeType } from "./animeListType"
             rate:'6.9[temporary]',
             trailer:'https://youtube.com/embed/0a-4qVD8okU',
             rank:'regular [temporary]',
-            msg:'kesan pertama untuk anime ini  Yatora Yaguchi yang memiliki keinginan untuk menggambar dan perjuangan yang ia akan tempuh tidaklah mudah dapatkah ia meraih cita cita yang ia inginkan sebagai pelukis yang mampu menghasilkan karya seni yang indah, saia suka anime ini karena warna yang ditampilkan adalah biru [hiasi harimu dengan biru maka harimu akan senantiasa membiru] nb:sialan kau ryuji kukira kau adalah wanita beneran ',
+            msg:'kesan pertama untuk anime ini  Yatora Yaguchi yang memiliki keinginan untuk menggambar dan perjuangan yang ia akan tempuh tidaklah mudah dapatkah ia meraih cita cita yang ia inginkan sebagai pelukis yang mampu menghasilkan karya seni yang indah, saia suka anime ini karena warna yang ditampilkan adalah biru [hiasi harimu dengan biru maka harimu akan senantiasa membiru] nb:sialan kau ryuji kukira kau adalah wanita beneran [ bedebah pisan ]',
             link:'https://pedomantangerang.pikiran-rakyat.com/selebritas/pr-072792826/nonton-anime-blue-period-lengkap-dengan-sinopsis-dan-link-streaming',
             tampil:true
         }
