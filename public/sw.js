@@ -49,35 +49,55 @@ const dataChache=[
 self.addEventListener("install",(e)=>{
         self.skipWaiting()
     e.waitUntil(
-        (async ()=>{
-           let cacheOpen=await caches.open(cacheDataName);
-             await cacheOpen.addAll(dataChache)
-        }
-        )()
+        // (async ()=>{
+        //    let cacheOpen=await caches.open(cacheDataName);
+        //       cacheOpen.addAll(dataChache)
+        // }
+        // )
+        caches.open(cacheDataName)
+            .then((cache)=>{
+                cache.addAll(dataChache)
+            })
     )
 })
 
 self.addEventListener('activate',(e)=>{
-        e.waitUntil(caches.keys().then((cachesName)=>Promise.all(
+        e.waitUntil(
+            caches.keys().then((cachesName)=>Promise.all(
             cachesName.map((cachename)=>{
                 if(cachename !== cacheDataName){
                     return caches.delete(cachename)
                 }
             })
             // e.waitUntil(clients.claim());
-        )))
-})
+        ))
+       
+                // (
+                //     async()=>{
+                //         const keycacheName=await caches.keys()
+                //             keycacheName.map((cacheKeyname)=>{
+                //                 if(cacheKeyname !== cacheDataName){
+                //                     caches.delete(cacheKeyname)
+                //                 }
+                //             })
+                //     }
+                // )
+        )
+
+        e.waitUntil(clients.claim())
+}) //end of event listener
 
 const warTime=(dayWar)=>new Date().getDay() === dayWar;
 
 // const Vika=require('../src/components/services/pwa/notification/index')
 self.addEventListener("fetch",(e)=>{
-        // console.warn('warning url : ',e.request.url)
+        console.warn('warning url : ',e.request.url)
         const title= 'comrade Vika need you!!'
         const body=`serve to the motherland!!! \n call to all kombatans \n war event is on going!!`
-        const icon=async()=>await'https://initer3737.github.io/static/media/Vika.f704162606f0c53f30d7.gif'
+        const icon='https://initer3737.github.io/static/media/Vika.f704162606f0c53f30d7.gif'
+        
     if(
-        e.request.url === 'https://initer3737.github.io//static/media/banner-982162_1920.a9354715cc5f66136ae9.jpg' 
+        e.request.url === 'https://initer3737.github.io/static/media/kitten-7157608.a7684d8fe997684d8924.png' 
         ){
             if( warTime(1) || warTime(2) || warTime(3) ){
                 e.waitUntil(
@@ -90,32 +110,43 @@ self.addEventListener("fetch",(e)=>{
     }
     
     e.respondWith(
-        (async ()=>{
-            const res=await caches.match(e.request);
-            if(res)return res
+        // (async ()=>{
+        //     const res=await caches.match(e.request);
+        //     if(res)return await res
 
-            const getResponseServer=await fetch(e.request);
-            const cache=await caches.open(cacheDataName);
-            cache.put(e.request,getResponseServer.clone())
-            return getResponseServer;
-        })()
+        //     const getResponseServer=await fetch(e.request);
+        //     const cache=await caches.open(cacheDataName);
+        //     await cache.put(e.request,getResponseServer.clone())
+        //     return getResponseServer;
+        // })()
+           caches.match(e.request)
+             .then((res)=>{
+                if(res){
+                    return res
+                }
+                const GetResServer=async()=>await fetch(e.request)
+                caches.open(cacheDataName)
+                    .then((cahcesResponse)=>{
+                        cahcesResponse.put(e.request,GetResServer())
+                    })
+             })  
     )
 })
 
 
-async function detectSWUpdate() {
-    const registration = await navigator.serviceWorker.ready;
+// async function detectSWUpdate() {
+//     const registration = await navigator.serviceWorker.ready;
   
-    registration.addEventListener("updatefound", event => {
-      const newSW = registration.installing;
-      newSW.addEventListener("statechange", event => {
-        if (newSW.state == "installed") {
-           // New service worker is installed, but waiting activation
+//     registration.addEventListener("updatefound", event => {
+//       const newSW = registration.installing;
+//       newSW.addEventListener("statechange", event => {
+//         if (newSW.state == "installed") {
+//            // New service worker is installed, but waiting activation
             
-        }
-      });
-    })
-  }
+//         }
+//       });
+//     })
+//   }
 
 //   detectSWUpdate();
 // addEventListener('fetch', (event) => {
