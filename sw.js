@@ -1,4 +1,4 @@
-let cacheDataName="initer3737 App cache V1.0.3";
+let cacheDataName="initer3737 App cache V1.0.        ddddddddd6";
         //xyz major minor patch
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
@@ -27,7 +27,6 @@ const dataChache=[
     '/static/media/ak12-fire.ccb6c04f9e3bcbeaf9e9.png',
     '/static/media/pwa3.35a97d3973d40e9615ce.jpg',
     '/static/media/night-1851685_960_720.5126a8b3b6220deea82f.png',
-    '/static/media/pwa3.35a97d3973d40e9615ce.jpg',
     '/static/media/Vika.f704162606f0c53f30d7.gif',
     '/static/media/Elina.16c8f89b18a0865a893c.gif',
     '/static/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -40,25 +39,35 @@ const dataChache=[
     '/index.html',
     '/',
     '/manifest.json',
-    '/chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js',
-    'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
-    'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
-    'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css',
-    'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png',
+    // '/chrome-extension://fmkadmapgofadopljbjfkapdkoienihi/build/installHook.js',
+    // 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css',
+    // 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js',
+    // 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css',
+    // 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png',
 ]
 self.addEventListener("install",(e)=>{
         self.skipWaiting()
+    // e.waitUntil(
+    //     // (async ()=>{
+    //     //    let cacheOpen=await caches.open(cacheDataName);
+    //     //       cacheOpen.addAll(dataChache)
+    //     // }
+    //     // )
+    //     // caches.open(cacheDataName)
+    //     //     .then((cache)=>{
+    //     //          cache.addAll(dataChache)
+    //     //     })
+    // )
+
     e.waitUntil(
-        // (async ()=>{
-        //    let cacheOpen=await caches.open(cacheDataName);
-        //       cacheOpen.addAll(dataChache)
-        // }
-        // )
         caches.open(cacheDataName)
-            .then((cache)=>{
-                cache.addAll(dataChache)
+            .then((res)=>{
+                res.addAll(
+                    dataChache
+                )
             })
     )
+
 })
 
 self.addEventListener('activate',(e)=>{
@@ -71,34 +80,25 @@ self.addEventListener('activate',(e)=>{
             })
             // e.waitUntil(clients.claim());
         ))
-       
-                // (
-                //     async()=>{
-                //         const keycacheName=await caches.keys()
-                //             keycacheName.map((cacheKeyname)=>{
-                //                 if(cacheKeyname !== cacheDataName){
-                //                     caches.delete(cacheKeyname)
-                //                 }
-                //             })
-                //     }
-                // )
         )
 
-        e.waitUntil(clients.claim())
+        // e.waitUntil(clients.claim())
 }) //end of event listener
 
 const warTime=(dayWar)=>new Date().getDay() === dayWar;
 
-// const Vika=require('../src/components/services/pwa/notification/index')
 self.addEventListener("fetch",(e)=>{
-        console.warn('warning url : ',e.request.url)
         const title= 'comrade Vika need you!!'
         const body=`serve to the motherland!!! \n call to all kombatans \n war event is on going!!`
         const icon='https://initer3737.github.io/static/media/Vika.f704162606f0c53f30d7.gif'
-        
-    if(
-        e.request.url === 'https://initer3737.github.io/static/media/kitten-7157608.a7684d8fe997684d8924.png' 
-        ){
+        // console.warn('request url is : ',e.request.url)
+        // e.waitUntil(
+        //     this.registration.showNotification(title,{
+        //         body,
+        //         icon
+        //     })
+        // )
+    if(e.request.url === 'https://initer3737.github.io/static/js/bundle.js'){
             if( warTime(1) || warTime(2) || warTime(3) ){
                 e.waitUntil(
                     this.registration.showNotification(title,{
@@ -108,7 +108,8 @@ self.addEventListener("fetch",(e)=>{
                 )
             }
     }
-    
+        ///offline mode
+    if(!navigator.onLine){
     e.respondWith(
         // (async ()=>{
         //     const res=await caches.match(e.request);
@@ -119,18 +120,20 @@ self.addEventListener("fetch",(e)=>{
         //     await cache.put(e.request,getResponseServer.clone())
         //     return getResponseServer;
         // })()
-           caches.match(e.request)
-             .then((res)=>{
-                if(res){
-                    return res
-                }
-                const GetResServer=async()=>await fetch(e.request)
-                caches.open(cacheDataName)
-                    .then((cahcesResponse)=>{
-                        cahcesResponse.put(e.request,GetResServer())
-                    })
-             })  
+            caches.match(e.request)
+            .then((res)=>{
+               if(res){
+                   return res
+               }
+               const GetResServer=fetch(e.request)
+               caches.open(cacheDataName)
+                   .then((cahcesResponse)=>{
+                       cahcesResponse.put(e.request,GetResServer)
+                   })
+            })
     )
+}
+
 })
 
 
