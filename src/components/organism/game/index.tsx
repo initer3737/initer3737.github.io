@@ -788,6 +788,20 @@ const AmmoWeapon=changeWeapon?30:5;
               name={""}
               />
           </h5> <hr />
+                <h5 className="fs4 text-center">
+                  <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-left"} 
+                    name={""}
+                    />
+                    <Icon variant={"info"} icon={"person-circle"} name={` `}/>
+                      Vika
+                    <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-right"} 
+                    name={""}
+                    />
+                </h5> <hr />
           <div className="d-flex justify-content-evently px-3 py-2">
               <div className="">
                 <ul>
