@@ -480,9 +480,10 @@ const AmmoWeapon=changeWeapon?30:5;
         />
        <div className="d-flex justify-content-between px-3 pt-3">
         <div className="d-flex flex-column">
-          <div className="d-flex flelx-row gap-5">
-          <Icon variant={"info"} icon={"info-circle"} name={" weapon info"}/>
-          <h5 className="text-center">{usegame().title}</h5>
+          <div className="d-flex flex-row gap-1">
+            <Icon variant={"info"} icon={"info-circle"} name={" "}/>
+            {" weapon info"}
+            <h5 className="text-center">{usegame().title}</h5>
           </div>
           <hr />
               <p className="text-start">
@@ -535,17 +536,31 @@ const AmmoWeapon=changeWeapon?30:5;
         modalTitle={" informasi akun"} 
         modalId={"charInfo"} 
         modalTitleIcon={"info-circle"} >
-        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+       <div className="d-flex justify-content-center gap-2">
+        <Icon variant={"info text-center"} icon={"info-circle"} name={" "}/>
+        {" informasi"}
+       </div>
         <hr />
         <div className="d-flex justify-content-between px-3 flex-row py-2 px-3">
-          <p><Icon variant={""} icon={"person-circle"} name={` kombatan : ${username??'player'}`}/></p>
-          <p><Icon variant={""} icon={"stars"} name={` score : ${point??'0'}`}/></p>
+          <p>
+            <Icon variant={"info"} icon={"person-circle"} name={` `}/>
+            {` kombatan : ${username??'player'}`}
+          </p>
+          <p>
+            <Icon variant={"info"} icon={"stars"} name={` `}/>
+              {` score : ${point??'0'}`}
+          </p>
         </div>
        <div className="d-flex flex-column align-items-end">
        <div className="d-flex flex-column align-items-center gap-3">
+
         <div className="text-center border-start border-info px-2">
-          <Icon variant={"info"} icon={"fire"} name={` weapon used : ${changeWeapon?"ak-12":"SPR-2 pindad"}`}/>
+          <div className="d-flex gap2">
+            <Icon variant={"info"} icon={"fire"} name={` `}/>
+              {`weapon used : ${changeWeapon?"ak-12":"SPR-2 pindad"}`}
+          </div>
         </div>
+
           <Img
               src={changeWeapon?Ak12:spr2Kal127MM}
               alt={changeWeapon?"ak12":"SPR-2 pindad"}
@@ -725,7 +740,10 @@ const AmmoWeapon=changeWeapon?30:5;
         modalTitle={" informasi"} 
         modalId={"resetScoreInfo"} 
         modalTitleIcon={"info-circle"} >
-        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+        <div className="d-flex gap-2 justify-content-center">
+          <Icon variant={"info text-center"} icon={"info-circle"} name={" "}/>
+          {" informasi"}
+        </div>
         <hr />
         
        <div className="d-flex flex-column align-items-start">
