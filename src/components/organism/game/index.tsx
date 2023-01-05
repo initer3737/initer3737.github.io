@@ -57,12 +57,12 @@ export default function Game() {
   let navigate=useNavigate(); 
   const srcAudio = (src: string) => new Audio(src);
   const keyPress=(key:string,id:string,keyup:boolean=true)=>{
-    if(!keyup)document.getElementById(id)?.click();
+    if(keyup === false)document.getElementById(id)?.click();
       document.addEventListener('keyup',(e)=>{
         return e.key === key?document.getElementById(id)?.click():''
     })
   }
-
+const ModalClose=(id:string)=>document.getElementById(id)?.click();
   const themes=[
     themeSound1,
     themeSound2,
@@ -74,6 +74,7 @@ export default function Game() {
 ];
 
 const day=new Date().getDay();
+const year=new Date().getFullYear();
 let audio=new Audio(themes[day===6?0:day+1])
 let BattleTheme=new Audio(battleTheme);
 let Artileri=new Audio(artileri);
@@ -137,11 +138,11 @@ const warTime=(dayWar:number)=>day === dayWar;
 const AmmoWeapon=changeWeapon?30:5;
   useEffect(() => {
     //this is to recieve theme music on every render 
-    //mounting 
+    //mounting || this keypress method pass in the use effect just to detect user keyboard event 
       keyPress('r','reload')
       keyPress('f','fire')
       keyPress('h','info')
-      keyPress('g','resetGame')
+      keyPress('g','resetScoreInfoTriger')
       keyPress('q','gantisenjata')
           //war start only 3 day 
      if( warTime(1) || warTime(2) || warTime(3) ){
@@ -240,24 +241,17 @@ const AmmoWeapon=changeWeapon?30:5;
               HightScore:{`${point}`}
             </h5>
             <h5 className={`mx-5 fs-5`}>
-              <Button
-                allAttr={{
-                  id:'resetGame'
-                }}
-                variant={" bg-danger rounded-pill  d-lg-none"}
-                name={``}
-                onClick={() => {
-                  window.location.reload();
-                  return localStorage.setItem("scorePlayer", "0");
-                }}
-                disableOnClick={false}
+              <button 
+                data-bs-Target='#resetScoreInfo'
+                data-bs-toggle='modal'
+                className="bg-4 rounded-pill d-inline d-lg-none"
               >
                 <Icon
                   variant={"light rounded-pill px-2"}
-                  icon={"arrow-clockwise"}
+                  icon={"chevron-bar-contract"}
                   name={""}
                 />
-              </Button>
+              </button>
             </h5>
           </div>
           <div className="d-flex flex-column gap-3">
@@ -350,19 +344,29 @@ const AmmoWeapon=changeWeapon?30:5;
                   <p>{changeWeapon?"ak-12":"SPR-2"}</p>
                 </div>
               </div>
-               <a 
-                role={'button'}
-                data-bs-target="#infoHotkeys"
-                data-bs-toggle='modal'
-               >
-                   <div className="border-start border-info px-2 d-none d-lg-block">
-                    <Icon 
-                      variant={""} 
-                      icon={"info-circle"} 
-                      name={" info hotkeys"}
-                      /> 
-                   </div>
-               </a>
+                <a 
+                  role={'button'}
+                  data-bs-target="#infoHotkeys"
+                  data-bs-toggle='modal'
+                >
+                    <div className="border-start border-info px-2 d-none d-lg-inline">
+                      <Icon 
+                        variant={""} 
+                        icon={"info-circle"} 
+                        name={" info hotkeys "}
+                        /> 
+                      <Icon 
+                        variant={"primary"} 
+                        icon={"chevron-double-left"} 
+                        name={""}
+                        /> 
+                      <Icon 
+                        variant={"primary"} 
+                        icon={"chevron-double-left"} 
+                        name={""}
+                        /> 
+                    </div>
+                </a>
             </div>
             <Button
               allAttr={{
@@ -437,9 +441,30 @@ const AmmoWeapon=changeWeapon?30:5;
          </div>
         </div>
       </div>
+      {/* button triger event */}
+          <Button
+                allAttr={{
+                  id:'resetGame'
+                }}
+                variant={" bg-danger rounded-pill  d-none"}
+                name={``}
+                onClick={() => {
+                  window.location.reload();
+                  return localStorage.setItem("scorePlayer", "0");
+                }}
+                disableOnClick={false}
+              >
+                <Icon
+                  variant={"light rounded-pill px-2"}
+                  icon={"arrow-clockwise"}
+                  name={""}
+                />
+              </Button>
+      {/* button triger event */}
       {/* button triger modal */}
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
         <button data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></button>
+        <button data-bs-target={'#resetScoreInfo'} data-bs-toggle='modal' id="resetScoreInfoTriger" className="d-none"></button>
       {/* button triger modal end */}
     {/* modal */}
     <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
@@ -567,13 +592,19 @@ const AmmoWeapon=changeWeapon?30:5;
         modalTitle={" informasi"} 
         modalId={"infoHotkeys"} 
         modalTitleIcon={"info-circle"} >
-        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+        <div className="d-flex gap-2 justify-content-center">
+          <Icon variant={"info text-center"} icon={"info-circle"} name={" "}/>
+          {" informasi"}
+        </div>
         <hr />
         
        <div className="d-flex flex-column align-items-start">
-       <div className="p-3 my-2 mx-auto">
-        <div className="text-center border-start border-info px-2">
-          <Icon variant={"info"} icon={"fire"} name={" hotkeys : info"}/>
+       <div className="pb-3 my-2 mx-auto">
+        <div className="border-start border-info px-2">
+          <div className="d-flex gap-2 flex-row">
+            <Icon variant={"info"} icon={"fire"} name={" "}/>
+            {" hotkeys : info"}
+          </div>
         </div>
        </div>
        
@@ -582,13 +613,15 @@ const AmmoWeapon=changeWeapon?30:5;
             <div className="border-start px-3 border-info">
                 <p className="d-flex flex-row gap-2">
                   h :  
-                  <Icon variant={""} icon={"bar-chart-line-fill"} name={" show player status"}/> 
+                  <Icon variant={"info"} icon={"bar-chart-line-fill"} name={" "}/> 
+                  {" show player status"}
                 </p> 
               </div>
             <div className="border-start px-3 border-info">
                 <p className="d-flex flex-row gap-2">
                   r : 
-                  <Icon variant={""} icon={"arrow-clockwise"} name={" reload firearm"}/>
+                  <Icon variant={"info"} icon={"arrow-clockwise"} name={" "}/>
+                  {" reload firearm"}
                 </p> 
               </div>
           </div>
@@ -597,19 +630,22 @@ const AmmoWeapon=changeWeapon?30:5;
               <div className="border-start px-3 border-info">
                 <p  className="d-flex flex-row gap-2">
                   f : 
-                  <Icon variant={""} icon={"fire"} name={" fire the weapon"}/>
+                  <Icon variant={"info"} icon={"fire"} name={" "}/>
+                  {" fire the weapon"}
                 </p> 
               </div>
               <div className="border-start px-3 border-info">
                 <p  className="d-flex flex-row gap-2">
                   q : 
-                  <Icon variant={""} icon={"fire"} name={" change the weapon"}/>
+                  <Icon variant={"info"} icon={"fire"} name={" "}/>
+                  {" change the weapon"}
                 </p> 
               </div>
               <div className="border-start px-3 border-info">
                 <p className="d-flex flex-row gap-2">
                   g : 
-                  <Icon variant={""} icon={"controller"} name={" restart the game"}/> 
+                  <Icon variant={"info"} icon={"controller"} name={" "}/> 
+                  {" restart the game"}
                 </p> 
               </div>
           </div>
@@ -624,23 +660,30 @@ const AmmoWeapon=changeWeapon?30:5;
         modalTitle={" informasi"} 
         modalId={"logoutInfo"} 
         modalTitleIcon={"info-circle"} >
-        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
-        <hr />
-        
-       <div className="d-flex flex-column align-items-start">
-       <div className="p-3 my-2 mx-auto">
-        <div className="text-center border-start border-info px-2">
-          <Icon variant={"light"} icon={"arrow-bar-right"} name={" "}/>
-          <p className="text-info d-inline">yakin mau logout??</p>
+        <div className="d-flex justify-content-center gap-1">
+          <Icon variant={"info text-center"} icon={"info-circle"} name={" "}/>
+          <p className="text-light d-inline">informasi</p>
         </div>
-       </div>
-       
+       <div className="d-flex flex-column align-items-start">
+       <hr />
        <div className="d-flex flex-column">
-           <div className="py-2 d-flex flex-column pb-3">
-              <div className="pb-2 mx-auto">
-                  <div className="text-center border-start border-info px-2">
-                    <Icon variant={"light"} icon={"lightning"} name={" counter strike"}/>
+            <div className="d-flex flex-column pb-3">
+              <hr />
+              <div className=" mx-auto">
+                <div className="text-center border-start border-info px-2">
+                  <Icon variant={"info"} icon={"arrow-bar-right"} name={" "}/>
+                  <p className="text-light d-inline">yakin mau logout??</p>
+                </div>
+              </div>
+                <hr />
+              <div className="">
+                <div className="d-flex justify-content-center">
+                  <div className="text-center border-start border-info px-2 gap-1">
+                    <Icon variant={"info"} icon={"lightning"} name={" "}/>
+                    <p className="d-inline text-light">counter strike</p>
                   </div>
+                </div>
+                   <hr />
               </div>
            <Img 
               src={spesialForce} 
@@ -648,16 +691,18 @@ const AmmoWeapon=changeWeapon?30:5;
               srcset={""} 
               className={"w-100 border"} width={""} height={""} attr={undefined}/>
            </div>
-           
+           <hr />
           <div className="d-flex justify-content-between px-3 py-2">
               <div className="border-start px-3 border-info">
                 <p  className="d-flex flex-row gap-2">
-                  <Icon variant={""} icon={"person-circle"} name={` kombatan : ${username}`}/>
+                  <Icon variant={"info"} icon={"person-circle"} name={` `}/>
+                  {` kombatan : ${username}`}
                 </p> 
               </div>
               <div className="border-end px-3 border-info">
                 <p className="d-flex flex-row gap-2">
-                  <Icon variant={""} icon={"stars"} name={` score : ${point}`}/> 
+                  <Icon variant={"info"} icon={"stars"} name={` `}/> 
+                  {` score : ${point}`}
                 </p> 
               </div>
           </div> <hr />
@@ -670,6 +715,203 @@ const AmmoWeapon=changeWeapon?30:5;
                     <Icon variant={"info"} icon={"caret-right"} name={" "}/>
                     <p className="d-inline text-light">logout</p>
                 </Button>
+       </div>
+
+       </div>
+        <hr />
+      </Modal>
+      {/*reset warning info  */}
+      <Modal 
+        modalTitle={" informasi"} 
+        modalId={"resetScoreInfo"} 
+        modalTitleIcon={"info-circle"} >
+        <Icon variant={"info text-center"} icon={"info-circle"} name={" informasi"}/>
+        <hr />
+        
+       <div className="d-flex flex-column align-items-start">
+       <div className="d-flex flex-column">
+          <div className="my-2 mx-auto">
+              <div className="text-center border-start border-info px-2">
+                <Icon variant={"info"} icon={"bricks"} name={" "}/>
+                <p className="text-light d-inline">yakin mau reset game??</p>
+              </div> 
+            </div>
+            <hr />
+           <div className="py-2 d-flex flex-column pb-3">
+              <div className="pb-2 mx-auto">
+                  <div className="text-center border-start border-info px-2">
+                    <Icon variant={"info"} icon={"lightning"} name={" "}/>
+                    <p className="text-light d-inline">counter strike</p>
+                  </div>
+              </div>
+              <hr />
+           <Img 
+              src={Vika} 
+              alt={"comrade vika"} 
+              srcset={""} 
+              className={"w-100 border"} width={""} height={""} attr={undefined}/>
+           </div>
+           <hr />
+           <h5 className="text-center fs-4">
+            <Icon 
+              variant={"primary"} 
+              icon={"chevron-double-left"} 
+              name={""}
+              /> 
+            <Icon 
+              variant={"info"} 
+              icon={"exclamation-triangle"} 
+              name={" "}
+              /> 
+               agent information!!
+              <Icon 
+              variant={"primary"} 
+              icon={"chevron-double-right"} 
+              name={""}
+              />
+          </h5> <hr />
+          <div className="d-flex justify-content-evently px-3 py-2">
+              <div className="">
+                <ul>
+                  <li>nationality : russia</li>
+                  <li>age : {year - 2002} years old</li>
+                  <li>language : </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      russian
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      english
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      korea
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      turkiye
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      indonesian
+                  </li>
+                </ul>
+              </div>
+              <div className="">
+                <ul>
+                  <li>
+                    {/* <Icon variant={"info"} icon={"fingerprint"} name={" "}/> */}
+                     duty
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      lead operation military 
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      reconnaissance mision
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      drone operator
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      manipulate information
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      eliminate traitor 
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                    planning a war strategy
+                  </li>
+                  <li className="pl-3">
+                    <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
+                      serve to the motherland
+                  </li>
+                </ul>
+              </div>
+          </div> 
+          <hr />
+          <h5 className="text-center fs-4">
+            <Icon 
+              variant={"primary"} 
+              icon={"chevron-double-left"} 
+              name={""}
+              /> 
+            <Icon 
+              variant={"info"} 
+              icon={"exclamation-triangle"} 
+              name={" "}
+              /> 
+               player information!!
+              <Icon 
+              variant={"primary"} 
+              icon={"chevron-double-right"} 
+              name={""}
+              />
+          </h5>
+          <hr />
+          <div className="d-flex justify-content-between px-3 py-2">
+              <div className="border-start px-3 border-info">
+                <p  className="d-flex flex-row gap-2">
+                  <Icon variant={"info"} icon={"person-circle"} name={` `}/>
+                  {` kombatan : ${username}`}
+                </p> 
+              </div>
+              <div className="border-end px-3 border-info">
+                <p className="d-flex flex-row gap-2">
+                  <Icon variant={"info"} icon={"stars"} name={` `}/> 
+                  {` score : ${point}`}
+                </p> 
+              </div>
+          </div> 
+          <hr />
+                <Button 
+                  variant={""} 
+                  name={""} onClick={()=>{
+                     document.getElementById('resetGame')?.click()
+                  }} disableOnClick={false}allAttr={{}}>
+                    <Icon variant={"danger"} icon={"x-diamond-fill"} name={" "}/>
+                    <p className="d-inline text-light">reset game </p>
+                    <Icon 
+                      variant={"danger"} 
+                      icon={"chevron-double-left"} 
+                      name={""}
+                      /> 
+                    <Icon 
+                      variant={"danger"} 
+                      icon={"chevron-double-left"} 
+                      name={""}
+                      /> 
+                </Button>
+                <hr />
+                <h5 className="text-center fs-4">
+                      <Icon 
+                        variant={"primary"} 
+                        icon={"chevron-double-left"} 
+                        name={""}
+                        /> 
+                      <Icon 
+                        variant={"info"} 
+                        icon={"exclamation-triangle"} 
+                        name={" "}
+                        /> 
+                        peringatan!!
+                        <Icon 
+                        variant={"primary"} 
+                        icon={"chevron-double-right"} 
+                        name={""}
+                        />
+                </h5>
+                <hr />
+                <p className="text-light fs-4">
+                    reset score akan membuatmu kehilangan 
+                    semua point yang telah kamu kumpulkan!!!
+                </p>
        </div>
 
        </div>
