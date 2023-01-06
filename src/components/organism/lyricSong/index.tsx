@@ -374,7 +374,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork w-100 ">
+    <div className="mt-5 bg-firefork w-100 wasureji__container">
         <div className="shadow   songWasurejiBG"></div>
       </div>
 

@@ -105,6 +105,7 @@ self.addEventListener("fetch",(e)=>{
         //     })
         // )
         if( warTime(1) || warTime(2) || warTime(3) ){
+            //e.request.url === 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png'
             if(e.request.url === 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png'){
                 e.waitUntil(
                     this.registration.showNotification(title,{

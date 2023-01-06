@@ -298,32 +298,32 @@ const AmmoWeapon=changeWeapon?30:5;
                     />
                   </p>
 
-                  <button id="reload"//triger reload when player press r
-                    onClick={() => {
-                        
-                      const reloadAmmo:HTMLAudioElement=srcAudio(reloadSound2)
-                      const reloadAmmoFull:HTMLAudioElement=srcAudio(reloadSound)
-                        if(ammo >= AmmoWeapon){
-                          reloadAmmo.volume=0.0
-                          reloadAmmoFull.play()
+                  <button 
+                        id="reload"  //triger reload when player press r
+                       onClick={() => {
+                        const reloadAmmo: HTMLAudioElement = srcAudio(reloadSound2);
+                        const reloadAmmoFull: HTMLAudioElement = srcAudio(reloadSound);
+                        if (ammo >= AmmoWeapon) {
+                          reloadAmmo.volume = 0.0;
+                          reloadAmmoFull.play();
                           return null;
                         }
-                        if(ammo < AmmoWeapon){
-                          reloadAmmoFull.volume=0.0
-                          reloadAmmo.play()
+                        if (ammo < AmmoWeapon) {
+                          reloadAmmoFull.volume = 0.0;
+                          reloadAmmo.play();
                         }
-                          setReloadAction(true)
-                          setIsFire(false);
-                        setTimeout(()=>{
-                          setAmmo(AmmoWeapon)
-                          setReloadAction(false)
-                        },3000)
-                    }}
-                    className={"w-25 h-25 rounded-pill d-lg-none"}
-                  >
+                        setReloadAction(true);
+                        setIsFire(false);
+                        setTimeout(() => {
+                          setAmmo(AmmoWeapon);
+                          setReloadAction(false);
+                        }, 3000);
+                      } }
+                      className={"px-4 py-1 rounded-pill text-center  d-lg-none bg-4"}
+                      >
                     <Icon
-                      variant={"danger w-100"}
-                      icon={"arrow-clockwise"}
+                      variant={"light"}
+                      icon={"hurricane"}
                       name={""}
                     />
                   </button>
