@@ -8,9 +8,10 @@
 
 .songWasurejiBG{
     width: 100%;
-    height: 120vh;
+    height: 120svh;
     background-image: url(../../../imgs/wasurejiBg.jpg);
-    background-size: contain;
+    background-size: cover;
+    /* background-size: contain; */
     background-repeat: no-repeat;
     background-color: steelblue;
     background-blend-mode: luminosity;

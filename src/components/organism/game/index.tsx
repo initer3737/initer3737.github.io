@@ -802,10 +802,24 @@ const AmmoWeapon=changeWeapon?30:5;
                     name={""}
                     />
                 </h5> <hr />
+                <h5 className="fs4 text-center">
+                  <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-left"} 
+                    name={""}
+                    />
+                    {/* <Icon variant={"info"} icon={"hearts"} name={` `}/> */}
+                      <Img src={rusiaFlag} alt={"rusia flag"} srcset={""} className={""} width={"15%"} height={""} attr={undefined}/>
+                    <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-right"} 
+                    name={""}
+                    />
+                </h5> <hr />
           <div className="d-flex justify-content-evently px-3 py-2">
               <div className="">
                 <ul>
-                  <li>nationality : russia</li>
+                  <li>in service : SVR RF</li>
                   <li>age : {year - 2002} years old</li>
                   <li>language : </li>
                   <li className="pl-3">
@@ -833,8 +847,8 @@ const AmmoWeapon=changeWeapon?30:5;
               <div className="">
                 <ul>
                   <li>
-                    {/* <Icon variant={"info"} icon={"fingerprint"} name={" "}/> */}
-                     duty
+                    <Icon variant={"info"} icon={"suit-diamond-fill"} name={" "}/>
+                    mission
                   </li>
                   <li className="pl-3">
                     <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 

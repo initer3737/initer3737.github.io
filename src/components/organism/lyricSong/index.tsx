@@ -20,7 +20,7 @@ export default function LyricSong() {
           <h5 className='fs-5'><Icon variant={' '} icon={'file-music-fill'} name={' '}/> songs [{Object.entries(useSong().translate).length}]</h5>
         </div>
 
-        <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+        <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -32,7 +32,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/>
@@ -45,14 +45,14 @@ export default function LyricSong() {
       </div>
     </div>
 
-       <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+       <div className="mt-5 bg-firefork w-100">
         <Img
           src={Logo1}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -64,7 +64,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/>  
@@ -77,14 +77,14 @@ export default function LyricSong() {
       </div>
     </div>
 
-      <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+      <div className="mt-5 bg-firefork w-100">
         <Img
           src={Logo3}
-          className="shadow img-fluid"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}        
           />
       </div>
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
         <div className="text-center ">
           <h5>
             <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -96,7 +96,7 @@ export default function LyricSong() {
         </div>
       </div>
      
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
         <div className="text-center ">
           <h5>
           <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -176,15 +176,15 @@ export default function LyricSong() {
               </div>
           </Modal>
         {/* end of modal */}
-      <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+      <div className="mt-5 bg-firefork w-100">
         <Img
           src={Logo2}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}        
           />
       </div>
 
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -196,7 +196,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/>
@@ -209,15 +209,15 @@ export default function LyricSong() {
       </div>
     </div>
     
-      <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+      <div className="mt-5 bg-firefork w-100">
         <Img
           src={Logo5}
-          className="shadow img-fluid col-12 "
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -229,7 +229,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -242,15 +242,15 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+    <div className="mt-5 bg-firefork w-100">
         <Img
           src={Logo4}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
 
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -262,7 +262,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -275,15 +275,15 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+    <div className="mt-5 bg-firefork w-100">
         <Img
           src={Rumah}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
 
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -295,7 +295,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -308,15 +308,15 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+    <div className="mt-5 bg-firefork w-100">
         <Img
           src={Kupu}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
 
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -328,7 +328,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -341,15 +341,15 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+    <div className="mt-5 bg-firefork w-100">
         <Img
           src={forest}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
 
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -361,7 +361,7 @@ export default function LyricSong() {
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -374,23 +374,23 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
-        <div className="shadow img-fluid col-12 songWasurejiBG"></div>
+    <div className="mt-5 bg-firefork w-100 ">
+        <div className="shadow   songWasurejiBG"></div>
       </div>
 
-      <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 
               {useSong().original.wasureji.title}
             </h5>
           </div>
-          <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+          <div className="text-start mx-auto fs-5 px-5 col-12 col-md-6">
             {useSong().original.wasureji.lirik}
           </div>
         </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <h5>
         <Icon variant={''} icon={'pencil-square'} name={' '}/> 
@@ -406,15 +406,15 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 bg-1 d-flex align-items-center align-content-center">
+    <div className="mt-5 bg-firefork w-100 ">
         <Img
           src={bandung}
-          className="shadow img-fluid col-12"
+          className="shadow w-100"
           alt="" srcset={''} width={''} height={''} attr={[]}       
            />
       </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <Img
           src={indonesiaFlag}
@@ -432,7 +432,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <Img
           src={indonesiaFlag}
