@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.77a833dc.css",
-    "main.js": "/static/js/main.ae17bc48.js",
-    "static/js/787.b9287c69.chunk.js": "/static/js/787.b9287c69.chunk.js",
+    "main.js": "/static/js/main.051b2ea5.js",
+    "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Vika.gif": "/static/media/Vika.f704162606f0c53f30d7.gif",
     "static/media/404.gif": "/static/media/404.81ccc55e76c2111bb81f.gif",
     "static/media/Elina.gif": "/static/media/Elina.16c8f89b18a0865a893c.gif",
@@ -57,11 +57,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.77a833dc.css.map": "/static/css/main.77a833dc.css.map",
-    "main.ae17bc48.js.map": "/static/js/main.ae17bc48.js.map",
-    "787.b9287c69.chunk.js.map": "/static/js/787.b9287c69.chunk.js.map"
+    "main.051b2ea5.js.map": "/static/js/main.051b2ea5.js.map",
+    "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.77a833dc.css",
-    "static/js/main.ae17bc48.js"
+    "static/js/main.051b2ea5.js"
   ]
 }
