@@ -4,7 +4,7 @@ import { animeType } from "./animeListType"
     const animeLists:animeType={
         lycoris:{
             name:'lycoris recoil',
-            pov:'sangat bagus dan ending yang sangat mengagetkan',
+            pov:'sangat bagus dan ending yang sangat mengagetkan,yang sangat mengesankan dari anime ini adalah penggunaan teknik C.A.R(center axis relock) sehingga membuat akurasi dari penembak kian mematikan ,hayo kamu sudah coba teknik ini belum ,dari segi kenyamanan tentu teknik ini sangat nyaman saat menggenggam senjata dibandingkan teknik konvensional [tangan lurus sejajar ,180 derajat kedepan sejajar mata] tentu lama kelamaan tangan kamu akan sangat pegal ,akan tetapi teknik ini efektif ,jika targetnya sangat dekat dengan kamu',
             rate:'9.5',
             trailer:'https://youtube.com/embed/F5DMjhg3A6c',
             rank:'epic',
@@ -14,7 +14,7 @@ import { animeType } from "./animeListType"
         },
         kimetsu:{
             name:'kimetsu no yaiba',
-            pov:'tanjirou yang merupakkan kakak tertua harus menerima kenyataan pahit ,keluarganya dibantai oleh muzan kibutsuji ,yang tersisa hanya adiknya seorang...',
+            pov:'tanjirou yang merupakkan kakak tertua harus menerima kenyataan pahit ,keluarganya dibantai oleh muzan kibutsuji ,yang tersisa hanya adiknya seorang...,meski begitu ia tidak menyerah dan berusaha bangkit berulang kali',
             rate:'8.5',
             trailer:'https://youtube.com/embed/a9tq0aS5Zu8',
             rank:'middle',
@@ -44,24 +44,26 @@ import { animeType } from "./animeListType"
             rate:'10',
             trailer:'https://youtube.com/embed/RlYUo0P2g8c',
             rank:'legend',
-            msg:'kawaishi noboru bebas setelah membunuh bitou makio , lalu ia di incar oleh seluruh siswa housen',
+            msg:'kawaishi noboru bebas setelah membunuh bitou makio ,mendengar kabar itu seluruh siswa housen pun mengincar nyawanya',
             tampil:true
         },
         tenshura:{
             name:'tenshura',
-            pov:'bereinkarnasi malah jadi slime',
-            rate:'7.6',
+            pov:'anime ini sekilas seperti mengatakkan bahwa ("ayo kita berkembang bersama , saya [rimuru tempest] selaku pemimpin tidak akan membiarkanmu lemah mari berjuang bersama") ,tentu pesan yang disampaikan di awal episode sungguh sangat jelas dan gamblang bahwa manusia adalah makhluk sosial.',
+            rate:'8.6',
             trailer:'https://youtube.com/embed/q2FCfgT-Fm8',
-            rank:'middle',
+            rank:'epic',
+            msg:'satoru mikami yang berusia 37 tahun bekerja sebagai pegawai corporate , dia memiliki kehidupan yang sempurna di tokyo, namun semuanya berubah ketika ia tiba-tiba dibunuh oleh orang , saat mencoba melindungi juniornya [rekan kerja] dari upaya pembunuhan ,lalu iapun bereinkarnasi di dunia lain [isekai] menjadi slime, disaat itulah kehidupannya mulai berubah beragam konflik ia lalui dengan caranya sendiri , membentuk sebuah negeri mulai dari nol , mengumpulkan teman seperjuangan dan berkembang bersama demi terwujudnya impian itu ia harus menghadapi ancaman dari pihak-pihak yang merasa terancam akan aksistensinya,',
             tampil:true
         },
         samuraiX:{
             name:'samurai x',
-            pov:'pertarungan kenshin himura sang hitokiri battousai',
+            pov:'saya sangat menantikkan anime ini tayang di indonesia ',
             rate:'10',
             trailer:'https://youtube.com/embed/KlgKIkCZ4nQ',
             rank:'legend',
-            msg:'di remake menjadi lebih hd dan mengalami peningkatan kualitas dari segi grafis',
+            msg:'berjuluk hitokiri battousai, kenshin himura ditakuti karena teknik berpedangnya begitu lincah dan mematikkan,diera bakumatsu ia merupakkan pembunuh yang terkenal sehingga menjadi incaran oleh organisasi shinsengumi ,teknik berpedangnya yang mengandalkan kuda-kuda rendah serta memanfaatkan teknik aliran pedang hiten mitsurugi ryu membuatnya begitu kuat, dibawah bimbingan gurunya hiko seijuro ke 13 ia berlatih berpedang namun ditengah latihannya ia berhenti dan mencari apa yang menurut ia benar, teknik ini sangat jarang orang yang menguasainya ,sebab saat murid telah selesai mempelajari keseluruhan teknik berpedang ,akan tiba saat dimana sang guru dan murid berduel hingga sang guru tewas ditangan sang muridnya lalu sang murid mewarisi ilmu sekaligus jubah sang guru dan ia akan menanggung gelar hiko seijuro berikutnya ,[di dunia nyata membunuh itu dilarang sebagai gantinya coba kamu lampaui seseorang yang kau anggap sebagai ahli di bidang yang kamu sukai contohnya seperti [lukis,musisi,beladiri dan lain sebagainya]]',
+            link:'https://id.wikipedia.org/wiki/Bakumatsu',
             tampil:true
         },
         ninja:{
@@ -84,12 +86,11 @@ import { animeType } from "./animeListType"
         },
         girlFrontline:{
             name:'girl frontline',
-            pov:`Pada tahun 2060 akibat dari kecelakaan militer mengakibatkan penyakit berbahaya yang menular, serta karena kecerobohan perang nuklir secara besar-besaran. Sebagian besar permukaan Bumi sudah hancur. Selain itu, negara-negara besar juga mulai hancur karena efek buruk dari perang nuklir tersebut`
-            ,
+            pov:`baku tembak ledakkan,mayat berjatuhan,serangan di segala arah ,pengepungan sekala besar, sangat menggambarkan kondisi peperangan era modern`,
             rate:'6.5',
             trailer:'https://youtube.com/embed/qeBlL3GrAkY',
             rank:'mid-medium',
-            msg:'cocok jika anda penyuka adrenalin',
+            msg:'Pada tahun 2060 akibat dari kecelakaan militer mengakibatkan penyakit berbahaya yang menular, serta karena kecerobohan perang nuklir secara besar-besaran. Sebagian besar permukaan Bumi sudah hancur. Selain itu, negara-negara besar juga mulai hancur karena efek buruk dari perang nuklir tersebut atas dasar itu diciptakkanlah t-dol robot yang digunakkan untuk berperang menggantikkan manusia',
             link:'https://dafunda.com/otaku/informasi-terbaru-anime-girls-frontline/',
             tampil:true
         },

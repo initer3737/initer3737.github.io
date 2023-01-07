@@ -35,6 +35,7 @@
             rate:string,
             trailer:string,
             rank:string,
+            msg:string,
             tampil:boolean
         }
 
@@ -65,6 +66,7 @@
             trailer:string,
             rank:string,
             msg:string,
+            link:string,
             tampil:boolean
         }
 
