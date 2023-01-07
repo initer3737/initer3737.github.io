@@ -4,7 +4,7 @@ import { animeType } from "./animeListType"
     const animeLists:animeType={
         lycoris:{
             name:'lycoris recoil',
-            pov:'chisato sejak kecil ia memiliki bakat yang menonjol diantara rekan-rekannya dibawah organisasi DA[direct attack]( organisasi yang memungut anak yatim-piatu dan menjadikannya agent pembunuh) namun ia memiliki penyakit jantung sejak ia berusia dini namun agensi alan (agensi yang mendukung orang-orang yang memiliki bakat istimewa) tidak membiarkannya mati begitu saja ia diberikkan jantung buatan namun jantung tersebut memiliki waktu yang terbatas [hanya sampai ia berusia 18 tahun saja] setelah lewat maka iapun akan meninggal,perpaduan antara baku tembak dan it[information teknologi] membuata anime ini begitu terasa mengesankan serta scene hacking yang begitu realistis dan menampilkan kode program yang real cuy bukan hello world , tentu saja yang menjadi perhatian mimin,yang sangat mengesankan dari anime ini adalah penggunaan teknik C.A.R(center axis relock) sehingga membuat akurasi dari penembak kian mematikan ,hayo kamu sudah coba teknik ini belum ,dari segi kenyamanan tentu teknik ini sangat nyaman saat menggenggam senjata dibandingkan teknik konvensional [tangan lurus sejajar ,180 derajat kedepan sejajar mata] tentu lama kelamaan tangan kamu akan sangat pegal ,akan tetapi teknik ini efektif ,jika target tembak sangat dekat dengan kamu serta dengan menggunakkan teknik ini akan membuat hentakan senapan menjadi kecil',
+            pov:'chisato sejak kecil ia memiliki bakat yang menonjol diantara rekan-rekannya dibawah organisasi DA[direct attack]( organisasi yang memungut anak yatim-piatu dan menjadikannya agent pembunuh) namun ia memiliki penyakit jantung sejak ia berusia dini tetapi agensi alan (agensi yang mendukung orang-orang yang memiliki bakat istimewa) tidak membiarkannya mati begitu saja ia diberikkan jantung buatan namun jantung tersebut memiliki waktu yang terbatas [hanya sampai ia berusia 18 tahun saja] setelah lewat maka iapun akan meninggal,perpaduan antara baku tembak dan it[information teknologi] membuat anime ini begitu terasa mengesankan serta scene hacking yang begitu realistis dan menampilkan kode program yang real cuy bukan hello world , tentu saja itu yang menjadi perhatian mimin,yang sangat memukau dari anime ini adalah penggunaan teknik C.A.R(center axis relock) sehingga membuat akurasi dari penembak kian mematikan ,hayo kamu sudah coba teknik ini belum ,dari segi kenyamanan tentu teknik ini sangat nyaman saat menggenggam senjata dibandingkan teknik konvensional [tangan lurus sejajar ,180 derajat kedepan sejajar mata] tentu lama kelamaan tangan kamu akan sangat pegal ,akan tetapi teknik ini efektif ,jika target tembak sangat dekat dengan kamu serta dengan menggunakkan teknik ini akan membuat hentakan senapan menjadi kecil',
             rate:'9.5',
             trailer:'https://youtube.com/embed/F5DMjhg3A6c',
             rank:'epic',
@@ -51,7 +51,7 @@ import { animeType } from "./animeListType"
         },
         tenshura:{
             name:'tenshura',
-            pov:'anime ini sekilas seperti mengatakkan bahwa ("ayo kita berkembang bersama , saya [rimuru tempest] selaku pemimpin tidak akan membiarkanmu lemah mari berjuang bersama") ,tentu pesan yang disampaikan di awal episode sungguh sangat jelas dan gamblang bahwa manusia adalah makhluk sosial.',
+            pov:'anime ini sekilas seperti mengatakkan bahwa ("ayo kita berkembang bersama , saya [rimuru tempest] selaku pemimpin tidak akan membiarkanmu lemah !! mari berjuang bersama") ,tentu pesan yang disampaikan di awal episode sungguh sangat jelas dan gamblang bahwa manusia adalah makhluk sosial.',
             rate:'8.6',
             trailer:'https://youtube.com/embed/q2FCfgT-Fm8',
             rank:'epic',
@@ -121,7 +121,7 @@ import { animeType } from "./animeListType"
             rate:'7.6',
             trailer:'https://youtube.com/embed/Ghi2R6-HcMA',
             rank:'middle',
-            msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x] nb : kalau di dunia nyata orang yang menurut akan dianggap pintar sedang yang melawan sistem dan bertindak sesuai dengan keinginannya disebut sebagai orang bodoh [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
+            msg:'kesan pertama terhadap anime ini adalah anime ini menyampaikkan sebuah isu yang sangat relate di masa kini dimana para wanita berusaha mendominasi / feminisme yang kelewat batas dan dikemas dalam bentuk komedi yang nyeleneh serta yang unik dari anime ini adalah entah kenapa disaat main character [nomura fudo] bertarung selalu saja ada jurus yang unik yang dikeluarkan oleh lawannya [semacam samurai x] nb : yang mencoba melawan sistem akan dianggap aneh oleh kebanyakan orang [kamu bisa menonton anime ini di chanel youtube muse indonesia]',
             link:'https://www.otakotaku.com/anime/view/742/busou-shoujo-machiavellianism',
             tampil:false
         },
