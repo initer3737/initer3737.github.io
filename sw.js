@@ -1,5 +1,6 @@
-let cacheDataName="initer3737 App cache V1.0.8";
+let cacheDataName="initer3737 App cache V1.0.9";
         //xyz major minor patch
+        //bug has been found!!! when it on localhost it can cache the asset but when it become online it cannot cache file what is wrong with my code man omg 
 const dataChache=[
     // 'https://animechan.vercel.app/api/quotes',
     '/media/wave-305226.99bfceef311ce0d8786d.png',
@@ -98,21 +99,17 @@ self.addEventListener("fetch",(e)=>{
         const body=`serve to the motherland!!! \n call to all kombatans \n war event is on going!!`
         const icon='/static/media/Vika.f704162606f0c53f30d7.gif'
         // console.warn('request url is : ',e.request.url)
-        // e.waitUntil(
-        //     this.registration.showNotification(title,{
-        //         body,
-        //         icon
-        //     })
-        // )
+       
         if( warTime(1) || warTime(2) || warTime(3) ){
             //e.request.url === 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png'
             if(e.request.url === 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png'){
                 e.waitUntil(
                     this.registration.showNotification(title,{
                         body,
-                        icon
-                    })
+                        icon 
+                    }) 
                 )
+                
             }
     }
         ///offline mode
