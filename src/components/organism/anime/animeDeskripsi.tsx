@@ -4,20 +4,22 @@ import { animeType } from "./animeListType"
     const animeLists:animeType={
         lycoris:{
             name:'lycoris recoil',
-            pov:'sangat bagus dan ending yang sangat mengagetkan,yang sangat mengesankan dari anime ini adalah penggunaan teknik C.A.R(center axis relock) sehingga membuat akurasi dari penembak kian mematikan ,hayo kamu sudah coba teknik ini belum ,dari segi kenyamanan tentu teknik ini sangat nyaman saat menggenggam senjata dibandingkan teknik konvensional [tangan lurus sejajar ,180 derajat kedepan sejajar mata] tentu lama kelamaan tangan kamu akan sangat pegal ,akan tetapi teknik ini efektif ,jika targetnya sangat dekat dengan kamu',
+            pov:'chisato sejak kecil ia memiliki bakat yang menonjol diantara rekan-rekannya dibawah organisasi DA[direct attack]( organisasi yang memungut anak yatim-piatu dan menjadikannya agent pembunuh) namun ia memiliki penyakit jantung sejak ia berusia dini namun agensi alan (agensi yang mendukung orang-orang yang memiliki bakat istimewa) tidak membiarkannya mati begitu saja ia diberikkan jantung buatan namun jantung tersebut memiliki waktu yang terbatas [hanya sampai ia berusia 18 tahun saja] setelah lewat maka iapun akan meninggal,perpaduan antara baku tembak dan it[information teknologi] membuata anime ini begitu terasa mengesankan serta scene hacking yang begitu realistis dan menampilkan kode program yang real cuy bukan hello world , tentu saja yang menjadi perhatian mimin,yang sangat mengesankan dari anime ini adalah penggunaan teknik C.A.R(center axis relock) sehingga membuat akurasi dari penembak kian mematikan ,hayo kamu sudah coba teknik ini belum ,dari segi kenyamanan tentu teknik ini sangat nyaman saat menggenggam senjata dibandingkan teknik konvensional [tangan lurus sejajar ,180 derajat kedepan sejajar mata] tentu lama kelamaan tangan kamu akan sangat pegal ,akan tetapi teknik ini efektif ,jika target tembak sangat dekat dengan kamu serta dengan menggunakkan teknik ini akan membuat hentakan senapan menjadi kecil',
             rate:'9.5',
             trailer:'https://youtube.com/embed/F5DMjhg3A6c',
             rank:'epic',
-            msg:'anime ini sebenarnya mengangkat isu Machiavellianism yang mana organisasi DA[direct attack] mencoba menutupi fakta bahwa di jepang ada kasus kejahatan terorisme lewat agent yang bernama lycoris yang mereka buat, ini mengingatkan saya tentang kota yang dihapus oleh pemerintahan jepang [kamagasaki] dan juga peristiwa penggusuran tuna wisma oleh pemerintahan jepang di saat olimpiade tokyo kemarin [2020] ,apakah kehadiran anime ini sebagai kritik atas apa yang dilakukan pemerintahan tokyo selama ini?? entahlah hanya tuhan dan pemerintahan jepang yang tahu.',
+            msg:'anime ini sebenarnya mengangkat isu eksploitasi anak dibawah umur dan Machiavellianism yang mana organisasi DA[direct attack] mencoba menutupi fakta bahwa di jepang ada kasus kejahatan terorisme lewat agent yang bernama lycoris yang mereka buat, ini mengingatkan saya tentang kota yang dihapus oleh pemerintahan jepang [kamagasaki] dan juga peristiwa penggusuran tuna wisma oleh pemerintahan jepang di saat olimpiade tokyo kemarin [2020] ,apakah kehadiran anime ini sebagai kritik atas apa yang dilakukan pemerintahan tokyo selama ini?? entahlah hanya tuhan dan pemerintahan jepang yang tahu.',
             link:'https://www.kompas.com/properti/read/2022/04/16/120000121/kamagasaki-kota-terkumuh-di-jepang-dihapus-dari-peta-kenapa?page=all',
             tampil:true
         },
         kimetsu:{
             name:'kimetsu no yaiba',
-            pov:'tanjirou yang merupakkan kakak tertua harus menerima kenyataan pahit ,keluarganya dibantai oleh muzan kibutsuji ,yang tersisa hanya adiknya seorang...,meski begitu ia tidak menyerah dan berusaha bangkit berulang kali',
+            pov:'anime ini digarap oleh mappa studio sehingga dari segi grafis dan animasi , begitu bagus ditambah effect serangan dan jurus yang tanjirou keluarkan yang begitu memukau , lihatlah scene yang saya lampirkan di link-referensi',
             rate:'8.5',
             trailer:'https://youtube.com/embed/a9tq0aS5Zu8',
             rank:'middle',
+            msg:'tanjirou yang merupakkan kakak tertua harus menerima kenyataan pahit ,bahwa keluarganya dibantai oleh muzan kibutsuji ,yang tersisa hanya adiknya seorang...,meski begitu ia tidak menyerah dan berusaha bangkit berulang kali untuk menyembuhkan adiknya yang terinfeksi darah iblis, ia harus mengalahkan muzan kibutsuji tetapi ia harus mengalahkan 12 iblis bulan atas',
+            link:'https://youtu.be/7Ke-_WNqqso',
             tampil:true
         },
         chainsaw:{
