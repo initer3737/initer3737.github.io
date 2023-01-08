@@ -432,7 +432,7 @@ export default function LyricSong() {
       <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
         {useSong().translate.fairyTale.lirik}
           <div className="mb-3">
-            <LinkToPage href={'https://youtu.be/m8TfY3xfYR0?list=PLBX8-8t4YfAbDLPPlW9VyRsdD_45q4PsT'} icon={'link'} target={'_blank'} variant={'info'} name={' link referensi'} className={'d-inline'}/>
+            <LinkToPage href={'https://youtu.be/ogM3TRhdWUc'} icon={'link'} target={'_blank'} variant={'info'} name={' link referensi'} className={'d-inline'}/>
           </div>
           <VideoFromYoutube src={useSong().video.fairyTale} />
       </div>
