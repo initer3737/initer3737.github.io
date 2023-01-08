@@ -10,7 +10,7 @@ import Kupu from '../../../imgs/butterfly.png'
 import forest from '../../../imgs/forest.jpg'
 import bandung from '../../../imgs/bandung.jpg'
 import indonesiaFlag from '../../../imgs/indonesia-flag.png'
-import useSong from './text/song';
+import {useSong} from './text/song';
 import './lyricsong.css'
 export default function LyricSong() {
   return (
@@ -375,7 +375,7 @@ export default function LyricSong() {
     </div>
 
     <div className="mt-5 bg-firefork w-100 wasureji__container">
-        <div className="shadow   songWasurejiBG"></div>
+        <div className="shadow   songWasurejiBG blending__mode__blue "></div>
       </div>
 
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
@@ -406,7 +406,39 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork w-100 ">
+    <div className="mt-5 bg-firefork">
+        <div className="shadow songFairyTaleBG blending__mode__blue"/>
+      </div>
+
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+          <div className="text-center ">
+            <h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+              {useSong().original.fairyTale.title}
+            </h5>
+          </div>
+          <div className="text-start mx-auto fs-5 px-5 col-12 col-md-6">
+            {useSong().original.fairyTale.lirik}
+          </div>
+        </div>
+
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().translate.fairyTale.title}
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().translate.fairyTale.lirik}
+          <div className="mb-3">
+            <LinkToPage href={'https://youtu.be/m8TfY3xfYR0?list=PLBX8-8t4YfAbDLPPlW9VyRsdD_45q4PsT'} icon={'link'} target={'_blank'} variant={'info'} name={' link referensi'} className={'d-inline'}/>
+          </div>
+          <VideoFromYoutube src={useSong().video.fairyTale} />
+      </div>
+    </div>
+
+    <div className="mt-5 bg-firefork">
         <Img
           src={bandung}
           className="shadow w-100"

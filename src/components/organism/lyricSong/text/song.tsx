@@ -1,4 +1,5 @@
-export default function useSong() {
+
+function useSong() {
   const data=
   {
     data:{
@@ -379,7 +380,34 @@ export default function useSong() {
                     いつか失い奪われて 消える運命でも
                     それは忘れられることなき物語
                     `
-                }     
+                } ,
+                fairyTale:{
+                        title:`Сказка`,
+                        lirik:`В те года я был моложе,
+                        И влюблен тогда был я.
+                        До сих пор мне всех дороже,
+                        Первая любовь моя.
+                        В сказку я навсегда влюблён,
+                        Забывая боль.
+                        По тебе я схожу с ума,
+                        Я пленён тобой.
+                        Днём у на бывали ссоры,
+                        Ночь дарила нам любовь.
+                        Лишь она могла так ранить,
+                        Лишь она могла дать крылья вновь.
+                        До сих пор не понимаю,
+                        Как мог её я потерять.
+                        Я ищу её повсюду,
+                        Чтобы снова мы могли начать.
+                        В сказку я навсегда влюблен,
+                        Забывая боль.
+                        По тебе я схожу с ума,
+                        Я пленён тобой. 
+                        В сказку я влюблён,
+                        Забывая боль.
+                        По тебе я схожу с ума,
+                        Я пленён тобой.`
+                   },      
         }, //original
         translate:{
             comet:{
@@ -781,6 +809,29 @@ export default function useSong() {
                 they are the very things we cannot forget —
                 stories`
            },     
+           fairyTale:{
+                title:`dongeng`,
+                lirik:`Dulu, ketika aku masih muda.
+                Aku menyukai seorang gadis kenalanku.
+                Dia kekasihku dan kami adalah pasangan serasi.
+                Itu dulu, tapi memang benar demikian.
+                Aku jatuh cinta pada sebuah dongeng.
+                Meskipun itu menyakitkan.
+                Karna aku tidak peduli meskipun aku gila,
+                aku ini sudah dikutuk.
+                Setiap hari kami bertengkar.
+                Setiap malam kami jatuh cinta.
+                Tidak ada orang yang membuatku lebih sedih.
+                Tapi tak seorang pun yang bisa membuatku sangat bahagia.
+                Aku tidak tahu apa yang aku lakukan.
+                Ketika tiba-tiba kami berpisah.
+                Sekarang aku tidak bisa menemukannya.
+                Tapi kalau bertemu lagi kami akan memulai hubungan baru.
+                Dia adalah sebuah dongeng, yeah.
+                Meskipun itu menyakitkan.
+                Karna aku tidak peduli meskipun aku gila.
+                Aku ini sudah dikutuk.`
+           },     
         },
        video:{
               comet:"https://youtube.com/embed/VyvhvlYvRnc",
@@ -794,6 +845,7 @@ export default function useSong() {
               temnaya:"https://youtube.com/embed/FEuSNZ2veME",
               bandung:"https://youtube.com/embed/R6esoDId4fY",
               wasureji:"https://youtube.com/embed/SVQd3HkIq8U",
+              fairyTale:"https://youtube.com/embed/m8TfY3xfYR0",
        } ,
        text:{
         yorunikakeru_text:{
@@ -811,4 +863,8 @@ export default function useSong() {
     }
   }
   return data.data
+}
+
+export {
+        useSong
 }
