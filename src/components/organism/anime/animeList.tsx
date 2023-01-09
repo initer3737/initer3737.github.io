@@ -20,7 +20,7 @@ const AnimeList = () => {
               key={animelist[1].name}
             >
               <Icon variant={"primary"} icon={"play"} name={""} />
-              {animelist[1].name}
+              {animelist[1].name} [{i+1}]
             </li>
             <li className="list-group-item" key={animelist[1].pov}>
               <Icon variant={"info"} icon={"list-stars"} name={""} />

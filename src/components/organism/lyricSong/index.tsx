@@ -1,13 +1,13 @@
 import React from 'react'
 import { Icon, Img, LinkToPage, Modal, VideoFromYoutube } from '../../assembleComponent';
-import Logo1 from '../../../imgs/night-1851685_960_720.png'
-import Logo2 from '../../../imgs/the-background-292720.png'
-import Logo3 from '../../../imgs/wave-305226.png'
-import Logo4 from '../../../imgs/watercolor-4116932.png'
-import Logo5 from '../../../imgs/landscape-1844226.svg'
-import Rumah from '../../../imgs/rumah.jpg'
-import Kupu from '../../../imgs/butterfly.png'
-import forest from '../../../imgs/forest.jpg'
+// import Khorobuska from '../../../imgs/khorobushka.jpg'
+// import Literature from '../../../imgs/literature.png'
+// import Yorunikakeru from '../../../imgs/yorunikakeru.png'
+// import chernoglaza from '../../../imgs/chernoglaza.png'
+// import ServeRussia from '../../../imgs/serveRussia.png'
+// import Cinderela from '../../../imgs/cinderela.jpg'
+// import Kimetsu from '../../../imgs/kimetsu.png'
+// import Temnaya from '../../../imgs/temnaya.jpg'
 import bandung from '../../../imgs/bandung.jpg'
 import indonesiaFlag from '../../../imgs/indonesia-flag.png'
 import {useSong} from './text/song';
@@ -20,6 +20,7 @@ export default function LyricSong() {
           <h5 className='fs-5'><Icon variant={' '} icon={'file-music-fill'} name={' '}/> songs [{Object.entries(useSong().translate).length}]</h5>
         </div>
 
+        <div className="songYasashiSuiseiBG blending__mode__blue shadow"/>
         <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -45,13 +46,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-       <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Logo1}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
+    <div className="songkhorobushkaBG blending__mode__blue shadow"/>
     <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -77,13 +72,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-      <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Logo3}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}        
-          />
-      </div>
+      <div className="songYoruBG blending__mode__blue shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
         <div className="text-center ">
           <h5>
@@ -176,14 +165,8 @@ export default function LyricSong() {
               </div>
           </Modal>
         {/* end of modal */}
-      <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Logo2}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}        
-          />
-      </div>
-
+        
+      <div className="songLiteratureBG blending__mode__blue shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -209,14 +192,7 @@ export default function LyricSong() {
       </div>
     </div>
     
-      <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Logo5}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
-
+      <div className="songServeRusiaBG blending__mode__blue shadow"/>
     <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -242,14 +218,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Logo4}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
-
+      <div className="songChernoglazaBG blending__mode__blue__darken shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -275,14 +244,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Rumah}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
-
+      <div className="songChinderelaBG blending__mode__blue__darken shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -308,14 +270,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={Kupu}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
-
+      <div className="songKimetsuBG blending__mode__blue shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -340,15 +295,8 @@ export default function LyricSong() {
           <VideoFromYoutube src={useSong().video.tanjirou} />
       </div>
     </div>
-
-    <div className="mt-5 bg-firefork w-100">
-        <Img
-          src={forest}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
-
+    
+      <div className="songTemnayaBG blending__mode__blue shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -374,10 +322,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork w-100 wasureji__container">
-        <div className="shadow   songWasurejiBG blending__mode__blue "></div>
-      </div>
-
+        <div className="shadow   songWasurejiBG blending__mode__blue "/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
@@ -406,10 +351,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork">
         <div className="shadow songFairyTaleBG blending__mode__blue"/>
-      </div>
-
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
           <div className="text-center ">
             <h5>
