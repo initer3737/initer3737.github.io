@@ -109,7 +109,7 @@ self.addEventListener("fetch",(e)=>{
                         icon ,
                         vibrate: [200, 100, 200, 100, 200, 100, 200],
                         image
-                    }) 
+                    })
                 )
                 
             }

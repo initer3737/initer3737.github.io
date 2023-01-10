@@ -83,9 +83,9 @@ const song=new Date().getDay();
   return (
     <>
       <form action="">
-        <div className="vw-100 vh-100 form-login">
+        <div className="game__login__page form-login blending__mode__blue">
           <div className="d-flex justify-content-center align-items-center position-absolute">
-            <div className="d-flex flex-column px-3 py-4 gap-2 bg-dark">
+            <div className="d-flex flex-column px-3 py-4 gap-2 bg-dark chek">
               <p className="color-1 h5 text-center">
                 <Icon variant={"info"} icon={"lightning"} name={" "} />
                 counter strike
@@ -115,7 +115,7 @@ const song=new Date().getDay();
                           formvaluePass.length>5 && formvalueUser.length>5?'register success':'registerfail'
                               }
               </p>
-              <p className="text-white">
+              <p className="text-white d-none d-lg-block">
                   <Icon
                       variant={`${
                             isLogin?
@@ -128,7 +128,7 @@ const song=new Date().getDay();
                       />
                 user : {formvalueUser}
               </p>
-              <p className="text-white">
+              <p className="text-white d-none d-lg-block">
                   <Icon
                       variant={`${
                           isLogin?
@@ -151,6 +151,7 @@ const song=new Date().getDay();
               </p>
               <div className="d-flex flex-column gap-3">
                 <input
+                  autoFocus
                   type="text"
                   onChange={(e) => changeValue(e, true)}
                   placeholder="username"
@@ -333,8 +334,10 @@ const song=new Date().getDay();
           disableOnClick={false}
           allAttr={{}}
         >
-          <Icon variant={"info"} icon={"arrow-clockwise"} name={" "} />
+          <Icon variant={"info"} icon={"chevron-bar-expand"} name={" "} />
           <p className="d-inline text-light">reset</p>
+          <Icon variant={"info"} icon={"chevron-double-left"} name={" "} />
+          <Icon variant={"info"} icon={"chevron-double-left"} name={" "} />
         </Button>
         <hr />
       </Modal>

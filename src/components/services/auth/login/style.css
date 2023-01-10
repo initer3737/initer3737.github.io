@@ -13,10 +13,21 @@
     background-repeat: no-repeat;
     background-attachment: scroll; 
     background-position: center; 
+    /* filter: drop-shadow(30px 10px 4px steelblue);
+    box-shadow: 120px 120px blue; */
 }
-
+.chek{
+    filter: drop-shadow(3px 1px 141px steelblue);
+    box-shadow: 6px 6px rgba(70, 130, 180,.6);
+    border-radius: 8px;
+}
 .opacity-form{
     background: var(--kombatanforce) 90% ;
     background-size: cover;
     
+}
+
+.game__login__page{
+    width: auto;
+    min-height: 680px;
 }

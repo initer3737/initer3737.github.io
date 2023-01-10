@@ -29,7 +29,7 @@ export default  function ServiceWorker__initialize() {
                 const swUrl=`${process.env.PUBLIC_URL}/sw.js`
                 navigator.serviceWorker.register(swUrl).then((res)=>{
                     return res.pushManager.getSubscription()
-                        .then(subscript=>{
+                        .then(subscript=>{ 
                             return res.pushManager.subscribe({
                                 userVisibleOnly:true,
                                 applicationServerKey:serverKey()
