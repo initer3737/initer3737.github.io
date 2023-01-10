@@ -380,14 +380,7 @@ export default function LyricSong() {
       </div>
     </div>
 
-    <div className="mt-5 bg-firefork">
-        <Img
-          src={bandung}
-          className="shadow w-100"
-          alt="" srcset={''} width={''} height={''} attr={[]}       
-           />
-      </div>
-
+      <div className="shadow songBandungImageBg blending__mode__blue __darken"/>
     <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
       <div className="text-center ">
         <Img

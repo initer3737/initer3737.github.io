@@ -50,7 +50,7 @@ export default function Anime(): JSX.Element {
       const animeQuotes=randomQuotes[randomQuotesdataIndex];
   return (
     <>
-        <div className='text-dark d-flex justify-content-center flex-column gap-3'>
+        <div className='row text-dark d-flex justify-content-center flex-column gap-3'>
         <div className='text-dark d-flex justify-content-center'>
           <Card
           key={randomQuotesdataIndex}

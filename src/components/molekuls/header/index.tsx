@@ -3,8 +3,8 @@ import {Img} from '../../atom'
 import Banner from '../../../imgs/banner-982162_1920.jpg'
 export default function Header() {
   return (
-    <header className=" bg-4 text-light mb-3">
-         <Img src={`${Banner}`} alt="" className="col-12 shadow" srcset={''} width={''} height={''} attr={[]}/> 
+    <header className="row bg-4 text-light mb-3">
+         <Img src={`${Banner}`} alt="" className="row shadow" srcset={''} width={''} height={''} attr={[]}/> 
     </header> 
   )
 }

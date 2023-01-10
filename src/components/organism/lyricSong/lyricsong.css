@@ -39,7 +39,9 @@
 .songChinderelaBG{
     background-image: url(../../../imgs/cinderela.jpg);
 }
-
+.songBandungImageBg{
+    background-image: url(../../../imgs/bandung.jpg);
+}
 
 .blending__mode__blue{
     width: 100%;
