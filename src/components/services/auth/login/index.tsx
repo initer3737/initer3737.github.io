@@ -47,7 +47,7 @@ const changeValue=(e:FormEvent<HTMLInputElement> | any,isUser:boolean)=>{
     return  condition=setformvaluePass(e.target.value);
 }
 
-const DBStore=(key:string,value:string)=>{
+const DBChange=(key:string,value:string)=>{
  return localStorage.setItem(key,value)
 }
 const DBCheck=(username:string,password:string)=>{
@@ -180,7 +180,7 @@ const song=new Date().getDay();
                       //login function
                       if (!DBCheck(username, password)) {
                         setLoginMsg("login fail");
-                        DBStore("token", "false");
+                        DBChange("token", "false");
                         //clear value input
                         setformvalueUser("");
                         setformvaluePass("");
@@ -188,7 +188,7 @@ const song=new Date().getDay();
                       }
 
                       setLoginMsg("login nice 69");
-                      DBStore("token", "true");
+                      DBChange("token", "true");
                       //clear value input
                       setformvalueUser("");
                       setformvaluePass("");
@@ -197,8 +197,8 @@ const song=new Date().getDay();
                       if(username.length > 5 && password.length > 5)
                       {
                         //register function
-                        DBStore("username", username);
-                        DBStore("password", password);
+                        DBChange("username", username);
+                        DBChange("password", password);
                         //clear value input
                         setformvalueUser("");
                         setformvaluePass("");
@@ -257,8 +257,9 @@ const song=new Date().getDay();
                 <input
                   type="text"
                   placeholder="username"
-                  onChange={(e) => setformResetvalueUser(e.target.value)}
+                  onChange={() => setformResetvalueUser(getUser!!)}
                   value={formResetvalueUser}
+                  // disabled
                 />
               </div>
               <div className="border-start px-3 border-info my-3">
@@ -311,7 +312,7 @@ const song=new Date().getDay();
         <div className="d-flex flex-column px-3 py-2">
           <p>
             <Icon variant={"info"} icon={"pencil-square"} name={" "} />
-            username : {formResetvalueUser??''}
+            username : {getUser??''}
           </p>
           <p>
             <Icon variant={"info"} icon={"pencil-square"} name={" "} />
@@ -325,7 +326,7 @@ const song=new Date().getDay();
           onClick={() => {
 
             if(formResetvaluePass.length > 5 && formResetvalueUser === getUser){
-              DBStore('password',formResetvaluePass);
+              DBChange('password',formResetvaluePass);
               setformResetvalueUser('')
               setformResetvaluePass('')
               document.getElementById('modalClose')?.click();

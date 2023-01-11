@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+    //kuki
+import Cookies from 'js-cookie'    
 import "./style.css";
 import magSlide from "../../../sound/mag-slide.mp3";
 import PuingSound from "../../../sound/puing.mp3";
@@ -53,6 +55,7 @@ export default function Game() {
   const username=localStorage.getItem('username');
   const password=localStorage.getItem('password');
   const token=localStorage.getItem('token');
+  const kuki=Cookies.get('useGameKuki');
   //utils
   let navigate=useNavigate(); 
   const srcAudio = (src: string) => new Audio(src);
@@ -179,12 +182,13 @@ const AmmoWeapon=changeWeapon?30:5;
     ) {
       localStorage.setItem("scorePlayer", JSON.stringify(score));
     }
+        if(!kuki)localStorage.setItem('token','false')
         //check data to localstorage
         if(token !== 'true'){
             navigate('/login')
           }
           // changeWeapon?setAmmo(30):setAmmo(5)
-  }, [score,ammo,changeWeapon,username,password,token,point]); //when score change it become realtime
+  }, [score,ammo,changeWeapon,username,password,token,point,kuki]); //when score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -957,6 +961,11 @@ const AmmoWeapon=changeWeapon?30:5;
                 <p className="text-light fs-4">
                     reset score akan membuatmu kehilangan 
                     semua point yang telah kamu kumpulkan!!!
+                </p>
+                <hr />
+                <p className="fs">
+                  <Icon variant={"info fs-4"} icon={"check2-square"} name={" "} />
+                  kuki : {kuki}
                 </p>
        </div>
 
