@@ -52,6 +52,7 @@ export default function Game() {
   let [ammo, setAmmo] = useState(changeWeapon?30:5);
   let [isFire, setIsFire] = useState(false);
   let [reloadAction, setReloadAction] = useState(false);
+  let [kukiExpire, setKukiExpire] = useState(60*60*1000);
   const username=localStorage.getItem('username');
   const password=localStorage.getItem('password');
   const token=localStorage.getItem('token');
@@ -136,7 +137,13 @@ let BattleRadio=new Audio(battleradio);
           //jika fire di triger maka animasi tidak ditampilkan
       if(changeWeapon === false && ammo<=0)return "d-none";
     return reloadAction?'':"d-none"
-   }   
+   }  
+const formatTime=(kukiExpireArgumen:number)=>{
+  const totalMinutes = Math.floor(kukiExpireArgumen / 60);
+  const seconds = kukiExpireArgumen % 60;
+  const minutes = totalMinutes % 60;
+  return  `${minutes} menit : ${seconds} detik`;
+}
 const warTime=(dayWar:number)=>day === dayWar;
 const AmmoWeapon=changeWeapon?30:5;
   useEffect(() => {
@@ -175,7 +182,6 @@ const AmmoWeapon=changeWeapon?30:5;
 
   useEffect(() => {
     //store to local storage
-      
     if (
       score > JSON.parse(point!!) &&
       ammo >= 0
@@ -187,8 +193,13 @@ const AmmoWeapon=changeWeapon?30:5;
         if(token !== 'true'){
             navigate('/login')
           }
-          // changeWeapon?setAmmo(30):setAmmo(5)
-  }, [score,ammo,changeWeapon,username,password,token,point,kuki]); //when score change it become realtime
+          // timmer out ? delete kuki
+          if(kukiExpire > 0){
+            setTimeout(()=>setKukiExpire((lastValue)=>lastValue-1),1000)
+          }else{
+            Cookies.remove('useGameKuki')
+          }
+  }, [score,ammo,changeWeapon,username,password,token,point,kuki,kukiExpire]); //when score change it become realtime
 
   useEffect(() => {
     if (score <= 200) {
@@ -963,10 +974,16 @@ const AmmoWeapon=changeWeapon?30:5;
                     semua point yang telah kamu kumpulkan!!!
                 </p>
                 <hr />
-                <p className="fs">
-                  <Icon variant={"info fs-4"} icon={"check2-square"} name={" "} />
-                  kuki : {kuki}
-                </p>
+                <div className="d-flex flex-column">
+                  <p className="fs">
+                    <Icon variant={"info fs-4"} icon={"check2-square"} name={" "} />
+                    kuki : {kuki}
+                  </p> <hr />
+                  <p className="fs">
+                    <Icon variant={"danger fs-4"} icon={"clock-history"} name={" "} />
+                    kuki expires in : {formatTime(kukiExpire)}
+                  </p>
+                </div>
        </div>
 
        </div>

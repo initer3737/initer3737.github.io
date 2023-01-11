@@ -1,4 +1,5 @@
 import React from 'react'
+import Cookie from 'js-cookie'
 import {Img} from '../../atom'
 import './header.css'
 import Banner from '../../../imgs/banner-982162_1920.jpg'

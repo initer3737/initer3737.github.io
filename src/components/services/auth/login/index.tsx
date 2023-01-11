@@ -14,6 +14,7 @@ import themeSound4 from '../../../../sound/teme-gaming-4.mp3'
 import themeSound5 from '../../../../sound/teme-gaming-5.mp3'
 import themeSound6 from '../../../../sound/teme-gaming-6.mp3'
 import themeSound7 from '../../../../sound/teme-gaming-7.mp3'
+import { Kuki__initialize } from '../..';
 /*end of themes*/
 export default function Login() {
   const [formvalueUser,setformvalueUser]=useState('')
@@ -56,8 +57,11 @@ const DBCheck=(username:string,password:string)=>{
 const navigate=useNavigate();
   useEffect(()=>{
     document.title='initer3737 | game'
+          //login sucess
       if(getToken !== 'false'){
         navigate('/game')
+        // initialize the cookie
+        Kuki__initialize()
       }
   },[getPass,getUser,getToken])
   // audio themes
