@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.43cc72c8.css",
-    "main.js": "/static/js/main.516e489e.js",
+    "main.js": "/static/js/main.b9d2ab2c.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
+    "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
     "static/media/Vika.gif": "/static/media/Vika.f704162606f0c53f30d7.gif",
     "static/media/temnaya.jpg": "/static/media/temnaya.1c0cd2e7801c0c11edd9.jpg",
-    "static/media/Elina.gif": "/static/media/Elina.c9da9dd1dbeaf8ba4b58.gif",
     "static/media/teme-gaming-5.mp3": "/static/media/teme-gaming-5.42e02ead6df153f48331.mp3",
     "static/media/teme-gaming-7.mp3": "/static/media/teme-gaming-7.449ad9c7c316b91fc802.mp3",
     "static/media/fairyTale.jpg": "/static/media/fairyTale.7ef0125fb9b7f1bdb299.jpg",
@@ -59,11 +59,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.43cc72c8.css.map": "/static/css/main.43cc72c8.css.map",
-    "main.516e489e.js.map": "/static/js/main.516e489e.js.map",
+    "main.b9d2ab2c.js.map": "/static/js/main.b9d2ab2c.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43cc72c8.css",
-    "static/js/main.516e489e.js"
+    "static/js/main.b9d2ab2c.js"
   ]
 }
