@@ -945,7 +945,7 @@ const AmmoWeapon=changeWeapon?30:5;
                      document.getElementById('resetGame')?.click()
                   }} disableOnClick={false}allAttr={{}}>
                     <Icon variant={"danger"} icon={"x-diamond-fill"} name={" "}/>
-                    <p className="d-inline">reset game </p>
+                    <p className="d-inline reset__game__text">reset game </p>
                     <Icon 
                       variant={"danger"} 
                       icon={"chevron-double-left"} 
