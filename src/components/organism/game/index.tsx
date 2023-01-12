@@ -434,7 +434,7 @@ const AmmoWeapon=changeWeapon?30:5;
           src={warmode?Vika:Elina}
           alt={`comrade ${warmode?'Vika':'Elina'}`}
           srcset={""}
-          className={"w-100"}
+          className={warmode?'w-100':" elina__char"}
           width={""}
           height={""}
           attr={[]}
@@ -447,13 +447,21 @@ const AmmoWeapon=changeWeapon?30:5;
           </div>
          <div className="d-flex justify-content-around">
           <h5 className="border-start border-3 border-info px-2">name : {warmode?'Vika':'Elina'}</h5>
-          <h5 className="border-end border-3 border-info px-2">status : {warmode?'leading military operations':'leading military training'}</h5>
+          <h5 className="border-end border-3 border-info px-2">status : {warmode?'leading military operation':'leading military training'}</h5>
          </div>
           <hr />
          <div className="d-flex justify-content-around py-2">
           <h5 className="border-start border-3 border-info px-2">rank : {warmode?'SVR agent':'leutnant'}</h5>
           <h5 className="border-end border-3 border-info px-2">position : {warmode?'infantry':'TOS-A1 operator'}</h5>
          </div>
+         <hr/>
+         <LinkToPage 
+            href={'https://www.pixiv.net/en/artworks/94294254'} 
+            icon={"link"} 
+            target={"_blank"} 
+            variant={"info fs-5"} 
+            name={" sumber gambar"} className={warmode?"d-none":"d-inline"}
+          /> 
         </div>
       </div>
       {/* button triger event */}
@@ -867,7 +875,7 @@ const AmmoWeapon=changeWeapon?30:5;
                   </li>
                   <li className="pl-3">
                     <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
-                      lead operation military 
+                      lead military operation
                   </li>
                   <li className="pl-3">
                     <Icon variant={"info"} icon={"chevron-double-right"} name={""}/> 
@@ -937,7 +945,7 @@ const AmmoWeapon=changeWeapon?30:5;
                      document.getElementById('resetGame')?.click()
                   }} disableOnClick={false}allAttr={{}}>
                     <Icon variant={"danger"} icon={"x-diamond-fill"} name={" "}/>
-                    <p className="d-inline text-light">reset game </p>
+                    <p className="d-inline">reset game </p>
                     <Icon 
                       variant={"danger"} 
                       icon={"chevron-double-left"} 
