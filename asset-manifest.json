@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d58cc1f.css",
-    "main.js": "/static/js/main.cb749d41.js",
+    "main.css": "/static/css/main.a46f7c06.css",
+    "main.js": "/static/js/main.3d5c77cb.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
     "static/media/Vika.gif": "/static/media/Vika.f704162606f0c53f30d7.gif",
-    "static/media/Elina.gif": "/static/media/Elina.16c8f89b18a0865a893c.gif",
     "static/media/temnaya.jpg": "/static/media/temnaya.1c0cd2e7801c0c11edd9.jpg",
+    "static/media/Elina.gif": "/static/media/Elina.c9da9dd1dbeaf8ba4b58.gif",
     "static/media/teme-gaming-5.mp3": "/static/media/teme-gaming-5.42e02ead6df153f48331.mp3",
     "static/media/teme-gaming-7.mp3": "/static/media/teme-gaming-7.449ad9c7c316b91fc802.mp3",
     "static/media/fairyTale.jpg": "/static/media/fairyTale.7ef0125fb9b7f1bdb299.jpg",
@@ -58,12 +58,12 @@
     "static/media/ak12-Sound.mp3": "/static/media/ak12-Sound.9833d9c1ccf8250245a7.mp3",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
-    "main.7d58cc1f.css.map": "/static/css/main.7d58cc1f.css.map",
-    "main.cb749d41.js.map": "/static/js/main.cb749d41.js.map",
+    "main.a46f7c06.css.map": "/static/css/main.a46f7c06.css.map",
+    "main.3d5c77cb.js.map": "/static/js/main.3d5c77cb.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d58cc1f.css",
-    "static/js/main.cb749d41.js"
+    "static/css/main.a46f7c06.css",
+    "static/js/main.3d5c77cb.js"
   ]
 }
