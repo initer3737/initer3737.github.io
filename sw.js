@@ -97,9 +97,9 @@ const warTime=(dayWar)=>new Date().getDay() === dayWar;
 self.addEventListener("fetch",(e)=>{
         const title= 'comrade Vika need you!!'
         const body=`serve to the motherland!!! \n call to all kombatans \n war event is on going!!`
-        const icon='/static/media/Vika.f704162606f0c53f30d7.gif'
+        const icon='https://initer3737.github.io/static/media/Vika.f704162606f0c53f30d7.gif'
         // console.warn('request url is : ',e.request.url)
-        const image='/static/media/Vika.f704162606f0c53f30d7.gif'
+        const image='https://initer3737.github.io/static/media/Vika.f704162606f0c53f30d7.gif'
         if( warTime(1) || warTime(2) || warTime(3) ){
             //e.request.url === 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png'
             if(e.request.url === 'https://cur.cursors-4u.net/cursors/cur-11/cur1018.png'){
