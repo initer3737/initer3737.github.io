@@ -84,7 +84,7 @@ export default function Weather() {
                 {
                     weather?
                     (
-                       <div className="d-flex flex-wrap flex-row justify-content-center align-content-center fs-5 gap-3  mt-5">
+                       <div className="d-flex flex-wrap flex-row flex-1 justify-content-center fs-5 gap-3  mt-5">
                         <div className="d-flex flex-column gap-3 border border-light rounded py-2 px-3">
                             <p>location : { weather?.name}</p>
                             <p>kode negara : {weather?.sys.country} </p>
