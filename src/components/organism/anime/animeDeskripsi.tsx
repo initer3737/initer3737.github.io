@@ -10,7 +10,7 @@ import { animeType } from "./animeListType"
             rank:'epic',
             msg:'anime ini sebenarnya mengangkat isu eksploitasi anak dibawah umur dan Machiavellianism yang mana organisasi DA[direct attack] mencoba menutupi fakta bahwa di jepang ada kasus kejahatan terorisme lewat agent yang bernama lycoris yang mereka buat, ini mengingatkan saya tentang kota yang dihapus oleh pemerintahan jepang [kamagasaki] dan juga peristiwa penggusuran tuna wisma oleh pemerintahan jepang di saat olimpiade tokyo kemarin [2020] ,apakah kehadiran anime ini sebagai kritik atas apa yang dilakukan pemerintahan tokyo selama ini?? entahlah hanya tuhan dan pemerintahan jepang yang tahu.',
             link:'https://www.kompas.com/properti/read/2022/04/16/120000121/kamagasaki-kota-terkumuh-di-jepang-dihapus-dari-peta-kenapa?page=all',
-            tampil:true
+            tampil:false
         },
         kimetsu:{
             name:'kimetsu no yaiba',
@@ -133,6 +133,16 @@ import { animeType } from "./animeListType"
             rank:'epic',
             msg:'Yatora Yaguchi yang memiliki keinginan untuk menggambar dan perjuangan yang ia akan tempuh tidaklah mudah dapatkah ia meraih cita cita yang ia inginkan sebagai pelukis yang mampu menghasilkan karya seni yang indah, saia suka anime ini karena warna yang ditampilkan adalah biru [hiasi harimu dengan biru maka harimu akan senantiasa membiru] \n nb:sialan kau ryuji kukira kau adalah wanita beneran [ bedebah pisan ]',
             link:'https://pedomantangerang.pikiran-rakyat.com/selebritas/pr-072792826/nonton-anime-blue-period-lengkap-dengan-sinopsis-dan-link-streaming',
+            tampil:true
+        },
+        NewGame:{
+            name:'new game',
+            pov:'di menit ke 1:23 "Our Work Is Fun" yeah sangat menggambarkan keadaan karyawan yang suka koding-mengkoding khususnya back end dev',
+            rate:'9.3',
+            trailer:'https://youtube.com/embed/SO6v0DDXRjY',
+            rank:'epic',
+            msg:'suzuke aoba adalah fresh graduate yang bekerja sebagai pengembang game di perusahaan Eagle Jump ,dia bekerja sebagai 3d designer',
+            link:'https://www.youtube.com/playlist?list=PLPanbgyToztbZ-pVx140xwRbev5tnssrd',
             tampil:true
         }
     }

@@ -142,6 +142,16 @@
             link?:string,
             tampil:boolean
         }
+        type NewGame={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link?:string,
+            tampil:boolean
+        }
 
  interface animeType{
                 lycoris:Lycoris,
@@ -158,6 +168,7 @@
                 blueperiod:Blueperiod,
                 tanakaKun:TanakaKun,
                 sakamoto:Sakamoto,
+                NewGame:NewGame,
             }
 
 export type {animeType}
