@@ -91,7 +91,7 @@ let Katyusha=new Audio(katyusha);
 let Sukhoi57=new Audio(sukhoi57);
 let SpesialWeapons: string | number | NodeJS.Timeout | undefined;
     const ServeMotherland=(isOn:boolean)=>{
-          if(isOn === false)
+          if(isOn === true)
         {
             //alarm militer
           Alarmmiliter.loop=true;
