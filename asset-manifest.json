@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.43cc72c8.css",
-    "main.js": "/static/js/main.d5900158.js",
+    "main.js": "/static/js/main.40a09745.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
@@ -27,12 +27,14 @@
     "static/media/spesial-force.jpg": "/static/media/spesial-force.2c98a3a2fd214cf5e04a.jpg",
     "static/media/ak12-fire.png": "/static/media/ak12-fire.81fee0f78045f2168ed3.png",
     "static/media/AK-12-info.png": "/static/media/AK-12-info.7e1065f2127c52bb1398.png",
+    "static/media/katyusha-rocket-multiple.mp3": "/static/media/katyusha-rocket-multiple.ddfe769ede25cc1fa674.mp3",
     "static/media/literature.png": "/static/media/literature.19958da7a4785b570e39.png",
     "static/media/antithank.mp3": "/static/media/antithank.17f3bf5f928cdaed5f19.mp3",
     "static/media/ak12.png": "/static/media/ak12.a335ed14cb9c16db7daf.png",
     "static/media/banner-909710_1920.jpg": "/static/media/banner-909710_1920.07b6b6e52305963a8175.jpg",
     "static/media/teme-gaming-1.mp3": "/static/media/teme-gaming-1.5223b703bb0d8d305a63.mp3",
     "static/media/alarmmiliter.mp3": "/static/media/alarmmiliter.a796df1136c79c2b096d.mp3",
+    "static/media/57-for-connoisseurs.mp3": "/static/media/57-for-connoisseurs.6f1ad781eff43ddb2538.mp3",
     "static/media/battleradio.mp3": "/static/media/battleradio.39a86427115be96c0a9f.mp3",
     "static/media/teme-gaming-3.mp3": "/static/media/teme-gaming-3.eb49ccee6d29da396e96.mp3",
     "static/media/chernoglaza.png": "/static/media/chernoglaza.44baa96f11d1943d6d7d.png",
@@ -59,11 +61,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.43cc72c8.css.map": "/static/css/main.43cc72c8.css.map",
-    "main.d5900158.js.map": "/static/js/main.d5900158.js.map",
+    "main.40a09745.js.map": "/static/js/main.40a09745.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.43cc72c8.css",
-    "static/js/main.d5900158.js"
+    "static/js/main.40a09745.js"
   ]
 }
