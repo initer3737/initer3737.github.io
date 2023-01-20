@@ -5,6 +5,8 @@ import "./style.css";
 import magSlide from "../../../sound/mag-slide.mp3";
 import PuingSound from "../../../sound/puing.mp3";
 import ak12Sound from "../../../sound/ak12-Sound.mp3";
+import katyusha from "../../../sound/katyusha-rocket-multiple.mp3";
+import sukhoi57 from "../../../sound/57-for-connoisseurs.mp3";
 import spr2Kal127MMSound from "../../../sound/SPR_2_1.mp3";
 import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
@@ -85,8 +87,11 @@ let Artileri=new Audio(artileri);
 let Alarmmiliter=new Audio(alarmmiliter);
 let Antithank=new Audio(antithank);
 let BattleRadio=new Audio(battleradio);
+let Katyusha=new Audio(katyusha);
+let Sukhoi57=new Audio(sukhoi57);
+let SpesialWeapons: string | number | NodeJS.Timeout | undefined;
     const ServeMotherland=(isOn:boolean)=>{
-          if(isOn === true)
+          if(isOn === false)
         {
             //alarm militer
           Alarmmiliter.loop=true;
@@ -104,6 +109,19 @@ let BattleRadio=new Audio(battleradio);
           Artileri.loop=true;
           Artileri.volume=0.4
           Artileri.play()
+            
+     SpesialWeapons=setInterval(()=>{
+              //katyusha
+              // Katyusha.loop=true;
+              Katyusha.volume=1
+              Katyusha.play()
+              //sukoi 57
+              // Katyusha.loop=true;
+              setTimeout(()=>{
+                Sukhoi57.volume=1
+                Sukhoi57.play()
+              },3000)
+            },12000)
             //battle theme
           BattleTheme.loop=true;
           BattleTheme.volume=0.4
@@ -118,6 +136,10 @@ let BattleRadio=new Audio(battleradio);
           BattleRadio.pause()
             //artileri
           Artileri.pause()
+            //katyusha
+          Katyusha.pause()
+            //sukhoi 57
+          Sukhoi57.pause()
             //battle theme
           BattleTheme.pause()
         }
@@ -154,6 +176,7 @@ const AmmoWeapon=changeWeapon?30:5;
       keyPress('h','info')
       keyPress('g','resetScoreInfoTriger')
       keyPress('q','gantisenjata')
+      keyPress('k','creditListsTriger')
           //war start only 3 day 
      if( warTime(1) || warTime(2) || warTime(3) ){
        setWarmode(true)
@@ -176,7 +199,10 @@ const AmmoWeapon=changeWeapon?30:5;
       Artileri.pause()
       Alarmmiliter.pause()
       Antithank.pause()
+      Katyusha.pause()
+      Sukhoi57.pause()
       BattleRadio.pause()
+      clearInterval(SpesialWeapons)
     };
   },[])
 
@@ -488,6 +514,7 @@ const AmmoWeapon=changeWeapon?30:5;
         <a role="button" data-bs-target={'#charInfo'} data-bs-toggle='modal' id="info" className="d-none"></a>
         <button data-bs-target={'#logoutInfo'} data-bs-toggle='modal' id="logoutInfoTriger" className="d-none"></button>
         <button data-bs-target={'#resetScoreInfo'} data-bs-toggle='modal' id="resetScoreInfoTriger" className="d-none"></button>
+        <button data-bs-target={'#kreditList'} data-bs-toggle='modal' id="creditListsTriger" className="d-none"></button>
       {/* button triger modal end */}
     {/* modal */}
     <Modal modalTitle={" weapon | firearm"} modalId={"infoweapon"} modalTitleIcon={"info-circle"}>
@@ -684,6 +711,13 @@ const AmmoWeapon=changeWeapon?30:5;
                   g : 
                   <Icon variant={"info"} icon={"controller"} name={" "}/> 
                   {" restart the game"}
+                </p> 
+              </div>
+              <div className="border-start px-3 border-info">
+                <p className="d-flex flex-row gap-2">
+                  k : 
+                  <Icon variant={"info"} icon={"list-stars"} name={" "}/> 
+                  {" credit lists"}
                 </p> 
               </div>
           </div>
@@ -996,6 +1030,29 @@ const AmmoWeapon=changeWeapon?30:5;
 
        </div>
         <hr />
+      </Modal>
+      {/*credit lists  */}
+      <Modal 
+        modalTitle={" informasi modal list"} 
+        modalId={"kreditList"} 
+        modalTitleIcon={"info-circle"} >
+          <div className="d-flex flex-column">
+            <h5 className="fs-5 text-center">
+             <Icon variant={"info"} icon={"list-stars"} name={" "} /> 
+             credit lists 
+            </h5>  
+            <hr />
+           <div className="d-flex align-items-center">
+            <Icon variant={"light"} icon={"stars"} name={" "}/>
+              <LinkToPage href={"https://pixabay.com/sound-effects/katyusha-rocket-multiple-114774/"} icon={"link"} target={"_blank"} variant={"info"} name={" katyusha voice"} className={"fs-4 d-inline"}/>
+           </div>
+            <hr />
+            <div className="d-flex align-items-center">
+            <Icon variant={"light"} icon={"stars"} name={" "}/>
+              <LinkToPage href={"https://www.youtube.com/watch?v=Zid1Nv-FfyQ"} icon={"link"} target={"_blank"} variant={"info"} name={" su-57 voice"} className={"fs-4"}/>
+           </div>
+            <hr />
+          </div>
       </Modal>
     </div>
   );
