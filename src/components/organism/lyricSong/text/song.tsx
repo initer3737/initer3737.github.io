@@ -844,7 +844,7 @@ function useSong() {
               tanjirou:"https://youtube.com/embed/l-AjkizQ70A",
               temnaya:"https://youtube.com/embed/FEuSNZ2veME",
               bandung:"https://youtube.com/embed/R6esoDId4fY",
-              wasureji:"https://youtube.com/embed/SVQd3HkIq8U",
+              wasureji:"https://youtube.com/embed/0pOIEza8Cpc",
               fairyTale:"https://youtube.com/embed/m8TfY3xfYR0",
        } ,
        text:{
