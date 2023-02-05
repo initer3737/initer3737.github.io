@@ -122,12 +122,13 @@ export default function HomePage()
               </div>
                LDV
           </div>
-          <div className="banners-border-kanan-atas">
+          <div className="banners-border-kiri-atas">
             <div className="banners-border"></div>
           </div>
         </div>
       </div>
-      <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+
+      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
         <h5>
           <Icon variant={'primary'} icon={'info-circle'} name={''}/> information
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
@@ -166,8 +167,27 @@ export default function HomePage()
               icon={'youtube'} className={''}            />
           </>
         </div>
+        <div className="banners-border-kanan-bawah">
+            <div className="banners-border"></div>
+        </div>
+        <div className="bintang-container d-flex justify-content-between w-75">
+          <div className="d-flex">
+            <Icon variant={'primary'} icon={'moon-stars-fill'} name={''}/>
+            <Icon variant={'primary'} icon={'moon-stars-fill'} name={''}/>
+          </div>
+          <div className="d-flex">
+            <Icon variant={' primary'} icon={'star-fill'} name={''}/>
+            <Icon variant={' primary'} icon={'star-fill'} name={''}/>
+            <Icon variant={' primary'} icon={'star-fill'} name={''}/>
+          </div>
+          <div className="d-flex">
+            <Icon variant={'primary'} icon={'moon-stars-fill'} name={''}/>
+            <Icon variant={'primary'} icon={'moon-stars-fill'} name={''}/>
+          </div>
+        </div>
+
       </div>
-      <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
         <h5>
           <Icon variant={'primary'} icon={'info-circle'} name={''}/> spesial thanks to.
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
@@ -222,6 +242,14 @@ export default function HomePage()
               icon={'stars'} className={''}            />
           </>
         </div>
+            <div className="banners-border-kiri-atas">
+              <div className="banners-border"></div>
+            </div>
+          <div className="berlian-container d-flex justify-content-between w-100">
+            <Icon variant={'primary'} icon={'gem berlian berlian-double-kanan'} name={''}/>
+            <Icon variant={'primary'} icon={'gem single-gem'} name={''}/>
+            <Icon variant={'primary'} icon={'gem berlian berlian-double-kiri'} name={''}/>
+          </div>
       </div>
      </>
   )

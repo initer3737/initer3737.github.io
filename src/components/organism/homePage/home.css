@@ -1,10 +1,11 @@
-/* .border{
+.border-atas-kiri .border,
+.border-atas-kanan .border{
     width: 50px;
     height: 50px;
     background-color: rgb(138, 229, 229);
     box-shadow: 12px 12px 12px royalblue;
     animation: border-kelip 5s alternate-reverse infinite;
-} */
+}
 
 @keyframes border-kelip {
     from{}
@@ -29,60 +30,78 @@
 
 .hiasan{
     color: #13005A;
-    text-shadow: 0px 5px 3px #13005A;
+    filter: drop-shadow(0 5px 1px blue);
     animation: kelip 3s alternate infinite;
+    transition: .7s all;
+
 }
 @keyframes kelip {
     from{
-        /* text-shadow: 12px 12px 12px black; */
         color: #00337C;
-        text-shadow: 0px 5px 3px rgba(0, 51, 124,.6);
+        filter: drop-shadow(0 5px 3px #00337C);
+        transform: translateY(-12px) rotate(0deg);
     }
     50%{
-        /* text-shadow: 12px 12px 12px black; */
-        color: #1C82AD;
-        text-shadow: 0px 5px 3px rgba(28, 128, 171,.6);
+        color: #087953;
+        filter: drop-shadow(0 5px 3px #087953);
+        transform: translateY(4px) rotate(30deg);
     }
     to{
-        /* text-shadow: 12px 12px 12px black; */
         color: #03C988;
-        text-shadow: 0px 5px 3px rgba(3, 201, 136,.6);
+        filter: drop-shadow(0 5px 3px #03C988);
+        transform: translateY(12px) rotate(60deg);
     }
 }
 
 
 .hiasan-utama{
+    position: relative;
     color: #13005A;
-    text-shadow: 0px 5px 3px #7B2869;
-    animation: kelip-utama 5s alternate-reverse infinite;
-    filter: drop-shadow(12px 12px 1px white);
+    font-size: 1em;
+    text-shadow:0 6px 5px rgb(56, 59, 241);
+    filter: drop-shadow(12px 12px 1px rgb(223, 131, 241));
+    animation: kelip-utama 3s alternate-reverse infinite;
 }
 
 @keyframes kelip-utama {
     from{
-        /* text-shadow: 12px 12px 12px black; */
-        color: #00337C;
-        text-shadow: 0px 5px 3px rgba(0, 51, 124,.6);
+        color: rgb(95, 98, 238);
+        filter: drop-shadow(12px 12px 1px rgb(208, 174, 224));
     }
     50%{
-        /* text-shadow: 12px 12px 12px black; */
-        color: #1C82AD;
-        text-shadow: 0px 5px 3px rgba(28, 130, 173,.6);
-        filter: drop-shadow(12px 12px 1px #1C82AD);
+        color: rgb(117, 176, 245);
+        filter: drop-shadow(12px 12px 1px rgb(183, 54, 243));
     }
     to{
-        /* text-shadow: 12px 12px 12px black; */
-        color: #03C988;
-        text-shadow: 0px 5px 3px rgba(3, 201, 136,.6);
+        color: rgb(41, 194, 173);
+        filter: drop-shadow(12px 12px 1px rgb(100, 9, 143));
     }
 }
 
 
-.banners-border-kanan-atas{
+.banners-border-kiri-atas{
     position: absolute;
     transform:rotate(190deg);
     left:0;
     top: 0;
+}
+.banners-border-kanan-atas{
+    position: absolute;
+    transform:rotate(190deg);
+    right:0;
+    top: 0;
+}
+.banners-border-kiri-bawah{
+    position: absolute;
+    transform:rotate(190deg);
+    left:0;
+    bottom: 0;
+}
+.banners-border-kanan-bawah{
+    position: absolute;
+    transform:rotate(0deg);
+    right:0;
+    bottom: 0;
 }
 
 .banners-border{
@@ -119,4 +138,69 @@
 }
 .mata{
     font-size: 12px;
+}
+.berlian-container .bi-gem{
+    text-shadow: 0 7px 3px blue;
+}
+.single-gem{
+    animation:gem 2s infinite alternate;
+}
+@keyframes gem {
+    from{
+        /* opacity: 1; */
+    }
+    to{
+        text-shadow: 0 7px 3px purple;
+    }
+}
+.berlian-double-kanan{filter: drop-shadow(12px 12px blue);}
+.berlian-double-kiri{filter: drop-shadow(-12px 12px blue);}
+.berlian{
+    animation:berlian 2s infinite alternate-reverse;
+}
+@keyframes berlian {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.bintang-container .bi-moon-stars-fill{
+    transform: translateY(-47px);
+    animation:bulan-jatuh  4s infinite ease-out;
+    opacity: 0;
+}
+@keyframes bulan-jatuh {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(0px);
+        filter: drop-shadow(12px 12px 4px blue);
+    }
+}
+.bintang-container .bi-star-fill{
+    color: rgb(72, 81, 212) !important;
+    filter: drop-shadow(3px 3px 5px blue);
+    margin-left: -12px;
+    animation:laka-lantas-bintang  4s infinite ease-out;
+}
+@keyframes laka-lantas-bintang {
+    from{
+        color: purple !important;
+        opacity: 1;
+    }
+    50%{
+        color: purple !important;
+        filter: drop-shadow(3px 3px 5px purple);
+        margin-left: 8px;
+    }
+    to{
+        opacity: 0;
+        color: purple !important;
+        margin-left: 12px;
+    }
 }
