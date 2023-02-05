@@ -1,7 +1,12 @@
 import React from 'react'
 import Video from '../../../imgs/Earth - 4788.mp4'
+import LDV from '../../../imgs/LDV.jpg'
+import LRV from '../../../imgs/LRV.png'
+import TSV from '../../../imgs/TSV.png'
+import TSR from '../../../imgs/TSR.png'
+import './home.css'
 import {Clock} from '../../../utils'
-import { LinkToPage,Icon} from '../../atom'
+import { LinkToPage,Icon, Img} from '../../atom'
 export default function HomePage()
  {
   return (
@@ -25,6 +30,7 @@ export default function HomePage()
               <div className="col-10 col-md-9 col-lg-8">
                 <h5 className="text-capitalize">
                   <Icon variant={'dark'} icon={'medium'} name={''}/> social media.
+                  <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
                 </h5>
                 <div className="d-flex flex-row align-content-center align-items-center gap-3 flex-wrap">
                   <div className="d-flex flex-column fs-4">
@@ -56,24 +62,76 @@ export default function HomePage()
 
           </div>
       </div>
-      <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+      <div className="overflow-hidden position-relative container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
           <h5><Icon variant={'dark'} icon={'briefcase-fill'} name={''}
-          /> framework.</h5>
+          /> framework.
+          <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/>  
+          </h5>
             <h3><Icon variant={'danger'} icon={'ubuntu'} name={''}/> laravel</h3>
               <h3><Icon variant={'primary'} icon={'bootstrap'} name={''}/> bootstrap 5</h3>
+          <div className="d-flex justify-content-between w-100">
+            <Icon variant={''} icon={'suit-diamond-fill hiasan'} name={''}/> 
+            <Icon variant={''} icon={'suit-diamond-fill hiasan'} name={''}/> 
+            <Icon variant={''} icon={'suit-diamond-fill hiasan'} name={''}/> 
+          </div>
+              <div className="border-atas-kiri">
+                <div className="border"></div>
+              </div>
+              <div className="border-atas-kanan">
+                <div className="border"></div>
+              </div>
           </div>
 
       <div className="container bg-light shadow mt-5 d-flex flex-column  justify-content-center align-content-center align-items-center p-2">
-          <h5><Icon variant={'dark'} icon={'code-slash'} name={''}/> language.</h5>
+          <h5>
+              <Icon variant={'dark'} icon={'code-slash'} name={''}/> language.
+              <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+          </h5>
               <h3><Icon variant={' php'} icon={'filetype-php'} name={''}/> php</h3>
               <h3><Icon variant={'warning'} icon={'filetype-js'} name={''}/> javascript</h3>
               <h3><Icon variant={' mysql'} icon={'filetype-sql'} name={''}/> mysql</h3>
               <h3><Icon variant={' html'} icon={'filetype-html'} name={''}/> html 5</h3>
               <h3><Icon variant={' css'} icon={'filetype-css'} name={''}/> css</h3>
           </div>
-
+                  {/* banners */}
+      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+        <h5>
+          <Icon variant={'primary'} icon={'info-circle'} name={''}/> banners
+          <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+        </h5>
+        <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
+          <div className='d-flex flex-column justify-content-center align-items-center'>
+                <Img src={TSR} alt={'tsr'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+                TSR
+          </div>
+          <div className='d-none d-flex flex-column justify-content-center align-items-center'>
+                <Img src={TSV} alt={'tsv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+                TSV
+          </div>
+          <div className='d-flex flex-column justify-content-center align-items-center'>
+                <Img src={LRV} alt={'lrv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+               LRV
+          </div>
+          <div className='d-flex flex-column justify-content-center align-items-center'>
+              <div className="position-relative">
+                <Img src={LDV} alt={'ldv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+                  <div className="mata-container">
+                    <Icon variant={' php'} icon={'circle-fill mata'} name={''}/>
+                    <Icon variant={' php'} icon={'circle-fill mata'} name={''}/>
+                  </div>
+              </div>
+               LDV
+          </div>
+          <div className="banners-border-kanan-atas">
+            <div className="banners-border"></div>
+          </div>
+        </div>
+      </div>
       <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
-        <h5><Icon variant={'primary'} icon={'info-circle'} name={''}/> information.</h5>
+        <h5>
+          <Icon variant={'primary'} icon={'info-circle'} name={''}/> information
+          <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+        </h5>
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
           <>
             <LinkToPage 
@@ -110,7 +168,10 @@ export default function HomePage()
         </div>
       </div>
       <div className="container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
-        <h5><Icon variant={'primary'} icon={'info-circle'} name={''}/> spesial thanks to.</h5>
+        <h5>
+          <Icon variant={'primary'} icon={'info-circle'} name={''}/> spesial thanks to.
+          <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+        </h5>
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3 flex-wrap">
           <>
             <LinkToPage 
@@ -150,6 +211,14 @@ export default function HomePage()
               target="_blank"
               variant={'primary'}
               name={' lyricstranslate.com'}
+              icon={'stars'} className={''}            />
+          </>
+          <>
+            <LinkToPage 
+              href={"https://iconscout.com/"}
+              target="_blank"
+              variant={'primary'}
+              name={' iconscout.com'}
               icon={'stars'} className={''}            />
           </>
         </div>

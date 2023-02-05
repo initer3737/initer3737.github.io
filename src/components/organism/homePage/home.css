@@ -1,0 +1,122 @@
+.border{
+    width: 50px;
+    height: 50px;
+    background-color: rgb(138, 229, 229);
+    box-shadow: 12px 12px 12px royalblue;
+    animation: border-kelip 5s alternate-reverse infinite;
+}
+
+@keyframes border-kelip {
+    from{}
+    to{
+        background-color: rgb(241, 241, 241);
+        box-shadow: 12px 12px 12px rgb(244, 245, 247);
+    }
+}
+
+.border-atas-kiri{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-12px) translateY(-12px);
+}
+.border-atas-kanan{
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(12px) translateY(-12px) rotate(90deg);
+}
+
+.hiasan{
+    color: #13005A;
+    text-shadow: 0px 5px 3px #13005A;
+    animation: kelip 3s alternate infinite;
+}
+@keyframes kelip {
+    from{
+        /* text-shadow: 12px 12px 12px black; */
+        color: #00337C;
+        text-shadow: 0px 5px 3px rgba(0, 51, 124,.6);
+    }
+    50%{
+        /* text-shadow: 12px 12px 12px black; */
+        color: #1C82AD;
+        text-shadow: 0px 5px 3px rgba(28, 128, 171,.6);
+    }
+    to{
+        /* text-shadow: 12px 12px 12px black; */
+        color: #03C988;
+        text-shadow: 0px 5px 3px rgba(3, 201, 136,.6);
+    }
+}
+
+
+.hiasan-utama{
+    color: #13005A;
+    text-shadow: 0px 5px 3px #7B2869;
+    animation: kelip-utama 5s alternate-reverse infinite;
+    filter: drop-shadow(12px 12px 1px white);
+}
+
+@keyframes kelip-utama {
+    from{
+        /* text-shadow: 12px 12px 12px black; */
+        color: #00337C;
+        text-shadow: 0px 5px 3px rgba(0, 51, 124,.6);
+    }
+    50%{
+        /* text-shadow: 12px 12px 12px black; */
+        color: #1C82AD;
+        text-shadow: 0px 5px 3px rgba(28, 130, 173,.6);
+        filter: drop-shadow(12px 12px 1px #1C82AD);
+    }
+    to{
+        /* text-shadow: 12px 12px 12px black; */
+        color: #03C988;
+        text-shadow: 0px 5px 3px rgba(3, 201, 136,.6);
+    }
+}
+
+
+.banners-border-kanan-atas{
+    position: absolute;
+    transform:rotate(190deg);
+    left:0;
+    top: 0;
+}
+
+.banners-border{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+}
+.banners-border::before,
+.banners-border::after{
+    content: '';
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.banners-border::before{
+    right:13px;
+    top: 13px;
+    background-color: rgb(161, 21, 196);
+}
+.banners-border::after{
+    left: 15px;
+    top: 13px;
+    background-color: rgb(88, 71, 182);
+}
+
+.banner-icon{
+    width: 90px;
+    height: 70px;
+}
+.mata-container{
+    position: absolute;
+    top: 0;
+}
+.mata{
+    font-size: 12px;
+}
