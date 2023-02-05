@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.43cc72c8.css",
-    "main.js": "/static/js/main.2abaed8f.js",
+    "main.css": "/static/css/main.67e48877.css",
+    "main.js": "/static/js/main.30d8b086.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
@@ -13,6 +13,7 @@
     "static/media/login-page.jpg": "/static/media/login-page.596095708ffa0d174c67.jpg",
     "static/media/kitten-7157608.png": "/static/media/kitten-7157608.a7684d8fe997684d8924.png",
     "static/media/teme-gaming-2.mp3": "/static/media/teme-gaming-2.4fe1afefe38931cae7d4.mp3",
+    "static/media/LDV.jpg": "/static/media/LDV.3dca37dd5b29956a4245.jpg",
     "static/media/Earth - 4788.mp4": "/static/media/Earth - 4788.c6043d6c61ec245407f5.mp4",
     "static/media/army.gif": "/static/media/army.b3f71c2f681aa8081d18.gif",
     "static/media/battletheme.mp3": "/static/media/battletheme.84389f6310b4b7c98deb.mp3",
@@ -52,20 +53,23 @@
     "static/media/puing.mp3": "/static/media/puing.fd2c2fea27379cbc44da.mp3",
     "static/media/SPR_2_1_fire.png": "/static/media/SPR_2_1_fire.974ebb3b7941eebd6613.png",
     "static/media/soldat.png": "/static/media/soldat.9274177d6a0aa01b9e55.png",
+    "static/media/TSR.png": "/static/media/TSR.efe9765e5b3b287bd960.png",
+    "static/media/TSV.png": "/static/media/TSV.61a2616867f17dc1a81b.png",
     "static/media/SPR_2_1-info.png": "/static/media/SPR_2_1-info.b27979a768daca8c4c94.png",
     "static/media/reload2.mp3": "/static/media/reload2.4a1bbbfd04df737a5586.mp3",
     "static/media/SPR_2_1.png": "/static/media/SPR_2_1.71fb250fb6e951ee813c.png",
+    "static/media/LRV.png": "/static/media/LRV.479daf815cd872e40430.png",
     "static/media/reload.mp3": "/static/media/reload.b2a72bf3291a2d2f97be.mp3",
     "static/media/mag-slide.mp3": "/static/media/mag-slide.eb1733f56b1881e132f4.mp3",
     "static/media/ak12-Sound.mp3": "/static/media/ak12-Sound.9833d9c1ccf8250245a7.mp3",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
-    "main.43cc72c8.css.map": "/static/css/main.43cc72c8.css.map",
-    "main.2abaed8f.js.map": "/static/js/main.2abaed8f.js.map",
+    "main.67e48877.css.map": "/static/css/main.67e48877.css.map",
+    "main.30d8b086.js.map": "/static/js/main.30d8b086.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.43cc72c8.css",
-    "static/js/main.2abaed8f.js"
+    "static/css/main.67e48877.css",
+    "static/js/main.30d8b086.js"
   ]
 }
