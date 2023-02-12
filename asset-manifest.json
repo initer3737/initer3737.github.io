@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.f318cc69.css",
-    "main.js": "/static/js/main.deba0749.js",
+    "main.css": "/static/css/main.3a9e731c.css",
+    "main.js": "/static/js/main.9b59cc2e.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
@@ -19,6 +19,7 @@
     "static/media/battletheme.mp3": "/static/media/battletheme.84389f6310b4b7c98deb.mp3",
     "static/media/yorunikakeru.png": "/static/media/yorunikakeru.3784c11bb9d9cb0b4cc9.png",
     "static/media/serveRussia.png": "/static/media/serveRussia.e1d1065d860b320d0f31.png",
+    "static/media/money.jpg": "/static/media/money.72f5945995ece7b773fa.jpg",
     "static/media/bandung.jpg": "/static/media/bandung.13dbd9561acb5210324b.jpg",
     "static/media/yasashiSuisei.jpg": "/static/media/yasashiSuisei.60d9536637edcdc2ac34.jpg",
     "static/media/kimetsu.png": "/static/media/kimetsu.13fa4a9cf4cf0c53a097.png",
@@ -64,12 +65,12 @@
     "static/media/ak12-Sound.mp3": "/static/media/ak12-Sound.9833d9c1ccf8250245a7.mp3",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
-    "main.f318cc69.css.map": "/static/css/main.f318cc69.css.map",
-    "main.deba0749.js.map": "/static/js/main.deba0749.js.map",
+    "main.3a9e731c.css.map": "/static/css/main.3a9e731c.css.map",
+    "main.9b59cc2e.js.map": "/static/js/main.9b59cc2e.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f318cc69.css",
-    "static/js/main.deba0749.js"
+    "static/css/main.3a9e731c.css",
+    "static/js/main.9b59cc2e.js"
   ]
 }
