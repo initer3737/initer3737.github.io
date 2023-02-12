@@ -408,6 +408,27 @@ function useSong() {
                         По тебе я схожу с ума,
                         Я пленён тобой.`
                    },      
+                etoLiScaste:{
+                        title:`это ли счастье`,
+                        lirik:`в мире не осталось искренних чувств
+                        я теперь иду и тут каждую боюсь
+                        это ли счастье ?
+                        тут все погасло
+                        это не счастье
+                        не счастье
+                        это ли счастье ?
+                        тут все погасло
+                        это не счастье
+                        не счастье
+                        ты мне говоришь люблю
+                        на это в голове много мыслей у меня
+                        что если тебе не даю
+                        я не даю то что хочешь от меня
+                        в мире только  подлость грусть
+                        тебе важны мои деньги бери мои деньги
+                        я тебя не люблю уходи от меня
+                        не возвращайся сюда`
+                   },      
         }, //original
         translate:{
             comet:{
@@ -832,6 +853,27 @@ function useSong() {
                 Karna aku tidak peduli meskipun aku gila.
                 Aku ini sudah dikutuk.`
            },     
+           etoLiScaste:{
+                title:`inikah kebahagiaan`,
+                lirik:`tidak ada perasaan yang tulus di dunia
+                Aku pergi sekarang dan di sini aku takut pada semua orang
+                apakah ini bahagia?
+                semuanya mati di sini
+                ini bukan bahagia
+                bukan bahagia
+                apakah ini bahagia?
+                semuanya mati di sini
+                ini bukan bahagia
+                bukan bahagia
+                kamu bilang cinta
+                Aku punya banyak pemikiran tentang ini di kepalaku
+                bagaimana jika aku tidak memberi kamu?
+                Aku tidak memberikan apa yang kamu inginkan dariku
+                di dunia hanya sedih yang kejam
+                Kamu peduli dengan uangku, ambil uangku
+                aku tidak mencintaimu tinggalkan aku
+                jangan kembali kesini`
+           },     
         },
        video:{
               comet:"https://youtube.com/embed/VyvhvlYvRnc",
@@ -846,6 +888,7 @@ function useSong() {
               bandung:"https://youtube.com/embed/R6esoDId4fY",
               wasureji:"https://youtube.com/embed/0pOIEza8Cpc",
               fairyTale:"https://youtube.com/embed/m8TfY3xfYR0",
+              etoLiScaste:"https://youtube.com/embed/MQRM3qVMlqY",
        } ,
        text:{
         yorunikakeru_text:{

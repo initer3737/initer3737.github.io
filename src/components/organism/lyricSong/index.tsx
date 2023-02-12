@@ -295,6 +295,35 @@ export default function LyricSong() {
           <VideoFromYoutube src={useSong().video.tanjirou} />
       </div>
     </div>
+
+      <div className="songEtoLiScasteBG blending__mode__blue shadow"/>
+      <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+          <div className="text-center ">
+            <h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+              {useSong().original.etoLiScaste.title}
+            </h5>
+          </div>
+          <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+            {useSong().original.etoLiScaste.lirik}
+          </div>
+        </div>
+
+    <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+      <div className="text-center ">
+        <h5>
+        <Icon variant={''} icon={'pencil-square'} name={' '}/> 
+          {useSong().translate.etoLiScaste.title}
+        </h5>
+      </div>
+      <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+        {useSong().translate.etoLiScaste.lirik}
+        <div className="mb-3">
+            <LinkToPage href={'https://firmanimmanksyah.xyz/lirik-lela-lela-le-rauf-faik-dan-arti/'} icon={'link'} target={'_blank'} variant={'info'} name={' link referensi'} className={'d-inline'}/>
+        </div>
+          <VideoFromYoutube src={useSong().video.etoLiScaste} />
+      </div>
+    </div>
     
       <div className="songTemnayaBG blending__mode__blue shadow"/>
       <div className="mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">

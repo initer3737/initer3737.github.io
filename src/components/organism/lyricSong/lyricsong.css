@@ -42,6 +42,9 @@
 .songBandungImageBg{
     background-image: url(../../../imgs/bandung.jpg);
 }
+.songEtoLiScasteBG{
+    background-image: url(../../../imgs/money.jpg);
+}
 
 .blending__mode__blue{
     width: 100%;
