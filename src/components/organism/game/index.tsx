@@ -441,7 +441,7 @@ const AmmoWeapon=changeWeapon?30:5;
                             setReloadAction(true)
                             setTimeout(()=>{
                               setReloadAction(false)
-                            },5000)
+                            },3000)
                         }
                     if (ammo <= 0) srcAudio(emptygunSound).play();
                     setScore((score) => (ammo <= 0 ? score : score + 1));
