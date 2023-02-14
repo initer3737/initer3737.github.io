@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.3a9e731c.css",
-    "main.js": "/static/js/main.9b59cc2e.js",
+    "main.js": "/static/js/main.d9321716.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
@@ -50,10 +50,10 @@
     "static/media/artileri.mp3": "/static/media/artileri.2ee7eb3bd59d75090b8c.mp3",
     "static/media/giphy (1).gif": "/static/media/giphy (1).a43db8f03471a8fdeee5.gif",
     "static/media/book-158812.png": "/static/media/book-158812.cce0cc7959d103e0bfbb.png",
-    "static/media/SPR_2_1.mp3": "/static/media/SPR_2_1.027ae2818951eabdbda4.mp3",
     "static/media/puing.mp3": "/static/media/puing.fd2c2fea27379cbc44da.mp3",
     "static/media/SPR_2_1_fire.png": "/static/media/SPR_2_1_fire.974ebb3b7941eebd6613.png",
     "static/media/soldat.png": "/static/media/soldat.9274177d6a0aa01b9e55.png",
+    "static/media/SPR_2_1.mp3": "/static/media/SPR_2_1.8394218034e83f039e38.mp3",
     "static/media/TSR.png": "/static/media/TSR.efe9765e5b3b287bd960.png",
     "static/media/TSV.png": "/static/media/TSV.61a2616867f17dc1a81b.png",
     "static/media/SPR_2_1-info.png": "/static/media/SPR_2_1-info.b27979a768daca8c4c94.png",
@@ -66,11 +66,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.3a9e731c.css.map": "/static/css/main.3a9e731c.css.map",
-    "main.9b59cc2e.js.map": "/static/js/main.9b59cc2e.js.map",
+    "main.d9321716.js.map": "/static/js/main.d9321716.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3a9e731c.css",
-    "static/js/main.9b59cc2e.js"
+    "static/js/main.d9321716.js"
   ]
 }
