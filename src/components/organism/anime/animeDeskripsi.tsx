@@ -10,7 +10,7 @@ import { animeType } from "./animeListType"
             rank:'epic',
             msg:'anime ini sebenarnya mengangkat isu eksploitasi anak dibawah umur dan Machiavellianism yang mana organisasi DA[direct attack] mencoba menutupi fakta bahwa di jepang ada kasus kejahatan terorisme lewat agent yang bernama lycoris yang mereka buat, ini mengingatkan saya tentang kota yang dihapus oleh pemerintahan jepang [kamagasaki] dan juga peristiwa penggusuran tuna wisma oleh pemerintahan jepang di saat olimpiade tokyo kemarin [2020] ,apakah kehadiran anime ini sebagai kritik atas apa yang dilakukan pemerintahan tokyo selama ini?? entahlah hanya tuhan dan pemerintahan jepang yang tahu.',
             link:'https://www.kompas.com/properti/read/2022/04/16/120000121/kamagasaki-kota-terkumuh-di-jepang-dihapus-dari-peta-kenapa?page=all',
-            tampil:false
+            tampil:true
         },
         kimetsu:{
             name:'kimetsu no yaiba',
