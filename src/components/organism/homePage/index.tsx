@@ -136,7 +136,7 @@ export default function HomePage()
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
           <>
             <LinkToPage 
-              href={"https://initer3737.github.io/course/#/course"}
+              href={"https://course-4dr4n0zwn-initer3737.vercel.app/"}
               target="_blank"
               variant={'primary'}
               name={'blog'}
@@ -144,7 +144,7 @@ export default function HomePage()
           </>
           <>
             <LinkToPage 
-              href={"https://initer3737.github.io/tongkronganku/pages/umkms/epri-cilok/toko.html"}
+              href={"https://initer3737.github.io/tongkronganku/"}
               target="_blank"
               variant={'primary'}
               name={'bussines'}
