@@ -1,6 +1,7 @@
 import React from 'react'
 import Video from '../../../imgs/Earth - 4788.mp4'
 import LDV from '../../../imgs/LDV.jpg'
+import ODV from '../../../imgs/ODV.jpg'
 import LRV from '../../../imgs/LRV.png'
 import TSV from '../../../imgs/TSV.png'
 import TSR from '../../../imgs/TSR.png'
@@ -121,6 +122,16 @@ export default function HomePage()
                   </div>
               </div>
                LDV
+          </div>
+          <div className='d-flex flex-column justify-content-center align-items-center'>
+              <div className="position-relative">
+                <Img src={ODV} alt={'ldv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+                  <div className="mata-container">
+                    <Icon variant={' mysql'} icon={'circle-fill mata'} name={''}/>
+                    <Icon variant={' mysql'} icon={'circle-fill mata'} name={''}/>
+                  </div>
+              </div>
+               ODV
           </div>
           <div className="banners-border-kiri-atas">
             <div className="banners-border"></div>
