@@ -155,6 +155,14 @@ export default function HomePage()
           </>
           <>
             <LinkToPage 
+              href={"https://language-rho.vercel.app/"}
+              target="_blank"
+              variant={'primary'}
+              name={'blog2'}
+              icon={'file-richtext-fill'} className={''}            />
+          </>
+          <>
+            <LinkToPage 
               href={"https://initer3737.github.io/tongkronganku/"}
               target="_blank"
               variant={'primary'}
