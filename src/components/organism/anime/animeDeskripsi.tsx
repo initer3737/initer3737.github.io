@@ -135,7 +135,7 @@ import { animeType } from "./animeListType"
             link:'https://pedomantangerang.pikiran-rakyat.com/selebritas/pr-072792826/nonton-anime-blue-period-lengkap-dengan-sinopsis-dan-link-streaming',
             tampil:true
         },
-        NewGame:{
+        newGame:{
             name:'new game',
             pov:'di menit ke 1:23 "Our Work Is Fun" yeah sangat menggambarkan keadaan karyawan yang suka koding-mengkoding khususnya back end dev',
             rate:'9.3',
@@ -143,6 +143,17 @@ import { animeType } from "./animeListType"
             rank:'epic',
             msg:'suzuke aoba adalah fresh graduate yang bekerja sebagai pengembang game di perusahaan Eagle Jump ,dia bekerja sebagai 3d designer',
             link:'https://www.youtube.com/playlist?list=PLPanbgyToztbZ-pVx140xwRbev5tnssrd',
+            tampil:true
+        },
+        eightySix:{
+            name:'eighty six',
+            pov:'di menit ke 1:03 berpakaian ala militer membuat saia jatuh hati kepada mbak yang ayu nan gepeng , sosok misterius dengan rambut berwarna biru muda agak keputih-putihan',
+            rate:'7.3',
+            trailer:'https://youtube.com/embed/ElYA0bhlZdk',
+            rank:'unknown',
+            msg:'Republik San Magnolia telah berperang dengan Kekaisaran Giad selama sembilan tahun.. Meskipun awalnya menderita kerugian yang menghancurkan dari Legion mekanik otonom Kekaisaran, Republik telah mengembangkan unit otonomnya sendiri, yang disebut Juggernaut, yang diarahkan dari jarak jauh oleh seorang Handler. Sementara di permukaan publik percaya perang sedang terjadi di antara mesin, kenyataannya jauh lebih mengerikan. Pada kenyataannya, Juggernaut diujicobakan oleh manusia dan semuanya berusia 86-an,',
+            link:'https://www.youtube.com/playlist?list=PLPanbgyToztbZ-pVx140xwRbev5tnssrd',
+            link2:'https://id.wikipedia.org/wiki/86_(seri_novel)',
             tampil:true
         }
     }

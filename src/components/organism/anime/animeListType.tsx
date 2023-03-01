@@ -152,6 +152,17 @@
             link?:string,
             tampil:boolean
         }
+        type EightySix={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link?:string,
+            link2?:string,
+            tampil:boolean
+        }
 
  interface animeType{
                 lycoris:Lycoris,
@@ -168,7 +179,8 @@
                 blueperiod:Blueperiod,
                 tanakaKun:TanakaKun,
                 sakamoto:Sakamoto,
-                NewGame:NewGame,
+                newGame:NewGame,
+                eightySix:EightySix,
             }
 
 export type {animeType}

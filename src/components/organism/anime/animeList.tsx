@@ -1,4 +1,5 @@
 import React from "react";
+import { NewLineKind } from "typescript";
 import { LinkToPage,Icon, VideoFromYoutube } from "../../atom";
 import { animeLists } from "./animeDeskripsi";
 const AnimeList = () => {
@@ -49,6 +50,15 @@ const AnimeList = () => {
                 variant={`primary ${animelist[1].link ?? "d-none"} fs-4`} 
                 name={' link referensi'} 
                 className={`${animelist[1].link ?? "d-none"}`}
+                />
+            </li>
+            <li className="list-group-item" key={animelist[1].link}>
+            <LinkToPage 
+                href={animelist[1].link2 ?? undefined} 
+                icon={'link'} target={'_blank'} 
+                variant={`primary ${animelist[1].link2 ?? "d-none"} fs-4`} 
+                name={' link referensi'} 
+                className={`${animelist[1].link2 ?? "d-none"}`}
                 />
             </li>
             <li
