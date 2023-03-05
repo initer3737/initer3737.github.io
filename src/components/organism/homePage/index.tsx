@@ -105,7 +105,7 @@ export default function HomePage()
                 <Img src={TSR} alt={'tsr'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                 TSR
           </div>
-          <div className='d-none d-flex flex-column justify-content-center align-items-center'>
+          <div className='d-flex flex-column justify-content-center align-items-center'>
                 <Img src={TSV} alt={'tsv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                 TSV
           </div>
