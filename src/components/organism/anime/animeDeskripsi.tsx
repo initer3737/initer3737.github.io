@@ -155,6 +155,17 @@ import { animeType } from "./animeListType"
             link:'https://www.youtube.com/playlist?list=PLPanbgyToztbZ-pVx140xwRbev5tnssrd',
             link2:'https://id.wikipedia.org/wiki/86_(seri_novel)',
             tampil:true
+        },
+        ayano:{
+            name:'Classroom of the Elite ',
+            pov:'anime ini menunjukkan secara blak-blakan mengenai manusia yang selalu mempunyai 2 kepribadian baik dan busuk yang baik ditunjukkan di depan public dan yang busuk ditunjukkan di belakang tapi ada beberapa faktor yang menyebabkan manusia memiliki sifat tersebut salah satunya adalah kemampuan adaptasi manusia di berbagai lingkungan sosial, ayano koji saat itu terkejut melihat teman sekelasnya memiliki sifat yang berbeda saat tidak berada di depan teman sekelasnya lantas iapun berpura-pura tidak peduli saat dipergoki mengintip teman sekelasnya tersebut di balik semak',
+            rate:'9.6',
+            trailer:'https://youtube.com/embed/NO-IhnTNSDM',
+            rank:'epic',
+            msg:'manusia hanyalah alat ,tidak peduli apa yang dikorbankan ,didunia ini kemenangan adalah segalanya ',
+            link:'https://youtu.be/-QwFNyAoKvQ',
+            link2:'https://id.quora.com/Mengapa-ada-orang-yang-bermuka-dua-Apa-tujuan-orang-bermuka-dua',
+            tampil:true
         }
     }
 

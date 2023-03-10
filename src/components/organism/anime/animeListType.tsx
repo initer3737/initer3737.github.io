@@ -163,6 +163,17 @@
             link2?:string,
             tampil:boolean
         }
+        type ayano={
+            name:string,
+            pov:string,
+            rate:string,
+            trailer:string,
+            rank:string,
+            msg:string,
+            link?:string,
+            link2?:string,
+            tampil:boolean
+        }
 
  interface animeType{
                 lycoris:Lycoris,
@@ -181,6 +192,7 @@
                 sakamoto:Sakamoto,
                 newGame:NewGame,
                 eightySix:EightySix,
+                ayano:ayano,
             }
 
 export type {animeType}
