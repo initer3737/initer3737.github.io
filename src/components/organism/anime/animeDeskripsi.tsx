@@ -152,7 +152,7 @@ import { animeType } from "./animeListType"
             trailer:'https://youtube.com/embed/ElYA0bhlZdk',
             rank:'unknown',
             msg:'Republik San Magnolia telah berperang dengan Kekaisaran Giad selama sembilan tahun.. Meskipun awalnya menderita kerugian yang menghancurkan dari Legion mekanik otonom Kekaisaran, Republik telah mengembangkan unit otonomnya sendiri, yang disebut Juggernaut, yang diarahkan dari jarak jauh oleh seorang Handler. Sementara di permukaan publik percaya perang sedang terjadi di antara mesin, kenyataannya jauh lebih mengerikan. Pada kenyataannya, Juggernaut diujicobakan oleh manusia dan semuanya berusia 86-an,',
-            link:'https://www.youtube.com/playlist?list=PLPanbgyToztbZ-pVx140xwRbev5tnssrd',
+            link:'https://youtu.be/1gkh_LKTaRA',
             link2:'https://id.wikipedia.org/wiki/86_(seri_novel)',
             tampil:true
         },
