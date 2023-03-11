@@ -162,7 +162,7 @@ import { animeType } from "./animeListType"
             rate:'9.6',
             trailer:'https://youtube.com/embed/NO-IhnTNSDM',
             rank:'epic',
-            msg:'manusia hanyalah alat ,tidak peduli apa yang dikorbankan ,didunia ini kemenangan adalah segalanya ',
+            msg:'manusia hanyalah alat ,tidak peduli apa yang dikorbankan ,didunia ini kemenangan adalah segalanya ["kiyotaka ayanokoji"]',
             link:'https://youtu.be/-QwFNyAoKvQ',
             link2:'https://id.quora.com/Mengapa-ada-orang-yang-bermuka-dua-Apa-tujuan-orang-bermuka-dua',
             tampil:true
