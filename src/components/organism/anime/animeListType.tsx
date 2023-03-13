@@ -1,169 +1,5 @@
 
-        type Lycoris={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-
-        type Kimetsu={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-
-        type Chainsaw={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            tampil:boolean
-        }
-
-        type Thensura={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            tampil:boolean
-        }
-
-        type Crow={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            tampil:boolean
-        }
-
-        type Crow2={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            tampil:boolean
-        }
-
-        type SamuraiX={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-
-        type Ninja={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            tampil:boolean
-        }
-
-        type GirlFrontline={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-
-        type kage={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            tampil:boolean
-        }
-        type Machiavellianism={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-        type Blueperiod={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-        type TanakaKun={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link:string,
-            tampil:boolean
-        }
-        type Sakamoto={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link?:string,
-            tampil:boolean
-        }
-        type NewGame={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link?:string,
-            tampil:boolean
-        }
-        type EightySix={
-            name:string,
-            pov:string,
-            rate:string,
-            trailer:string,
-            rank:string,
-            msg:string,
-            link?:string,
-            link2?:string,
-            tampil:boolean
-        }
-        type ayano={
+        type Tweejio={
             name:string,
             pov:string,
             rate:string,
@@ -176,23 +12,26 @@
         }
 
  interface animeType{
-                lycoris:Lycoris,
-                kimetsu:Kimetsu,
-                chainsaw:Chainsaw,
-                crow:Crow,
-                crow2:Crow2,
-                tenshura:Thensura,
-                samuraiX:SamuraiX,
-                ninja?:Ninja,
-                girlFrontline:GirlFrontline,
-                kage?:kage,
-                machiavellianism?:Machiavellianism,
-                blueperiod:Blueperiod,
-                tanakaKun:TanakaKun,
-                sakamoto:Sakamoto,
-                newGame:NewGame,
-                eightySix:EightySix,
-                ayano:ayano,
+                lycoris:Tweejio,
+                kimetsu:Tweejio,
+                chainsaw:Tweejio,
+                crow:Tweejio,
+                crow2:Tweejio,
+                tenshura:Tweejio,
+                samuraiX:Tweejio,
+                ninja?:Tweejio,
+                girlFrontline:Tweejio,
+                kage?:Tweejio,
+                machiavellianism?:Tweejio,
+                blueperiod:Tweejio,
+                tanakaKun:Tweejio,
+                sakamoto:Tweejio,
+                newGame:Tweejio,
+                eightySix:Tweejio,
+                ayano:Tweejio,
+                kubosan:Tweejio,
+                neirautomata:Tweejio,
+                nonbirinouka:Tweejio,
             }
 
 export type {animeType}
