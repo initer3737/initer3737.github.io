@@ -204,11 +204,11 @@ import { animeType } from "./animeListType"
             name:'isekai nonbiri nouka',
             pov:'bersama kedua istrinya beliau menjadi petani dan hidup damai selamanya...',
             rate:convert_rate_to_rank(777),
-            trailer:'https://youtube.com/embed/kx3znAQ1DaU',
+            trailer:'https://youtube.com/embed/zK0sBzZjcSE',
             rank:convert_rate_to_rank(777),
-            msg:'bereinkarnasi menjadi petani di dunia lain, jadi teringat game harvest moon back to natur ps1',
-            link:'https://youtu.be/zK0sBzZjcSE',
-            link2:'https://about.vidio.com/artikel/sinopsis-nier-automata-ver1-1a/#:~:text=Berlatar%20waktu%20di%20masa%20depan,karena%20berhadapan%20dengan%20para%20robot.',
+            msg:'bereinkarnasi menjadi petani di dunia lain, jadi teringat game harvest moon back to nature ps1',
+            link:'https://youtu.be/nHKWEeotdHA',
+            link2:'https://id.wikipedia.org/wiki/Isekai_Nonbiri_N%C5%8Dka',
             tampil:true
         },
     }
