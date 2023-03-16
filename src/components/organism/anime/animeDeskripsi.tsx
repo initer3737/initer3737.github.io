@@ -25,7 +25,7 @@ import { animeType } from "./animeListType"
         },
         kimetsu:{
             name:'kimetsu no yaiba',
-            pov:'anime ini digarap oleh mappa studio sehingga dari segi grafis dan animasi , begitu bagus ditambah effect serangan dan jurus yang tanjirou keluarkan yang begitu memukau , lihatlah scene yang saya lampirkan di link-referensi',
+            pov:'anime ini digarap oleh ufotable studio sehingga dari segi grafis dan animasi , begitu bagus ditambah effect serangan dan jurus yang tanjirou keluarkan yang begitu memukau , lihatlah scene yang saya lampirkan di link-referensi',
             rate:'8.5',
             trailer:'https://youtube.com/embed/a9tq0aS5Zu8',
             rank:convert_rate_to_rank(8.5),
