@@ -23,6 +23,18 @@ export default function HomePage()
 
               <div className="col-10 col-md-5 col-lg-4">
                 <div className="card shadow m-2 p-1 position-relative">
+                  <div className="border-atas-kanan">
+                    <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+                  </div>
+                  <div className="border-atas-kiri">
+                    <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+                  </div>
+                  <div className="border-bawah-kanan">
+                    <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+                  </div>
+                  <div className="border-bawah-kiri">
+                    <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
+                  </div>
                   <video src={`${Video}`} loop muted autoPlay className="w-100 rounded-pill py-5 px-2"></video>
                   <div className="filter2"></div>
                 </div>
