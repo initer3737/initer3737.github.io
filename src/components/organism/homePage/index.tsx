@@ -63,7 +63,7 @@ export default function HomePage()
 
           </div>
       </div>
-      <div className="overflow-hidden position-relative container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+      <div className="overflow-hidden position-relative container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2 banners-hoverable-effect">
           <h5><Icon variant={'dark'} icon={'briefcase-fill'} name={''}
           /> framework.
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/>  
@@ -83,7 +83,7 @@ export default function HomePage()
               </div>
           </div>
 
-      <div className="container bg-light shadow mt-5 d-flex flex-column  justify-content-center align-content-center align-items-center p-2">
+      <div className="container bg-light shadow mt-5 d-flex flex-column  justify-content-center align-content-center align-items-center p-2 ">
           <h5>
               <Icon variant={'dark'} icon={'code-slash'} name={''}/> language.
               <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
@@ -95,23 +95,32 @@ export default function HomePage()
               <h3><Icon variant={' css'} icon={'filetype-css'} name={''}/> css</h3>
           </div>
                   {/* banners */}
-      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2 banners-hoverable-effect">
         <h5>
           <Icon variant={'primary'} icon={'info-circle'} name={''}/> banners
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
         </h5>
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
-          <div className='d-flex flex-column justify-content-center align-items-center'>
-                <Img src={TSR} alt={'tsr'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+          <div className='d-flex flex-column justify-content-center align-items-center position-relative'>
+            <Img src={TSR} alt={'tsr'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                 TSR
+            <div className="hoverable-effect">
+                <h5>typescript react</h5>
+            </div>
           </div>
-          <div className='d-flex flex-column justify-content-center align-items-center'>
+          <div className='d-flex flex-column justify-content-center align-items-center position-relative'>
                 <Img src={TSV} alt={'tsv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                 TSV
+            <div className="hoverable-effect">
+                <h5>typescript vue</h5>
+            </div>
           </div>
-          <div className='d-flex flex-column justify-content-center align-items-center'>
+          <div className='d-flex flex-column justify-content-center align-items-center position-relative'>
                 <Img src={LRV} alt={'lrv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                LRV
+            <div className="hoverable-effect">
+                <h5>php laravel</h5>
+            </div>
           </div>
           <div className='d-flex flex-column justify-content-center align-items-center'>
               <div className="position-relative">
@@ -139,7 +148,7 @@ export default function HomePage()
         </div>
       </div>
 
-      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2">
+      <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2 ">
         <h5>
           <Icon variant={'primary'} icon={'info-circle'} name={''}/> information
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 

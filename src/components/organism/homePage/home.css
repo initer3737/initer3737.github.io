@@ -204,3 +204,43 @@
         margin-left: 12px;
     }
 }
+
+
+.hoverable-effect{
+    background: linear-gradient(45deg,rgba(0,0,0,.8),dodgerblue);
+    padding: 15px;
+    color: white;
+    transition: all 2s; 
+    font-size: 21px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+    border-radius: 8px;
+    filter: drop-shadow(8px 8px 12px purple);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: hoverable-animeshion 4s alternate infinite;
+}
+@keyframes  hoverable-animeshion {
+    from{}
+    to{
+        filter: drop-shadow(8px 8px 12px #fff);
+    }
+}
+.hoverable-effect:hover{
+    opacity: 1;
+}
+
+.banners-hoverable-effect{
+    background-color: #fff;
+    transition: 2s all;
+}
+.banners-hoverable-effect:hover{
+    background: linear-gradient(45deg,rgba(0,0,0,.8),dodgerblue);
+    filter: drop-shadow(1px 1px 4px black);
+    color: #fff;
+    /* transition: 3s all; */
+    opacity: 1;
+}
