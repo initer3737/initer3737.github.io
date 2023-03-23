@@ -12,7 +12,6 @@
         }
 
  interface animeType{
-                lycoris:Tweejio,
                 kimetsu:Tweejio,
                 chainsaw:Tweejio,
                 crow:Tweejio,

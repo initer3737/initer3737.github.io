@@ -13,16 +13,6 @@ import { animeType } from "./animeListType"
     }
     //legend epic middle mid-medium 
     const animeLists:animeType={
-        lycoris:{
-            name:'lycoris recoil',
-            pov:'chisato sejak kecil ia memiliki bakat yang menonjol diantara rekan-rekannya dibawah organisasi DA[direct attack]( organisasi yang memungut anak yatim-piatu dan menjadikannya agent pembunuh) namun ia memiliki penyakit jantung sejak ia berusia dini tetapi agensi alan (agensi yang mendukung orang-orang yang memiliki bakat istimewa) tidak membiarkannya mati begitu saja ia diberikkan jantung buatan namun jantung tersebut memiliki waktu yang terbatas [hanya sampai ia berusia 18 tahun saja] setelah lewat maka iapun akan meninggal,perpaduan antara baku tembak dan it[information teknologi] membuat anime ini begitu terasa mengesankan serta scene hacking yang begitu realistis dan menampilkan kode program yang real cuy bukan hello world , tentu saja itu yang menjadi perhatian mimin,yang sangat memukau dari anime ini adalah penggunaan teknik C.A.R(center axis relock) sehingga membuat akurasi dari penembak kian mematikan ,hayo kamu sudah coba teknik ini belum ,dari segi kenyamanan tentu teknik ini sangat nyaman saat menggenggam senjata dibandingkan teknik konvensional [tangan lurus sejajar ,180 derajat kedepan sejajar mata] tentu lama kelamaan tangan kamu akan sangat pegal ,akan tetapi teknik ini efektif ,jika target tembak sangat dekat dengan kamu serta dengan menggunakkan teknik ini akan membuat hentakan senapan menjadi kecil',
-            rate:'9.4',
-            trailer:'https://youtube.com/embed/F5DMjhg3A6c',
-            rank:convert_rate_to_rank(9.4),
-            msg:'anime ini sebenarnya mengangkat isu eksploitasi anak dibawah umur dan Machiavellianism yang mana organisasi DA[direct attack] mencoba menutupi fakta bahwa di jepang ada kasus kejahatan terorisme lewat agent yang bernama lycoris yang mereka buat, ini mengingatkan saya tentang kota yang dihapus oleh pemerintahan jepang [kamagasaki] dan juga peristiwa penggusuran tuna wisma oleh pemerintahan jepang di saat olimpiade tokyo kemarin [2020] ,apakah kehadiran anime ini sebagai kritik atas apa yang dilakukan pemerintahan tokyo selama ini?? entahlah hanya tuhan dan pemerintahan jepang yang tahu.',
-            link:'https://www.kompas.com/properti/read/2022/04/16/120000121/kamagasaki-kota-terkumuh-di-jepang-dihapus-dari-peta-kenapa?page=all',
-            tampil:true
-        },
         kimetsu:{
             name:'kimetsu no yaiba',
             pov:'anime ini digarap oleh ufotable studio sehingga dari segi grafis dan animasi , begitu bagus ditambah effect serangan dan jurus yang tanjirou keluarkan yang begitu memukau , lihatlah scene yang saya lampirkan di link-referensi',
