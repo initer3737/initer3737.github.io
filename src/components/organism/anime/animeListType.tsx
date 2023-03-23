@@ -32,6 +32,7 @@
                 kubosan:Tweejio,
                 neirautomata:Tweejio,
                 nonbirinouka:Tweejio,
+                tokidokibosottoroshia:Tweejio,
             }
 
 export type {animeType}

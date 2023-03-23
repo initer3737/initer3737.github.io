@@ -211,6 +211,17 @@ import { animeType } from "./animeListType"
             link2:'https://id.wikipedia.org/wiki/Isekai_Nonbiri_N%C5%8Dka',
             tampil:true
         },
+        tokidokibosottoroshia:{
+            name:'tokidoki bosotto roshia',
+            pov:'alisa mikhailovna kujo , adalah mbak alisa yang berambut perak nan cantik para pria pun dibuat kesemsem dengan kecantikkan mbak alisa , di dalam kelasnya ia duduk disebelah masachika kuze seorang murid pemalas dan selalu komplen saat alisa ngomong bahasa rusia walaupun masachika kuze bisa bahasa rusia juga tapi mbak alisa tidak mengetahuinya',
+            rate:convert_rate_to_rank(777),
+            trailer:'https://youtube.com/embed/fpA1NY7vRH4',
+            rank:convert_rate_to_rank(777),
+            msg:'menyembunyikan perasaan dalam bahasa rusia',
+            link:'https://www.wikiwand.com/ru/Tokidoki_Bosotto_Roshia-go_de_Dereru_Tonari_no_Alya-san',
+            link2:'https://id.wikipedia.org/wiki/Alya_Sometimes_Hides_Her_Feelings_in_Russian',
+            tampil:true
+        },
     }
 
     export {animeLists}
