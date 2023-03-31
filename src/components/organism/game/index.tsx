@@ -865,6 +865,62 @@ const AmmoWeapon=changeWeapon?30:5;
                     icon={"chevron-double-left"} 
                     name={""}
                     />
+                    <Icon variant={"info"} icon={"journal-text"} name={` `}/>
+                      biodatas
+                    <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-right"} 
+                    name={""}
+                    />
+                </h5> <hr />
+                <h5 className="fs4 text-center text-capitalize">
+                  <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-left"} 
+                    name={""}
+                    />
+                    <Icon variant={"info"} icon={"person-circle"} name={` `}/>
+                      Vika Rahmanova nurulianov
+                    <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-right"} 
+                    name={""}
+                    />
+                </h5> <hr />
+                <h5 className="fs4 text-center text-capitalize">
+                  <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-left"} 
+                    name={""}
+                    />
+                    <Icon variant={"info"} icon={"info-circle"} name={` `}/>
+                      пусть Аллах защитит тебя
+                    <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-right"} 
+                    name={""}
+                    />
+                </h5> <hr />
+                <h5 className="fs4 text-center text-capitalize">
+                  <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-left"} 
+                    name={""}
+                    />
+                    <Icon variant={"info"} icon={"info-circle"} name={` `}/>
+                      semoga allah melindungi anda
+                    <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-right"} 
+                    name={""}
+                    />
+                </h5> <hr />
+                <h5 className="fs4 text-center">
+                  <Icon 
+                    variant={"primary"} 
+                    icon={"chevron-double-left"} 
+                    name={""}
+                    />
                     {/* <Icon variant={"info"} icon={"hearts"} name={` `}/> */}
                       <Img src={rusiaFlag} alt={"rusia flag"} srcset={""} className={""} width={"15%"} height={""} attr={undefined}/>
                     <Icon 
