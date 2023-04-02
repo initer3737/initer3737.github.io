@@ -192,7 +192,7 @@ export default function HomePage()
           </>
           <>
             <LinkToPage 
-              href={"https://initer3737.github.io/galeri"}
+              href={"https://galeri.vercel.app/"}
               target="_blank"
               variant={'primary'}
               name={'galeri'}
