@@ -5,11 +5,13 @@ import Footer from './footer';
 import Nav from './nav';
 import Modal from "./modal";
 import QuotesMolekuls from "./quotesMolekuls";
+import LoadingAnimatsi from "./loadingAnimatsi";
 export {
     Card,
     Header,
     Footer,
     Nav,
     QuotesMolekuls,
-    Modal
+    Modal,
+    LoadingAnimatsi,
 };

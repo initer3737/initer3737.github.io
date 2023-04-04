@@ -11,15 +11,16 @@ import favicon from '../../imgs/kitten-7157608.png';
         HomePage,
         Anime,
         About,
-        LyricSong,
         Quotes,
-        Game
+        Game,
+        CrystalHarvester
     } from '../pages'
     import {
         Header,
         Footer,
         Nav,
-        ScrollToTop
+        ScrollToTop,
+        LoadingAnimatsi
     } from '../assembleComponent'
 import {
      Login ,
@@ -30,7 +31,7 @@ import {
 export default function Routes(){
     const location=useLocation();
         const {pathname}=location;
-        const path=pathname.split('/');   
+        const path=pathname.split('/')[1];   
   useEffect(() => {
         const changeFavicon=(src:string)=>{
            let favicon=document.getElementById('favicon')?.getAttribute('href')
@@ -50,20 +51,21 @@ export default function Routes(){
                     <Switch>
                         <Route path="/" element={<HomePage />} />
                         <Route path="/about" element={<About />} />
-                        <Route path="/songs" element={<LyricSong />} />
                         <Route path="/quotes" element={<Quotes />} />
                         <Route path="/animes" element={<Anime />} />
-                        <Route  element={<ProtectedRoutes/>}>
+                        <Route  element={<ProtectedRoutes navigate='/login'/>}>
                             <Route path="/game" element={<Game/>} />
                         </Route>
+                        <Route path="/crystal" element={<CrystalHarvester/>} />
+                        <Route path="/loading/:url" element={<LoadingAnimatsi/>} />
                         <Route path="/login" element={<Login/>} />
                         <Route path="/404" element={<NotFound/>} />
                         <Route path='*' element={<Navigate replace to='/404'/>} />
                     </Switch>
                </>
-            <>
+            <div className={`${path === 'crystal' || path === 'loading'?'d-none':'d-block'}`}>
                 <Footer/>
-            </>   
+            </div>   
         </div>
      )
 }

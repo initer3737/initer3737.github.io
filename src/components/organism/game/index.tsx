@@ -28,13 +28,6 @@ import rusiaFlag from "../../../imgs/rusia-flag.png";
 import { Button, Icon, Img, LinkToPage, Modal,Input } from "../../assembleComponent";
 import { useNavigate } from "react-router-dom";
 /*themes*/
-import themeSound1 from '../../../sound/teme-gaming-1.mp3'
-import themeSound2 from '../../../sound/teme-gaming-2.mp3'
-import themeSound3 from '../../../sound/teme-gaming-3.mp3'
-import themeSound4 from '../../../sound/teme-gaming-4.mp3'
-import themeSound5 from '../../../sound/teme-gaming-5.mp3'
-import themeSound6 from '../../../sound/teme-gaming-6.mp3'
-import themeSound7 from '../../../sound/teme-gaming-7.mp3'
 import battleTheme from '../../../sound/battletheme.mp3'
 import artileri from '../../../sound/artileri.mp3'
 import alarmmiliter from '../../../sound/alarmmiliter.mp3'
@@ -69,19 +62,9 @@ export default function Game() {
     })
   }
 const ModalClose=(id:string)=>document.getElementById(id)?.click();
-  const themes=[
-    themeSound1,
-    themeSound2,
-    themeSound3,
-    themeSound4,
-    themeSound5,
-    themeSound6,
-    themeSound7,
-];
 
 const day=new Date().getDay();
 const year=new Date().getFullYear();
-let audio=new Audio(themes[day===6?0:day+1])
 let BattleTheme=new Audio(battleTheme);
 let Artileri=new Audio(artileri);
 let Alarmmiliter=new Audio(alarmmiliter);
@@ -186,15 +169,15 @@ const AmmoWeapon=changeWeapon?30:5;
       ServeMotherland(false);
      }
         //main sound aka theme music
-      audio.loop=true;
-      audio.volume=0.2
-      audio.play()
+      // audio.loop=true;
+      // audio.volume=0.2
+      // audio.play()
       changeWeapon?setAmmo(30):setAmmo(5)
   }, []);
   useEffect(()=>{
     //when route change it trigger callback to pause audio || a.k.a component will unmount || unmounting lifecycle
     return ()=>{
-      audio.pause()
+      // audio.pause()
       BattleTheme.pause()
       Artileri.pause()
       Alarmmiliter.pause()

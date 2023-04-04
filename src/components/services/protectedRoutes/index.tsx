@@ -1,13 +1,16 @@
 import React from 'react'
 import { Navigate,Outlet } from 'react-router-dom'
   //[username:'',pass:'',is-login:bool]
-const useAuth=(auth:boolean=false)=>{
-    return (auth?<Outlet/>:<Navigate to={'/login'}/>) 
+const useAuth=(auth:boolean=false,ifFalse:string)=>{
+    return (auth?<Outlet/>:<Navigate to={ifFalse}/>) 
     //outlet adalah komponen anak | child component dari komponen protectedroutes 
     //jika argumen auth mereturn true maka komponen outlet akan dirender
     //sebaliknya maka user akan di arahkan ke login page
 }
-export default function ProtectedRoutes() {
+    type props={
+        navigate:string
+    }
+export default function ProtectedRoutes({navigate}:props) {
     const getUser=localStorage.getItem('username')
     const getPass=localStorage.getItem('password')
     const getToken=localStorage.getItem('token')
@@ -18,5 +21,5 @@ export default function ProtectedRoutes() {
           localStorage.setItem('password','');
       }
       
-    return useAuth(getUser !== '' && getPass !== '' && getToken !== 'false');
+    return useAuth(getUser !== '' && getPass !== '' && getToken !== 'false',navigate);
 }

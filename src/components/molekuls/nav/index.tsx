@@ -32,14 +32,6 @@ export default function Nav() {
                 href="/quotes" 
                 isIcon={true} 
                 icon={"chat-text"}    
-                />
-            <Link 
-                target={''}
-                variant={`${splitLokasi[1]==='songs'?'light':'info'}`} 
-                name={'songs'} 
-                href="/songs" 
-                isIcon={true} 
-                icon={"file-music-fill"}    
                 /> 
             <Link 
                 target={''}

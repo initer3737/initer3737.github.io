@@ -1,0 +1,30 @@
+.moonlight-weejio-begeh{
+    position: absolute;
+    object-position: center;
+    object-fit: cover;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.loading-container{
+    position:absolute;
+    bottom:20px;
+    right:50px;
+    color:#fff;
+    animation: loading 2s alternate infinite;
+    background: linear-gradient(rgba(0, 0, 255,.7),rgba(0,0,0,.7));
+    padding: 4px;
+    transform: translateX(0px);
+    transition: all 4s;
+}
+
+@keyframes loading {
+    from{}
+    to{
+        text-shadow: 1px 5px  purple;
+        box-shadow: 1px 1px 5px 3px dodgerblue;
+        transform: translateX(13px);
+        transition: all 4s;
+        opacity: 0;
+    }
+}

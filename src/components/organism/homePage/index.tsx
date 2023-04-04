@@ -60,7 +60,7 @@ export default function HomePage()
                         name={'github'}
                         icon={'github'} className={''}                      />
                   </div>
-                  <div className="">
+                  <div className="d-flex flex-column gap-1">
                         <LinkToPage 
                             href={'#/game'}
                             variant={'outline-primary'}
@@ -68,6 +68,14 @@ export default function HomePage()
                             icon={'controller'} 
                             target={''} 
                             className={'btn btn-outline-info py-3 px-5 rounded-pill shadow'}                          
+                            />
+                        <LinkToPage 
+                            href={'#/loading/crystal'}
+                            variant={'outline-primary'}
+                            name={' Game2'} 
+                            icon={'controller'} 
+                            target={''} 
+                            className={'btn btn-outline-info py-3 px-5 rounded-pill shadow d-none d-md-block'}                          
                             />
                     </div>
               </div>
