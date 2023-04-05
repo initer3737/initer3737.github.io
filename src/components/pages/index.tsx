@@ -5,4 +5,6 @@ import Quotes from './quotes';
 import Anime from './anime';
 import Game from './game';
 import CrystalHarvester from './crystalharvester';
-export {NotFound,HomePage,About,Quotes,Anime,Game,CrystalHarvester};
+import {CrystalHarvesterLogin} from './crystalharvester/auth';
+//============
+export {NotFound,HomePage,About,Quotes,Anime,Game,CrystalHarvester,CrystalHarvesterLogin};

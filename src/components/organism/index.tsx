@@ -5,4 +5,6 @@ import Anime from './anime'
 import NotFound from './404'
 import Game from './game'
 import CrystalHarvester from './crystalharvester'
-export {HomePage,About,Quotes,Anime,NotFound,Game,CrystalHarvester}
+import CrystalHarvesterLogin from './crystalharvester/auth/login'
+
+export {HomePage,About,Quotes,Anime,NotFound,Game,CrystalHarvester,CrystalHarvesterLogin}

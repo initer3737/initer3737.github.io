@@ -1,0 +1,67 @@
+hr{
+    /* color: #fff; */
+    width: 100%;
+    border: 1px solid #fff;
+}
+.auth-btn{
+    background-color: dodgerblue;
+    padding:5px 50px;
+    font-size: 19px;
+    color: #fff;
+    text-transform: capitalize;
+
+}
+.forms-container .input-wrapper{
+    margin: 0px 12px;
+}
+.forms-container .input-wrapper input{
+    border: 0;
+    font-size: 16px;
+    color:#fff;
+    padding: 3px 2px;
+    background: transparent;
+    border-bottom: 2px solid white;
+    transition: 2s all;
+}
+.forms-container .input-wrapper input:focus{
+    outline: none;
+    border-bottom: 2px solid purple;
+}
+.appName{
+    font-size: 24px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.forms-container{
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    z-index: 122;
+    top: 0px;
+    right: 0px;
+    /* inset: 0; */
+    background: rgba(0, 0, 0,.6);
+    width: 250px;
+    height:100%;
+    border-left: 2px solid #fff;
+}
+.link-harvester{
+    color: #fff;
+    text-decoration: none;
+    transition: all 2s;
+}
+.link-harvester:hover{
+    color: dodgerblue;
+    border-bottom: 2px solid blue;
+}
+.moonlight-weejio-begeh{
+    position: absolute;
+    object-position: center;
+    object-fit: cover;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}

@@ -17,6 +17,18 @@
     transform: translateX(0px);
     transition: all 4s;
 }
+.loading-appName-container{
+    position:absolute;
+    bottom:40%;
+    right:50%;
+    color:#fff;
+    animation: loading 2s alternate infinite;
+    animation-delay: 3s;
+    background: linear-gradient(rgba(0, 0, 255,.7),rgba(0,0,0,.7));
+    padding: 4px;
+    transform: translateX(0px);
+    transition: all 4s;
+}
 
 @keyframes loading {
     from{}

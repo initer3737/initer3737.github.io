@@ -13,18 +13,20 @@ import favicon from '../../imgs/kitten-7157608.png';
         About,
         Quotes,
         Game,
-        CrystalHarvester
+        CrystalHarvester,
+        CrystalHarvesterLogin,
     } from '../pages'
     import {
         Header,
         Footer,
         Nav,
         ScrollToTop,
-        LoadingAnimatsi
+        LoadingAnimatsi,
     } from '../assembleComponent'
 import {
      Login ,
-     ProtectedRoutes
+     ProtectedRoutes,
+     ProtectedRoutesAuth,
 } from "../services";
 
 
@@ -56,7 +58,17 @@ export default function Routes(){
                         <Route  element={<ProtectedRoutes navigate='/login'/>}>
                             <Route path="/game" element={<Game/>} />
                         </Route>
-                        <Route path="/crystal" element={<CrystalHarvester/>} />
+                        <Route  element={<ProtectedRoutes navigate='/loading/crystal&login'/>}>
+                            <Route path="/crystal" element={<CrystalHarvester/>} />
+                        </Route>
+                                {/* crystal harvester start */}
+                        <Route  element={<ProtectedRoutes navigate='/loading/crystal&login'/>}>
+                            <Route path="/crystal" element={<CrystalHarvester/>} />
+                        </Route>
+                        <Route  element={<ProtectedRoutesAuth navigate='/loading/crystal'/>}>
+                            <Route path="/crystal/login" element={<CrystalHarvesterLogin/>} />
+                        </Route>
+                                 {/* crystal harvester end */}
                         <Route path="/loading/:url" element={<LoadingAnimatsi/>} />
                         <Route path="/login" element={<Login/>} />
                         <Route path="/404" element={<NotFound/>} />
