@@ -6,5 +6,6 @@ import NotFound from './404'
 import Game from './game'
 import CrystalHarvester from './crystalharvester'
 import CrystalHarvesterLogin from './crystalharvester/auth/login'
-
-export {HomePage,About,Quotes,Anime,NotFound,Game,CrystalHarvester,CrystalHarvesterLogin}
+import { CrystalHarvesterReset,CrystalHarvesterRegister } from './crystalharvester/auth'
+//====
+export {HomePage,About,Quotes,Anime,NotFound,Game,CrystalHarvester,CrystalHarvesterLogin,CrystalHarvesterReset,CrystalHarvesterRegister}

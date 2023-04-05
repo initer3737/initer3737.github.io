@@ -4,12 +4,13 @@ import dewiBulan from '../../../../../weejio/mulberry-moonlight-lotus-arknights-
 import { Kuki__initialize } from '../../../../services'
 import './style.css'
 import { Icon } from '../../../../atom'
-import { data } from '../.././datas'
+import { data } from '../../datas'
 //=================================
-export default function CrystalHarvesterLogin() {
+export default function CrystalHarvesterReset() {
             let formdatas={
                 username:'',
                 password:'',
+                password_confirm:'',
             }
         const navigate=useNavigate()    
         const [formdata , setFormdata] =useState(formdatas)
@@ -26,12 +27,13 @@ export default function CrystalHarvesterLogin() {
             setFormdata({...formdata,[id]:value})
         }
         const onSubmit=()=>{
-            const {username,password}=formdata
-            const {playerName,playerPassword}=storage
-            if(username === playerName && password === playerPassword){
+            const {username,password,password_confirm}=formdata
+            const {playerName}=storage
+            if(username === playerName && password === password_confirm){
+                localStorage.setItem('password',password)
                 localStorage.setItem('token','true')
-                Kuki__initialize()
-                navigate('loading/crystal')
+                // Kuki__initialize()
+                navigate('/loading/crystal&login')
             }
         }
         //============useEffect
@@ -51,18 +53,25 @@ export default function CrystalHarvesterLogin() {
             <div className="input-wrapper">
                 <label htmlFor="password" className='d-flex gap-1 align-items-center'>
                     password
-                    <Icon variant={storage.playerPassword=== formdata.password?'info':'danger'} icon={'check2-circle'} name={''}/>
+                    <Icon variant={formdata.password_confirm === formdata.password?'info':'danger'} icon={'check2-circle'} name={''}/>
                 </label>
                 <input type="password" id='password' placeholder='password' onChange={onChange} />
             </div>
-            <button className='auth-btn' onClick={onSubmit}>login</button>
+            <div className="input-wrapper">
+                <label htmlFor="password_confirm" className='d-flex gap-1 align-items-center'>
+                    confirm password
+                    <Icon variant={formdata.password_confirm === formdata.password?'info':'danger'} icon={'check2-circle'} name={''}/>
+                </label>
+                <input type="password" id='password_confirm' placeholder='confirm password' onChange={onChange} />
+            </div>
+            <button className='auth-btn' onClick={onSubmit}>reset</button>
             <hr/>
             <div className="d-flex gap-3">
                 <NavLink to={'loading/crystal&login'} className='link-harvester'>
                     register
                 </NavLink>
                 <NavLink to={'loading/crystal&login'} className='link-harvester'>
-                    reset
+                    login
                 </NavLink>
             </div>
         </div>

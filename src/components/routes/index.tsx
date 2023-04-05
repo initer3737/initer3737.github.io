@@ -15,6 +15,8 @@ import favicon from '../../imgs/kitten-7157608.png';
         Game,
         CrystalHarvester,
         CrystalHarvesterLogin,
+        CrystalHarvesterReset,
+        CrystalHarvesterRegister,
     } from '../pages'
     import {
         Header,
@@ -67,6 +69,8 @@ export default function Routes(){
                         </Route>
                         <Route  element={<ProtectedRoutesAuth navigate='/loading/crystal'/>}>
                             <Route path="/crystal/login" element={<CrystalHarvesterLogin/>} />
+                            <Route path="/crystal/register" element={<CrystalHarvesterRegister/>} />
+                            <Route path="/crystal/reset" element={<CrystalHarvesterReset/>} />
                         </Route>
                                  {/* crystal harvester end */}
                         <Route path="/loading/:url" element={<LoadingAnimatsi/>} />

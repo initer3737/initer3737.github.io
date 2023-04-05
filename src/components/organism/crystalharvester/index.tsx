@@ -12,8 +12,10 @@ export default function CrystalHarvester() {
         const [score , setScore] =useState<number>(0)
         const [isHit , setIsHit] =useState<boolean>(false)
         const [isPause , setIsPause] =useState<boolean>(false)
-        const datas=data
-        let HightScore=datas.playerScore
+        const db=(key:string)=>localStorage.getItem(key)
+        const storage={
+            playerName:db('username'),
+        }
         let HightScore2=localStorage.getItem('scorePlayer')
         const woosh=new Audio(wooshSound)
         const Hooray=new Audio(puingSound)
@@ -50,7 +52,7 @@ export default function CrystalHarvester() {
                 }
             },[isPause])
             useEffect(()=>{
-                if(score > JSON.parse(HightScore!!)){
+                if(score > JSON.parse(HightScore2!!)){
                     localStorage.setItem('scorePlayer',JSON.stringify(score))
                     Hooray.play()
                 }
@@ -75,7 +77,7 @@ export default function CrystalHarvester() {
         <div className="score-container">
             <h3><Icon variant={'info'} icon={'suit-diamond-fill'} name={''}/>{score}</h3>
             <h3><Icon variant={'warning'} icon={'stars'} name={''}/> {HightScore2}</h3>
-            <h3><Icon variant={'info'} icon={'person-bounding-box'} name={''}/> {datas.playerName}</h3>
+            <h3><Icon variant={'info'} icon={'person-bounding-box'} name={''}/> {storage.playerName}</h3>
         </div>
                 {/* pause button*/}
         <div className="pause-container">
