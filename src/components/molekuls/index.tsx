@@ -6,6 +6,7 @@ import Nav from './nav';
 import Modal from "./modal";
 import QuotesMolekuls from "./quotesMolekuls";
 import LoadingAnimatsi from "./loadingAnimatsi";
+import LoadingAnimatsiCounterStrike from "./loadingAnimatsiCounterStrike";
 export {
     Card,
     Header,
@@ -14,4 +15,5 @@ export {
     QuotesMolekuls,
     Modal,
     LoadingAnimatsi,
+    LoadingAnimatsiCounterStrike,
 };

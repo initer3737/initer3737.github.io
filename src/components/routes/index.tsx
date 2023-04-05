@@ -24,6 +24,7 @@ import favicon from '../../imgs/kitten-7157608.png';
         Nav,
         ScrollToTop,
         LoadingAnimatsi,
+        LoadingAnimatsiCounterStrike,
     } from '../assembleComponent'
 import {
      Login ,
@@ -57,7 +58,7 @@ export default function Routes(){
                         <Route path="/about" element={<About />} />
                         <Route path="/quotes" element={<Quotes />} />
                         <Route path="/animes" element={<Anime />} />
-                        <Route  element={<ProtectedRoutes navigate='/login'/>}>
+                        <Route  element={<ProtectedRoutes navigate='/loadingCounterStrike/login'/>}>
                             <Route path="/game" element={<Game/>} />
                         </Route>
                         <Route  element={<ProtectedRoutes navigate='/loading/crystal&login'/>}>
@@ -74,12 +75,13 @@ export default function Routes(){
                         </Route>
                                  {/* crystal harvester end */}
                         <Route path="/loading/:url" element={<LoadingAnimatsi/>} />
+                        <Route path="/loadingCounterStrike/:url" element={<LoadingAnimatsiCounterStrike/>} />
                         <Route path="/login" element={<Login/>} />
                         <Route path="/404" element={<NotFound/>} />
                         <Route path='*' element={<Navigate replace to='/404'/>} />
                     </Switch>
                </>
-            <div className={`${path === 'crystal' || path === 'loading'?'d-none':'d-block'}`}>
+            <div className={`${path === 'crystal' || path === 'login' || path === 'loadingCounterStrike' || path === 'loading'?'d-none':'d-block'}`}>
                 <Footer/>
             </div>   
         </div>

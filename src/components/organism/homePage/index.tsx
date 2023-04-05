@@ -62,7 +62,7 @@ export default function HomePage()
                   </div>
                   <div className="d-flex flex-column gap-1">
                         <LinkToPage 
-                            href={'#/game'}
+                            href={'#/loadingCounterStrike/game'}
                             variant={'outline-primary'}
                             name={' Game'} 
                             icon={'controller'} 

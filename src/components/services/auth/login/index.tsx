@@ -6,6 +6,7 @@ import {
   Icon,
   Modal
 }from '../../../assembleComponent'
+import prajurit from '../../../../weejio/post-apocalyptic-soldiers-wasteland-3-moewalls.com.mp4'
 /*themes*/
 // import themeSound1 from '../../../../sound/teme-gaming-1.mp3'
 // import themeSound2 from '../../../../sound/teme-gaming-2.mp3'
@@ -59,7 +60,7 @@ const navigate=useNavigate();
     document.title='initer3737 | game'
           //login sucess
       if(getToken !== 'false'){
-        navigate('/game')
+        navigate('/loadingCounterStrike/game')
         // initialize the cookie
         Kuki__initialize()
       }
@@ -86,10 +87,11 @@ const song=new Date().getDay();
   // audio themes
   return (
     <>
-      <form action="">
-        <div className="game__login__page form-login blending__mode__blue">
-          <div className="d-flex justify-content-center align-items-center position-absolute">
-            <div className="d-flex flex-column px-3 py-4 gap-2 bg-dark chek">
+        <video src={prajurit} className="moonlight-weejio-begeh" loop muted autoPlay></video>
+      <form action="" className=''>
+        <div className="form-login">
+          <div className="d-flex justify-content-center align-items-center position-absolute style-form">
+            <div className="d-flex flex-column px-3 py-4 gap-1">
               <p className="color-1 h5 text-center">
                 <Icon variant={"info"} icon={"lightning"} name={" "} />
                 counter strike
@@ -153,7 +155,8 @@ const song=new Date().getDay();
                 />
                 {isLogin ? "Login" : "register"}
               </p>
-              <div className="d-flex flex-column gap-3">
+              <div className="d-flex flex-column gap-2">
+                <label htmlFor="user" className='text-white fs-5 '>username</label>
                 <input
                   autoFocus
                   type="text"
@@ -165,6 +168,7 @@ const song=new Date().getDay();
                   minLength={5}
                   autoComplete={"off"}
                 />
+                <label htmlFor="pass" className='text-white fs-5 '>password</label>
                 <input
                   type="password"
                   onChange={(e) => changeValue(e, false)}
@@ -230,6 +234,11 @@ const song=new Date().getDay();
                     name={" forgot password"}
                   />
                 </a>
+                <div className="d-inline">
+                  <h3 className='fs-5 link-harvester' onClick={()=>navigate('/loadingCounterStrike/home')}>
+                    homepage
+                  </h3>
+                </div>
               </div>
             </div>
           </div>

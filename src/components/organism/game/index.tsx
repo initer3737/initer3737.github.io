@@ -200,7 +200,7 @@ const AmmoWeapon=changeWeapon?30:5;
         if(!kuki)localStorage.setItem('token','false')
         //check data to localstorage
         if(token !== 'true'){
-            navigate('/login')
+            navigate('/loadingCounterStrike/login')
           }
           // timmer out ? delete kuki
           if(kukiExpire > 0){

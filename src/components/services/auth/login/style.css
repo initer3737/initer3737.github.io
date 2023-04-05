@@ -2,32 +2,54 @@
     --kombatanforce:url('../../../../imgs/spesial-force.jpg') no-repeat;
     --kombatanforce2:url('../../../../imgs/login-page.jpg') no-repeat;
 }
+.moonlight-weejio-begeh{
+    position: absolute;
+    object-position: center;
+    object-fit: cover;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+}
 .form-login{
-    background: var(--kombatanforce2);
-    position: relative;
+    position: absolute;
+    top:0;
+    right:0;
     background-size: cover;
     display: flex;
     padding:40px 70px;
     justify-content: flex-end;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll; 
-    background-position: center; 
-    /* filter: drop-shadow(30px 10px 4px steelblue);
-    box-shadow: 120px 120px blue; */
 }
-.chek{
-    filter: drop-shadow(3px 1px 141px steelblue);
-    box-shadow: 6px 6px rgba(70, 130, 180,.6);
-    border-radius: 8px;
+.form-login input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
-.opacity-form{
-    background: var(--kombatanforce) 90% ;
-    background-size: cover;
-    
+.form-login input:focus{
+    outline: none;
+    border-bottom: 2px solid dodgerblue;
+    transition: 1s ease;
 }
+.style-form{
+    background: rgba(0,0,0,.6);
+    border-radius: 9px;
+    box-shadow: 1px 1px 12px 6px dodgerblue;
+}
+/* .opacity-form{ */
+    /* background: var(--kombatanforce) 90% ; */
+    /* background-size: cover;
+    background: black 90%; */
+/* } */
 
-.game__login__page{
-    width: auto;
-    min-height: 680px;
+.link-harvester{
+    color: #fff;
+    text-decoration: none;
+    transition: all 2s;
+    cursor: default;
+}
+.link-harvester:hover{
+    color: dodgerblue;
+    border-bottom: 2px solid blue;
 }
