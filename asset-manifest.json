@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.d917600b.css",
-    "main.js": "/static/js/main.99e9a67e.js",
+    "main.css": "/static/css/main.d9417574.css",
+    "main.js": "/static/js/main.fd27f065.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
     "static/media/mulberry-moonlight-lotus-arknights-moewalls.com.mp4": "/static/media/mulberry-moonlight-lotus-arknights-moewalls.com.75f1e9051955b29222d0.mp4",
+    "static/media/post-apocalyptic-soldiers-wasteland-3-moewalls.com.mp4": "/static/media/post-apocalyptic-soldiers-wasteland-3-moewalls.com.c99e9a7c742a71cdaf42.mp4",
     "static/media/Vika.gif": "/static/media/Vika.f704162606f0c53f30d7.gif",
     "static/media/login-page.jpg": "/static/media/login-page.596095708ffa0d174c67.jpg",
     "static/media/kitten-7157608.png": "/static/media/kitten-7157608.a7684d8fe997684d8924.png",
@@ -49,12 +50,12 @@
     "static/media/ak12-Sound.mp3": "/static/media/ak12-Sound.9833d9c1ccf8250245a7.mp3",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
-    "main.d917600b.css.map": "/static/css/main.d917600b.css.map",
-    "main.99e9a67e.js.map": "/static/js/main.99e9a67e.js.map",
+    "main.d9417574.css.map": "/static/css/main.d9417574.css.map",
+    "main.fd27f065.js.map": "/static/js/main.fd27f065.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d917600b.css",
-    "static/js/main.99e9a67e.js"
+    "static/css/main.d9417574.css",
+    "static/js/main.fd27f065.js"
   ]
 }
