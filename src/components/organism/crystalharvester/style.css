@@ -1,3 +1,12 @@
+.link-harvester{
+    color: #fff;
+    text-decoration: none;
+    transition: all 2s;
+}
+.link-harvester:hover{
+    color: dodgerblue;
+    border-bottom: 2px solid blue;
+}
 .playground-area{
     margin: 0px 10px;
     border: 2px solid #fff;
@@ -100,11 +109,15 @@
     opacity: 1;
     z-index: 1;
     transition: all 2s;
+    color: blue;
+    font-size: 23px;
 }
 .crystal-disappear{
     opacity: 0;
     z-index: -1;
     transition: all 2s;
+    color: #fff;
+    font-size: 40px;
 }
 
 .crystal-blass{
@@ -113,8 +126,6 @@
     position: absolute;
     top: var(--top);
     left: var(--left);
-    color: blue;
-    font-size: 23px;
     transition: all 2s;
     animation: blinkinstar infinite alternate 2s;
     /* filter: drop-shadow(1px 1px 11px black ); */
