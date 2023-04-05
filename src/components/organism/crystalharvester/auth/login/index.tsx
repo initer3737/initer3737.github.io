@@ -31,7 +31,7 @@ export default function CrystalHarvesterLogin() {
             if(username === playerName && password === playerPassword){
                 localStorage.setItem('token','true')
                 Kuki__initialize()
-                navigate('loading/crystal')
+                navigate('/loading/crystal')
             }
         }
         //============useEffect
@@ -57,13 +57,18 @@ export default function CrystalHarvesterLogin() {
             </div>
             <button className='auth-btn' onClick={onSubmit}>login</button>
             <hr/>
-            <div className="d-flex gap-3">
-                <NavLink to={'loading/crystal&login'} className='link-harvester'>
-                    register
-                </NavLink>
-                <NavLink to={'loading/crystal&login'} className='link-harvester'>
-                    reset
-                </NavLink>
+            <div className="d-flex flex-column justify-content-center align-items-center gap-2">
+                <div className="d-flex gap-3">
+                    <NavLink to={'/loading/crystal&register'} className='link-harvester'>
+                        register
+                    </NavLink>
+                    <NavLink to={'/loading/crystal&reset'} className='link-harvester'>
+                        reset
+                    </NavLink>
+                </div>
+                    <NavLink to={'/loading/home'} className='link-harvester'>
+                        homepage
+                    </NavLink>
             </div>
         </div>
         {/* dengan kekuatan bulan aku akan menghukum kamu (*.*) */}

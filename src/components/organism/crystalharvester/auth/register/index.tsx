@@ -63,10 +63,10 @@ export default function CrystalHarvesterRegister() {
             <button className='auth-btn' onClick={onSubmit}>register</button>
             <hr/>
             <div className="d-flex gap-3">
-                <NavLink to={'loading/crystal&reset'} className='link-harvester'>
+                <NavLink to={'/loading/crystal&reset'} className='link-harvester'>
                     reset
                 </NavLink>
-                <NavLink to={'loading/crystal&login'} className='link-harvester'>
+                <NavLink to={'/loading/crystal&login'} className='link-harvester'>
                     login
                 </NavLink>
             </div>

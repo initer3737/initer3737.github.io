@@ -1,17 +1,17 @@
 import React,{useState,useEffect} from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink ,useNavigate} from 'react-router-dom'
 import dewiBulan from '../../../weejio/mulberry-moonlight-lotus-arknights-moewalls.com.mp4'
 import hitSound from '../../../sound/crystalHarvested.mp3'
 import wooshSound from '../../../sound/fast-whoosh-118248.mp3'
 import puingSound from '../../../sound/puing.mp3'
 import './style.css'
 import { Icon } from '../../atom'
-import { data } from './datas'
 //=================================
 export default function CrystalHarvester() {
         const [score , setScore] =useState<number>(0)
         const [isHit , setIsHit] =useState<boolean>(false)
         const [isPause , setIsPause] =useState<boolean>(false)
+        const navigate=useNavigate()
         const db=(key:string)=>localStorage.getItem(key)
         const storage={
             playerName:db('username'),
@@ -37,6 +37,10 @@ export default function CrystalHarvester() {
         const TargetElement=(id:string)=>document.getElementById(id)
         const Randomize=(numb:number)=>{
             return Math.ceil(Math.random()*numb);
+        }
+        const onLogout=()=>{
+            localStorage.setItem('token','false')
+            navigate('/loading/crystal&login')
         }
         //============useEffect
             useEffect(()=>{
@@ -65,6 +69,10 @@ export default function CrystalHarvester() {
             <h3 onClick={()=>continueTriger()} className='link-harvester'>
                 <Icon variant={'info'} icon={'play'} name={''}/>
                 continue
+            </h3>
+            <h3 className='link-harvester' onClick={onLogout}>
+                    <Icon variant={'info'} icon={'box-arrow-left'} name={''}/>
+                    logout
             </h3>
             <h3>
                 <NavLink to={'/loading/home'} className='link-harvester'>
