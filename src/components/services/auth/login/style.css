@@ -36,6 +36,13 @@
     background: rgba(0,0,0,.6);
     border-radius: 9px;
     box-shadow: 1px 1px 12px 6px dodgerblue;
+    animation:forms_anime 2s alternate infinite;
+}
+@keyframes forms_anime {
+    from{}
+    to{
+        box-shadow: 1px 1px 12px 6px white;
+    }
 }
 /* .opacity-form{ */
     /* background: var(--kombatanforce) 90% ; */
