@@ -764,8 +764,9 @@ const AmmoWeapon=changeWeapon?30:5;
                 <Button 
                   variant={""} 
                   name={""} onClick={()=>{
-                    window.location.reload()
+                    ModalClose('logoutInfo')
                     localStorage.setItem('token','false')
+                    navigate('/loadingCounterStrike/login')
                   }} disableOnClick={false}allAttr={{}}>
                     <Icon variant={"info"} icon={"caret-right"} name={" "}/>
                     <p className="d-inline text-light">logout</p>
