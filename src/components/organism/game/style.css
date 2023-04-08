@@ -1,3 +1,14 @@
+.link-home{
+    text-decoration: none;
+    font-size: 20px;
+    transition: all 1s;
+    color: #fff;
+    border-bottom:none;
+}
+.link-home:hover{
+    color: dodgerblue;
+    border-bottom:1px solid #fff;
+}
 .clear-focus:focus{
     clear: both;
     outline-style: none;

@@ -26,7 +26,7 @@ import indoFlag from "../../../imgs/indonesia-flag.png";
 import rusiaFlag from "../../../imgs/rusia-flag.png";
 // import spesialForce from "../../../imgs/login-page.jpg";
 import { Button, Icon, Img, LinkToPage, Modal,Input } from "../../assembleComponent";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 /*themes*/
 import battleTheme from '../../../sound/battletheme.mp3'
 import artileri from '../../../sound/artileri.mp3'
@@ -62,6 +62,10 @@ export default function Game() {
     })
   }
 const ModalClose=(id:string)=>document.getElementById(id)?.click();
+const toHome=()=>{
+    ModalClose('logoutInfo');
+    navigate('/loadingCounterStrike/home');
+}
 
 const day=new Date().getDay();
 const year=new Date().getFullYear();
@@ -720,7 +724,13 @@ const AmmoWeapon=changeWeapon?30:5;
           <p className="text-light d-inline">informasi</p>
         </div>
        <div className="d-flex flex-column align-items-start">
-       <hr />
+       <hr /> 
+      <div className="d-flex flex-column justify-content-center align-items-center">
+        <h3 onClick={toHome} className='link-home'>
+        <Icon variant={"info"} icon={"house-door-fill"} name={" "}/>
+          menuju homepage
+        </h3>
+      </div>
        <div className="d-flex flex-column">
             <div className="d-flex flex-column pb-3">
               <hr />

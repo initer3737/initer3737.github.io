@@ -47,7 +47,7 @@ export default function Routes(){
 
      return (
         <div className="d-flex flex-column h-100 w-100 overflow-x-hidden">
-            <div className="w-100">
+            <div className={`w-100 ${path === 'game'?'d-none':'d-block'}`}>
                 <ScrollToTop/>
                 <Nav/>
                 <Header/>
@@ -81,7 +81,7 @@ export default function Routes(){
                         <Route path='*' element={<Navigate replace to='/404'/>} />
                     </Switch>
                </>
-            <div className={`${path === 'crystal' || path === 'login' || path === 'loadingCounterStrike' || path === 'loading'?'d-none':'d-block'}`}>
+            <div className={`${path === 'crystal' || path === 'login' || path === 'loadingCounterStrike' || path === 'game' || path === 'loading'?'d-none':'d-block'}`}>
                 <Footer/>
             </div>   
         </div>
