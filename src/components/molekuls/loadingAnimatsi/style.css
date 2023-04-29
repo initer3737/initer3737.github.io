@@ -40,3 +40,56 @@
         opacity: 0;
     }
 }
+.tips-container{
+    z-index: 190;
+    cursor: default;
+    user-select: none;
+    font-size: 22px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.loading-bar-container{
+    position: absolute;
+    bottom: 0;
+    background-color: #000;
+    width: 100%;
+    height: 10px;
+
+}
+/*  */
+.loading-1{
+    background-color: orange;
+    width: 10%;
+    height: 10px;
+
+}
+.loading-2{
+    background-color: orange;
+    width: 40%;
+    height: 10px;
+
+}
+.loading-3{
+    background-color: orange;
+    width: 60%;
+    height: 10px;
+
+}
+.loading-4{
+    background-color: orange;
+    width: 80%;
+    height: 10px;
+
+}
+.loading-5{
+    background-color: orange;
+    width: 100%;
+    height: 10px;
+
+}
+.loading-6{
+    background-color: orange;
+    width: 100%;
+    height: 10px;
+
+}
