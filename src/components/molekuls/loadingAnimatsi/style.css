@@ -16,6 +16,7 @@
     padding: 4px;
     transform: translateX(0px);
     transition: all 4s;
+    user-select: none;
 }
 .loading-appName-container{
     position:absolute;
@@ -28,6 +29,7 @@
     padding: 4px;
     transform: translateX(0px);
     transition: all 4s;
+    user-select: none;
 }
 
 @keyframes loading {
@@ -41,54 +43,57 @@
     }
 }
 .tips-container{
+    position: absolute;
+    bottom:5%;
+    left: 25%;
     z-index: 190;
     cursor: default;
     user-select: none;
-    font-size: 22px;
+    font-size: calc(12px + 1vw);
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .loading-bar-container{
     position: absolute;
-    bottom: 0;
+    bottom: 0px;
     background-color: #000;
     width: 100%;
     height: 10px;
 
 }
 /*  */
-.loading-1{
-    background-color: orange;
+.crystal-loading-1{
+    background-color: dodgerblue;
     width: 10%;
     height: 10px;
 
 }
-.loading-2{
-    background-color: orange;
+.crystal-loading-2{
+    background-color: dodgerblue;
     width: 40%;
     height: 10px;
 
 }
-.loading-3{
-    background-color: orange;
+.crystal-loading-3{
+    background-color: dodgerblue;
     width: 60%;
     height: 10px;
 
 }
-.loading-4{
-    background-color: orange;
+.crystal-loading-4{
+    background-color: dodgerblue;
     width: 80%;
     height: 10px;
 
 }
-.loading-5{
-    background-color: orange;
+.crystal-loading-5{
+    background-color: dodgerblue;
     width: 100%;
     height: 10px;
 
 }
-.loading-6{
-    background-color: orange;
+.crystal-loading-6{
+    background-color: dodgerblue;
     width: 100%;
     height: 10px;
 

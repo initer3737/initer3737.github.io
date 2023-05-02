@@ -44,7 +44,7 @@ export default function LoadingAnimatsi() {
               <h5>{bodyTips}</h5>
             </div>
             <div className="loading-bar-container">
-                <div className={`loading-${percentageLoading}`}></div>
+                <div className={`crystal-loading-${percentageLoading}`}></div>
             </div>
           </div>
     </div>

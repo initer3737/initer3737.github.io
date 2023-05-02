@@ -43,7 +43,7 @@ export default function LoadingAnimatsiCounterStrike() {
               <h5>{bodyTips}</h5>
             </div>
             <div className="loading-bar-container">
-                <div className={`loading-${percentageLoading}`}></div>
+                <div className={`counterstrike-loading-${percentageLoading}`}></div>
             </div>
           </div>
     </div>
