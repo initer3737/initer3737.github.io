@@ -3,7 +3,7 @@ import {useEffect,useState} from 'react'
 // import AnimeList from './animeList'
 import { VideoFromYoutube } from '../../atom'
 export default function Anime(): JSX.Element {
-  const bahasa_anime_link='https://www.youtube.com/embed/ofZXuYp_teQ?si=rmARFzxWkksD7IP2'
+  const bahasa_anime_link='https://www.youtube.com/embed/playlist?list=PLvJPBaxQw4P7A7_LvZu8SPnerjjOMSRA7'
   let [randomQuotesdataIndex,setrandomQuotesDataIndex]=useState(0)
   let [randomQuotes,setRandomQuotes]=useState([{
     anime: '',
