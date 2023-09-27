@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react'
-import prajurit from '../../../weejio/post-apocalyptic-soldiers-wasteland-3-moewalls.com.mp4'
+import prajurit from '../../../weejio/soldier_war.mp4'
 import './style.css'
 import { useLocation,useNavigate } from 'react-router-dom'
 import {

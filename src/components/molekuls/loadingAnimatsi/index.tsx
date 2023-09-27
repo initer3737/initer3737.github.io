@@ -2,7 +2,7 @@ import React,{useEffect, useState} from 'react'
 import {
   SingleTips,
 } from '../../services'
-import dewiBulan from '../../../weejio/mulberry-moonlight-lotus-arknights-moewalls.com.mp4'
+import dewiBulan from '../../../weejio/blue_moon.mp4'
 import './style.css'
 import { useLocation,useNavigate } from 'react-router-dom'
 import { data } from '../../organism/crystalharvester/datas'

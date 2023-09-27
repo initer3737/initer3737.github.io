@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import { NavLink ,useNavigate} from 'react-router-dom'
-import dewiBulan from '../../../weejio/mulberry-moonlight-lotus-arknights-moewalls.com.mp4'
+import dewiBulan from '../../../weejio/blue_moon.mp4'
 import hitSound from '../../../sound/crystalHarvested.mp3'
 import wooshSound from '../../../sound/fast-whoosh-118248.mp3'
 import puingSound from '../../../sound/puing.mp3'

@@ -6,7 +6,7 @@ import {
   Icon,
   Modal
 }from '../../../assembleComponent'
-import prajurit from '../../../../weejio/post-apocalyptic-soldiers-wasteland-3-moewalls.com.mp4'
+import prajurit from '../../../../weejio/soldier_war.mp4'
 /*themes*/
 // import themeSound1 from '../../../../sound/teme-gaming-1.mp3'
 // import themeSound2 from '../../../../sound/teme-gaming-2.mp3'
