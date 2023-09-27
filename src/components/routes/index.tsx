@@ -61,13 +61,15 @@ export default function Routes(){
                         <Route  element={<ProtectedRoutes navigate='/loadingCounterStrike/login'/>}>
                             <Route path="/game" element={<Game/>} />
                         </Route>
-                        <Route  element={<ProtectedRoutes navigate='/loading/crystal&login'/>}>
+                        {/* <Route  element={<ProtectedRoutes navigate='/loading/crystal&login'/>}>
                             <Route path="/crystal" element={<CrystalHarvester/>} />
-                        </Route>
+                        </Route> */}
                                 {/* crystal harvester start */}
+                                {/* ProtectedRoutes  hanya mengechek apakah token di set true jika token bernilai false maka akan di navigasi ke crystal login page  */}
                         <Route  element={<ProtectedRoutes navigate='/loading/crystal&login'/>}>
                             <Route path="/crystal" element={<CrystalHarvester/>} />
-                        </Route>
+                        </Route>            
+                            {/* ProtectedRoutesAuth  hanya mengechek apakah token di set false jika token bernilai true maka akan di navigasi ke crystal page  */}
                         <Route  element={<ProtectedRoutesAuth navigate='/loading/crystal'/>}>
                             <Route path="/crystal/login" element={<CrystalHarvesterLogin/>} />
                             <Route path="/crystal/register" element={<CrystalHarvesterRegister/>} />
