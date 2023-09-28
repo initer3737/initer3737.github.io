@@ -1,6 +1,6 @@
 import React ,{useEffect,useState}from 'react'
-import LogoFooter from '../../../imgs/cat-133.gif'
-import LogoFooter2 from '../../../imgs/kitten-7157608.png'
+import LogoFooter from '../../../imgs/bunga_merah.jpg'
+import LogoFooter2 from '../../../imgs/bunga_biru.jpg'
 import { Button, Icon, Img } from '../../atom'
 import { Weather } from '../../services'
 import OfflineUser from "../../services/pwa/offline";

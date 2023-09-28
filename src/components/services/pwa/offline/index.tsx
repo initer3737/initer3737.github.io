@@ -1,5 +1,5 @@
 import React from 'react'
-import pwa3 from './assetpwa/pwa3.jpg'
+import pwa3 from './assetpwa/pwa5.jpg'
 
 export default function OfflineUser() {
         const useUser__offline=()=>{
