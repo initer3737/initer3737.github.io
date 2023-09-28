@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import {useLocation} from 'react-router-dom'
-import favicon from '../../imgs/kitten-7157608.png';
+import favicon from '../../imgs/bunga_biru.jpg';
     import {
         Routes as Switch, // similiar to switch
         Route ,
