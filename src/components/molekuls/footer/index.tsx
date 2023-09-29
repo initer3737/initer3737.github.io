@@ -47,10 +47,10 @@ export default function Footer() {
                       <div className="anime__footer__kelap"></div>
                     </div>
                 </div>
-        <div className="d-flex justify-content-between align-items-center">
+        <div className="d-flex px-4 py-4 justify-content-between align-items-center">
         <Img 
                 src={LogoFooter} 
-                alt={'cat kiss'} 
+                alt={'footer foto'} 
                 srcset={''} 
                 className={'w-25'} 
                 width={''} 
@@ -59,9 +59,9 @@ export default function Footer() {
           />       
           <Img 
                 src={LogoFooter2} 
-                alt={'ganks kittens'} 
+                alt={'footer foto'} 
                 srcset={''} 
-                className={'w-50'} 
+                className={'w-25'} 
                 width={''} 
                 height={''} 
                 attr={[]} 
