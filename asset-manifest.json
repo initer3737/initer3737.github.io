@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.07e9e071.css",
-    "main.js": "/static/js/main.3afad4fb.js",
+    "main.js": "/static/js/main.6086301b.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
@@ -33,29 +33,36 @@
     "static/media/pwa5.jpg": "/static/media/pwa5.42cc7ac55963f7a96b5c.jpg",
     "static/media/giphy (1).gif": "/static/media/giphy (1).a43db8f03471a8fdeee5.gif",
     "static/media/book-158812.png": "/static/media/book-158812.cce0cc7959d103e0bfbb.png",
+    "static/media/golang.mp3": "/static/media/golang.edc04bf442383f5df6a5.mp3",
     "static/media/puing.mp3": "/static/media/puing.fd2c2fea27379cbc44da.mp3",
     "static/media/SPR_2_1_fire.png": "/static/media/SPR_2_1_fire.974ebb3b7941eebd6613.png",
     "static/media/soldat.png": "/static/media/soldat.9274177d6a0aa01b9e55.png",
+    "static/media/typescript.mp3": "/static/media/typescript.15b0bff652a821c02ebb.mp3",
+    "static/media/api.mp3": "/static/media/api.48ec4d641df44a9b2b5a.mp3",
     "static/media/crystalHarvested.mp3": "/static/media/crystalHarvested.e9cdb333ab472c48eb88.mp3",
     "static/media/SPR_2_1.mp3": "/static/media/SPR_2_1.8394218034e83f039e38.mp3",
     "static/media/TSR.png": "/static/media/TSR.efe9765e5b3b287bd960.png",
+    "static/media/php2.mp3": "/static/media/php2.66afa2eff8a851bdf7a6.mp3",
     "static/media/TSV.png": "/static/media/TSV.61a2616867f17dc1a81b.png",
+    "static/media/php1.mp3": "/static/media/php1.ac53001d6fee056ff99e.mp3",
     "static/media/SPR_2_1-info.png": "/static/media/SPR_2_1-info.b27979a768daca8c4c94.png",
     "static/media/fast-whoosh-118248.mp3": "/static/media/fast-whoosh-118248.880d01b53f0275ac12dc.mp3",
     "static/media/reload2.mp3": "/static/media/reload2.4a1bbbfd04df737a5586.mp3",
     "static/media/SPR_2_1.png": "/static/media/SPR_2_1.71fb250fb6e951ee813c.png",
+    "static/media/mysql.mp3": "/static/media/mysql.77eceb1725d4c2dee745.mp3",
     "static/media/LRV.png": "/static/media/LRV.479daf815cd872e40430.png",
+    "static/media/laravel.mp3": "/static/media/laravel.6ebb9af2b2819d844629.mp3",
     "static/media/reload.mp3": "/static/media/reload.b2a72bf3291a2d2f97be.mp3",
     "static/media/mag-slide.mp3": "/static/media/mag-slide.eb1733f56b1881e132f4.mp3",
     "static/media/ak12-Sound.mp3": "/static/media/ak12-Sound.9833d9c1ccf8250245a7.mp3",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.07e9e071.css.map": "/static/css/main.07e9e071.css.map",
-    "main.3afad4fb.js.map": "/static/js/main.3afad4fb.js.map",
+    "main.6086301b.js.map": "/static/js/main.6086301b.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07e9e071.css",
-    "static/js/main.3afad4fb.js"
+    "static/js/main.6086301b.js"
   ]
 }
