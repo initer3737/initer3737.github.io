@@ -8,15 +8,19 @@ import {
 //======================================
 export default function LoadingAnimatsiCounterStrike() {
   const [percentageLoading,setPercentageLoading]=useState(0)
-  const {titleTips,bodyTips}=SingleTips()
+  const {titleTips,bodyTips,special}=SingleTips()
     const {pathname}=useLocation()
     const path=pathname.split('/')[2]
     const navigate=useNavigate()
+    const duration_loading=SingleTips().special.duration+3*1000
     //================useEffect
+    useEffect(()=>{
+      new Audio(special.audio).play()
+    },[]) //on mounting lifecylce
         useEffect(()=>{
             const LoadingAnimatsiOut=setTimeout(()=>{
                     path === 'home'?navigate(`/`): navigate(`/${path.replace('&','/')}`)
-            },6000)
+            },duration_loading)
               const transitionloading=setInterval(()=>{
                 if(percentageLoading < 6){
                   setPercentageLoading(prev=>prev+1)
