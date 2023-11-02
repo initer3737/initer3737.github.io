@@ -176,7 +176,7 @@ export default function HomePage()
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
           <>
             <LinkToPage 
-              href={"https://course-gamma.vercel.app/"}
+              href={"https://training-ground-programmis.vercel.app/"}
               target="_blank"
               variant={'primary'}
               name={'blog'}
