@@ -64,6 +64,16 @@ export default function Quotes() {
 
           <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
             <div className="text-center "><h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> 死ぬ</h5>
+            </div>
+            <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+              in amsakta nafsi fagfir laha
+            </div>
+          </div>
+          {/* https://ilmuislam.id/hadits/17575/hadits-darimi-nomor-2568 */}
+
+          <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+            <div className="text-center "><h5>
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 金</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
@@ -80,6 +90,16 @@ export default function Quotes() {
              diam di heningnya malam berkilau layaknya kunang
             </div>
           </div>
+
+          {/* <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+            <div className="text-center "><h5>
+              <Icon variant={''} icon={'pencil-square'} name={' '}/> родители</h5>
+            </div>
+            <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+              dulu aku kesulitan melihat kasih sayang kedua orang tua 
+              sekarang aku melihatnya lalu tak sanggup membalasnya
+            </div>
+          </div> */}
 
         </div>
     </>
