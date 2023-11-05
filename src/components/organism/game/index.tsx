@@ -470,7 +470,7 @@ const AmmoWeapon=changeWeapon?30:5;
          </div>
          <hr/>
          <LinkToPage 
-            href={'https://www.pixiv.net/en/artworks/94294254'} 
+            href={'https://www.instagram.com/p/Cylo-RgP2UV/'} 
             icon={"link"} 
             target={"_blank"} 
             variant={"info fs-5"} 
@@ -816,7 +816,7 @@ const AmmoWeapon=changeWeapon?30:5;
               </div>
               <hr />
            <Img 
-              src={Vika} 
+              src={perdamaian} 
               alt={"comrade vika"} 
               srcset={""} 
               className={"w-100 border"} width={""} height={""} attr={undefined}/>
