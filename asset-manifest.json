@@ -1,12 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.35a69f53.css",
-    "main.js": "/static/js/main.ba5e6d3b.js",
+    "main.css": "/static/css/main.e920a405.css",
+    "main.js": "/static/js/main.e381078e.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
     "static/media/soldier_war.mp4": "/static/media/soldier_war.c7e04900c1513c714bbc.mp4",
     "static/media/blue_moon.mp4": "/static/media/blue_moon.596d4b4bf1ed6461bbe7.mp4",
-    "static/media/login-page.jpg": "/static/media/login-page.596095708ffa0d174c67.jpg",
     "static/media/bunga_merah.jpg": "/static/media/bunga_merah.7bd79ffc9a338d4bdf57.jpg",
     "static/media/LDV.jpg": "/static/media/LDV.3dca37dd5b29956a4245.jpg",
     "static/media/bunga_biru.jpg": "/static/media/bunga_biru.1f2f6c7e95464c814976.jpg",
@@ -54,12 +53,12 @@
     "static/media/ak12-Sound.mp3": "/static/media/ak12-Sound.9833d9c1ccf8250245a7.mp3",
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
-    "main.35a69f53.css.map": "/static/css/main.35a69f53.css.map",
-    "main.ba5e6d3b.js.map": "/static/js/main.ba5e6d3b.js.map",
+    "main.e920a405.css.map": "/static/css/main.e920a405.css.map",
+    "main.e381078e.js.map": "/static/js/main.e381078e.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35a69f53.css",
-    "static/js/main.ba5e6d3b.js"
+    "static/css/main.e920a405.css",
+    "static/js/main.e381078e.js"
   ]
 }
