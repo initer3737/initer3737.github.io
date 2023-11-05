@@ -1,9 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.07e9e071.css",
-    "main.js": "/static/js/main.a643fc50.js",
+    "main.js": "/static/js/main.ca2a4af7.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
-    "static/media/Elina.gif": "/static/media/Elina.e5db32004ec9043361d7.gif",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
     "static/media/Vika.gif": "/static/media/Vika.f704162606f0c53f30d7.gif",
     "static/media/soldier_war.mp4": "/static/media/soldier_war.c7e04900c1513c714bbc.mp4",
@@ -31,6 +30,7 @@
     "static/media/banner-982162_1920.jpg": "/static/media/banner-982162_1920.a9354715cc5f66136ae9.jpg",
     "static/media/artileri.mp3": "/static/media/artileri.2ee7eb3bd59d75090b8c.mp3",
     "static/media/pwa5.jpg": "/static/media/pwa5.42cc7ac55963f7a96b5c.jpg",
+    "static/media/want_peace.jpg": "/static/media/want_peace.74bb96a263e311dc383e.jpg",
     "static/media/giphy (1).gif": "/static/media/giphy (1).a43db8f03471a8fdeee5.gif",
     "static/media/book-158812.png": "/static/media/book-158812.cce0cc7959d103e0bfbb.png",
     "static/media/golang.mp3": "/static/media/golang.edc04bf442383f5df6a5.mp3",
@@ -58,11 +58,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.07e9e071.css.map": "/static/css/main.07e9e071.css.map",
-    "main.a643fc50.js.map": "/static/js/main.a643fc50.js.map",
+    "main.ca2a4af7.js.map": "/static/js/main.ca2a4af7.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07e9e071.css",
-    "static/js/main.a643fc50.js"
+    "static/js/main.ca2a4af7.js"
   ]
 }
