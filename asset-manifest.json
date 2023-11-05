@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.07e9e071.css",
-    "main.js": "/static/js/main.a4fa1a1c.js",
+    "main.js": "/static/js/main.ba5e6d3b.js",
     "static/js/787.3c8cf1d2.chunk.js": "/static/js/787.3c8cf1d2.chunk.js",
     "static/media/404.gif": "/static/media/404.b0945d6f71c19fabd065.gif",
     "static/media/soldier_war.mp4": "/static/media/soldier_war.c7e04900c1513c714bbc.mp4",
@@ -11,7 +11,6 @@
     "static/media/LDV.jpg": "/static/media/LDV.3dca37dd5b29956a4245.jpg",
     "static/media/bunga_biru.jpg": "/static/media/bunga_biru.1f2f6c7e95464c814976.jpg",
     "static/media/Earth - 4788.mp4": "/static/media/Earth - 4788.c6043d6c61ec245407f5.mp4",
-    "static/media/army.gif": "/static/media/army.b3f71c2f681aa8081d18.gif",
     "static/media/battletheme.mp3": "/static/media/battletheme.84389f6310b4b7c98deb.mp3",
     "static/media/ODV.jpg": "/static/media/ODV.852318adad5b93503849.jpg",
     "static/media/spesial-force.jpg": "/static/media/spesial-force.2c98a3a2fd214cf5e04a.jpg",
@@ -57,11 +56,11 @@
     "static/media/empty-gun.mp3": "/static/media/empty-gun.bb72e6c9d31bdfd3a6d6.mp3",
     "index.html": "/index.html",
     "main.07e9e071.css.map": "/static/css/main.07e9e071.css.map",
-    "main.a4fa1a1c.js.map": "/static/js/main.a4fa1a1c.js.map",
+    "main.ba5e6d3b.js.map": "/static/js/main.ba5e6d3b.js.map",
     "787.3c8cf1d2.chunk.js.map": "/static/js/787.3c8cf1d2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07e9e071.css",
-    "static/js/main.a4fa1a1c.js"
+    "static/js/main.ba5e6d3b.js"
   ]
 }
