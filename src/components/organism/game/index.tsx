@@ -246,7 +246,7 @@ const AmmoWeapon=changeWeapon?30:5;
       <div className="">
         <div className="container gap-3 d-flex flex-column ">
           <div className="bg-4 color-1 mt-2 justify-content-evently align-items-center d-flex gap-3">
-              <img src={(warmode?Army:spesialForce)} className="shadow" alt="spesial force" style={spesialForceStyle}/>
+              <img src={(warmode?indoFlag:rusiaFlag)} className="shadow" alt="spesial force" style={spesialForceStyle}/>
             <div className="mx-auto text-center">
               <div className="d-flex justify-content-between gap-5">
               <h3>
@@ -752,7 +752,7 @@ const AmmoWeapon=changeWeapon?30:5;
                    <hr />
               </div>
            <Img 
-              src={spesialForce} 
+              src={perdamaian} 
               alt={"spesial force"} 
               srcset={""} 
               className={"w-100 border"} width={""} height={""} attr={undefined}/>
