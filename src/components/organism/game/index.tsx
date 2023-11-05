@@ -14,7 +14,7 @@ import emptygunSound from "../../../sound/empty-gun.mp3";
 import Elina from "../../../imgs/Elina.gif";
 import Vika from "../../../imgs/Vika.gif";
 import Army from "../../../imgs/army.gif";
-import perdamaian from "../../../imgs/want_peace?.jpg";
+import perdamaian from "../../../imgs/want_peace.jpg";
 import spr2Kal127MM from "../../../imgs/SPR_2_1.png";
 import spr2Kal127MMFire from "../../../imgs/SPR_2_1_fire.png";
 import spr2Kal127MMInfo from "../../../imgs/SPR_2_1-info.png";
