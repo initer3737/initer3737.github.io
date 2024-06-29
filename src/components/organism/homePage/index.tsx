@@ -88,7 +88,7 @@ export default function HomePage()
           /> framework.
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/>  
           </h5>
-            <h3><Icon variant={'danger'} icon={'ubuntu'} name={''}/> laravel</h3>
+            <h3 className='d-none'><Icon variant={'danger'} icon={'ubuntu'} name={''}/> laravel</h3>
               <h3><Icon variant={'primary'} icon={'bootstrap'} name={''}/> bootstrap 5</h3>
           <div className="d-flex justify-content-between w-100">
             <Icon variant={''} icon={'suit-diamond-fill hiasan'} name={''}/> 
@@ -108,11 +108,11 @@ export default function HomePage()
               <Icon variant={'dark'} icon={'code-slash'} name={''}/> language.
               <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
           </h5>
-              <h3><Icon variant={' php'} icon={'filetype-php'} name={''}/> php</h3>
-              <h3><Icon variant={'warning'} icon={'filetype-js'} name={''}/> javascript</h3>
-              <h3><Icon variant={' mysql'} icon={'filetype-sql'} name={''}/> mysql</h3>
+              <h3 className='d-none'><Icon variant={' php'} icon={'filetype-php'} name={''}/> php</h3>
+              <h3 className='d-none'><Icon variant={' mysql'} icon={'filetype-sql'} name={''}/> mysql</h3>
               <h3><Icon variant={' html'} icon={'filetype-html'} name={''}/> html 5</h3>
               <h3><Icon variant={' css'} icon={'filetype-css'} name={''}/> css</h3>
+              <h3><Icon variant={'warning'} icon={'filetype-js'} name={''}/> javascript</h3>
           </div>
                   {/* banners */}
       <div className="position-relative overflow-hidden container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2 banners-hoverable-effect">
@@ -135,7 +135,7 @@ export default function HomePage()
                 <h5>typescript vue</h5>
             </div>
           </div>
-          <div className='d-flex flex-column justify-content-center align-items-center position-relative'>
+          <div className='d-none d-flex flex-column justify-content-center align-items-center position-relative'>
                 <Img src={LRV} alt={'lrv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                LRV
             <div className="hoverable-effect">
