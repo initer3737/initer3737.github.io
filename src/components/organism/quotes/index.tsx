@@ -21,7 +21,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> gelap</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-              rasakan gelapnya malam jangan sering-sering merasakan terangnya siang
+              keheningan dapat memunculkan kreativitas 
             </div>
           </div>
       
