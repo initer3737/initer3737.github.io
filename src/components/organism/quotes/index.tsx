@@ -1,5 +1,6 @@
 import React from 'react'
 import { Icon } from '../../atom'
+import Dataquote from './dataquote/data'
 
 export default function Quotes() {
   return (
@@ -100,7 +101,7 @@ export default function Quotes() {
               sekarang aku melihatnya lalu tak sanggup membalasnya
             </div>
           </div> */}
-
+              <Dataquote/>
         </div>
     </>
   )
