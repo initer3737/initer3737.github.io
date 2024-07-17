@@ -115,6 +115,20 @@ export default function About() {
               alt="" srcset={''} width={''} height={''} attr={[]}        
               />
           </div>
+          <div className="col-12 mt-5 m-auto bg-4 text-light mb-3 px-2 py-4">
+            <div className="text-center ">
+              <h5>
+              <Icon variant={'white'} icon={'info-circle-fill'} name={' '}/>
+               problem
+              </h5>
+            </div>
+            <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
+              when i was on my first internship i have been choose back end dev 
+              and it was my biggest mistake that i choose, 
+              so when i choose and start learning front end dev everything become 
+              easy  
+            </div>
+          </div>
         </div>
       );
 }

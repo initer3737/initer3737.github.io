@@ -11,7 +11,12 @@ import spr2Kal127MMSound from "../../../sound/SPR_2_1.mp3";
 import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
 import emptygunSound from "../../../sound/empty-gun.mp3";
-import perdamaian from "../../../imgs/want_peace.jpg";
+// import perdamaian from "../../../imgs/want_peace.jpg";
+import vika from '../../../imgs/vika.gif';
+import elaina from '../../../imgs/elaina.gif';
+import futari from '../../../imgs/futari.gif'
+// import warModeGambar from '../../../imgs/background_war.jpg'
+// import trainingModeGambar from '../../../imgs/background_training.jpg'
 import spr2Kal127MM from "../../../imgs/SPR_2_1.png";
 import spr2Kal127MMFire from "../../../imgs/SPR_2_1_fire.png";
 import spr2Kal127MMInfo from "../../../imgs/SPR_2_1-info.png";
@@ -441,7 +446,7 @@ const AmmoWeapon=changeWeapon?30:5;
 
       <div className="d-none d-lg-block">
         <Img
-          src={perdamaian}
+          src={warmode?vika:elaina}
           alt={`comrade ${warmode?'Vika':'Elina'}`}
           srcset={""}
           className={warmode?'w-100':" elina__char"}
@@ -748,7 +753,7 @@ const AmmoWeapon=changeWeapon?30:5;
                    <hr />
               </div>
            <Img 
-              src={perdamaian} 
+              src={futari} 
               alt={"spesial force"} 
               srcset={""} 
               className={"w-100 border"} width={""} height={""} attr={undefined}/>
@@ -812,7 +817,7 @@ const AmmoWeapon=changeWeapon?30:5;
               </div>
               <hr />
            <Img 
-              src={perdamaian} 
+              src={vika} 
               alt={"comrade vika"} 
               srcset={""} 
               className={"w-100 border"} width={""} height={""} attr={undefined}/>

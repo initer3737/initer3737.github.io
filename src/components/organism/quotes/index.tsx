@@ -11,9 +11,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> ilusi</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-              mungkin semuanya baik baik saja
-              tanpa disadari ternyata semua itu adalah ilusi...
-              semuanya terjebak dalam asumsi.
+              memilih role yang salah akan memperbesar masalah yang akan datang
             </div>
           </div>
 
@@ -31,8 +29,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> biru</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-              takkan ada duka tanpa adanya kegembiraan
-              semuanya merupakan kesatuan.
+              saat menemukan role yang tepat saat itulah bakatmu mulai terasah
             </div>
           </div>
 
@@ -41,7 +38,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 雨</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-              hujan yang indah menghiasi pagiku... pagiku begitu cerah
+              saat salah memilih role tinggal tunggu waktu untuk kehancuran
             </div>
           </div>
 
@@ -68,7 +65,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 死ぬ</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-              in amsakta nafsi fagfir laha
+              waktu semakin menipis , gunakkanlah untuk belajar dan pilih role yang disukai
             </div>
           </div>
           {/* https://ilmuislam.id/hadits/17575/hadits-darimi-nomor-2568 */}
@@ -78,8 +75,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 金</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-             kenapa tuan begitu rakus??, mencari harta kesana kemari,
-             tak peduli siang dan malam , apakah tuan akan menjadi kapitalis? yang hanya ada uang dikepala tuan ? dan tidak perduli kepada kehidupan setelah kematian???, esok tuan akan dimakamkan ,disana akan ditanya perkara yang tuan lewatkan semasa hidup, tentang kepatuhan kepada tuhan yang menciptakan malam ,apakah tuan tidak melihat ??
+             saat kau berambisi kejarlah ambisi itu dan jangan lupakan keluarga
             </div>
           </div>
 
@@ -88,7 +84,7 @@ export default function Quotes() {
               <Icon variant={''} icon={'pencil-square'} name={' '}/> 夜</h5>
             </div>
             <div className="text-start fs-5 px-5 col-12 col-md-6  m-auto">
-             diam di heningnya malam berkilau layaknya kunang
+             disaat kau memilih role yang tepat kau akan mudah dalam mengerjakkannya
             </div>
           </div>
 
