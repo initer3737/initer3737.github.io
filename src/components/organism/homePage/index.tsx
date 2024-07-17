@@ -128,7 +128,7 @@ export default function HomePage()
                 <h5>typescript react</h5>
             </div>
           </div>
-          <div className='d-flex flex-column justify-content-center align-items-center position-relative'>
+          <div className='d-flex flex-column justify-content-center align-items-center position-relative d-none'>
                 <Img src={TSV} alt={'tsv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
                 TSV
             <div className="hoverable-effect">
