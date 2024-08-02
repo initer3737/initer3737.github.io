@@ -21,5 +21,5 @@ export default function ProtectedRoutesAuth({navigate}:props) {
           localStorage.setItem('password','');
       }
                     //chek ketika token flase maka di navigasikan ke login karena user belum login
-    return useAuth(getUser !== '' && getPass !== '' && getToken === 'false',navigate);
+    return useAuth(getUser !== '' && getPass !== '' && getToken === 'true',navigate);
 }
