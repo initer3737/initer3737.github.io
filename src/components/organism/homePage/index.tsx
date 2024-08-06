@@ -36,7 +36,7 @@ export default function HomePage()
                     <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/> 
                   </div>
                   <video src={`${Video}`} loop muted autoPlay className="w-100 rounded-pill py-5 px-2"></video>
-                  <div className="filter2"></div>
+                  <div className="filter2 transition-all duration-500"></div>
                 </div>
               </div>
 

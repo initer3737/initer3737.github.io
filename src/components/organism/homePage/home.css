@@ -1,3 +1,10 @@
+.transition-all{
+    transition: all;
+}
+
+.duration-500{
+    transition-duration: .5s;
+}
 .border-atas-kiri .border,
 .border-atas-kanan .border{
     width: 50px;
