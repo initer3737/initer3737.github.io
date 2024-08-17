@@ -251,3 +251,13 @@
     /* transition: 3s all; */
     opacity: 1;
 }
+
+.dodger-blue{
+    color: dodgerblue;
+    background-color: white;
+}
+
+.pink{
+    color: violet;
+    background-color: white;
+}

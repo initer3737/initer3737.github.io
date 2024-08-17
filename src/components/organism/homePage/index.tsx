@@ -5,6 +5,7 @@ import ODV from '../../../imgs/ODV.jpg'
 import LRV from '../../../imgs/LRV.png'
 import TSV from '../../../imgs/TSV.png'
 import TSR from '../../../imgs/TSR.png'
+import book from '../../../imgs/book-805405_1280.png' 
 import './home.css'
 import {Clock} from '../../../utils'
 import { LinkToPage,Icon, Img} from '../../atom'
@@ -83,7 +84,7 @@ export default function HomePage()
 
           </div>
       </div>
-      <div className="overflow-hidden position-relative container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center align-content-center align-items-center p-2 banners-hoverable-effect">
+      <div className="overflow-hidden position-relative container bg-light shadow mt-5 d-flex flex-column gap-1 justify-content-center alignc-content-center align-items-center p-2 banners-hoverable-effect">
           <h5><Icon variant={'dark'} icon={'briefcase-fill'} name={''}
           /> framework.
           <Icon variant={' hiasan-utama'} icon={'suit-diamond-fill'} name={''}/>  
@@ -161,6 +162,16 @@ export default function HomePage()
                   </div>
               </div>
                ODV
+          </div>
+          <div className='d-flex flex-column justify-content-center align-items-center'>
+              <div className="position-relative">
+                <Img src={book} alt={'ldv'} srcset={''} className={'banner-icon'} width={''} height={''} attr={undefined}/>
+                  <div className="mata-container">
+                    <Icon variant={' dodger-blue'} icon={'circle-fill mata'} name={''}/>
+                    <Icon variant={' pink'} icon={'circle-fill mata'} name={''}/>
+                  </div>
+              </div>
+               PBS
           </div>
           <div className="banners-border-kiri-atas">
             <div className="banners-border"></div>
