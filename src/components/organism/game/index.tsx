@@ -26,7 +26,7 @@ import Ak12info from "../../../imgs/AK-12-info.png";
 import soldatIcon from "../../../imgs/soldat.png";
 import indoFlag from "../../../imgs/indonesia-flag.png";
 import rusiaFlag from "../../../imgs/rusia-flag.png";
-// import spesialForce from "../../../imgs/login-page.jpg";
+
 import { Button, Icon, Img, LinkToPage, Modal,Input } from "../../assembleComponent";
 import { NavLink, useNavigate } from "react-router-dom";
 /*themes*/
