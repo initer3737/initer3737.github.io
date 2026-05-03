@@ -12,9 +12,9 @@ import reloadSound from "../../../sound/reload.mp3";
 import reloadSound2 from "../../../sound/reload2.mp3";
 import emptygunSound from "../../../sound/empty-gun.mp3";
 // import perdamaian from "../../../imgs/want_peace.jpg";
-import vik from '../../../imgs/chantaku.jpg';
-import elain from '../../../imgs/chantaku.jpg';
-import futar from '../../../imgs/chantaku.jpg'
+import vika from '../../../imgs/chantaku.jpg';
+import elaina from '../../../imgs/chantaku.jpg';
+import futari from '../../../imgs/chantaku.jpg'
 // import warModeGambar from '../../../imgs/background_war.jpg'
 // import trainingModeGambar from '../../../imgs/background_training.jpg'
 import spr2Kal127MM from "../../../imgs/SPR_2_1.png";
