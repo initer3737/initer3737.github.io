@@ -60,6 +60,12 @@ export default function HomePage()
                         variant={'primary'}
                         name={'github'}
                         icon={'github'} className={''}                      />
+                      <LinkToPage 
+                        href={"https://initer3737.github.io/proverka_check/"}
+                        target="_blank"
+                        variant={'primary'}
+                        name={'proverka'}
+                        icon={'link'} className={''}                      />
                   </div>
                   <div className="d-flex flex-column gap-1">
                         <LinkToPage 
@@ -186,6 +192,12 @@ export default function HomePage()
         </h5>
         <div className="fs-4 d-flex flex-column flex-sm-row gap-3">
           <>
+          <LinkToPage 
+                        href={"https://initer3737.github.io/proverka_check/"}
+                        target="_blank"
+                        variant={'primary'}
+                        name={'proverka'}
+                        icon={'link'} className={''}                      />
             <LinkToPage 
               href={"https://training-ground-programmis.vercel.app/"}
               target="_blank"
